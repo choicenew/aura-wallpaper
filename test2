@@ -1,0 +1,1174 @@
+import json
+import os
+import time
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
+
+JUMP_URL = "https://www.moely.link/random/jump/?wallpaper=true"
+JSON_PATH = "wallpaper.json"
+
+def log(msg: str):
+    now = datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{now}] {msg}")
+
+def fetch_wallpaper_data():
+    """使用 Playwright 打开页面并获取 <script id="wallpaper"> 中的 JSON 数据"""
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+        log(f"▶️ 打开 {JUMP_URL}")
+        page.goto(JUMP_URL, timeout=30000, wait_until="domcontentloaded")
+        # 等待页面发生跳转
+        page.wait_for_event("framenavigated", timeout=10000)
+        print("✅ 页面已跳转到：", page.url)
+        # 等待目标元素加载
+        time.sleep(3)
+        html = page.content()
+        browser.close()
+
+    soup = BeautifulSoup(html, "html5lib")
+    script = soup.find("script", {"id": "wallpaper"})
+    if script and script.string:
+        return json.loads(script.string)
+    else:
+        return None
+
+def load_existing():
+    if os.path.exists(JSON_PATH):
+        with open(JSON_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+def save_all(data_list):
+    with open(JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(data_list, f, ensure_ascii=False, indent=2)
+    log(f"✅ 保存 {JSON_PATH}，共 {len(data_list)} 条记录")
+
+def main():
+    tz = ZoneInfo("Asia/Shanghai")
+    today = datetime.now(tz).date()
+    target_date = today + timedelta(days=7)
+    date_str = target_date.strftime("%Y%m%d")
+
+    log("🚀 开始获取随机壁纸信息")
+    info = fetch_wallpaper_data()
+    if not info:
+        log("❌ 未能获取到 wallpaper 数据，程序终止")
+        return
+
+    info["date"] = date_str
+    log(f"✅ 获取到 wallpaper ID={info.get('id')}，目标日期={date_str}")
+
+    items = load_existing()
+
+    # 基于 date 判断是否已存在
+    if not any(item.get("date") == date_str for item in items):
+        items.append(info)
+        log("🎨 壁纸添加成功")
+    else:
+        log("ℹ️ 壁纸已存在，不重复添加")
+
+    # 过滤保留 [today-7 .. today+7]
+    min_date = today - timedelta(days=7)
+    filtered = [
+        it for it in items
+        if min_date <= datetime.strptime(it["date"], "%Y%m%d").date() <= target_date
+    ]
+    filtered.sort(key=lambda x: x["date"])
+    save_all(filtered)
+
+if __name__ == "__main__":
+    main()
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
+  const apiUrl = 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN'
+  const url = new URL(request.url)
+  const resParam = url.searchParams.get('res') || 'uhd'
+
+  try {
+
+    const response = await fetch(apiUrl)
+    const data = await response.json()
+    
+    // Check
+    const image = data.images[0]
+    if (!image) throw new Error('No image found')
+    if (!image.urlbase) throw new Error('Missing image base URL')
+
+    let suffix
+    switch (resParam.toLowerCase()) {
+      case 'uhd':
+        suffix = '_UHD.jpg'       // 超高清 3840x2160
+        break
+      case 'm':
+        suffix = '_1080x1920.jpg' // 手机竖版 1080x1920
+        break
+      default:
+        // 自定义分辨率格式 (1920x1080)
+        if (/^\d+x\d+$/.test(resParam)) {
+          suffix = `_${resParam}.jpg`
+        } else {
+          throw new Error(`ILOVESCRATCH API ERROR: UNKNOWN RESOLUTION ${resParam}`)
+        }
+    }
+
+    const imageUrl = `https://cn.bing.com${image.urlbase}${suffix}`
+    
+
+    if (!isValidUrl(imageUrl)) throw new Error('ILOVESCRATCH API ERROR(INTERNAL): INVALID URL GENERATED.    IF YOU BELIEVE THIS IS A MISTAKE, CONTACT ILOVESCRATCH@FOXMAIL.com')
+
+
+    return Response.redirect(imageUrl, 302)
+
+  } catch (error) {
+    return new Response(error.message, {
+      status: error.message.startsWith('ILOVESCRATCH API ERROR:') ? 400 : 500,
+      headers: { 'Content-Type': 'text/plain' }
+    })
+  }
+}
+
+function isValidUrl(string) {
+  try {
+    new URL(string)
+    return true
+  } catch (_) {
+    return false
+  }
+}
+// EdgeOne边缘函数 - Bing壁纸API与图片代理
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
+
+async function handleRequest(request) {
+  const url = new URL(request.url);
+  const pathname = url.pathname;
+  
+  // 根据路径判断请求类型
+  if (pathname === '/' || pathname === '') {
+    // 根目录访问 - 返回图片
+    return handleImageRequest(request);
+  } else if (pathname.startsWith('/api') || pathname.includes('api')) {
+    // API访问 - 返回JSON数据
+    return handleApiRequest(request);
+  } else {
+    // 其他路径 - 返回404
+    return new Response('Not Found', { status: 404 });
+  }
+}
+
+// 处理图片请求 - 直接返回图片
+async function handleImageRequest(request) {
+  // 处理预检请求
+  if (request.method === 'OPTIONS') {
+    return new Response(null, {
+      status: 200,
+      headers: getCorsHeaders(),
+    });
+  }
+
+  try {
+    const url = new URL(request.url);
+    const params = url.searchParams;
+    
+    // 获取参数
+    const idx = params.get('idx') || '0';
+    const mkt = params.get('mkt') || 'zh-CN';
+    const resolution = params.get('resolution') || '1920x1080';
+    
+    console.log(`图片请求 - idx: ${idx}, mkt: ${mkt}, resolution: ${resolution}`);
+    
+    // 首先获取图片信息
+    const imageData = await getBingImageData(idx, mkt, 1);
+    
+    if (!imageData || !imageData.images || imageData.images.length === 0) {
+      return createErrorResponse('无法获取Bing壁纸信息', 404);
+    }
+    
+    const image = imageData.images[0];
+    let imageUrl;
+    
+    // 根据分辨率参数选择对应的图片URL
+    if (resolution === 'uhd' || resolution === '4k') {
+      imageUrl = `https://www.bing.com${image.urlbase}_UHD.jpg`;
+    } else if (resolution === 'mobile') {
+      imageUrl = `https://www.bing.com${image.urlbase}_768x1366.jpg`;
+    } else if (resolution === 'thumbnail') {
+      imageUrl = `https://www.bing.com${image.urlbase}_400x240.jpg`;
+    } else {
+      // 默认或自定义分辨率
+      imageUrl = `https://www.bing.com${image.urlbase}_${resolution}.jpg`;
+    }
+    
+    console.log(`代理图片URL: ${imageUrl}`);
+    
+    // 代理图片请求 - 带重试机制
+    const imageResponse = await fetchImageWithRetry(imageUrl);
+    
+    if (!imageResponse.ok) {
+      console.error(`图片请求失败: ${imageResponse.status}`);
+      return createErrorResponse(`图片加载失败: ${imageResponse.status}`, 502);
+    }
+    
+    // 获取图片数据
+    const imageBuffer = await imageResponse.arrayBuffer();
+    const contentType = imageResponse.headers.get('content-type') || 'image/jpeg';
+    
+    // 构建响应头
+    const headers = {
+      ...getCorsHeaders(),
+      'Content-Type': contentType,
+      'Content-Length': imageBuffer.byteLength.toString(),
+      'Cache-Control': 'public, max-age=86400, s-maxage=172800', // 缓存24小时，EdgeOne缓存48小时
+      'Last-Modified': new Date().toUTCString(),
+      'ETag': `"bing-${idx}-${resolution}-${Date.now()}"`,
+      // 图片信息头
+      'X-Image-Title': encodeURIComponent(image.title || ''),
+      'X-Image-Copyright': encodeURIComponent(image.copyright || ''),
+      'X-Image-Date': image.startdate || '',
+      'X-Resolution': resolution,
+      'X-Powered-By': 'EdgeOne-Image-Proxy',
+    };
+    
+    console.log(`成功返回图片，大小: ${imageBuffer.byteLength} bytes`);
+    
+    return new Response(imageBuffer, {
+      status: 200,
+      headers: headers,
+    });
+    
+  } catch (error) {
+    console.error('图片请求处理错误:', error);
+    return createErrorResponse(`图片服务错误: ${error.message}`, 500);
+  }
+}
+
+// 处理API请求 - 返回JSON数据
+async function handleApiRequest(request) {
+  // 处理预检请求
+  if (request.method === 'OPTIONS') {
+    return new Response(null, {
+      status: 200,
+      headers: getCorsHeaders(),
+    });
+  }
+
+  try {
+    const url = new URL(request.url);
+    const params = url.searchParams;
+    
+    // 获取查询参数
+    const format = params.get('format') || 'js';
+    const idx = params.get('idx') || '0';
+    const n = Math.min(parseInt(params.get('n')) || 1, 8);
+    const mkt = params.get('mkt') || 'zh-CN';
+    const resolution = params.get('resolution') || '1920x1080';
+    
+    console.log(`API请求 - format: ${format}, idx: ${idx}, n: ${n}, mkt: ${mkt}`);
+    
+    // 参数验证
+    if (!/^(js|xml)$/.test(format)) {
+      return createErrorResponse('format参数只支持js或xml', 400);
+    }
+    
+    if (!/^\d+$/.test(idx) || parseInt(idx) < 0 || parseInt(idx) > 7) {
+      return createErrorResponse('idx参数必须是0-7的数字', 400);
+    }
+    
+    // 获取Bing数据
+    const data = await getBingImageData(idx, mkt, n, format);
+    
+    if (!data) {
+      return createErrorResponse('无法获取Bing壁纸数据', 502);
+    }
+    
+    // 构建响应
+    const responseHeaders = {
+      ...getCorsHeaders(),
+      'Content-Type': format === 'js' ? 'application/json; charset=utf-8' : 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600, s-maxage=7200',
+      'X-API-Version': '2.0.0',
+      'X-Powered-By': 'EdgeOne-API',
+    };
+    
+    const responseBody = format === 'js' ? JSON.stringify(data, null, 2) : data;
+    
+    console.log(`成功返回API数据，格式: ${format}`);
+    
+    return new Response(responseBody, {
+      status: 200,
+      headers: responseHeaders,
+    });
+    
+  } catch (error) {
+    console.error('API请求处理错误:', error);
+    return createErrorResponse(`API服务错误: ${error.message}`, 500);
+  }
+}
+
+// 获取Bing图片数据的通用函数 - 带重试机制
+async function getBingImageData(idx, mkt, n, format = 'js') {
+  const maxRetries = 3;
+  const timeoutMs = 10000; // 10秒超时
+  
+  // 多个Bing API镜像地址，提高成功率
+  const bingUrls = [
+    `https://www.bing.com/HPImageArchive.aspx?format=${format}&idx=${idx}&n=${n}&mkt=${mkt}`,
+    `https://cn.bing.com/HPImageArchive.aspx?format=${format}&idx=${idx}&n=${n}&mkt=${mkt}`,
+    `https://global.bing.com/HPImageArchive.aspx?format=${format}&idx=${idx}&n=${n}&mkt=${mkt}`
+  ];
+  
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    for (let urlIndex = 0; urlIndex < bingUrls.length; urlIndex++) {
+      try {
+        const bingApiUrl = bingUrls[urlIndex];
+        console.log(`尝试请求 (${attempt + 1}/${maxRetries}): ${bingApiUrl}`);
+        
+        // 使用AbortController设置超时
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+        
+        const response = await fetch(bingApiUrl, {
+          method: 'GET',
+          signal: controller.signal,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'application/json, text/plain, */*',
+            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+            'Connection': 'keep-alive',
+            'Cache-Control': 'no-cache',
+            'Pragma': 'no-cache'
+          },
+          cf: {
+            cacheTtl: 3600,
+            cacheEverything: true,
+            timeout: timeoutMs / 1000, // EdgeOne超时设置
+          }
+        });
+        
+        clearTimeout(timeoutId);
+        
+        if (!response.ok) {
+          console.warn(`请求失败 ${response.status}: ${bingApiUrl}`);
+          continue; // 尝试下一个URL
+        }
+        
+        if (format !== 'js') {
+          return await response.text();
+        }
+        
+        const responseText = await response.text();
+        console.log(`成功获取数据，长度: ${responseText.length}`);
+        
+        let data;
+        try {
+          data = JSON.parse(responseText);
+        } catch (parseError) {
+          console.error('JSON解析失败:', parseError);
+          continue; // 尝试下一个URL
+        }
+        
+        // 验证数据完整性
+        if (!data || !data.images || !Array.isArray(data.images) || data.images.length === 0) {
+          console.warn('数据格式不完整，尝试下一个URL');
+          continue;
+        }
+        
+        return data;
+        
+      } catch (error) {
+        console.error(`请求错误 (${attempt + 1}/${maxRetries}, URL ${urlIndex + 1}): ${error.message}`);
+        
+        // 如果是最后一次尝试且是最后一个URL，抛出错误
+        if (attempt === maxRetries - 1 && urlIndex === bingUrls.length - 1) {
+          throw new Error(`所有请求都失败了: ${error.message}`);
+        }
+        
+        // 短暂延迟后重试
+        if (urlIndex === bingUrls.length - 1) {
+          await new Promise(resolve => setTimeout(resolve, 1000 * (attempt + 1)));
+        }
+      }
+    }
+  }
+  
+  throw new Error('无法从任何Bing API获取数据');
+  
+  // 处理和增强图片数据
+  if (data.images && Array.isArray(data.images)) {
+    data.images = data.images.map((image, index) => {
+      const baseUrl = image.url.startsWith('http') ? image.url : `https://www.bing.com${image.url}`;
+      const urlBase = `https://www.bing.com${image.urlbase}`;
+      
+      return {
+        ...image,
+        url: baseUrl,
+        urlbase: urlBase,
+        // 不同分辨率的图片URL
+        resolutions: {
+          thumbnail: `${urlBase}_400x240.jpg`,
+          mobile: `${urlBase}_768x1366.jpg`,
+          desktop: `${urlBase}_1920x1080.jpg`,
+          uhd: `${urlBase}_UHD.jpg`,
+        },
+        // 直接访问图片的代理URL
+        proxyUrls: {
+          thumbnail: `${new URL('/', globalThis.location || 'https://example.com').href}?idx=${parseInt(idx) + index}&resolution=thumbnail&mkt=${mkt}`,
+          mobile: `${new URL('/', globalThis.location || 'https://example.com').href}?idx=${parseInt(idx) + index}&resolution=mobile&mkt=${mkt}`,
+          desktop: `${new URL('/', globalThis.location || 'https://example.com').href}?idx=${parseInt(idx) + index}&resolution=1920x1080&mkt=${mkt}`,
+          uhd: `${new URL('/', globalThis.location || 'https://example.com').href}?idx=${parseInt(idx) + index}&resolution=uhd&mkt=${mkt}`,
+        },
+        downloadUrl: `${urlBase}_1920x1080.jpg`,
+        previewUrl: `${urlBase}_400x240.jpg`,
+        fetchTime: new Date().toISOString(),
+        index: parseInt(idx) + index
+      };
+    });
+    
+    // 添加API元信息
+    data.meta = {
+      total: data.images.length,
+      market: mkt,
+      format: format,
+      fetchTime: new Date().toISOString(),
+      apiVersion: '2.0.0',
+      usage: {
+        api: 'GET /api/bing-wallpaper - 获取JSON数据',
+        image: 'GET / - 直接获取图片',
+        parameters: 'idx, mkt, resolution, n, format'
+      }
+    };
+  }
+  
+  return data;
+}
+
+// 带重试机制的图片获取函数
+async function fetchImageWithRetry(imageUrl, maxRetries = 3) {
+  const timeoutMs = 15000; // 15秒超时
+  
+  // 图片可能的镜像URL
+  const imageUrls = [
+    imageUrl,
+    imageUrl.replace('www.bing.com', 'cn.bing.com'),
+    imageUrl.replace('www.bing.com', 'global.bing.com')
+  ];
+  
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    for (let urlIndex = 0; urlIndex < imageUrls.length; urlIndex++) {
+      try {
+        const currentUrl = imageUrls[urlIndex];
+        console.log(`获取图片 (${attempt + 1}/${maxRetries}): ${currentUrl}`);
+        
+        // 设置超时控制
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+        
+        const response = await fetch(currentUrl, {
+          method: 'GET',
+          signal: controller.signal,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Referer': 'https://www.bing.com/',
+            'Accept': 'image/webp,image/apng,image/jpeg,image/png,image/*,*/*;q=0.8',
+            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+            'Connection': 'keep-alive',
+          },
+          cf: {
+            cacheTtl: 86400, // 缓存24小时
+            cacheEverything: true,
+            timeout: timeoutMs / 1000, // EdgeOne超时设置
+            polish: 'lossless', // EdgeOne图片优化
+            mirage: true, // EdgeOne自适应图片
+          }
+        });
+        
+        clearTimeout(timeoutId);
+        
+        if (response.ok) {
+          console.log(`图片获取成功: ${response.status}, 大小: ${response.headers.get('content-length') || 'unknown'}`);
+          return response;
+        } else {
+          console.warn(`图片请求失败 ${response.status}: ${currentUrl}`);
+          continue;
+        }
+        
+      } catch (error) {
+        console.error(`图片获取错误 (${attempt + 1}/${maxRetries}, URL ${urlIndex + 1}): ${error.message}`);
+        
+        // 如果是最后一次尝试，抛出错误
+        if (attempt === maxRetries - 1 && urlIndex === imageUrls.length - 1) {
+          throw error;
+        }
+        
+        // 短暂延迟后重试
+        if (urlIndex === imageUrls.length - 1) {
+          await new Promise(resolve => setTimeout(resolve, 1000 * (attempt + 1)));
+        }
+      }
+    }
+  }
+  
+  throw new Error('所有图片URL都无法访问');
+}
+
+// 获取CORS头部
+function getCorsHeaders() {
+  return {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
+    'Access-Control-Max-Age': '86400',
+    'Access-Control-Expose-Headers': 'X-Image-Title, X-Image-Copyright, X-Image-Date, X-Resolution',
+  };
+}
+
+// 创建错误响应
+function createErrorResponse(message, status = 500) {
+  const errorData = {
+    error: true,
+    message: message,
+    status: status,
+    timestamp: new Date().toISOString(),
+    service: 'EdgeOne Bing Wallpaper Service'
+  };
+  
+  return new Response(JSON.stringify(errorData, null, 2), {
+    status: status,
+    headers: {
+      ...getCorsHeaders(),
+      'Content-Type': 'application/json; charset=utf-8',
+    },
+  });
+}# 🎨 随机壁纸设置器
+
+一个功能强大的随机壁纸设置器，支持多种图片API，具有现代化的图形用户界面。
+
+## 📸 界面预览
+![GUI.png](GUI.png)
+
+## ✨ 功能特点
+
+- 🖼️ **多种图片API支持**：内置6种不同类型的图片API
+- 🎯 **实时图片预览**：获取图片后立即预览
+- 🖥️ **一键设置壁纸**：支持Windows、macOS、Linux系统
+- 💾 **图片保存功能**：可保存喜欢的图片到本地
+- 🎨 **图片清晰化处理**：自动优化图片质量
+- 📁 **文件夹管理**：快速打开图片文件夹
+- 🔧 **自定义API支持**：支持输入自定义图片API
+- 🌟 **远梦API集成**：高质量PC壁纸，支持多种分类
+- 🎌 **动漫壁纸API**：专门获取动漫风格壁纸
+- 🎬 **动态壁纸支持**：支持视频壁纸预览和下载
+- 📖 **详细使用说明**：内置完整的使用指南
+
+## 🚀 快速开始
+
+### 1. 安装依赖
+
+```bash
+# 方法一：使用requirements.txt
+pip install -r requirements.txt
+
+# 方法二：手动安装
+pip install pillow requests opencv-python
+```
+
+**注意**：动态壁纸预览功能需要安装OpenCV，如果不需要此功能可以跳过。
+
+### 2. 运行程序
+
+#### 方法一：直接运行GUI
+```bash
+python gui.py
+```
+
+#### 方法二：使用启动脚本
+```bash
+python run_gui.py
+```
+
+#### 方法三：使用exe可执行文件
+- 在该项目releases中下载RandomWallpaper.exe
+- 直接运行exe文件，无需安装Python环境在该项目
+
+## 📋 使用说明
+
+### 主界面布局
+
+程序采用标签页设计，包含五个主要功能模块：
+
+#### 标签页1：🖼️ 随机壁纸
+```
+┌─────────────────────────────────────────┐
+│           🎨 随机壁纸设置器              │
+├─────────────────────────────────────────┤
+│ API 选择                                │
+│ ├─ 选择图片API: [下拉菜单]              │
+│ └─ 自定义API: [输入框] [测试]           │
+├─────────────────────────────────────────┤
+│ 图片预览                                │
+│ ┌─────────────────────────────────────┐ │
+│ │                                     │ │
+│ │        图片预览区域                  │ │
+│ │                                     │ │
+│ └─────────────────────────────────────┘ │
+├─────────────────────────────────────────┤
+│ [🖼️ 获取随机图片] [🖥️ 设置为壁纸]      │
+│ [💾 保存图片] [📁 打开图片文件夹]       │
+├─────────────────────────────────────────┤
+│ 图片数量: 0                    就绪     │
+└─────────────────────────────────────────┘
+```
+
+#### 标签页2：🌟 远梦API
+```
+┌─────────────────────────────────────────┐
+│           🌟 远梦API - 随机PC壁纸        │
+├─────────────────────────────────────────┤
+│ 壁纸分类选择                            │
+│ ├─ 选择壁纸分类: [下拉菜单]             │
+├─────────────────────────────────────────┤
+│ 壁纸预览                                │
+│ ┌─────────────────────────────────────┐ │
+│ │                                     │ │
+│ │        壁纸预览区域                  │ │
+│ │                                     │ │
+│ └─────────────────────────────────────┘ │
+├─────────────────────────────────────────┤
+│ [🖼️ 获取随机壁纸] [🖥️ 设置为壁纸]      │
+│ [💾 保存壁纸] [📁 打开图片文件夹]       │
+├─────────────────────────────────────────┤
+│ 图片数量: 0                    就绪     │
+└─────────────────────────────────────────┘
+```
+
+#### 标签页3：🎌 动漫壁纸
+```
+┌─────────────────────────────────────────┐
+│        🎌 动漫壁纸API - 随机动漫壁纸     │
+├─────────────────────────────────────────┤
+│ API信息                                 │
+│ ├─ API地址: https://img.8845.top/random.php │
+│ └─ API文档: https://api.aa1.cn/doc/json.html │
+├─────────────────────────────────────────┤
+│ 动漫壁纸预览                            │
+│ ┌─────────────────────────────────────┐ │
+│ │                                     │ │
+│ │        动漫壁纸预览区域              │ │
+│ │                                     │ │
+│ └─────────────────────────────────────┘ │
+├─────────────────────────────────────────┤
+│ [🎌 获取动漫壁纸] [🖥️ 设置为壁纸]      │
+│ [💾 保存壁纸] [📁 打开图片文件夹]       │
+├─────────────────────────────────────────┤
+│ 图片数量: 0                    就绪     │
+└─────────────────────────────────────────┘
+```
+
+#### 标签页4：🎬 动态壁纸
+```
+┌─────────────────────────────────────────┐
+│      🎬 动态壁纸API - 随机动态壁纸视频   │
+├─────────────────────────────────────────┤
+│ 视频预览                                │
+│ ┌─────────────────────────────────────┐ │
+│ │                                     │ │
+│ │        视频预览区域                  │ │
+│ │                                     │ │
+│ └─────────────────────────────────────┘ │
+│ [▶️ 播放] [⏹️ 停止] [进度条]           │
+├─────────────────────────────────────────┤
+│ [🎬 获取动态壁纸] [💾 下载视频]        │
+│ [📁 打开视频文件夹]                    │
+├─────────────────────────────────────────┤
+│ 视频数量: 0                    就绪     │
+└─────────────────────────────────────────┘
+```
+
+#### 标签页5：📖 使用说明
+```
+┌─────────────────────────────────────────┐
+│                📖 使用说明               │
+├─────────────────────────────────────────┤
+│ ┌─────────────────────────────────────┐ │
+│ │                                     │ │
+│ │        详细使用说明文档              │ │
+│ │                                     │ │
+│ │  • 功能概述                         │ │
+│ │  • 各标签页使用方法                 │ │
+│ │  • 通用操作说明                     │ │
+│ │  • 注意事项                         │ │
+│ │  • 故障排除                         │ │
+│ │  • 技术支持                         │ │
+│ │                                     │ │
+│ └─────────────────────────────────────┘ │
+└─────────────────────────────────────────┘
+```
+
+### 操作步骤
+
+#### 标签页1：🖼️ 随机壁纸
+1. **选择API**：
+   - 从下拉菜单选择预设的图片API
+   - 或输入自定义API地址并点击"测试"
+
+2. **获取图片**：
+   - 点击"🖼️ 获取随机图片"按钮
+   - 等待图片下载完成，预览区域会显示图片
+
+3. **设置壁纸**：
+   - 点击"🖥️ 设置为壁纸"按钮
+   - 系统会自动将当前预览的图片设置为桌面壁纸
+
+4. **保存图片**：
+   - 点击"💾 保存图片"按钮
+   - 选择保存位置和文件名
+
+5. **管理图片**：
+   - 点击"📁 打开图片文件夹"查看所有下载的图片
+
+#### 标签页2：🌟 远梦API
+1. **选择分类**：
+   - 从下拉菜单选择壁纸分类（如风景、动漫、游戏等）
+   - 选择"随机壁纸"可获取任意分类的壁纸
+
+2. **获取壁纸**：
+   - 点击"🖼️ 获取随机壁纸"按钮
+   - 等待壁纸下载完成，预览区域会显示壁纸
+
+3. **设置壁纸**：
+   - 点击"🖥️ 设置为壁纸"按钮
+   - 系统会自动将当前预览的壁纸设置为桌面壁纸
+
+4. **保存壁纸**：
+   - 点击"💾 保存壁纸"按钮
+   - 选择保存位置或自动保存到images文件夹
+
+5. **管理壁纸**：
+   - 点击"📁 打开图片文件夹"查看所有下载的壁纸
+
+#### 标签页3：🎌 动漫壁纸
+1. **获取动漫壁纸**：
+   - 点击"🎌 获取动漫壁纸"按钮
+   - 等待动漫壁纸下载完成，预览区域会显示壁纸
+
+2. **设置壁纸**：
+   - 点击"🖥️ 设置为壁纸"按钮
+   - 系统会自动保存并设置当前预览的动漫壁纸为桌面壁纸
+
+3. **保存壁纸**：
+   - 点击"💾 保存壁纸"按钮
+   - 选择保存位置或自动保存到images文件夹
+
+4. **管理壁纸**：
+   - 点击"📁 打开图片文件夹"查看所有下载的动漫壁纸
+
+#### 标签页4：🎬 动态壁纸
+1. **获取动态壁纸**：
+   - 点击"🎬 获取动态壁纸"按钮
+   - 等待视频下载完成，预览区域会显示视频预览
+
+2. **视频预览控制**：
+   - **▶️ 播放**：开始播放视频预览
+   - **⏸️ 暂停**：暂停视频播放
+   - **⏹️ 停止**：停止播放并回到第一帧
+   - **进度条**：显示当前播放进度
+
+3. **下载视频**：
+   - 点击"💾 下载视频"按钮
+   - 完整视频将保存到videos文件夹
+
+4. **管理视频**：
+   - 点击"📁 打开视频文件夹"查看所有下载的视频
+   - 使用Wallpaper Engine等软件设置动态壁纸
+
+#### 标签页5：📖 使用说明
+- 查看完整的功能说明和使用指南
+- 了解各标签页的详细操作方法
+- 获取故障排除和技术支持信息
+
+## 🎯 支持的API类型
+
+### 标签页1：🖼️ 随机壁纸
+| API类型 | 描述 | 地址 |
+|---------|------|------|
+| 随机各类壁纸 | 多种类型的随机壁纸 | https://api.btstu.cn/sjbz/api.php |
+| 随机动漫壁纸 | 动漫风格的壁纸 | https://api.paugram.com/wallpaper/ |
+| 随机二次元 | 二次元风格图片 | https://cdn.seovx.com/d/?mom=302 |
+| 随机美图 | 精选美图 | https://cdn.seovx.com/?mom=302 |
+| 随机古风 | 古风风格图片 | https://cdn.seovx.com/ha/?mom=302 |
+| 樱花二次元 | 樱花二次元图片 | https://www.dmoe.cc/random.php |
+
+### 标签页2：🌟 远梦API
+远梦API提供高质量的PC壁纸，支持多种分类：
+- **风景壁纸**：自然风光、城市景观
+- **动漫壁纸**：二次元、动漫角色
+- **游戏壁纸**：游戏截图、游戏角色
+- **动物壁纸**：各种动物图片
+- **抽象壁纸**：抽象艺术风格
+- **其他分类**：更多精彩分类
+
+*注：远梦API需要 `yuanmeng_api.py` 模块支持，如果模块不存在，相关功能将不可用。*
+
+### 标签页3：🎌 动漫壁纸API
+| 项目 | 详情 |
+|------|------|
+| API地址 | https://img.8845.top/random.php |
+| API文档 | https://api.aa1.cn/doc/json.html |
+| 返回格式 | JSON |
+| 图片状态 | 自动检测图片可用性 |
+| 特点 | 专门提供动漫风格壁纸 |
+
+### 标签页4：🎬 动态壁纸API
+| 项目 | 详情 |
+|------|------|
+| API地址 | https://i18.net/video.php |
+| API文档 | https://api.aa1.cn/doc/pcwallpaper.html |
+| 返回格式 | JSON |
+| 视频格式 | MP4 |
+| 特点 | 提供动态视频壁纸，支持预览播放 |
+
+## 🔧 自定义API
+
+### 标签页1：🖼️ 随机壁纸
+你可以输入任何返回图片的API地址，程序会自动检测图片格式并下载。
+
+#### API要求：
+- 返回HTTP状态码200
+- 返回有效的图片文件
+- 支持GET请求
+
+#### 测试API：
+点击"测试"按钮可以验证API是否可用。
+
+### 标签页2：🌟 远梦API
+远梦API是内置的高质量壁纸API，无需自定义配置。
+
+### 标签页3：🎌 动漫壁纸API
+动漫壁纸API是专门提供动漫风格壁纸的API，无需自定义配置。
+
+### 标签页4：🎬 动态壁纸API
+动态壁纸API提供视频壁纸，支持预览播放功能，无需自定义配置。
+
+## 📁 文件结构
+
+```
+ImageRandom/
+├── gui.py                    # GUI版本主程序
+├── myAPI.py                  # 核心API功能模块
+├── yuanmeng_api.py           # 远梦API模块（可选）
+├── anime_wallpaper_api.py    # 动漫壁纸API模块
+├── dynamic_wallpaper_api.py  # 动态壁纸API模块
+├── run_gui.py                # GUI启动脚本
+├── requirements.txt          # 依赖包列表
+├── images/                   # 图片保存目录
+├── videos/                   # 视频保存目录
+├── logs/                     # 日志文件目录
+├── GUI.png                   # 界面截图
+└── README.md                 # 项目说明文档
+```
+
+## 🛠️ 系统要求
+
+- **操作系统**：Windows 10/11, macOS 10.14+, Linux
+- **Python版本**：Python 3.6+
+- **依赖包**：tkinter, PIL (Pillow), requests
+- **可选依赖**：
+  - yuanmeng_api.py（远梦API支持）
+  - opencv-python（动态壁纸预览功能）
+
+## 🔍 故障排除
+
+### 常见问题
+
+1. **GUI无法启动**
+   - 检查Python版本是否为3.6+
+   - 确认已安装所有依赖包
+
+2. **图片下载失败**
+   - 检查网络连接
+   - 尝试更换API
+   - 查看日志文件了解详细错误
+
+3. **壁纸设置失败**
+   - 确认图片文件存在且完整
+   - 检查系统权限
+   - Windows用户可能需要以管理员身份运行
+
+4. **预览显示异常**
+   - 确认图片格式支持
+   - 检查PIL库是否正确安装
+
+5. **远梦API功能不可用**
+   - 确认 `yuanmeng_api.py` 文件存在
+   - 检查网络连接是否正常
+   - 查看控制台输出的错误信息
+
+6. **动漫壁纸API功能不可用**
+   - 确认 `anime_wallpaper_api.py` 文件存在
+   - 检查网络连接是否正常
+   - 查看控制台输出的错误信息
+
+7. **动态壁纸预览失败**
+   - 确认已安装OpenCV：`pip install opencv-python`
+   - 检查网络连接是否正常
+   - 确认视频文件下载完整
+   - 查看控制台输出的错误信息
+
+8. **动态壁纸API功能不可用**
+   - 确认 `dynamic_wallpaper_api.py` 文件存在
+   - 检查网络连接是否正常
+   - 查看控制台输出的错误信息
+
+### 日志查看
+
+程序运行时会生成日志文件，包含详细的运行日志，可用于故障排查：
+- `myAPI.log`：核心API功能日志
+- `yuanmenAPI.log`：远梦API日志
+- `anime_wallpaper_api.log`：动漫壁纸API日志
+- `dynamic_wallpaper_api.log`：动态壁纸API日志
+
+## 🎨 界面截图
+
+程序具有现代化的界面设计，包含：
+- 清晰的五标签页布局结构
+- 直观的操作按钮
+- 实时状态显示
+- 图片和视频预览功能
+- 完整的视频播放控制
+- 详细的使用说明文档
+
+## 📝 更新日志
+
+### v2.0.0
+- **新增动漫壁纸API**：专门获取动漫风格壁纸
+- **新增动态壁纸支持**：支持视频壁纸预览和下载
+- **新增使用说明标签页**：内置完整的使用指南
+- **改进视频预览功能**：支持播放/暂停/停止控制
+- **优化壁纸设置流程**：先保存再设置，确保壁纸永久保存
+- **增强错误处理**：更完善的异常处理和用户提示
+- **改进界面设计**：五标签页布局，功能更加清晰
+
+### v1.0.0
+- 初始GUI版本发布
+- 支持多种图片API
+- 实时图片预览
+- 一键设置壁纸
+- 图片保存功能
+- 新增标签页设计，支持多种API
+- 集成远梦API，提供高质量PC壁纸
+- 支持壁纸分类选择
+- 优化图片预览和保存功能
+- 改进错误处理和用户体验
+
+## 🤝 贡献
+
+感谢以上免费图片壁纸的api提供者，祝大家财源滚滚！
+
+欢迎提交问题报告和功能建议！
+
+## 📄 许可证
+
+本项目采用Apache License 2.0许可证。
+动态壁纸
+夏柔 - 分享的API永不收费
+cover
+
+原创
+站长工具
+开发者：Hudson
+接口反馈
+动态壁纸
+2025-07-10 10:14:42
+GET请求
+热度：4287
+公益.png
+
+公益.png
+auroraverse
+API简介：随机动态壁纸视频
+
+接口问题联系相关负责人沟通修复：查看该接口开发者
+
+接口地址：https://i18.net/video.php 
+
+返回格式：JSON
+
+请求方式：GET
+
+请求参数：https://i18.net/video.php?return=json
+
+极速测试（自动）
+历史统计
+历史列表
+注：单纯检测接口是否可调通，返回的数据请自行检查
+
+再次检测
+
+接口客户端错误，状态码: 404 (客户端错误)
+
+postcat.png
+注意事项
+Bug修复
+专属线路
+您好！我们的平台聚合了上千位开发者提供的免费接口，我们已尽力确保接口的稳定性，但由于无法控制其他开发者的接口，可能会出现不稳定或服务中断的情况。对此，我们深感抱歉！我们正在积极改善这一问题，感谢您的理解与支持。
+1. 由于开发者可能因盈利问题导致接口失效，我为此向您道歉。
+2. 我们竭尽全力改进平台的接口稳定性。
+3. 为便于您使用，我们提供了智能生成对接代码和在线极速测试接口的功能。
+4. 我们将继续努力提供更多可靠的接口，满足您的需求。
+5. 若有任何问题，欢迎通过微信与我联系：13132131321。再次感谢您的支持与信任！
+
+接口注意：接口故障请及时反馈，修复进度将通过短信通知。
+
+请求参数
+接口名称	是否必填	接口类型	接口说明
+返回示例
+{
+    "success": true,
+    "message": "获取成功",
+    "video_url": "https:\/\/img-baofun.zhhainiao.com\/pcwallpaper_ugc\/preview\/5e299c8659f39baec61af1d287aea78d_preview.mp4"
+}
+返回参数
+接口名称	接口类型	接口说明
+success	boolean	成功与否
+message	string	请求结果信息
+video_url	string	视频的地址
+
+{
+    "video_url": "视频的地址",
+    "message": "请求结果信息",
+    "success": "成功与否"
+}
+小白教程
+本教程帮助用户快速对接动态壁纸接口，现已支持智能生成代码
+
+为照顾小白，特意编写此对接文档教程，若有不懂请及时联系接口维护者。
+动态壁纸
+小白快速对接「动态壁纸」简易教程
+freevps.png
+生成代码
+支持生成对接动态壁纸接口代码，多语言选择，助力学生对接！
+
+介绍
+Python
+Java
+PHP
+NodeJS
+C语言
+注意，AI·BOT自动生成对接「动态壁纸」简易代码，方便您调试对接，实时生成！
+
+实时调试
+部分视频、图片或其他接口报错、空值并不代表无法对接，请在本地尝试请求参数接口
+
+调试工具支持的请求类型有： GETPOSTPUTHEADTRACEDELETECONNECTOPTIONS
+
+GET 请求
+https://i18.net/video.php
+在线调试
+温馨提示：请修改请求参数，未修改可能返回报错；
+
+参数名称	参数值（修改后测试）
+{
+    "success": true,
+    "message": "获取成功",
+    "video_url": "https://img-baofun.zhhainiao.com/pcwallpaper_ugc/preview/5e299c8659f39baec61af1d287aea78d_preview.mp4"
+}
+打赏站长
+站长联系方式
+#
+站长工具
+99+
+原创
+动态壁纸
+https://api.aa1.cn/doc/pcwallpaper.html
+
+转载时 请保存本API链接，完整转载请注明来自夏柔API，作者：早晨好，我是
+注意保护眼睛
+早晨好，我是作者
+avataravatar
+作者一言：这个人很懒啥都没写~
+管理一言：相信你可以在这里找到对你有用的知识和教程。
+如需技术支持请联系对应开发者。
+Hudson
+参与公益事业发展者
+文档目录
+请求参数
+返回示例
+返回参数
+小白教程
+生成代码
+实时调试
+在线调试
+免费apilogo.png
+随机接口
+QQ扫码登录
+QQ扫码登录
+分类：QQ
+htpasswd生成服务
+htpasswd生成服务
+分类：生活、工具、研发
+[ja-JP] Bing壁纸 All In One
+[ja-JP] Bing壁纸 All In One
+分类：站长工具
+';
+来自 Hudson 贡献的接口
+了解作者
+随机推荐
+天目图片api
+音乐聚合搜索
+抖音实时热搜榜
+全国城市列表(三级)
+B站热搜榜
+随机推荐
+识别客户端信息
+高级文案搜索
+文本相似度对比
+IP地址查询
+AI图像OCR识别文字
+随机推荐
+全球IP归属地信息查询V2版
+肯德基V50文案
+IP地址查询
+随机二次元壁纸
+随机一言TXT
+随机推荐
+体积容积单位全维转换服务
+腾讯云轻量云硬盘创建快照[备份点]
+全国行政规划数据库
+营销号文案生成器v1
+邮箱编码服务
+随机推荐
+生成条形码
+随机人设
+OCR图像文字识别
+IThome今日热搜榜单获取
+生成彩色二维码
+随机推荐
+淘宝商品搜索建议词获取
+微信状态歌曲热度榜
+AuthCode数据加密服务
+百度联想词
+微博热搜榜单
+友链
+夏柔Blog
+个人商城
+更多
+免费API-LOGO
+     
+本项目由AA1旗下运营 平台共收录了 2958 个接口 累计7854位开发者入驻 | 接口日志
+Copyright © 2021 - 2023 免费API. All Rights Reserved. 夏柔公益 & AA1 联合运营. 夏柔 技术支持.
+旗下公益项目: API｜ DNS解析｜ 源码站｜ 图床｜ 团队文档｜ 短链生成｜ IT工具箱｜ SEO检测 ｜ 在线ping ｜ 60秒新闻插件 ｜ SSL在线检测
+
+合作伙伴支持：浑欲不胜簪｜小尘｜Cheese｜不配拥有｜繁星｜小白API｜PearNo｜大米API｜CareFree｜宋子宪｜小小｜LuckyCola｜安克网络｜岛主｜熊猫伪原创｜泽客
+合作安全厂商： 流光网络安全团队 ｜
+合作友商平台： PostCat ｜ 小皮面板 ｜ 硅云 ｜ 高防cdn ｜ 高防服务器 ｜ 统计鸟 ｜ 微麦兔 ｜ 泽客资源网 ｜ PearAPI ｜ 明伟数据 ｜ 明勇科技 ｜ API管理系统 ｜ 更多友链 ｜
+合作站长平台： 奈斯猫架构师 ｜ 葭兴网 ｜ 跨境百宝箱 ｜ 酷酷熊自媒体爆文库 ｜ 币安app官网下载 ｜ AI智能SEO助理 ｜ MythSocial
+数掘科技 & 亚洲云 提供高防服务 ｜ 字节跳动 提供算力支持 ｜ DNSLA 提供高防DNS解析支持 ｜ FreeGetSSL 提供通配符证书支持 ｜火毅盾 网盾星球 麋鹿云 零零七 火数云 QTCloud 乐喵云 轻语安全 墨云 菠萝云 阿沐云 大兵云提供CDN及云计算服务
+
+QQ群 关于 辽ICP备19017037号
