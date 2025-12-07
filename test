@@ -935,3 +935,106 @@ code
     "url": "http://img5.adesk.com/5ff594a0e7bce76c1ed2f0c2"
 }
     https://api.isoyu.com/mm_images.php
+
+UAPI
+此API已被调用 336154 次
+
+欢迎来到随机图片API,本API所有图片均为pixiv下载
+这个API非常简单,只需要把API地址当正常图片使用即可
+图片均来源于pixiv，侵权联系删除噢，每个图片均保留原图片名称
+
+ACG稿图
+PC图(横屏图)
+Mobile图(竖屏图)
+GET ACG稿图
+GET /api/imgapi/acg/pc.php
+
+GET /api/imgapi/acg/mb.php
+
+PC(横屏图)
+下面为例图,可刷新此页面查看效果
+
+接口：https://uapis.cn/api/imgapi/acg/pc.php
+ACG横屏图片
+Mobile(竖屏图)
+下面为例图,可刷新此页面查看效果
+
+接口：https://uapis.cn/api/imgapi/acg/mb.php
+ACG竖屏图片
+UAPI
+此API已被调用 325692 次
+
+欢迎来到随机图片API,本站所有图片均为4K或8K
+这个API非常简单,只需要把API地址当正常图片使用即可
+图片均来源于网络，侵权联系删除噢
+
+投稿图片
+投稿须知
+常见问题
+投稿
+Furry稿图
+16:9(横屏图)
+9:16(竖屏图)
+1:1(方形图)
+Furry兽装照片
+3:4(竖屏图)
+投稿须知
+感谢您的投稿qaq！以下是投稿须知
+1：图片可以有水印，但是水印占比不能大于整张图片的10%.
+
+2：图片必须为正常图片，不能包含R18(擦点边的可以)或社政内容.
+
+另外，如果您有什么改进的建议也可以告诉我们噢!
+
+常见问题
+Q：我的图片不是4K的，可以投稿嘛？
+
+A：可以的qwq!不是4k的图片我们会通过无损放大技术放大为4k再上传至API中
+
+Q：你们的图片为什么数量这么少？
+
+A：我们为了保证图片质量,图片都是人工一个个找的,再加上还需要大量的计算机资源用最强的AI将图片批量无损放大为4K,并无损压缩图片.这是非常耗费时间和精力的,所以图片资源很少.
+
+投稿
+您可以将图片打包通过邮箱发送至chaoji@chcat.cn这个邮箱账户。也可以加入AxT社区群(832275338)上传图片。
+通过邮件上传需要注意
+备注上是否为原创内容(自设,自己画的之类的)，还需备注您的网名，以及图片分类(稿图或兽装照片)。
+
+示例
+UAPI-Furry福瑞图片投稿
+您的名字：chaoji
+是否为原创：是
+图片分类：furry稿图
+——————————————————
+图片链接(没有链接可以不填,通过邮件附件上传)：
+通过QQ上传需要注意：最好添加chaoji(242247494)或darf(1680839)QQ上传噢
+GET Furry稿图
+GET /api/imgapi/furry/img4k.php
+
+GET /api/imgapi/furry/imgz4k.php
+
+GET /api/imgapi/furry/imgs4k.php
+
+16:9(横屏图)
+下面为例图,可刷新此页面查看效果
+
+接口：https://uapis.cn/api/imgapi/furry/img4k.php
+furry4k横屏壁纸图片
+9:16(竖屏图)
+下面为例图,可刷新此页面查看效果
+
+接口：https://uapis.cn/api/imgapi/furry/imgs4k.php
+furry4k竖屏图片
+1:1(方形图)
+下面为例图,可刷新此页面查看效果
+
+接口：https://uapis.cn/api/imgapi/furry/imgz4k.php
+furry4k正方形图片
+GET Furry兽装照片
+GET /api/imgapi/furry/szs8k.php
+
+3:4(竖屏图)
+下面为例图,可刷新此页面查看效果
+
+接口：https://uapis.cn/api/imgapi/furry/szs8k.php
+兽装4k竖屏图片
