@@ -1,0 +1,937 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:wallpaperapp/fullscreen.dart';
+import 'package:wallpaperapp/splashscreen.dart';
+
+class WallpaperApp extends StatefulWidget {
+  const WallpaperApp({super.key});
+
+  @override
+  State<WallpaperApp> createState() => _WallpaperAppState();
+}
+
+class _WallpaperAppState extends State<WallpaperApp> {
+  List images = [];
+  int page = 1;
+
+  @override
+  void initState() {
+    super.initState();
+    fetchPhotos();
+  }
+
+  Future fetchPhotos() async{
+    var response =  await http.get(Uri.parse("https://api.pexels.com/v1/curated?per_page=80"),
+        headers:{
+      "Authorization" : "jxmzXQEdDd0YqhaEZKoDwbTFo4BRdPZ6JdFAW556kvKoZZaeYGM6z1i4"
+    });
+
+    if(response.statusCode == 200){
+      Map result = jsonDecode(response.body);   //Converted the json String into Dart Map Object
+      setState(() {
+        images = result['photos'];              // Stored the photos key separately into a list
+      });
+    }else{
+      print("Something went wrong ${response.statusCode}");
+    }
+  }
+
+  Future loadMoreImages() async{
+    page = page + 1;
+    var nextResponse =  await http.get(Uri.parse("https://api.pexels.com/v1/curated?per_page=80&page=$page"),
+        headers:{
+          "Authorization" : "jxmzXQEdDd0YqhaEZKoDwbTFo4BRdPZ6JdFAW556kvKoZZaeYGM6z1i4"
+        });
+    Map result = jsonDecode(nextResponse.body);
+    setState(() {
+      images.addAll(result['photos']);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(child: Container(
+            child: GridView.builder(itemCount: images.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,crossAxisSpacing: 3,childAspectRatio: 2/3,mainAxisSpacing: 3), itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => SettingWallpaper(url: images[index]['src']['large2x'],),));
+                },
+                child: Container(
+                  child: Image.network(images[index]['src']['tiny'],fit: BoxFit.cover,),
+                ),
+              );
+            },),
+          )),
+          GestureDetector(
+            onTap: () async{
+              await loadMoreImages();
+            },
+            child: Container(color: Colors.black,
+              height: 80 ,
+              width: double.infinity,
+              child: Card(
+                elevation: 10,
+                child: Center(child: Text("Load More Images",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold))),
+              ),),
+          )
+        ],
+      ),
+    );
+  }
+}https://gh-proxy.org/https:/raw.githubusercontent.com/moelylink/wallpaper-api/refs/heads/main/wallpaper.json
+scheme = "littletree_wallpaper_source_v2"
+identifier = "builtin_cn_sources"
+name = "小树壁纸官方源"
+version = "1.0.0"
+# ≤100 字符
+description = "从6.0移植"
+skip_ssl_verify = false
+refresh_interval_seconds = 0
+
+# ============================================================================
+# 分类定义 [[categories]]
+# 注：客户端按 (category, subcategory, subsubcategory) 聚合
+# ============================================================================
+
+[[categories]]
+id = "bing_daily"
+name = "必应历史"
+category = "官方"
+subcategory = "Bing"
+
+[[categories]]
+id = "wallhaven_random"
+name = "Wallhaven 随机"
+category = "综合"
+subcategory = "Wallhaven"
+
+[[categories]]
+id = "wallhaven_today"
+name = "Wallhaven 今日"
+category = "综合"
+subcategory = "Wallhaven"
+
+[[categories]]
+id = "scenery_dujin"
+name = "风景-缙哥哥接口"
+category = "自然"
+subcategory = "风景"
+
+[[categories]]
+id = "scenery_yuanfang"
+name = "风景-远方接口"
+category = "自然"
+subcategory = "风景"
+
+# 二次元 - 保罗源
+[[categories]]
+id = "acg_paugram_sm"
+name = "白底动漫-sm.ms"
+category = "二次元"
+subcategory = "保罗源"
+
+[[categories]]
+id = "acg_paugram_github"
+name = "白底动漫-github.io"
+category = "二次元"
+subcategory = "保罗源"
+
+# 二次元 - 次元源
+[[categories]]
+id = "acg_mwm_genshin"
+name = "原神"
+category = "二次元"
+subcategory = "次元源"
+
+[[categories]]
+id = "acg_mwm_random"
+name = "随机"
+category = "二次元"
+subcategory = "次元源"
+
+[[categories]]
+id = "acg_mwm_ai"
+name = "AI生成"
+category = "二次元"
+subcategory = "次元源"
+
+[[categories]]
+id = "acg_mwm_scenery"
+name = "风景"
+category = "二次元"
+subcategory = "次元源"
+
+[[categories]]
+id = "acg_mwm_fox"
+name = "小狐狸"
+category = "二次元"
+subcategory = "次元源"
+
+[[categories]]
+id = "acg_mwm_moe"
+name = "萌图"
+category = "二次元"
+subcategory = "次元源"
+
+# 二次元 - 其他源
+[[categories]]
+id = "acg_yiyun_random"
+name = "[忆云]随机"
+category = "二次元"
+subcategory = "其他源"
+
+[[categories]]
+id = "acg_paulzzh_touhou"
+name = "[PAULZZH]东方"
+category = "二次元"
+subcategory = "其他源"
+
+[[categories]]
+id = "acg_dmoe_random"
+name = "[樱花]随机"
+category = "二次元"
+subcategory = "其他源"
+
+[[categories]]
+id = "acg_anosu_pixiv"
+name = "[Anosu]Pixiv精选"
+category = "二次元"
+subcategory = "其他源"
+
+# 收藏 - 个人收集
+[[categories]]
+id = "collection_epiao"
+name = "饿殍：明末千里行"
+category = "收藏"
+subcategory = "游戏"
+
+# ============================================================================
+# API 定义 [[apis]]
+# - Bing 使用 JSON + multi
+# - 绝大多数第三方随机图接口返回图片二进制或重定向到图片，使用 image_raw 更稳妥
+# - 个人收藏使用 static_list
+# ============================================================================
+
+
+
+# Wallhaven 随机
+[[apis]]
+name = "Wallhaven 随机"
+url = "https://api.nguaduot.cn/wallhaven/random"
+format = "image_raw"
+category_ids = ["wallhaven_random"]
+
+# Wallhaven 今日
+[[apis]]
+name = "Wallhaven 今日"
+url = "https://api.nguaduot.cn/wallhaven/today"
+format = "image_raw"
+category_ids = ["wallhaven_today"]
+
+# 风景 - 缙哥哥接口
+[[apis]]
+name = "风景-缙哥哥接口"
+url = "https://api.dujin.org/pic/fengjing"
+format = "image_raw"
+category_ids = ["scenery_dujin"]
+
+# 风景 - 远方接口
+[[apis]]
+name = "风景-远方接口"
+url = "https://tu.ltyuanfang.cn/api/fengjing.php"
+format = "image_raw"
+category_ids = ["scenery_yuanfang"]
+
+# 二次元 - 保罗源（sm.ms）
+[[apis]]
+name = "白底动漫-sm.ms"
+url = "https://api.paugram.com/wallpaper/?source=sm"
+format = "image_raw"
+category_ids = ["acg_paugram_sm"]
+
+# 二次元 - 保罗源（github.io）
+[[apis]]
+name = "白底动漫-github.io"
+url = "https://api.paugram.com/wallpaper/?source=github"
+format = "image_raw"
+category_ids = ["acg_paugram_github"]
+
+# 二次元 - 次元源（原神）
+[[apis]]
+name = "次元源-原神"
+url = "https://t.mwm.moe/ysz"
+format = "image_raw"
+category_ids = ["acg_mwm_genshin"]
+
+# 二次元 - 次元源（随机）
+[[apis]]
+name = "次元源-随机"
+url = "https://t.mwm.moe/pc"
+format = "image_raw"
+category_ids = ["acg_mwm_random"]
+
+# 二次元 - 次元源（AI生成）
+[[apis]]
+name = "次元源-AI生成"
+url = "https://t.mwm.moe/ai"
+format = "image_raw"
+category_ids = ["acg_mwm_ai"]
+
+# 二次元 - 次元源（风景）
+[[apis]]
+name = "次元源-风景"
+url = "https://t.mwm.moe/fj"
+format = "image_raw"
+category_ids = ["acg_mwm_scenery"]
+
+# 二次元 - 次元源（小狐狸）
+[[apis]]
+name = "次元源-小狐狸"
+url = "https://t.mwm.moe/xhl"
+format = "image_raw"
+category_ids = ["acg_mwm_fox"]
+
+# 二次元 - 次元源（萌图）
+[[apis]]
+name = "次元源-萌图"
+url = "https://t.mwm.moe/moe"
+format = "image_raw"
+category_ids = ["acg_mwm_moe"]
+
+# 二次元 - 其他源（忆云 随机）
+[[apis]]
+name = "[忆云]随机"
+url = "https://api.imlcd.cn/bg/acg.php"
+format = "image_raw"
+category_ids = ["acg_yiyun_random"]
+
+# 二次元 - 其他源（PAULZZH 东方）
+[[apis]]
+name = "[PAULZZH]东方"
+url = "https://img.paulzzh.com/touhou/random"
+format = "image_raw"
+category_ids = ["acg_paulzzh_touhou"]
+
+# 二次元 - 其他源（樱花 随机）
+[[apis]]
+name = "[樱花]随机"
+url = "https://www.dmoe.cc/random.php"
+format = "image_raw"
+category_ids = ["acg_dmoe_random"]
+
+# 二次元 - 其他源（Anosu Pixiv 精选）
+[[apis]]
+name = "[Anosu]Pixiv精选"
+url = "https://image.anosu.top/pixiv/direct"
+format = "image_raw"
+category_ids = ["acg_anosu_pixiv"]
+
+# 收藏 - 个人收集（静态列表）
+[[apis]]
+name = "饿殍：明末千里行 精选"
+format = "static_list"
+category_ids = ["collection_epiao"]
+
+  [apis.static_list]
+  urls = [
+    "https://i.postimg.cc/zf2yRGXj/image.jpg",
+    "https://i.postimg.cc/ZRjVN3vQ/image.jpg",
+    "https://i.postimg.cc/FRVG56y8/4b290f6e-b886-effb-b9b1-4a97bbeea0fe.jpg",
+    "https://i.postimg.cc/3RZMSndJ/a3cde8b4-0197-1ad3-3760-9cb95dbc6517.jpg",
+    "https://i.postimg.cc/02RWMpQV/ea0ff1ca-0358-4fca-b2bb-5b3a51706bdc.jpg",
+    "https://i.postimg.cc/qRttT6HK/f5fd0dc2722faf65c455943574b087863546706878663505.jpg",
+    "https://i.postimg.cc/0NZ9J3vB/ss-f1ba762ccb2918909b05051891316f27ecbbb245-1920x1080.jpg",
+  ]
+
+<!doctype html><html lang=zh-CN><head><title>https://www.moely.link/category/Twitter/</title><link rel=canonical href=https://www.moely.link/category/Twitter/><meta charset=utf-8><meta http-equiv=refresh content="0; url=https://www.moely.link/category/Twitter/"></head></html>
+
+
+
+<!doctype html><html lang=zh-CN><head><title>https://www.moely.link/category/Pixiv/</title><link rel=canonical href=https://www.moely.link/category/Pixiv/><meta charset=utf-8><meta http-equiv=refresh content="0; url=https://www.moely.link/category/Pixiv/"></head></html>
+
+
+# Minimalistic Wallpaper Collection
+
+[![images](https://custom-icon-badges.demolab.com/github/directory-file-count/DenverCoder1/Minimalistic-Wallpaper-Collection/images?label=images&logo=image)](https://github.com/DenverCoder1/Minimalistic-Wallpaper-Collection/tree/main/images)
+[![license](https://custom-icon-badges.demolab.com/github/license/denvercoder1/custom-icon-badges?logo=file-badge&logoColor=white&label=code+license&color=success)](https://github.com/DenverCoder1/Minimalistic-Wallpaper-Collection/blob/main/LICENSE)
+[![discord](https://custom-icon-badges.demolab.com/discord/819650821314052106?color=7289DA&logo=comments&label=discord&logoColor=white)](https://discord.gg/fPrdqh3Zfu)
+
+This is my collection of minimalistic, flat art, and colorful, digital nature wallpapers.
+
+**Disclaimer:** I do not claim ownership of the wallpapers appearing in this repository. Most of these wallpapers were found on [Reddit](https://www.reddit.com/r/wallpaper/), DeviantArt, or Artstation. If you find images in this repository owned by you and are of limited use, please let me know and I will remove them.
+
+## Wallpapers
+
+To view a gallery of all 300+ wallpapers, [click here](https://minimalistic-wallpaper.demolab.com/)!
+
+[![screenshot](https://user-images.githubusercontent.com/20955511/186479660-475532e8-427d-4df1-a19d-7f94090805b1.png)](https://minimalistic-wallpaper.demolab.com/)
+
+## API
+
+The website also includes a random wallpaper API, so you can request random wallpapers from the collection using a web request.
+
+To use the API, simply make a request to:
+
+```md
+https://minimalistic-wallpaper.demolab.com/?random
+```
+
+To get multiple random images at once, it is recommended to change the URL slightly to avoid caching. For example,
+
+```md
+https://minimalistic-wallpaper.demolab.com/?random=1
+https://minimalistic-wallpaper.demolab.com/?random=2
+https://minimalistic-wallpaper.demolab.com/?random=3
+```
+
+This API can be used for setting daily wallpapers on a mobile device by combining it with an app such as IFTTT.
+
+> **Note**
+> By default, the API will fetch the image from GitHub and return it as content if it is smaller than 4.5MB.
+> To force the API to redirect to the image on GitHub instead, add `&redirect=1` to the end of the URL.
+
+## Contributing
+
+All images appearing in the images directory contain the author (sometimes this is the original artist, for others, this is a Reddit user who shared the image or a website the image was found on in cases where the original artist is unknown) and the title or description of the wallpaper.
+
+* If the artist is not properly attributed, feel free to open an issue or pull request for renaming the files to give the author the correct attribution
+* New wallpapers may be suggested by opening a pull request, but as this is a personal wallpaper collection, it is up to my discretion whether or not the wallpaper will be accepted
+* If you are able to find or create higher resoluion versions of the existing wallpapers, feel free to do so and open a PR. Images should be at least 1920x1080, the preferrable size is 3840x2160, larger than this is not necessary. Note that a resized image is not considered higher resolution, however, an image upscaled using an AI image restoration model can be used if the output is not pixelated or blurry.
+* Issues and pull requests regarding improvements to the website or API are welcome
+import 'package:zenwall/models/categories_model.dart';
+
+String apiKEY = "AeKl9RPEq9UtbUfw7M7iT0aNqRL4WtwBvHE2XZ3ALHJ0l73bRJjIrGdl";
+
+List<CategoriesModel> getCategories() {
+  List<CategoriesModel> categories = [];
+  CategoriesModel categorieModel = CategoriesModel();
+
+  categorieModel.imgUrl =
+      "https://images.pexels.com/photos/545008/pexels-photo-545008.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
+  categorieModel.categoriesName = "Street Art";
+  categories.add(categorieModel);
+  categorieModel = CategoriesModel();
+
+  categorieModel.imgUrl =
+      "https://images.pexels.com/photos/704320/pexels-photo-704320.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
+  categorieModel.categoriesName = "Wild Life";
+  categories.add(categorieModel);
+  categorieModel = CategoriesModel();
+
+  categorieModel.imgUrl =
+      "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500";
+  categorieModel.categoriesName = "Nature";
+  categories.add(categorieModel);
+  categorieModel = CategoriesModel();
+
+  categorieModel.imgUrl =
+      "https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
+  categorieModel.categoriesName = "City";
+  categories.add(categorieModel);
+  categorieModel = CategoriesModel();
+
+  categorieModel.imgUrl =
+      "https://images.pexels.com/photos/1434819/pexels-photo-1434819.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260";
+  categorieModel.categoriesName = "Motivation";
+
+  categories.add(categorieModel);
+  categorieModel = CategoriesModel();
+
+  categorieModel.imgUrl =
+      "https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
+  categorieModel.categoriesName = "Bikes";
+  categories.add(categorieModel);
+  categorieModel = CategoriesModel();
+
+  categorieModel.imgUrl =
+      "https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
+  categorieModel.categoriesName = "Cars";
+  categories.add(categorieModel);
+  categorieModel = CategoriesModel();
+
+  return categories;
+}
+
+class AppConstants {
+  AppConstants._();
+
+  static const String apiKey =
+      "563492ad6f9170000100000173f531892a5a4b43b0b9c08cd109082e";
+
+  static const String baseUrl = "https://api.pexels.com/v1/";
+}
+
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:wallify/core/user_shared_prefs.dart';
+import 'package:wallify/model/wallpaper_model.dart';
+
+class WallpaperManager {
+  static int? interval = 1;
+  static int deviceWidth = 360;
+  static int deviceHeight = 800;
+  static List<Wallpaper> urls = [];
+  static String tag = "nature";
+  static final usp = UserSharedPrefs();
+
+  
+
+  static Future<List<Wallpaper>> fetchImagesFromAllSources() async {
+    try {
+      // Load from favorites first
+      urls.addAll(await UserSharedPrefs.getFavWallpapers());
+      tag = await UserSharedPrefs.getRandomTag();
+      deviceWidth = await UserSharedPrefs.getDeviceWidth();
+      deviceHeight = await UserSharedPrefs.getDeviceHeight();
+
+      // 🔹 Wallhaven
+      final wallRes = await http.get(
+        Uri.parse(
+          "https://wallhaven.cc/api/v1/search?q=$tag"
+          "&categories=100&purity=100"
+          "&ratios=portrait"
+          "&atleast=${deviceWidth}x$deviceHeight"
+          "&sorting=random",
+        ),
+      );
+      final wallData = jsonDecode(wallRes.body);
+      for (var item in wallData["data"]) {
+        urls.add(Wallpaper(id: item["id"].toString(), url: item["path"]));
+      }
+
+      // 🔹 Unsplash
+      final unsplashRes = await http.get(
+        Uri.parse(
+          "https://api.unsplash.com/photos/random"
+          "?query=$tag&orientation=portrait&content_filter=high&count=10",
+        ),
+        headers: {
+          "Authorization":
+              "Client-ID yTBcYNAtnRHbrYMn2p4DrBiqzOAfdH9nyexQQtJWO-E",
+        },
+      );
+      final unsplashData = jsonDecode(unsplashRes.body);
+      for (var item in unsplashData) {
+        urls.add(
+          Wallpaper(id: item["id"].toString(), url: item["urls"]["regular"]),
+        );
+      }
+
+      // 🔹 Pixabay
+      final pixabayRes = await http.get(
+        Uri.parse(
+          "https://pixabay.com/api/"
+          "?key=52028006-a7e910370a5d0158c371bb06a"
+          "&q=$tag"
+          "&image_type=photo"
+          "&orientation=vertical"
+          "&min_width=$deviceWidth&min_height=$deviceHeight"
+          "&safesearch=true",
+        ),
+      );
+      final pixabayData = jsonDecode(pixabayRes.body);
+      for (var item in pixabayData["hits"]) {
+        urls.add(
+          Wallpaper(id: item["id"].toString(), url: item["largeImageURL"]),
+        );
+      }
+    } catch (e) {
+      debugPrint("❌ Error fetching images: $e");
+    }
+    return urls;
+  }
+}
+// TODO 15: Import necessary packages
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+// TODO 16: Import models
+import '../models/api_response_model.dart';
+
+// TODO 17: Define API Service class
+class ApiService {
+  static const String _baseUrl = 'https://api.pexels.com/v1';
+  static const String _apiKey = 'kCvMGYbKdtzok8mHlznVnGcUXCRBfVkjdtoQ8Vc9TT3L8o6gKCE8vbJf';
+
+  // TODO 18: Create headers for API requests
+  Map<String, String> get _headers => {
+    'Authorization': _apiKey,
+  };
+
+  // TODO 19: Fetch curated wallpapers
+  Future<ApiResponse> getCuratedWallpapers({int page = 1, int perPage = 30}) async {
+    final response = await http.get(
+      Uri.parse('$_baseUrl/curated?per_page=$perPage&page=$page'),
+      headers: _headers,
+    );
+
+    if (response.statusCode == 200) {
+      return ApiResponse.fromJson(jsonDecode(response.body));
+    } else {
+      throw Exception('Failed to load wallpapers: ${response.statusCode}');
+    }
+  }
+
+  // TODO 20: Search wallpapers by query
+  Future<ApiResponse> searchWallpapers(String query, {int page = 1, int perPage = 30}) async {
+    final response = await http.get(
+      Uri.parse('$_baseUrl/search?query=$query&per_page=$perPage&page=$page'),
+      headers: _headers,
+    );
+
+    if (response.statusCode == 200) {
+      return ApiResponse.fromJson(jsonDecode(response.body));
+    } else {
+      throw Exception('Failed to search wallpapers: ${response.statusCode}');
+    }
+  }
+
+  // TODO 21: Fetch wallpapers by category
+  Future<ApiResponse> getCategoryWallpapers(String category, {int page = 1, int perPage = 30}) async {
+    return searchWallpapers(category, page: page, perPage: perPage);
+  }
+}
+
+
+
+
+# realwds-api
+
+## 必应壁纸 api
+
+接口：`https://realwds-api.vercel.app/bing`
+
+| 参数 | 说明 | 选择 |
+|----|-----|------|
+|start| 从几开始，默认 0 | 可选 |
+|count| 截取数量，默认 1 | 可选 |
+
+## 360 壁纸 api
+
+获取360壁纸所有类目：`https://realwds-api.vercel.app/360/getAllCategories`
+
+获取某类别下的壁纸：`https://realwds-api.vercel.app/360/getAppsByCategory`
+
+| 参数 | 说明 | 选择 |
+|----|-----|------|
+| cid | 类别 ID，初始 new | 必填 |
+|start| 从几开始，默认 0 | 可选 |
+|count| 截取数量，默认 10 | 可选 |
+
+按关键字搜索壁纸：`https://realwds-api.vercel.app/360/search`
+
+| 参数 | 说明 | 选择 |
+|----|-----|------|
+| kw | 搜索关键词 | 必填 |
+|start| 从几开始，默认 0 | 可选 |
+|count| 截取数量，默认 10 | 可选 |
+
+获取今日热门搜索：`https://realwds-api.vercel.app/360/hotSearch`
+
+## Star History
+
+![Star History Chart](https://api.star-history.com/svg?repos=realwds/realwds-api&type=Date)
+import json
+import os
+import time
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
+
+JUMP_URL = "https://www.moely.link/random/jump/?wallpaper=true"
+JSON_PATH = "wallpaper.json"
+
+def log(msg: str):
+    now = datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{now}] {msg}")
+
+def fetch_wallpaper_data():
+    """使用 Playwright 打开页面并获取 <script id="wallpaper"> 中的 JSON 数据"""
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+        log(f"▶️ 打开 {JUMP_URL}")
+        page.goto(JUMP_URL, timeout=30000, wait_until="domcontentloaded")
+        # 等待页面发生跳转
+        page.wait_for_event("framenavigated", timeout=10000)
+        print("✅ 页面已跳转到：", page.url)
+        # 等待目标元素加载
+        time.sleep(3)
+        html = page.content()
+        browser.close()
+
+    soup = BeautifulSoup(html, "html5lib")
+    script = soup.find("script", {"id": "wallpaper"})
+    if script and script.string:
+        return json.loads(script.string)
+    else:
+        return None
+
+def load_existing():
+    if os.path.exists(JSON_PATH):
+        with open(JSON_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+def save_all(data_list):
+    with open(JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(data_list, f, ensure_ascii=False, indent=2)
+    log(f"✅ 保存 {JSON_PATH}，共 {len(data_list)} 条记录")
+
+def main():
+    tz = ZoneInfo("Asia/Shanghai")
+    today = datetime.now(tz).date()
+    target_date = today + timedelta(days=7)
+    date_str = target_date.strftime("%Y%m%d")
+
+    log("🚀 开始获取随机壁纸信息")
+    info = fetch_wallpaper_data()
+    if not info:
+        log("❌ 未能获取到 wallpaper 数据，程序终止")
+        return
+
+    info["date"] = date_str
+    log(f"✅ 获取到 wallpaper ID={info.get('id')}，目标日期={date_str}")
+
+    items = load_existing()
+
+    # 基于 date 判断是否已存在
+    if not any(item.get("date") == date_str for item in items):
+        items.append(info)
+        log("🎨 壁纸添加成功")
+    else:
+        log("ℹ️ 壁纸已存在，不重复添加")
+
+    # 过滤保留 [today-7 .. today+7]
+    min_date = today - timedelta(days=7)
+    filtered = [
+        it for it in items
+        if min_date <= datetime.strptime(it["date"], "%Y%m%d").date() <= target_date
+    ]
+    filtered.sort(key=lambda x: x["date"])
+    save_all(filtered)
+
+if __name__ == "__main__":
+    main()
+保罗｜API
+首页
+博客
+项目
+API
+网易云解析
+随机动漫壁纸
+随机动漫音乐
+Gravatar 解析
+必应每日壁纸
+随机动漫壁纸
+生成适合 Single 主题的白底动漫壁纸
+说明：
+本 API 的所有图片均进行了公开，欢迎前往仓库 Anime-Wallpaper 提交 PR，完善资源。Commit 的说明上最好带上对应角色的来源～
+
+你既可以将仓库图片下载自用或创建自己的随机图片 API，也可以直接使用本 API 提供的链接插入到自己的网页上，也顺带让你学会了用 Git 提交代码，不是很有意思嘛。
+提 PR 增加资源需要注意一些细节问题，先做了解，会让你的提交过程更加顺利呢！本仓库不接受存在以下问题的提交，保罗有拒绝合并的权限哦（当然，你也可以重新修改后再次提交）
+
+动作/衣着等尺度较大的图片
+尽可能以日漫女或无性角色为主（暂时没有作品上的限制）
+人物主体占画面主体的比例偏高（应小于 50%）
+人物主体离画面顶部、左右侧或底部太靠近（网站顶部有菜单栏就会被“切掉”了）
+可参考以下图片示例，画布尺寸需为 1920 x 1080 像素，.jpg 格式。
+提交须知
+
+提交须知
+
+Commit 说明可参考以下示例：
+
+Add 5 Images
+
+增加了《轻音少女》阿梓喵、《原神》可莉的图片
+使用方法：
+调用地址 https://api.paugram.com/wallpaper/ 可自动跳转到对应的壁纸（由于运营成本限制，目前本 API 借助 图床/CDN 等平台托管图片。欢迎给予资源赞助~）
+
+如果您已开始使用本 API 服务，则默认视为遵守 本约定。
+
+图片版权归原作者所有，本站不为滥用本 API 进行违规操作者承担责任。
+
+参数：
+参数	可选值	描述
+source	sm cp sina paul	图片源，如留空则默认采用 sm.ms 源
+category（施工中）	us jp cn	图片分类，可按不同国家和类别选择
+图片源：
+参数名称	状态	图片源描述
+sm	可用	资源较少！sm.ms 图床，国外速度较快，部分浏览器会阻止访问
+gh	可用	存放在 GitHub 上的图片资源，基于 GitHub Pages 托管
+jsd	可用	存放在 GitHub 上的图片资源，基于 JSDelivr Fastly CDN 托管，可能会无法访问
+图片分类（施工中）：
+参数名称	状态	分类描述
+1	不可用	白底动漫插图
+2	不可用	透明底动漫插图
+3	不可用	随机底动漫壁纸
+示例：
+使用 sm.ms 图片源
+
+https://api.paugram.com/wallpaper/?source=sm
+使用新浪图片源，并选择美漫图片分类
+
+https://api.paugram.com/wallpaper/?source=sina&category=us
+在网页背景上使用本 API
+
+body{
+  background: url("https://api.paugram.com/wallpaper/") center/cover no-repeat;
+}
+在网页背景上使用本 API（伪元素半透明版）
+
+body:before{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .3;
+  z-index: -1;
+  content: "";
+  position: fixed;
+  background: url(https://api.paugram.com/wallpaper/) center/cover;
+}
+测试：
+使用 img 标签引用图片
+
+示例
+
+感谢：
+SM.MS
+GitHub
+JSDelivr
+Gitee Pages
+LA
+© 2025 Dreamer-Paul. All Rights Reserved.
+# 手机端随机图片
+
+### 请求URL
+
+```
+https://www.loliapi.com/acg/pe/
+```
+
+{% hint style="success" %}
+URL中的 pe 是**Pocket Edition**的简写
+{% endhint %}
+
+### 请求参数（get）
+
+<table><thead><tr><th width="150" align="center">参数名称</th><th width="251" align="center">参数值</th><th width="194" align="center">参数说明</th><th width="150" align="center">参数类型</th></tr></thead><tbody><tr><td align="center">id</td><td align="center">不多于图片收录数的整数</td><td align="center">指定id对应的图片</td><td align="center">可选</td></tr></tbody></table>
+
+<table><thead><tr><th width="150" align="center">参数名称</th><th width="150" align="center">参数值</th><th width="287" align="center">参数说明</th><th width="150" align="center">参数类型</th></tr></thead><tbody><tr><td align="center">type</td><td align="center"></td><td align="center">重定向到图片源网址</td><td align="center">默认</td></tr><tr><td align="center">type</td><td align="center">url</td><td align="center">返回图片源网址</td><td align="center">可选</td></tr><tr><td align="center">type</td><td align="center">img</td><td align="center">返回图片源网址对应图片</td><td align="center">可选</td></tr><tr><td align="center">type</td><td align="center">json</td><td align="center">返回图片相关json数据</td><td align="center">可选</td></tr></tbody></table>
+
+### 请求示例
+
+#### 最基本调用格式
+
+<https://www.loliapi.com/acg/pe/>
+
+访问会返回一个随机图片
+
+#### 高级调用格式
+
+如果想获取 id 为 23 的图片的 json 数据，就应该访问
+
+<https://www.loliapi.com/acg/pe/?id=23&type=json>
+
+访问会返回
+
+```
+{
+    "site": "www.Loliapi.com",
+    "imgurl": "https:\/\/tva1.sinaimg.cn\/large\/0075ueBvly1gxcsxrhtsdj312z1kwtiu.jpg",
+    "width": "1403",
+    "height": "2048"
+}
+```
+# 双端自适应随机图片
+
+### 请求URL
+
+```
+https://www.loliapi.com/acg/
+```
+
+{% hint style="success" %}
+ACG 即Animation（动画）、Comics（漫画）与Games（游戏）的首字母缩写，来源不是英语，也不是一个英语单词，并没有完全对应的广泛使用的中文翻译
+{% endhint %}
+
+### 请求参数（get）
+
+<table><thead><tr><th width="150" align="center">参数名称</th><th width="224" align="center">参数值</th><th width="172" align="center">参数说明</th><th width="150" align="center">参数类型</th></tr></thead><tbody><tr><td align="center">id</td><td align="center">不多于图片收录数的整数</td><td align="center">指定id对应的图片</td><td align="center">可选</td></tr></tbody></table>
+
+<table><thead><tr><th width="150" align="center">参数名称</th><th width="150" align="center">参数值</th><th width="291" align="center">参数说明</th><th width="150" align="center">参数类型</th></tr></thead><tbody><tr><td align="center">type</td><td align="center"></td><td align="center">重定向到图片源网址</td><td align="center">默认</td></tr><tr><td align="center">type</td><td align="center">url</td><td align="center">返回图片源网址</td><td align="center">可选</td></tr><tr><td align="center">type</td><td align="center">img</td><td align="center">返回图片源网址对应图片</td><td align="center">可选</td></tr><tr><td align="center">type</td><td align="center">json</td><td align="center">返回图片相关json数据</td><td align="center">可选</td></tr></tbody></table>
+
+### 请求示例
+
+#### 最基本调用格式
+
+<https://www.loliapi.com/acg/>
+
+访问会返回一个随机图片
+
+#### 高级调用格式
+
+如果想获取 id 为 23 的图片的 json 数据，就应该访问
+
+<https://www.loliapi.com/acg/?id=23&type=json>
+
+电脑端访问会返回
+
+```
+{
+    "site": "www.Loliapi.com",
+    "imgurl": "https:\/\/tva1.sinaimg.cn\/large\/0075ueBvly1gxct1fxp2ij31hc0u0qq0.jpg",
+    "width": "1920",
+    "height": "1080"
+}
+```
+
+手机端访问会返回
+
+```
+{
+    "site": "www.Loliapi.com",
+    "imgurl": "https:\/\/tva1.sinaimg.cn\/large\/0075ueBvly1gxcsxrhtsdj312z1kwtiu.jpg",
+    "width": "1403",
+    "height": "2048"
+}
+```
+接口一：获取壁纸分类
+http://cdn.apc.360.cn/index.php?c=WallPaper&a=getAllCategoriesV2&from=360chrome  
+这个接口很简单，直接请求上述网址，就可以得到 json 数据。返回的数据中有个 data 数组，其中的“name”就是获取到的壁纸分类名，“id”就是这个分类对应的ID值。
+接口地址： http://api.4qb.cn/api/suiji-bizhi
+
+返回格式： JSON/TEXT
+
+请求方式： GET/POST
+
+请求示例： https://api.4qb.cn/api/suiji-bizhi?msg=3&type=image
+
+请求参数说明：
+
+名称	必填	类型	说明
+type	否	string	输出方式，默认json，支持text(返回图片地址),image(直接返回图片),tiao(直接跳转到图片地址),json(返回一些信息)
+msg	是	int	1是美女壁纸2是动漫壁纸3是风景壁纸4是游戏壁纸5是文字壁纸6是视觉壁纸7是情感壁纸8是设计壁纸9是明星壁纸10是物语壁纸
+返回参数说明：
+
+名称	类型	说明
+code	string	状态码
+text	string	提示内容
+url	string	图片链接
+返回示例：
+
+code
+    {
+    "code": "1",
+    "url": "http://img5.adesk.com/5ff594a0e7bce76c1ed2f0c2"
+}
+    https://api.isoyu.com/mm_images.php
