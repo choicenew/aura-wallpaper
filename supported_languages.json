@@ -1,0 +1,2590 @@
+[
+    {
+        "Value": "自动",
+        "baidu": "auto",
+        "cloudTranslation": "all",
+        "deepl": "auto",
+        "google": "auto",
+        "itranslate": "auto",
+        "qqFanyi": "auto"
+    },
+    {
+        "Value": "中文",
+        "alibaba": "zh",
+        "argos": "zh",
+        "baidu": "zh",
+        "bing": "zh-Hans",
+        "caiyun": "zh",
+        "cloudTranslation": "zh-cn",
+        "deepl": "zh",
+        "google": "zh-CN",
+        "iflyrec": "zh",
+        "itranslate": "zh-CN",
+        "lingvanex": "zh-Hans_CN",
+        "mglip": "zh",
+        "modernMt": "zh-CN",
+        "papago": "zh-CN",
+        "qqFanyi": "zh",
+        "qqTranSmart": "zh",
+        "reverso": "zh",
+        "sogou": "zh-CHS",
+        "translateCom": "zh",
+        "utibet": "zh",
+        "yandex": "zh"
+    },
+    {
+        "Value": "中文(台湾)",
+        "alibaba": "zh-tw",
+        "argos": "zt",
+        "baidu": "cht",
+        "bing": "zh-Hant",
+        "cloudTranslation": "zh-tw",
+        "google": "zh-TW",
+        "itranslate": "zh-TW",
+        "lingvanex": "zh-Hant_TW",
+        "modernMt": "zh-TW",
+        "papago": "zh-TW",
+        "translateCom": "zh-TW",
+        "yandex": "zh"
+    },
+    {
+        "Value": "中文(香港)",
+        "itranslate": "zh-HK"
+    },
+    {
+        "Value": "中文(粤语)",
+        "alibaba": "yue",
+        "baidu": "yue",
+        "bing": "yue",
+        "cloudTranslation": "yue",
+        "iflyrec": "yue"
+    },
+    {
+        "Value": "中文(文言文)",
+        "baidu": "wyw",
+        "bing": "lzh"
+    },
+    {
+        "Value": "藏语",
+        "alibaba": "bo",
+        "bing": "bo",
+        "cloudTranslation": "bo",
+        "modernMt": "bo",
+        "qqTranSmart": "bo",
+        "utibet": "ti"
+    },
+    {
+        "Value": "壮语",
+        "alibaba": "za"
+    },
+    {
+        "Value": "苗语",
+        "alibaba": "hmn",
+        "baidu": "hmn",
+        "bing": "mww",
+        "google": "hmn",
+        "itranslate": "hmn",
+        "lingvanex": "hmn_CN"
+    },
+    {
+        "Value": "彝语",
+        "alibaba": "ii"
+    },
+    {
+        "Value": "蒙古语",
+        "alibaba": "mn",
+        "cloudTranslation": "mn",
+        "google": "mn",
+        "itranslate": "mn",
+        "lingvanex": "mn_MN",
+        "modernMt": "mn",
+        "qqTranSmart": "mn"
+    },
+    {
+        "Value": "蒙古语(西里尔文)",
+        "bing": "mn-Cyrl",
+        "mglip": "xle",
+        "qqTranSmart": "mnk"
+    },
+    {
+        "Value": "蒙古语(传统蒙古字母)",
+        "bing": "mn-Mong",
+        "mglip": "mon"
+    },
+    {
+        "Value": "德语",
+        "alibaba": "de",
+        "argos": "de",
+        "baidu": "de",
+        "bing": "de",
+        "cloudTranslation": "de",
+        "deepl": "de",
+        "google": "de",
+        "iflyrec": "de",
+        "itranslate": "de",
+        "languageWire": "de",
+        "lingvanex": "de_DE",
+        "modernMt": "de",
+        "papago": "de",
+        "qqFanyi": "de",
+        "qqTranSmart": "de",
+        "reverso": "de",
+        "sogou": "de",
+        "translateCom": "de"
+    },
+    {
+        "Value": "俄语",
+        "alibaba": "ru",
+        "apertium": "rus",
+        "argos": "ru",
+        "baidu": "ru",
+        "bing": "ru",
+        "caiyun": "ru",
+        "cloudTranslation": "ru",
+        "deepl": "ru",
+        "google": "ru",
+        "iflyrec": "ru",
+        "itranslate": "ru",
+        "lingvanex": "ru_RU",
+        "modernMt": "ru",
+        "papago": "ru",
+        "qqFanyi": "ru",
+        "qqTranSmart": "ru",
+        "reverso": "ru",
+        "sogou": "ru",
+        "translateCom": "ru"
+    },
+    {
+        "Value": "日语",
+        "alibaba": "ja",
+        "argos": "ja",
+        "baidu": "jp",
+        "bing": "ja",
+        "caiyun": "ja",
+        "cloudTranslation": "ja",
+        "deepl": "ja",
+        "google": "ja",
+        "iflyrec": "ja",
+        "itranslate": "ja",
+        "lingvanex": "ja_JP",
+        "modernMt": "ja",
+        "papago": "ja",
+        "qqFanyi": "jp",
+        "qqTranSmart": "ja",
+        "reverso": "ja",
+        "sogou": "ja",
+        "translateCom": "ja"
+    },
+    {
+        "Value": "英语",
+        "alibaba": "en",
+        "apertium": "eng",
+        "argos": "en",
+        "baidu": "en",
+        "bing": "en",
+        "caiyun": "en",
+        "cloudTranslation": "en-us",
+        "deepl": "en",
+        "elia": "en",
+        "google": "en",
+        "iflyrec": "en",
+        "itranslate": "en",
+        "languageWire": "en",
+        "modernMt": "en",
+        "papago": "en",
+        "qqFanyi": "en",
+        "qqTranSmart": "en",
+        "reverso": "en",
+        "sogou": "en",
+        "translateCom": "en"
+    },
+    {
+        "Value": "英语(澳大利亚)",
+        "itranslate": "en-AU"
+    },
+    {
+        "Value": "英语(英国)",
+        "itranslate": "en-UK",
+        "languageWire": "en-GB",
+        "lingvanex": "en_GB",
+        "translateCom": "en-gb"
+    },
+    {
+        "Value": "英语(美国)",
+        "itranslate": "en-US",
+        "languageWire": "en-US"
+    },
+    {
+        "Value": "韩语",
+        "alibaba": "ko",
+        "argos": "ko",
+        "baidu": "kor",
+        "bing": "ko",
+        "caiyun": "ko",
+        "cloudTranslation": "ko",
+        "deepl": "ko",
+        "google": "ko",
+        "iflyrec": "ko",
+        "itranslate": "ko",
+        "lingvanex": "ko_KR",
+        "modernMt": "ko",
+        "papago": "ko",
+        "qqFanyi": "kr",
+        "qqTranSmart": "ko",
+        "reverso": "ko",
+        "sogou": "ko",
+        "translateCom": "ko"
+    },
+    {
+        "Value": "西班牙语",
+        "alibaba": "es",
+        "apertium": "spa",
+        "argos": "es",
+        "baidu": "spa",
+        "bing": "es",
+        "caiyun": "es",
+        "cloudTranslation": "es",
+        "deepl": "es",
+        "elia": "es",
+        "google": "es",
+        "iflyrec": "es",
+        "itranslate": "es-ES",
+        "languageWire": "es",
+        "lingvanex": "es_ES",
+        "modernMt": "es-ES",
+        "papago": "es",
+        "qqFanyi": "es",
+        "qqTranSmart": "es",
+        "reverso": "es",
+        "sogou": "es",
+        "translateCom": "es"
+    },
+    {
+        "Value": "西班牙语(墨西哥)",
+        "itranslate": "es-MX"
+    },
+    {
+        "Value": "西班牙语(美国)",
+        "itranslate": "es-US"
+    },
+    {
+        "Value": "西班牙语(拉丁美洲)",
+        "modernMt": "es-419"
+    },
+    {
+        "Value": "荷兰语",
+        "alibaba": "nl",
+        "apertium": "nld",
+        "argos": "nl",
+        "baidu": "nl",
+        "bing": "nl",
+        "cloudTranslation": "nl",
+        "deepl": "nl",
+        "google": "nl",
+        "itranslate": "nl",
+        "languageWire": "nl",
+        "lingvanex": "nl_NL",
+        "modernMt": "nl",
+        "qqTranSmart": "nl",
+        "reverso": "nl",
+        "sogou": "nl",
+        "translateCom": "nl"
+    },
+    {
+        "Value": "法语",
+        "alibaba": "fr",
+        "apertium": "fra",
+        "argos": "fr",
+        "baidu": "fra",
+        "bing": "fr",
+        "caiyun": "fr",
+        "cloudTranslation": "fr",
+        "deepl": "fr",
+        "elia": "fr",
+        "google": "fr",
+        "iflyrec": "fr",
+        "itranslate": "fr-FR",
+        "languageWire": "fr",
+        "lingvanex": "fr_FR",
+        "modernMt": "fr",
+        "papago": "fr",
+        "qqFanyi": "fr",
+        "qqTranSmart": "fr",
+        "reverso": "fr",
+        "sogou": "fr",
+        "translateCom": "fr"
+    },
+    {
+        "Value": "中古法语",
+        "baidu": "frm"
+    },
+    {
+        "Value": "加拿大法语",
+        "baidu": "frn",
+        "bing": "fr-CA",
+        "itranslate": "fr-CA",
+        "lingvanex": "fr_CA",
+        "translateCom": "fr-ca"
+    },
+    {
+        "Value": "意大利语",
+        "alibaba": "it",
+        "apertium": "ita",
+        "argos": "it",
+        "baidu": "it",
+        "bing": "it",
+        "cloudTranslation": "it",
+        "deepl": "it",
+        "google": "it",
+        "iflyrec": "it",
+        "itranslate": "it",
+        "lingvanex": "it_IT",
+        "modernMt": "it",
+        "papago": "it",
+        "qqFanyi": "it",
+        "qqTranSmart": "it",
+        "reverso": "it",
+        "sogou": "it",
+        "translateCom": "it"
+    },
+    {
+        "Value": "阿布哈兹语",
+        "alibaba": "ab"
+    },
+    {
+        "Value": "亚齐语",
+        "alibaba": "ace",
+        "baidu": "ach",
+        "modernMt": "ace",
+        "qqTranSmart": "ach"
+    },
+    {
+        "Value": "圣卢西亚克里奥尔法语"
+    },
+    {
+        "Value": "南非语",
+        "alibaba": "af",
+        "bing": "af",
+        "google": "af",
+        "itranslate": "af",
+        "lingvanex": "af_ZA",
+        "modernMt": "af",
+        "qqTranSmart": "af",
+        "reverso": "af"
+    },
+    {
+        "Value": "南非荷兰语",
+        "apertium": "afr",
+        "baidu": "afr"
+    },
+    {
+        "Value": "安提瓜和巴布达克里奥尔语"
+    },
+    {
+        "Value": "阿肯语",
+        "alibaba": "ak",
+        "baidu": "aka",
+        "google": "ak",
+        "modernMt": "ak",
+        "qqTranSmart": "ak"
+    },
+    {
+        "Value": "托斯克阿尔巴尼亚语",
+        "modernMt": "als"
+    },
+    {
+        "Value": "阿姆哈拉语",
+        "alibaba": "am",
+        "baidu": "amh",
+        "bing": "am",
+        "google": "am",
+        "lingvanex": "am_ET",
+        "modernMt": "am",
+        "qqTranSmart": "am"
+    },
+    {
+        "Value": "阿拉贡语",
+        "alibaba": "an",
+        "apertium": "arg",
+        "baidu": "arg",
+        "qqTranSmart": "an"
+    },
+    {
+        "Value": "古英语",
+        "alibaba": "ang",
+        "baidu": "eno"
+    },
+    {
+        "Value": "阿拉伯语",
+        "alibaba": "ar",
+        "apertium": "ara",
+        "argos": "ar",
+        "baidu": "ara",
+        "bing": "ar",
+        "cloudTranslation": "ar",
+        "deepl": "ar",
+        "google": "ar",
+        "iflyrec": "ar",
+        "modernMt": "ar",
+        "qqFanyi": "ar",
+        "qqTranSmart": "ar",
+        "reverso": "ar",
+        "sogou": "ar",
+        "translateCom": "ar"
+    },
+    {
+        "Value": "阿拉伯语(阿联酋)",
+        "itranslate": "ar-AE"
+    },
+    {
+        "Value": "阿拉伯语(沙特阿拉伯)",
+        "itranslate": "ar-SA",
+        "lingvanex": "ar_SA"
+    },
+    {
+        "Value": "阿拉伯语(埃及)",
+        "itranslate": "ar-EG",
+        "lingvanex": "ar_EG"
+    },
+    {
+        "Value": "阿尔及利亚阿拉伯语",
+        "baidu": "arq"
+    },
+    {
+        "Value": "阿萨姆语",
+        "alibaba": "as",
+        "baidu": "asm",
+        "bing": "as",
+        "google": "as",
+        "lingvanex": "as_IN",
+        "modernMt": "as"
+    },
+    {
+        "Value": "阿斯图里亚斯语",
+        "alibaba": "ast",
+        "apertium": "ast",
+        "baidu": "ast",
+        "modernMt": "ast",
+        "qqTranSmart": "ast"
+    },
+    {
+        "Value": "阿瓦德语",
+        "modernMt": "awa"
+    },
+    {
+        "Value": "艾马拉语",
+        "alibaba": "ay",
+        "baidu": "aym",
+        "google": "ay",
+        "modernMt": "ayr",
+        "qqTranSmart": "ay"
+    },
+    {
+        "Value": "阿塞拜疆语",
+        "alibaba": "az",
+        "argos": "az",
+        "baidu": "aze",
+        "bing": "az",
+        "google": "az",
+        "itranslate": "az",
+        "lingvanex": "az_AZ",
+        "modernMt": "az",
+        "qqTranSmart": "az"
+    },
+    {
+        "Value": "南阿塞拜疆语",
+        "modernMt": "azb"
+    },
+    {
+        "Value": "北阿塞拜疆语",
+        "modernMt": "azj"
+    },
+    {
+        "Value": "巴什基尔语",
+        "alibaba": "ba",
+        "baidu": "bak",
+        "bing": "ba",
+        "modernMt": "ba"
+    },
+    {
+        "Value": "巴哈马克里奥尔语"
+    },
+    {
+        "Value": "俾路支语",
+        "alibaba": "bal",
+        "baidu": "bal"
+    },
+    {
+        "Value": "白俄罗斯语",
+        "alibaba": "be",
+        "apertium": "bel",
+        "baidu": "bel",
+        "google": "be",
+        "itranslate": "be",
+        "lingvanex": "be_BY",
+        "modernMt": "be",
+        "qqTranSmart": "be"
+    },
+    {
+        "Value": "本巴语",
+        "alibaba": "bem",
+        "baidu": "bem",
+        "modernMt": "bem"
+    },
+    {
+        "Value": "巴厘语",
+        "modernMt": "ban"
+    },
+    {
+        "Value": "柏柏尔语",
+        "alibaba": "ber",
+        "baidu": "ber"
+    },
+    {
+        "Value": "保加利亚语",
+        "alibaba": "bg",
+        "apertium": "bul",
+        "argos": "bg",
+        "baidu": "bul",
+        "bing": "bg",
+        "deepl": "bg",
+        "google": "bg",
+        "itranslate": "bg",
+        "lingvanex": "bg_BG",
+        "modernMt": "bg",
+        "qqTranSmart": "bg",
+        "reverso": "bg",
+        "translateCom": "bg"
+    },
+    {
+        "Value": "博杰普尔语",
+        "alibaba": "bho",
+        "baidu": "bho",
+        "bing": "bho",
+        "google": "bho",
+        "modernMt": "bho"
+    },
+    {
+        "Value": "比斯拉马语",
+        "alibaba": "bi",
+        "baidu": "bis"
+    },
+    {
+        "Value": "班查语",
+        "modernMt": "bjn"
+    },
+    {
+        "Value": "巴巴多斯克里奥尔语"
+    },
+    {
+        "Value": "班巴拉语",
+        "alibaba": "bm",
+        "google": "bm",
+        "modernMt": "bm"
+    },
+    {
+        "Value": "孟加拉语",
+        "alibaba": "bn",
+        "argos": "bn",
+        "baidu": "ben",
+        "bing": "bn",
+        "google": "bn",
+        "itranslate": "bn",
+        "lingvanex": "bn_BD",
+        "modernMt": "bn",
+        "qqTranSmart": "bn",
+        "reverso": "bn"
+    },
+    {
+        "Value": "布列塔尼语",
+        "alibaba": "br",
+        "apertium": "bre",
+        "baidu": "bre",
+        "bing": "brx",
+        "qqTranSmart": "br"
+    },
+    {
+        "Value": "波斯尼亚语",
+        "alibaba": "bs",
+        "baidu": "bos",
+        "bing": "bs",
+        "google": "bs",
+        "itranslate": "bs",
+        "lingvanex": "bs_BA",
+        "modernMt": "bs",
+        "qqTranSmart": "bs"
+    },
+    {
+        "Value": "波斯尼亚语(西里尔文)"
+    },
+    {
+        "Value": "布吉语",
+        "modernMt": "bug"
+    },
+    {
+        "Value": "比林语",
+        "alibaba": "byn",
+        "baidu": "bli"
+    },
+    {
+        "Value": "加泰罗尼亚语",
+        "alibaba": "ca",
+        "apertium": "cat",
+        "argos": "ca",
+        "baidu": "cat",
+        "bing": "ca",
+        "elia": "ca",
+        "google": "ca",
+        "itranslate": "ca",
+        "lingvanex": "ca_ES",
+        "modernMt": "ca",
+        "qqTranSmart": "ca"
+    },
+    {
+        "Value": "瓦伦西亚语",
+        "apertium": "cat_valencia"
+    },
+    {
+        "Value": "查瓦卡诺语",
+        "alibaba": "cbk"
+    },
+    {
+        "Value": "宿务语",
+        "alibaba": "ceb",
+        "baidu": "ceb",
+        "google": "ceb",
+        "itranslate": "ceb",
+        "lingvanex": "ceb_PH",
+        "modernMt": "ceb"
+    },
+    {
+        "Value": "查莫罗语",
+        "alibaba": "ch"
+    },
+    {
+        "Value": "马里语（俄罗斯）",
+        "alibaba": "chm"
+    },
+    {
+        "Value": "切罗基语",
+        "alibaba": "chr",
+        "baidu": "chr"
+    },
+    {
+        "Value": "乔克韦语",
+        "modernMt": "cjk"
+    },
+    {
+        "Value": "库尔德语(索拉尼)",
+        "google": "ckb",
+        "modernMt": "ckb"
+    },
+    {
+        "Value": "黑山语",
+        "alibaba": "cnr",
+        "baidu": "mot",
+        "qqTranSmart": "cnr"
+    },
+    {
+        "Value": "科西嘉语",
+        "alibaba": "co",
+        "baidu": "cos",
+        "google": "co",
+        "lingvanex": "co_FR"
+    },
+    {
+        "Value": "科普特语"
+    },
+    {
+        "Value": "康瓦尔语",
+        "baidu": "cor"
+    },
+    {
+        "Value": "克里米亚鞑靼语",
+        "alibaba": "crh",
+        "apertium": "crh",
+        "baidu": "cri",
+        "modernMt": "crh"
+    },
+    {
+        "Value": "塞舌尔克里奥尔语"
+    },
+    {
+        "Value": "捷克语",
+        "alibaba": "cs",
+        "argos": "cs",
+        "baidu": "cs",
+        "bing": "cs",
+        "deepl": "cs",
+        "google": "cs",
+        "itranslate": "cs",
+        "lingvanex": "cs_CZ",
+        "modernMt": "cs",
+        "qqTranSmart": "cs",
+        "reverso": "cs",
+        "sogou": "cs",
+        "translateCom": "cs"
+    },
+    {
+        "Value": "卡舒比语",
+        "alibaba": "csb",
+        "baidu": "kah",
+        "qqTranSmart": "csb"
+    },
+    {
+        "Value": "楚瓦什语",
+        "alibaba": "cv",
+        "baidu": "chv"
+    },
+    {
+        "Value": "威尔士语",
+        "alibaba": "cy",
+        "apertium": "cym",
+        "baidu": "wel",
+        "bing": "cy",
+        "google": "cy",
+        "itranslate": "cy",
+        "lingvanex": "cy_GB",
+        "modernMt": "cy",
+        "qqTranSmart": "cy"
+    },
+    {
+        "Value": "丹麦语",
+        "alibaba": "da",
+        "apertium": "dan",
+        "argos": "da",
+        "baidu": "dan",
+        "bing": "da",
+        "deepl": "da",
+        "google": "da",
+        "itranslate": "da",
+        "languageWire": "da",
+        "lingvanex": "da_DK",
+        "modernMt": "da",
+        "qqTranSmart": "da",
+        "reverso": "da",
+        "sogou": "da",
+        "translateCom": "da"
+    },
+    {
+        "Value": "瑞典德语"
+    },
+    {
+        "Value": "西南丁卡语",
+        "modernMt": "dik"
+    },
+    {
+        "Value": "迪姆利语",
+        "modernMt": "diq"
+    },
+    {
+        "Value": "杜顺语",
+        "alibaba": "dtp",
+        "baidu": "div",
+        "bing": "doi",
+        "google": "doi"
+    },
+    {
+        "Value": "迪维西语",
+        "alibaba": "dv",
+        "bing": "dv",
+        "google": "dv",
+        "qqTranSmart": "dev"
+    },
+    {
+        "Value": "迪乌拉语",
+        "modernMt": "dyu"
+    },
+    {
+        "Value": "宗喀语",
+        "modernMt": "dz",
+        "qqTranSmart": "dz"
+    },
+    {
+        "Value": "埃维语",
+        "alibaba": "ee",
+        "google": "ee",
+        "modernMt": "ee"
+    },
+    {
+        "Value": "现代希腊语",
+        "alibaba": "el",
+        "argos": "el",
+        "baidu": "el",
+        "bing": "el",
+        "deepl": "el",
+        "google": "el",
+        "itranslate": "el",
+        "lingvanex": "el_GR",
+        "modernMt": "el",
+        "qqTranSmart": "el",
+        "reverso": "el",
+        "translateCom": "el"
+    },
+    {
+        "Value": "世界语",
+        "alibaba": "eo",
+        "apertium": "epo",
+        "argos": "eo",
+        "baidu": "epo",
+        "google": "eo",
+        "itranslate": "eo",
+        "lingvanex": "eo_WORLD",
+        "modernMt": "eo",
+        "qqTranSmart": "eo"
+    },
+    {
+        "Value": "爱沙尼亚语",
+        "alibaba": "et",
+        "argos": "et",
+        "baidu": "est",
+        "bing": "et",
+        "deepl": "et",
+        "google": "et",
+        "itranslate": "et",
+        "lingvanex": "et_EE",
+        "modernMt": "et",
+        "qqTranSmart": "et",
+        "reverso": "et"
+    },
+    {
+        "Value": "巴斯克语",
+        "alibaba": "eu",
+        "apertium": "eus",
+        "baidu": "baq",
+        "bing": "eu",
+        "elia": "eu",
+        "google": "eu",
+        "itranslate": "eu",
+        "lingvanex": "eu_ES",
+        "qqTranSmart": "eu"
+    },
+    {
+        "Value": "波斯语",
+        "alibaba": "fa",
+        "argos": "fa",
+        "baidu": "per",
+        "bing": "fa",
+        "cloudTranslation": "fa",
+        "google": "fa",
+        "itranslate": "fa",
+        "lingvanex": "fa_IR",
+        "qqTranSmart": "fa",
+        "reverso": "fa",
+        "translateCom": "fa"
+    },
+    {
+        "Value": "芬兰语",
+        "alibaba": "fi",
+        "argos": "fi",
+        "baidu": "fin",
+        "bing": "fi",
+        "deepl": "fi",
+        "google": "fi",
+        "itranslate": "fi",
+        "lingvanex": "fi_FI",
+        "modernMt": "fi",
+        "qqTranSmart": "fi",
+        "reverso": "fi",
+        "sogou": "fi",
+        "translateCom": "fi"
+    },
+    {
+        "Value": "菲律宾语",
+        "alibaba": "fil",
+        "baidu": "fil",
+        "bing": "fil",
+        "qqTranSmart": "fil"
+    },
+    {
+        "Value": "斐济语",
+        "alibaba": "fj",
+        "bing": "fj",
+        "modernMt": "fj"
+    },
+    {
+        "Value": "法纳柯罗语"
+    },
+    {
+        "Value": "法罗语",
+        "alibaba": "fo",
+        "baidu": "fao",
+        "bing": "fo",
+        "modernMt": "fo",
+        "qqTranSmart": "fo"
+    },
+    {
+        "Value": "丰语",
+        "modernMt": "fon"
+    },
+    {
+        "Value": "法兰克-普罗旺斯语",
+        "apertium": "frp"
+    },
+    {
+        "Value": "弗留利语",
+        "alibaba": "fur",
+        "baidu": "fri",
+        "modernMt": "fur",
+        "qqTranSmart": "fur"
+    },
+    {
+        "Value": "富拉尼语",
+        "baidu": "ful"
+    },
+    {
+        "Value": "尼日利亚富拉语",
+        "modernMt": "fuv"
+    },
+    {
+        "Value": "富尔语",
+        "alibaba": "fvr"
+    },
+    {
+        "Value": "西弗里斯兰语",
+        "alibaba": "fy",
+        "baidu": "fry",
+        "google": "fy",
+        "lingvanex": "fy_NL",
+        "qqTranSmart": "fy"
+    },
+    {
+        "Value": "爱尔兰语",
+        "alibaba": "ga",
+        "argos": "ga",
+        "baidu": "gle",
+        "bing": "ga",
+        "deepl": "ga",
+        "google": "ga",
+        "itranslate": "ga",
+        "lingvanex": "ga_IE",
+        "modernMt": "ga",
+        "qqTranSmart": "ga"
+    },
+    {
+        "Value": "苏格兰盖尔语",
+        "alibaba": "gd",
+        "baidu": "gla",
+        "google": "gd",
+        "lingvanex": "gd_GB",
+        "modernMt": "gd",
+        "qqTranSmart": "gd"
+    },
+    {
+        "Value": "基里巴斯语",
+        "alibaba": "gil"
+    },
+    {
+        "Value": "加利西亚语",
+        "alibaba": "gl",
+        "apertium": "glg",
+        "baidu": "glg",
+        "bing": "gl",
+        "elia": "gl",
+        "google": "gl",
+        "itranslate": "gl",
+        "lingvanex": "gl_ES",
+        "modernMt": "gl",
+        "qqTranSmart": "gl"
+    },
+    {
+        "Value": "瓜拉尼语",
+        "alibaba": "gn",
+        "baidu": "grn",
+        "google": "gn",
+        "modernMt": "gn"
+    },
+    {
+        "Value": "贡根语",
+        "google": "gom"
+    },
+    {
+        "Value": "格罗宁根方言",
+        "alibaba": "gos"
+    },
+    {
+        "Value": "古希腊语",
+        "baidu": "gra"
+    },
+    {
+        "Value": "古吉拉特语",
+        "alibaba": "gu",
+        "baidu": "guj",
+        "bing": "gu",
+        "google": "gu",
+        "itranslate": "gu",
+        "lingvanex": "gu_IN",
+        "modernMt": "gu",
+        "qqTranSmart": "gu"
+    },
+    {
+        "Value": "马恩语",
+        "alibaba": "gv",
+        "baidu": "glv",
+        "qqTranSmart": "gun"
+    },
+    {
+        "Value": "豪萨语",
+        "alibaba": "ha",
+        "baidu": "hau",
+        "bing": "ha",
+        "google": "ha",
+        "itranslate": "ha",
+        "lingvanex": "ha_NE",
+        "modernMt": "ha",
+        "qqTranSmart": "ha",
+        "reverso": "ha"
+    },
+    {
+        "Value": "哈卡钦语",
+        "baidu": "hak"
+    },
+    {
+        "Value": "夏威夷语",
+        "alibaba": "haw",
+        "baidu": "haw",
+        "google": "haw",
+        "lingvanex": "haw_US"
+    },
+    {
+        "Value": "克罗地亚语",
+        "alibaba": "hbs",
+        "apertium": "hbs",
+        "baidu": "hrv",
+        "bing": "hr",
+        "deepl": "hr",
+        "google": "hr",
+        "itranslate": "hr",
+        "lingvanex": "hr_HR",
+        "modernMt": "hr",
+        "qqTranSmart": "hr"
+    },
+    {
+        "Value": "希伯来语",
+        "alibaba": "he",
+        "argos": "he",
+        "baidu": "heb",
+        "bing": "he",
+        "google": "iw",
+        "itranslate": "he",
+        "lingvanex": "he_IL",
+        "modernMt": "he",
+        "qqTranSmart": "he",
+        "reverso": "he"
+    },
+    {
+        "Value": "印地语",
+        "alibaba": "hi",
+        "apertium": "hin",
+        "argos": "hi",
+        "baidu": "hi",
+        "bing": "hi",
+        "cloudTranslation": "hi",
+        "google": "hi",
+        "itranslate": "hi",
+        "lingvanex": "hi_IN",
+        "modernMt": "hi",
+        "papago": "hi",
+        "qqFanyi": "hi",
+        "qqTranSmart": "hi",
+        "reverso": "hi"
+    },
+    {
+        "Value": "希利盖农语",
+        "alibaba": "hil",
+        "baidu": "hil"
+    },
+    {
+        "Value": "恰蒂斯加尔语",
+        "modernMt": "hne"
+    },
+    {
+        "Value": "上索布语",
+        "alibaba": "hsb",
+        "bing": "hsb"
+    },
+    {
+        "Value": "海地克里奥尔语",
+        "alibaba": "ht",
+        "baidu": "ht",
+        "bing": "ht",
+        "google": "ht",
+        "itranslate": "ht",
+        "lingvanex": "ht_HT",
+        "modernMt": "ht",
+        "qqTranSmart": "ht"
+    },
+    {
+        "Value": "匈牙利语",
+        "alibaba": "hu",
+        "argos": "hu",
+        "baidu": "hu",
+        "bing": "hu",
+        "deepl": "hu",
+        "google": "hu",
+        "itranslate": "hu",
+        "lingvanex": "hu_HU",
+        "modernMt": "hu",
+        "qqTranSmart": "hu",
+        "reverso": "hu",
+        "sogou": "hu",
+        "translateCom": "hu"
+    },
+    {
+        "Value": "胡帕语",
+        "alibaba": "hup",
+        "baidu": "hup"
+    },
+    {
+        "Value": "亚美尼亚语",
+        "alibaba": "hy",
+        "baidu": "arm",
+        "bing": "hy",
+        "google": "hy",
+        "itranslate": "hy",
+        "lingvanex": "hy_AM",
+        "modernMt": "hy",
+        "qqTranSmart": "hy"
+    },
+    {
+        "Value": "因特语",
+        "alibaba": "ia",
+        "baidu": "ina",
+        "qqTranSmart": "ia"
+    },
+    {
+        "Value": "伊班语",
+        "alibaba": "iba"
+    },
+    {
+        "Value": "印度尼西亚语",
+        "alibaba": "id",
+        "apertium": "ind",
+        "argos": "id",
+        "baidu": "id",
+        "bing": "id",
+        "cloudTranslation": "id",
+        "deepl": "id",
+        "google": "id",
+        "itranslate": "id",
+        "lingvanex": "id_ID",
+        "modernMt": "id",
+        "papago": "id",
+        "qqFanyi": "id",
+        "qqTranSmart": "id",
+        "reverso": "id",
+        "translateCom": "id"
+    },
+    {
+        "Value": "西方国际语",
+        "alibaba": "ie"
+    },
+    {
+        "Value": "伊博语",
+        "alibaba": "ig",
+        "baidu": "ibo",
+        "bing": "ig",
+        "google": "ig",
+        "itranslate": "ig",
+        "lingvanex": "ig_NG",
+        "modernMt": "ig"
+    },
+    {
+        "Value": "因纽特语",
+        "bing": "ikt"
+    },
+    {
+        "Value": "伊洛卡诺语",
+        "alibaba": "ilo",
+        "google": "ilo",
+        "modernMt": "ilo"
+    },
+    {
+        "Value": "印古什语",
+        "alibaba": "inh",
+        "baidu": "ing"
+    },
+    {
+        "Value": "伊多语",
+        "alibaba": "io",
+        "baidu": "ido"
+    },
+    {
+        "Value": "冰岛语",
+        "alibaba": "is",
+        "apertium": "isl",
+        "baidu": "ice",
+        "bing": "is",
+        "deepl": "is",
+        "google": "is",
+        "itranslate": "is",
+        "lingvanex": "is_IS",
+        "modernMt": "is",
+        "qqTranSmart": "is"
+    },
+    {
+        "Value": "伊努克提图特语(拉丁文)",
+        "alibaba": "iu",
+        "baidu": "iku",
+        "bing": "iu",
+        "qqTranSmart": "iw",
+        "translateCom": "iw"
+    },
+    {
+        "Value": "伊努克提图特语",
+        "bing": "iu-Latn"
+    },
+    {
+        "Value": "逻辑语",
+        "alibaba": "jbo",
+        "baidu": "loj",
+        "qqTranSmart": "jbo"
+    },
+    {
+        "Value": "爪哇语",
+        "alibaba": "jv",
+        "baidu": "jav",
+        "google": "jw",
+        "itranslate": "jw",
+        "lingvanex": "jv_ID",
+        "modernMt": "jv",
+        "qqTranSmart": "jv"
+    },
+    {
+        "Value": "格鲁吉亚语",
+        "alibaba": "ka",
+        "baidu": "geo",
+        "bing": "ka",
+        "google": "ka",
+        "itranslate": "ka",
+        "lingvanex": "ka_GE",
+        "modernMt": "ka",
+        "qqTranSmart": "ka"
+    },
+    {
+        "Value": "卡拜尔语",
+        "alibaba": "kab",
+        "baidu": "kab",
+        "modernMt": "kab"
+    },
+    {
+        "Value": "景颇语",
+        "modernMt": "kac"
+    },
+    {
+        "Value": "康巴语",
+        "modernMt": "kam"
+    },
+    {
+        "Value": "卡比耶语",
+        "modernMt": "kbp"
+    },
+    {
+        "Value": "侗语",
+        "alibaba": "kdx"
+    },
+    {
+        "Value": "佛得角克里奥尔语",
+        "modernMt": "kea"
+    },
+    {
+        "Value": "玛雅语",
+        "alibaba": "kek"
+    },
+    {
+        "Value": "刚果语",
+        "alibaba": "kg",
+        "baidu": "kon",
+        "modernMt": "kg"
+    },
+    {
+        "Value": "卡西语",
+        "alibaba": "kha"
+    },
+    {
+        "Value": "喀尔喀蒙古语",
+        "modernMt": "khk"
+    },
+    {
+        "Value": "基库尤语",
+        "modernMt": "ki"
+    },
+    {
+        "Value": "哈萨克语",
+        "alibaba": "kk",
+        "apertium": "kaz",
+        "bing": "kk",
+        "google": "kk",
+        "itranslate": "kk",
+        "lingvanex": "kk_KZ",
+        "modernMt": "kk",
+        "qqTranSmart": "kk"
+    },
+    {
+        "Value": "格陵兰语",
+        "alibaba": "kl",
+        "baidu": "kal"
+    },
+    {
+        "Value": "高棉语",
+        "alibaba": "km",
+        "baidu": "hkm",
+        "bing": "km",
+        "cloudTranslation": "km",
+        "google": "km",
+        "itranslate": "km",
+        "lingvanex": "km_KH",
+        "modernMt": "km",
+        "qqTranSmart": "km"
+    },
+    {
+        "Value": "金邦杜语",
+        "modernMt": "kmb"
+    },
+    {
+        "Value": "卡纳达语",
+        "alibaba": "kn",
+        "baidu": "kan",
+        "bing": "kn",
+        "google": "kn",
+        "itranslate": "kn",
+        "lingvanex": "kn_IN",
+        "modernMt": "kn",
+        "qqTranSmart": "kn"
+    },
+    {
+        "Value": "孔卡尼语",
+        "baidu": "kok",
+        "bing": "gom"
+    },
+    {
+        "Value": "卡努里语",
+        "alibaba": "kr",
+        "baidu": "kau",
+        "modernMt": "knc"
+    },
+    {
+        "Value": "克里奥尔语",
+        "google": "kri"
+    },
+    {
+        "Value": "克什米尔语",
+        "alibaba": "ks",
+        "baidu": "kas",
+        "bing": "ks",
+        "modernMt": "kas"
+    },
+    {
+        "Value": "克什米尔语(天城文)",
+        "modernMt": "ks"
+    },
+    {
+        "Value": "库尔德语(中)",
+        "alibaba": "ku",
+        "baidu": "kur",
+        "bing": "ku",
+        "google": "ku",
+        "lingvanex": "ku_IR",
+        "qqTranSmart": "ku"
+    },
+    {
+        "Value": "库尔德语(北)",
+        "bing": "kmr",
+        "modernMt": "kmr"
+    },
+    {
+        "Value": "康沃尔语",
+        "alibaba": "kw",
+        "qqTranSmart": "kw"
+    },
+    {
+        "Value": "吉尔吉斯斯坦语",
+        "alibaba": "ky",
+        "baidu": "kir",
+        "bing": "ky",
+        "google": "ky",
+        "lingvanex": "ky_KG",
+        "modernMt": "ky",
+        "qqTranSmart": "ky"
+    },
+    {
+        "Value": "拉丁语",
+        "alibaba": "la",
+        "baidu": "lat",
+        "google": "la",
+        "itranslate": "la",
+        "lingvanex": "la_VAT",
+        "modernMt": "la"
+    },
+    {
+        "Value": "卢森堡语",
+        "alibaba": "lb",
+        "baidu": "ltz",
+        "google": "lb",
+        "lingvanex": "lb_LU",
+        "modernMt": "lb",
+        "qqTranSmart": "lb"
+    },
+    {
+        "Value": "新共同语言",
+        "alibaba": "lfn"
+    },
+    {
+        "Value": "卢干达语",
+        "alibaba": "lg",
+        "baidu": "lug",
+        "bing": "lug",
+        "google": "lg",
+        "modernMt": "lg"
+    },
+    {
+        "Value": "林堡语",
+        "alibaba": "li",
+        "baidu": "lim",
+        "modernMt": "li"
+    },
+    {
+        "Value": "利古里亚语",
+        "modernMt": "lij"
+    },
+    {
+        "Value": "伦巴底语",
+        "modernMt": "lmo"
+    },
+    {
+        "Value": "林加拉语",
+        "alibaba": "ln",
+        "baidu": "lin",
+        "bing": "ln",
+        "google": "ln",
+        "modernMt": "ln",
+        "qqTranSmart": "ln"
+    },
+    {
+        "Value": "老挝语",
+        "alibaba": "lo",
+        "baidu": "lao",
+        "bing": "lo",
+        "cloudTranslation": "lo",
+        "google": "lo",
+        "itranslate": "lo",
+        "lingvanex": "lo_LA",
+        "modernMt": "lo",
+        "qqTranSmart": "lo"
+    },
+    {
+        "Value": "下索布语",
+        "baidu": "los",
+        "bing": "dsb"
+    },
+    {
+        "Value": "立陶宛语",
+        "alibaba": "lt",
+        "argos": "lt",
+        "baidu": "lit",
+        "bing": "lt",
+        "deepl": "lt",
+        "google": "lt",
+        "itranslate": "lt",
+        "lingvanex": "lt_LT",
+        "modernMt": "lt",
+        "qqTranSmart": "lt",
+        "reverso": "lt"
+    },
+    {
+        "Value": "拉特加莱语",
+        "alibaba": "ltg",
+        "baidu": "lag",
+        "modernMt": "ltg"
+    },
+    {
+        "Value": "卢巴卡塞语",
+        "modernMt": "lua"
+    },
+    {
+        "Value": "卢奥语",
+        "modernMt": "luo"
+    },
+    {
+        "Value": "米佐语",
+        "google": "lus",
+        "modernMt": "lus"
+    },
+    {
+        "Value": "拉脱维亚语",
+        "alibaba": "lv",
+        "argos": "lv",
+        "baidu": "lav",
+        "bing": "lv",
+        "deepl": "lv",
+        "google": "lv",
+        "itranslate": "lv",
+        "lingvanex": "lv_LV",
+        "modernMt": "lv",
+        "qqTranSmart": "lv"
+    },
+    {
+        "Value": "标准拉脱维亚语",
+        "modernMt": "lvs"
+    },
+    {
+        "Value": "马加希语",
+        "modernMt": "mag"
+    },
+    {
+        "Value": "迈蒂利语",
+        "alibaba": "mai",
+        "baidu": "mai",
+        "bing": "mai",
+        "google": "mai",
+        "modernMt": "mai",
+        "qqTranSmart": "mai"
+    },
+    {
+        "Value": "毛里求斯克里奥尔语",
+        "alibaba": "mfe",
+        "baidu": "mau",
+        "qqTranSmart": "mfe"
+    },
+    {
+        "Value": "马达加斯加语",
+        "alibaba": "mg",
+        "baidu": "mg",
+        "bing": "mg",
+        "google": "mg",
+        "itranslate": "mg",
+        "lingvanex": "mg_MG",
+        "modernMt": "mg",
+        "qqTranSmart": "mg"
+    },
+    {
+        "Value": "马绍尔语",
+        "alibaba": "mh",
+        "baidu": "mah"
+    },
+    {
+        "Value": "毛利语",
+        "alibaba": "mi",
+        "baidu": "mao",
+        "bing": "mi",
+        "google": "mi",
+        "itranslate": "mi",
+        "lingvanex": "mi_NZ",
+        "modernMt": "mi",
+        "qqTranSmart": "mi"
+    },
+    {
+        "Value": "米南佳保语",
+        "modernMt": "min"
+    },
+    {
+        "Value": "马其顿语",
+        "alibaba": "mk",
+        "apertium": "mkd",
+        "baidu": "mac",
+        "bing": "mk",
+        "google": "mk",
+        "itranslate": "mk",
+        "lingvanex": "mk_MK",
+        "modernMt": "mk",
+        "qqTranSmart": "mk"
+    },
+    {
+        "Value": "马拉雅拉姆语",
+        "alibaba": "ml",
+        "baidu": "mal",
+        "bing": "ml",
+        "google": "ml",
+        "itranslate": "ml",
+        "lingvanex": "ml_IN",
+        "modernMt": "ml",
+        "qqTranSmart": "ml"
+    },
+    {
+        "Value": "梅泰语(曼尼普尔语)",
+        "google": "mni-Mtei",
+        "modernMt": "mni"
+    },
+    {
+        "Value": "莫西语",
+        "modernMt": "mos"
+    },
+    {
+        "Value": "马拉地语",
+        "alibaba": "mr",
+        "baidu": "mar",
+        "bing": "mr",
+        "google": "mr",
+        "itranslate": "mr",
+        "lingvanex": "mr_IN",
+        "modernMt": "mr",
+        "qqTranSmart": "mr"
+    },
+    {
+        "Value": "马来语",
+        "alibaba": "ms",
+        "apertium": "zlm",
+        "argos": "ms",
+        "baidu": "may",
+        "bing": "ms",
+        "cloudTranslation": "ms",
+        "google": "ms",
+        "itranslate": "ms",
+        "lingvanex": "ms_MY",
+        "modernMt": "ms",
+        "qqFanyi": "ms",
+        "qqTranSmart": "ms",
+        "translateCom": "ms"
+    },
+    {
+        "Value": "马耳他语",
+        "alibaba": "mt",
+        "apertium": "mlt",
+        "baidu": "mlt",
+        "bing": "mt",
+        "deepl": "mt",
+        "google": "mt",
+        "itranslate": "mt",
+        "lingvanex": "mt_MT",
+        "modernMt": "mt",
+        "qqTranSmart": "mt"
+    },
+    {
+        "Value": "克里克语",
+        "alibaba": "mus",
+        "baidu": "cre"
+    },
+    {
+        "Value": "缅甸语",
+        "alibaba": "my",
+        "baidu": "bur",
+        "bing": "my",
+        "cloudTranslation": "my",
+        "google": "my",
+        "itranslate": "my",
+        "lingvanex": "my_MM",
+        "modernMt": "my"
+    },
+    {
+        "Value": "南恩德贝莱语",
+        "baidu": "nbl"
+    },
+    {
+        "Value": "阿兹特克语",
+        "alibaba": "nch"
+    },
+    {
+        "Value": "低地德语",
+        "alibaba": "nds",
+        "baidu": "log"
+    },
+    {
+        "Value": "尼泊尔语",
+        "alibaba": "ne",
+        "baidu": "nep",
+        "bing": "ne",
+        "google": "ne",
+        "itranslate": "ne",
+        "lingvanex": "ne_NP",
+        "modernMt": "ne",
+        "qqTranSmart": "ne"
+    },
+    {
+        "Value": "那不勒斯语",
+        "baidu": "nea"
+    },
+    {
+        "Value": "格雷罗纳瓦特尔语",
+        "alibaba": "ngu"
+    },
+    {
+        "Value": "纽埃语",
+        "alibaba": "niu"
+    },
+    {
+        "Value": "新挪威语",
+        "apertium": "nno",
+        "baidu": "nno",
+        "modernMt": "nn",
+        "qqTranSmart": "nn"
+    },
+    {
+        "Value": "东挪威语",
+        "apertium": "nno_e"
+    },
+    {
+        "Value": "挪威语",
+        "alibaba": "no",
+        "baidu": "nor",
+        "deepl": "no",
+        "google": "no",
+        "itranslate": "no",
+        "lingvanex": "no_NO",
+        "qqTranSmart": "no",
+        "reverso": "no",
+        "translateCom": "no"
+    },
+    {
+        "Value": "书面挪威语",
+        "apertium": "nob",
+        "argos": "nb",
+        "baidu": "nob",
+        "bing": "nb",
+        "deepl": "nb",
+        "languageWire": "nb",
+        "modernMt": "nb",
+        "qqTranSmart": "nb"
+    },
+    {
+        "Value": "西非书面语",
+        "baidu": "nqo"
+    },
+    {
+        "Value": "塞佩蒂语",
+        "google": "nso"
+    },
+    {
+        "Value": "努尔语",
+        "modernMt": "nus"
+    },
+    {
+        "Value": "纳瓦霍语",
+        "alibaba": "nv"
+    },
+    {
+        "Value": "齐切瓦语",
+        "alibaba": "ny",
+        "baidu": "nya",
+        "bing": "nya",
+        "google": "ny",
+        "itranslate": "ny",
+        "lingvanex": "ny_MW",
+        "modernMt": "ny"
+    },
+    {
+        "Value": "奥克语",
+        "alibaba": "oc",
+        "baidu": "oci",
+        "modernMt": "oc",
+        "qqTranSmart": "oc"
+    },
+    {
+        "Value": "奥克西坦语",
+        "apertium": "oci"
+    },
+    {
+        "Value": "阿兰语",
+        "apertium": "oci_aran"
+    },
+    {
+        "Value": "加斯科尼语",
+        "apertium": "oci_gascon"
+    },
+    {
+        "Value": "奥杰布瓦语",
+        "alibaba": "oj",
+        "baidu": "oji"
+    },
+    {
+        "Value": "奥罗莫语",
+        "alibaba": "om",
+        "baidu": "orm",
+        "google": "om",
+        "modernMt": "gaz"
+    },
+    {
+        "Value": "奥里亚语",
+        "alibaba": "or",
+        "baidu": "ori",
+        "bing": "or",
+        "google": "or",
+        "lingvanex": "or_OR",
+        "modernMt": "or",
+        "qqTranSmart": "or"
+    },
+    {
+        "Value": "奥塞梯语",
+        "alibaba": "os",
+        "baidu": "oss"
+    },
+    {
+        "Value": "克雷塔罗奥托米语",
+        "bing": "otq"
+    },
+    {
+        "Value": "旁遮普语",
+        "alibaba": "pa",
+        "baidu": "pan",
+        "bing": "pa",
+        "google": "pa",
+        "itranslate": "pa",
+        "lingvanex": "pa_PK",
+        "modernMt": "pa",
+        "qqTranSmart": "pa"
+    },
+    {
+        "Value": "邦阿西楠语",
+        "alibaba": "pag",
+        "modernMt": "pag"
+    },
+    {
+        "Value": "邦板牙语",
+        "baidu": "pam"
+    },
+    {
+        "Value": "帕皮阿门托语",
+        "alibaba": "pap",
+        "baidu": "pap",
+        "modernMt": "pap",
+        "qqTranSmart": "pap"
+    },
+    {
+        "Value": "北索托语",
+        "baidu": "ped",
+        "bing": "nso",
+        "modernMt": "nso",
+        "qqTranSmart": "nso"
+    },
+    {
+        "Value": "西波斯语",
+        "modernMt": "pes",
+        "reverso": "pe"
+    },
+    {
+        "Value": "波兰语",
+        "alibaba": "pl",
+        "apertium": "pol",
+        "argos": "pl",
+        "baidu": "pl",
+        "bing": "pl",
+        "cloudTranslation": "pl",
+        "deepl": "pl",
+        "google": "pl",
+        "itranslate": "pl",
+        "lingvanex": "pl_PL",
+        "modernMt": "pl",
+        "qqTranSmart": "pl",
+        "reverso": "pl",
+        "sogou": "pl",
+        "translateCom": "pl"
+    },
+    {
+        "Value": "高原马拉加斯语",
+        "modernMt": "plt"
+    },
+    {
+        "Value": "帕姆语",
+        "alibaba": "pmn",
+        "qqTranSmart": "pms"
+    },
+    {
+        "Value": "普什图语",
+        "alibaba": "ps",
+        "baidu": "pus",
+        "bing": "ps",
+        "google": "ps",
+        "lingvanex": "ps_AF",
+        "modernMt": "ps",
+        "qqTranSmart": "ps",
+        "reverso": "ps"
+    },
+    {
+        "Value": "南普什图语",
+        "modernMt": "pbt"
+    },
+    {
+        "Value": "达利语",
+        "bing": "prs",
+        "modernMt": "prs"
+    },
+    {
+        "Value": "葡萄牙语",
+        "alibaba": "pt",
+        "apertium": "por",
+        "argos": "pt",
+        "baidu": "pt",
+        "bing": "pt",
+        "cloudTranslation": "pt",
+        "deepl": "pt",
+        "google": "pt",
+        "papago": "pt",
+        "qqFanyi": "pt",
+        "qqTranSmart": "pt",
+        "reverso": "pt",
+        "sogou": "pt",
+        "translateCom": "pt"
+    },
+    {
+        "Value": "巴西葡萄牙语",
+        "apertium": "por_BR",
+        "baidu": "pot",
+        "itranslate": "pt-BR",
+        "modernMt": "pt-BR",
+        "qqTranSmart": "pt-BR",
+        "reverso": "ptb",
+        "translateCom": "pt-br"
+    },
+    {
+        "Value": "欧洲葡萄牙语",
+        "apertium": "por_PTpre1990",
+        "bing": "pt-PT",
+        "itranslate": "pt-PT",
+        "lingvanex": "pt_PT",
+        "modernMt": "pt-PT",
+        "qqTranSmart": "pt-PT"
+    },
+    {
+        "Value": "克丘亚语",
+        "alibaba": "qu",
+        "baidu": "que",
+        "google": "qu"
+    },
+    {
+        "Value": "基切语",
+        "alibaba": "quc"
+    },
+    {
+        "Value": "阿亚库乔克丘亚语",
+        "modernMt": "quy"
+    },
+    {
+        "Value": "罗曼什语",
+        "alibaba": "rm",
+        "baidu": "roh",
+        "qqTranSmart": "rm"
+    },
+    {
+        "Value": "基隆迪语",
+        "alibaba": "rn",
+        "bing": "run",
+        "modernMt": "rn"
+    },
+    {
+        "Value": "罗马尼亚语",
+        "alibaba": "ro",
+        "apertium": "ron",
+        "argos": "ro",
+        "baidu": "ro",
+        "bing": "ro",
+        "deepl": "ro",
+        "google": "ro",
+        "itranslate": "ro",
+        "lingvanex": "ro_RO",
+        "modernMt": "ro",
+        "qqTranSmart": "ro",
+        "reverso": "ro",
+        "translateCom": "ro"
+    },
+    {
+        "Value": "罗姆语",
+        "alibaba": "rom",
+        "baidu": "rom"
+    },
+    {
+        "Value": "卢森尼亚语",
+        "alibaba": "rue",
+        "baidu": "ruy"
+    },
+    {
+        "Value": "卢旺达语",
+        "alibaba": "rw",
+        "baidu": "kin",
+        "bing": "rw",
+        "google": "rw",
+        "lingvanex": "rw_RW",
+        "modernMt": "rw"
+    },
+    {
+        "Value": "梵语",
+        "alibaba": "sa",
+        "baidu": "san",
+        "google": "sa",
+        "modernMt": "sa"
+    },
+    {
+        "Value": "萨哈语",
+        "qqTranSmart": "sah"
+    },
+    {
+        "Value": "桑塔利语",
+        "modernMt": "sat"
+    },
+    {
+        "Value": "西西里语",
+        "modernMt": "scn"
+    },
+    {
+        "Value": "低地苏格兰语",
+        "alibaba": "sco",
+        "baidu": "sco",
+        "qqTranSmart": "sco"
+    },
+    {
+        "Value": "信德语",
+        "alibaba": "sd",
+        "baidu": "snd",
+        "bing": "sd",
+        "google": "sd",
+        "lingvanex": "sd_PK",
+        "modernMt": "sd"
+    },
+    {
+        "Value": "北萨米语",
+        "alibaba": "se",
+        "apertium": "sme",
+        "baidu": "sme",
+        "qqTranSmart": "se"
+    },
+    {
+        "Value": "塞克语",
+        "baidu": "sec"
+    },
+    {
+        "Value": "桑戈语",
+        "alibaba": "sg",
+        "modernMt": "sg"
+    },
+    {
+        "Value": "掸语",
+        "alibaba": "shn",
+        "baidu": "sha",
+        "modernMt": "shn"
+    },
+    {
+        "Value": "僧伽罗语",
+        "alibaba": "si",
+        "baidu": "sin",
+        "bing": "si",
+        "google": "si",
+        "itranslate": "si",
+        "lingvanex": "si_LK",
+        "modernMt": "si",
+        "qqTranSmart": "si"
+    },
+    {
+        "Value": "斯诺伐克语",
+        "alibaba": "sk",
+        "argos": "sk",
+        "baidu": "sk",
+        "bing": "sk",
+        "cloudTranslation": "sk",
+        "deepl": "sk",
+        "google": "sk",
+        "itranslate": "sk",
+        "lingvanex": "sk_SK",
+        "modernMt": "sk",
+        "qqTranSmart": "sk",
+        "reverso": "sk",
+        "translateCom": "sk"
+    },
+    {
+        "Value": "斯洛文尼亚语",
+        "alibaba": "sl",
+        "apertium": "slv",
+        "argos": "sl",
+        "baidu": "slo",
+        "bing": "sl",
+        "deepl": "sl",
+        "google": "sl",
+        "itranslate": "sl",
+        "lingvanex": "sl_SI",
+        "modernMt": "sl",
+        "qqTranSmart": "sl",
+        "reverso": "sl"
+    },
+    {
+        "Value": "萨摩亚语",
+        "alibaba": "sm",
+        "baidu": "sm",
+        "bing": "sm",
+        "google": "sm",
+        "lingvanex": "sm_WS",
+        "modernMt": "sm"
+    },
+    {
+        "Value": "修纳语",
+        "alibaba": "sn",
+        "baidu": "sna",
+        "bing": "sn",
+        "google": "sn",
+        "lingvanex": "sn_ZW",
+        "modernMt": "sn"
+    },
+    {
+        "Value": "索马里语",
+        "alibaba": "so",
+        "baidu": "som",
+        "bing": "so",
+        "google": "so",
+        "itranslate": "so",
+        "lingvanex": "so_SO",
+        "modernMt": "so",
+        "qqTranSmart": "so",
+        "reverso": "so"
+    },
+    {
+        "Value": "桑海语",
+        "baidu": "sol",
+        "qqTranSmart": "son"
+    },
+    {
+        "Value": "南索托语",
+        "baidu": "sot"
+    },
+    {
+        "Value": "阿尔巴尼亚语",
+        "alibaba": "sq",
+        "argos": "sq",
+        "baidu": "alb",
+        "bing": "sq",
+        "google": "sq",
+        "itranslate": "sq",
+        "lingvanex": "sq_AL",
+        "modernMt": "sq",
+        "qqTranSmart": "sq"
+    },
+    {
+        "Value": "塞尔维亚语",
+        "alibaba": "sr",
+        "argos": "sr",
+        "google": "sr",
+        "itranslate": "sr",
+        "qqTranSmart": "sr",
+        "reverso": "sr",
+        "translateCom": "sr"
+    },
+    {
+        "Value": "塞尔维亚语(西里尔文)",
+        "baidu": "src",
+        "bing": "sr-Cyrl",
+        "lingvanex": "sr-Cyrl_RS",
+        "modernMt": "sr-Cyrl"
+    },
+    {
+        "Value": "塞尔维亚语(拉丁文)",
+        "baidu": "srp",
+        "bing": "sr-Latn",
+        "modernMt": "sr-Latn"
+    },
+    {
+        "Value": "萨丁尼亚语",
+        "apertium": "srd",
+        "baidu": "srd",
+        "modernMt": "sc"
+    },
+    {
+        "Value": "斯瓦特语",
+        "modernMt": "ss"
+    },
+    {
+        "Value": "塞索托语",
+        "alibaba": "st",
+        "bing": "st",
+        "google": "st",
+        "itranslate": "st",
+        "lingvanex": "st_LS",
+        "modernMt": "st"
+    },
+    {
+        "Value": "巽他语",
+        "alibaba": "su",
+        "baidu": "sun",
+        "google": "su",
+        "itranslate": "su",
+        "lingvanex": "su_ID",
+        "modernMt": "su",
+        "qqTranSmart": "su"
+    },
+    {
+        "Value": "瑞典语",
+        "alibaba": "sv",
+        "apertium": "swe",
+        "argos": "sv",
+        "baidu": "swe",
+        "bing": "sv",
+        "deepl": "sv",
+        "google": "sv",
+        "itranslate": "sv",
+        "languageWire": "sv",
+        "lingvanex": "sv_SE",
+        "modernMt": "sv",
+        "qqTranSmart": "sv",
+        "reverso": "sv",
+        "sogou": "sv",
+        "translateCom": "sv"
+    },
+    {
+        "Value": "斯瓦希里语",
+        "alibaba": "sw",
+        "baidu": "swa",
+        "bing": "sw",
+        "google": "sw",
+        "itranslate": "sw",
+        "lingvanex": "sw_TZ",
+        "modernMt": "sw",
+        "qqTranSmart": "sw"
+    },
+    {
+        "Value": "叙利亚语",
+        "alibaba": "syr",
+        "baidu": "syr"
+    },
+    {
+        "Value": "西里西亚语",
+        "alibaba": "szl",
+        "apertium": "szl",
+        "baidu": "sil",
+        "modernMt": "szl"
+    },
+    {
+        "Value": "泰米尔语",
+        "alibaba": "ta",
+        "baidu": "tam",
+        "bing": "ta",
+        "google": "ta",
+        "itranslate": "ta",
+        "lingvanex": "ta_IN",
+        "modernMt": "ta",
+        "qqTranSmart": "ta"
+    },
+    {
+        "Value": "图阿雷格语",
+        "modernMt": "taq"
+    },
+    {
+        "Value": "泰卢固语",
+        "alibaba": "te",
+        "baidu": "tel",
+        "bing": "te",
+        "google": "te",
+        "itranslate": "te",
+        "lingvanex": "te_IN",
+        "modernMt": "te",
+        "qqTranSmart": "te"
+    },
+    {
+        "Value": "德顿语",
+        "alibaba": "tet",
+        "baidu": "tet"
+    },
+    {
+        "Value": "塔吉克语",
+        "alibaba": "tg",
+        "baidu": "tgk",
+        "google": "tg",
+        "itranslate": "tg",
+        "lingvanex": "tg_TJ",
+        "modernMt": "tg",
+        "qqTranSmart": "tg"
+    },
+    {
+        "Value": "泰语",
+        "alibaba": "th",
+        "argos": "th",
+        "baidu": "th",
+        "bing": "th",
+        "cloudTranslation": "th",
+        "google": "th",
+        "itranslate": "th",
+        "lingvanex": "th_TH",
+        "modernMt": "th",
+        "papago": "th",
+        "qqFanyi": "th",
+        "qqTranSmart": "th",
+        "reverso": "th",
+        "sogou": "th",
+        "translateCom": "th"
+    },
+    {
+        "Value": "提格雷尼亚语",
+        "alibaba": "ti",
+        "baidu": "tir",
+        "bing": "ti",
+        "google": "ti",
+        "modernMt": "ti",
+        "qqTranSmart": "ti"
+    },
+    {
+        "Value": "土库曼语",
+        "alibaba": "tk",
+        "baidu": "tuk",
+        "bing": "tk",
+        "google": "tk",
+        "lingvanex": "tk_TM",
+        "modernMt": "tk",
+        "qqTranSmart": "tk"
+    },
+    {
+        "Value": "他加禄语",
+        "alibaba": "tl",
+        "argos": "tl",
+        "baidu": "tgl",
+        "cloudTranslation": "tl",
+        "google": "tl",
+        "itranslate": "tl",
+        "lingvanex": "tl_PH",
+        "modernMt": "tl",
+        "qqTranSmart": "tl",
+        "translateCom": "tl"
+    },
+    {
+        "Value": "克林贡语",
+        "alibaba": "tlh",
+        "baidu": "kli",
+        "bing": "tlh-Latn"
+    },
+    {
+        "Value": "茨瓦纳语",
+        "bing": "tn",
+        "modernMt": "tn"
+    },
+    {
+        "Value": "汤加语(汤加群岛)",
+        "alibaba": "to",
+        "bing": "to"
+    },
+    {
+        "Value": "汤加语(汤加群岛)",
+        "alibaba": "toi"
+    },
+    {
+        "Value": "巴布亚皮钦语",
+        "alibaba": "tpi",
+        "modernMt": "tpi"
+    },
+    {
+        "Value": "土耳其语",
+        "alibaba": "tr",
+        "apertium": "tur",
+        "argos": "tr",
+        "baidu": "tr",
+        "bing": "tr",
+        "deepl": "tr",
+        "google": "tr",
+        "itranslate": "tr",
+        "lingvanex": "tr_TR",
+        "modernMt": "tr",
+        "qqFanyi": "tr",
+        "qqTranSmart": "tr",
+        "reverso": "tr",
+        "translateCom": "tr"
+    },
+    {
+        "Value": "聪加语",
+        "alibaba": "ts",
+        "baidu": "tso",
+        "google": "ts",
+        "modernMt": "ts"
+    },
+    {
+        "Value": "鞑靼语",
+        "alibaba": "tt",
+        "apertium": "tat",
+        "baidu": "tat",
+        "bing": "tt",
+        "google": "tt",
+        "lingvanex": "tt_TT",
+        "modernMt": "tt",
+        "qqTranSmart": "tt"
+    },
+    {
+        "Value": "突尼斯阿拉伯语",
+        "baidu": "tua"
+    },
+    {
+        "Value": "通布卡语",
+        "modernMt": "tum"
+    },
+    {
+        "Value": "图瓦卢语",
+        "alibaba": "tvl"
+    },
+    {
+        "Value": "契维语",
+        "alibaba": "tw",
+        "baidu": "twi",
+        "modernMt": "tw"
+    },
+    {
+        "Value": "塔希提语",
+        "alibaba": "ty",
+        "bing": "ty"
+    },
+    {
+        "Value": "图瓦语",
+        "alibaba": "tyv"
+    },
+    {
+        "Value": "塔马齐格特语",
+        "modernMt": "tzm"
+    },
+    {
+        "Value": "乌德穆尔特语",
+        "alibaba": "udm"
+    },
+    {
+        "Value": "维吾尔语",
+        "alibaba": "ug",
+        "bing": "ug",
+        "cloudTranslation": "ug",
+        "google": "ug",
+        "lingvanex": "ug_CN",
+        "modernMt": "ug",
+        "qqTranSmart": "ug"
+    },
+    {
+        "Value": "乌克兰语",
+        "alibaba": "uk",
+        "apertium": "ukr",
+        "argos": "uk",
+        "baidu": "ukr",
+        "bing": "uk",
+        "cloudTranslation": "uk",
+        "deepl": "uk",
+        "google": "uk",
+        "itranslate": "uk",
+        "lingvanex": "uk_UA",
+        "modernMt": "uk",
+        "qqTranSmart": "uk",
+        "reverso": "uk",
+        "translateCom": "uk"
+    },
+    {
+        "Value": "姆班杜语",
+        "alibaba": "umb",
+        "modernMt": "umb"
+    },
+    {
+        "Value": "高地索布语",
+        "baidu": "ups"
+    },
+    {
+        "Value": "乌尔都语",
+        "alibaba": "ur",
+        "apertium": "urd",
+        "argos": "ur",
+        "baidu": "urd",
+        "bing": "ur",
+        "google": "ur",
+        "itranslate": "ur",
+        "lingvanex": "ur_PK",
+        "modernMt": "ur",
+        "qqTranSmart": "ur",
+        "reverso": "ur"
+    },
+    {
+        "Value": "乌孜别克语",
+        "alibaba": "uz",
+        "bing": "uz",
+        "google": "uz",
+        "itranslate": "uz",
+        "lingvanex": "uz_UZ",
+        "qqTranSmart": "uz"
+    },
+    {
+        "Value": "北乌孜别克语",
+        "modernMt": "uzn"
+    },
+    {
+        "Value": "文达语",
+        "alibaba": "ve",
+        "baidu": "ven"
+    },
+    {
+        "Value": "威尼斯语",
+        "modernMt": "vec"
+    },
+    {
+        "Value": "越南语",
+        "alibaba": "vi",
+        "argos": "vi",
+        "baidu": "vie",
+        "bing": "vi",
+        "cloudTranslation": "vi",
+        "google": "vi",
+        "iflyrec": "vi",
+        "itranslate": "vi",
+        "lingvanex": "vi_VN",
+        "modernMt": "vi",
+        "papago": "vi",
+        "qqFanyi": "vi",
+        "qqTranSmart": "vi",
+        "reverso": "vi",
+        "sogou": "vi",
+        "translateCom": "vi"
+    },
+    {
+        "Value": "沃拉普克语",
+        "alibaba": "vo"
+    },
+    {
+        "Value": "瓦隆语",
+        "alibaba": "wa",
+        "baidu": "wln",
+        "qqTranSmart": "wa"
+    },
+    {
+        "Value": "瓦瑞语(菲律宾)",
+        "alibaba": "war",
+        "modernMt": "war"
+    },
+    {
+        "Value": "沃洛夫语",
+        "alibaba": "wo",
+        "baidu": "wol",
+        "modernMt": "wo",
+        "qqTranSmart": "wo"
+    },
+    {
+        "Value": "科萨语",
+        "alibaba": "xh",
+        "baidu": "xho",
+        "bing": "xh",
+        "google": "xh",
+        "lingvanex": "xh_ZA",
+        "modernMt": "xh"
+    },
+    {
+        "Value": "意第绪语",
+        "alibaba": "yi",
+        "baidu": "yid",
+        "google": "yi",
+        "itranslate": "yi",
+        "lingvanex": "yi_IL",
+        "modernMt": "ydd"
+    },
+    {
+        "Value": "约鲁巴语",
+        "alibaba": "yo",
+        "baidu": "yor",
+        "bing": "yo",
+        "google": "yo",
+        "itranslate": "yo",
+        "lingvanex": "yo_NG",
+        "modernMt": "yo",
+        "qqTranSmart": "yo"
+    },
+    {
+        "Value": "尤卡特克玛雅语",
+        "bing": "yua"
+    },
+    {
+        "Value": "标准马来语",
+        "modernMt": "zsm"
+    },
+    {
+        "Value": "祖鲁语",
+        "alibaba": "zu",
+        "baidu": "zul",
+        "bing": "zu",
+        "google": "zu",
+        "itranslate": "zu",
+        "lingvanex": "zu_ZA",
+        "modernMt": "zu"
+    },
+    {
+        "Value": "扎扎其语",
+        "alibaba": "zza",
+        "baidu": "zaz"
+    }
+]

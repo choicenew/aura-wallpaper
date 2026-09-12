@@ -1,0 +1,158 @@
+name: PyroMagma Master Build Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pyro-global-governance-lock
+  cancel-in-progress: true
+
+jobs:
+  build_all:
+    name: 治理 + 同步 + 编译
+    runs-on: ubuntu-latest
+    steps:
+      - name: Free Disk Space (Clean Runner)
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android/sdk/ndk
+          sudo rm -rf /opt/ghc
+          sudo rm -rf "/usr/local/share/boost"
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+          sudo docker system prune -af 2>/dev/null || true
+
+      - name: Checkout aura-wallpaper
+        uses: actions/checkout@v4
+
+      - name: Checkout pyro_magma
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/pyro_magma
+          path: pyro_magma
+          token: ${{ secrets.GH_PAT }}
+          submodules: false
+
+      - name: Checkout packages
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/packages
+          path: packages
+          token: ${{ secrets.GH_PAT }}
+          submodules: false
+
+      - name: Inject Prebuilt Supported Languages JSON
+        run: |
+          mkdir -p packages/pyro_api_translate/assets
+          if [ -f "supported_languages.json" ]; then
+            cp supported_languages.json packages/pyro_api_translate/assets/supported_languages.json
+            echo "✓ 已将仓库预置的 supported_languages.json 注入 packages/pyro_api_translate/assets/"
+          fi
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Python Deps
+        run: pip install pyyaml requests
+
+      - name: 1. [CRITICAL] 执行依赖自愈治理
+        run: |
+          # 严格对齐目录结构：运行位于 pyro_magma/tools 下的治理脚本
+          python pyro_magma/tools/pyro_safe_governance.py
+
+      - name: 3. 执行国际化同步 (L10n Sync)
+        working-directory: ./pyro_magma
+        run: |
+          flutter pub get
+          dart run tools/sync_l10n.dart
+
+      - name: 3. 上传治理产物 (Shared Versions)
+        uses: actions/upload-artifact@v4
+        with:
+          name: shared-versions-final
+          path: packages/shared_versions.yaml
+
+      - name: 4. [Non-Blocking] 自动回推版本同步变更
+        continue-on-error: true
+        run: |
+          git config --global user.email "bot@pyromagma.org"
+          git config --global user.name "Pyro Governance Bot"
+          
+          # 处理 pyro_magma 仓库
+          cd pyro_magma
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "chore: auto-sync magma dependency versions [skip ci]"
+            git push || echo "Magma push failed, ignoring..."
+          fi
+          cd ..
+
+          # 处理 packages 仓库
+          cd packages
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "chore: auto-sync packages dependency versions [skip ci]"
+            git push || echo "Packages push failed, ignoring..."
+          fi
+          cd ..
+
+      - name: 5. Extract Dynamic Version from pubspec.yaml
+        working-directory: ./pyro_magma
+        run: |
+          BASE_VER=$(grep '^version:' pubspec.yaml | sed -E 's/version:[[:space:]]*([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
+          if [ -z "$BASE_VER" ]; then
+            BASE_VER="1.0.0"
+          fi
+          APP_VER="${BASE_VER}.${{ github.run_number }}"
+          echo "APP_VERSION=${APP_VER}" >> $GITHUB_ENV
+          echo "APP_BUILD_NUMBER=${{ github.run_number }}" >> $GITHUB_ENV
+          echo "🏷️ [Master Version] 版本号: ${APP_VER}+${{ github.run_number }}"
+
+      - name: 6. 编译同步后的 Debug APK (Master Synced)
+        working-directory: ./pyro_magma
+        run: |
+          flutter build apk --debug --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }}
+          mkdir -p release_assets
+          cp build/app/outputs/flutter-apk/app-debug.apk release_assets/pyro_magma-v${{ env.APP_VERSION }}-master.apk
+
+      - name: 7. 上传同步报告与产物 (Artifacts)
+        uses: actions/upload-artifact@v4
+        with:
+          name: pyro-build-outputs
+          path: |
+            packages/shared_versions.yaml
+            pyro_magma/release_assets/*.apk
+
+      - name: 8. Publish Master APK to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.APP_VERSION }}-master
+          name: "Master Synced Build v${{ env.APP_VERSION }}"
+          body: |
+            ## Master 治理同步构建 #${{ github.run_number }}
+            - **版本**: `${{ env.APP_VERSION }}`
+            - **Commit**: ${{ github.sha }}
+            - **说明**: 经过依赖治理与国际化同步后的 Master 分支构建产物。
+          draft: false
+          prerelease: false
+          files: ./pyro_magma/release_assets/*.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}

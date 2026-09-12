@@ -1,0 +1,75 @@
+name: 1. [Expert] Dependency Governance & Safety Gate
+
+concurrency:
+  group: pyro-global-governance-lock
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  governance:
+    name: 依赖自愈治理与安全门禁
+    runs-on: ubuntu-latest
+    steps:
+      - name: Free Disk Space
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android/sdk/ndk
+          sudo docker system prune -af 2>/dev/null || true
+
+      - name: Checkout pyro_magma
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/pyro_magma
+          path: pyro_magma
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Checkout packages
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/packages
+          path: packages
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Python Deps
+        run: pip install pyyaml requests
+
+      - name: 1. 运行自愈治理引擎
+        run: |
+          # 物理路径锁定
+          python pyro_magma/tools/pyro_safe_governance.py
+
+      - name: 2. 检查变更并提交 (仅在分析通过后)
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config --local user.email "bot@pyromagma.org"
+            git config --local user.name "Pyro Safety Bot"
+            git add .
+            git commit -m "chore: align dependency versions and pass safety check [skip ci]"
+            git push || echo "Push failed (permissions), changes kept in local build."
+          else
+            echo "No version changes needed."
+          fi
+
+      - name: 3. 上传治理报告
+        uses: actions/upload-artifact@v4
+        with:
+          name: governance-report
+          path: packages/shared_versions.yaml

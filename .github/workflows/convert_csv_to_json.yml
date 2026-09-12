@@ -1,0 +1,40 @@
+name: Weekly Sync Supported Languages from Translators & CSV
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # 每周一 0:00 自动更新
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync_and_archive_languages:
+    name: 抓取、合并与归档多源语言字典
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout aura-wallpaper
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/UlionTse/translators.git requests pyyaml
+
+      - name: Sync and Merge Languages from Translators & CSV
+        run: |
+          python tools/sync_and_merge_languages.py
+          if [ -f "raw_sources/sync_diff_report.md" ]; then
+            cat raw_sources/sync_diff_report.md >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Commit and Push to aura-wallpaper Repo
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(i18n): update supported_languages.json and raw_sources from UlionTse/translators"
+          file_pattern: 'supported_languages.json raw_sources/**'

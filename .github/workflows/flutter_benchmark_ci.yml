@@ -1,0 +1,81 @@
+name: VehereGo CI & Benchmark Test Workflow
+
+on:
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  analyze-and-test:
+    name: 1. Flutter Analyze, Unit, E2E & Benchmark Tests
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      (
+        github.event_name == 'issue_comment' &&
+        github.event.issue.pull_request &&
+        contains(github.event.comment.body, 'test cli')
+      )
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Get PR SHA (if triggered by comment)
+        if: github.event_name == 'issue_comment'
+        id: pr_sha
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number
+            });
+            core.setOutput('sha', pr.data.head.sha);
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/veherego
+          path: veherego
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          ref: ${{ steps.pr_sha.outputs.sha || github.sha }}
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Set up Flutter SDK 3.47.1
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.1'
+          channel: 'stable'
+          cache: true
+
+      - name: Preprocess & Sync Latest Global Brands & Holidays
+        working-directory: ./veherego
+        run: |
+          dart run tools/sync_simple_icons.dart
+          dart run tools/sync_holiday_catalog.dart
+          dart run tools/sync_l10n.dart
+
+      - name: Install Project Dependencies
+        run: |
+          cd veherego
+          flutter pub get
+          flutter gen-l10n
+
+      - name: Run Flutter Static Analysis
+        run: |
+          cd veherego
+          flutter analyze --no-fatal-warnings --no-fatal-infos
+
+      - name: Run Full Test Suite, UI Flow & Stress Benchmarks
+        run: |
+          cd veherego
+          flutter test --reporter expanded

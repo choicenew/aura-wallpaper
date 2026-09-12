@@ -1,0 +1,128 @@
+name: Build Fast Track Debug APK
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: pyro-global-governance-lock
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build_debug:
+    name: Build Fast Debug APK & GitHub Release
+    runs-on: ubuntu-latest
+    # 移除之前的 commit message 限制，由治理流程连锁触发
+    
+    steps:
+      - name: Free Disk Space (Clean Runner)
+        run: |
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android/sdk/ndk
+          sudo rm -rf /opt/ghc
+          sudo rm -rf "/usr/local/share/boost"
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+          sudo docker system prune -af 2>/dev/null || true
+
+      - name: Checkout aura-wallpaper
+        uses: actions/checkout@v4
+
+      - name: Checkout pyro_magma
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/pyro_magma
+          path: pyro_magma
+          token: ${{ secrets.GH_PAT }}
+          submodules: false
+
+      - name: Checkout packages
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/packages
+          path: packages
+          token: ${{ secrets.GH_PAT }}
+          submodules: false
+
+      - name: Inject Prebuilt Supported Languages JSON
+        run: |
+          mkdir -p packages/pyro_api_translate/assets
+          if [ -f "supported_languages.json" ]; then
+            cp supported_languages.json packages/pyro_api_translate/assets/supported_languages.json
+            echo "✓ 已将仓库预置的 supported_languages.json 注入 packages/pyro_api_translate/assets/"
+          fi
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Get Dependencies & Upgrade Git Packages
+        working-directory: ./pyro_magma
+        run: |
+          flutter pub upgrade onnxruntime_v2
+          flutter pub get
+
+      - name: Sync L10n to Native Android & iOS Strings
+        working-directory: ./pyro_magma
+        run: |
+          dart run tools/sync_l10n.dart
+
+      - name: Extract Dynamic Version from pubspec.yaml
+        working-directory: ./pyro_magma
+        run: |
+          BASE_VER=$(grep '^version:' pubspec.yaml | sed -E 's/version:[[:space:]]*([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
+          if [ -z "$BASE_VER" ]; then
+            BASE_VER="1.0.0"
+          fi
+          YEAR_DIGIT=$(date -u +"%y" | tail -c 2)
+          TIME_PREFIX=$(date -u +"%m%d%H")
+          BUILD_NUM="${YEAR_DIGIT}${TIME_PREFIX}$(( ${{ github.run_number }} % 10 ))"
+          APP_VER="${BASE_VER}.${BUILD_NUM}"
+          echo "APP_VERSION=${APP_VER}" >> $GITHUB_ENV
+          echo "APP_BUILD_NUMBER=${BUILD_NUM}" >> $GITHUB_ENV
+          echo "=========================================================================="
+          echo "🏷️ [Debug Version] 版本号: ${APP_VER}+${BUILD_NUM}"
+          echo "=========================================================================="
+
+      - name: Build Fast Debug APK
+        working-directory: ./pyro_magma
+        run: |
+          echo "=========================================================================="
+          echo "📦 开始编译日常快速测试 Debug APK (免混淆，极速构建)..."
+          echo "=========================================================================="
+          flutter build apk --debug --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }}
+          echo "=========================================================================="
+          echo "✅ Debug APK 编译完成！"
+          echo "=========================================================================="
+
+      - name: Prepare Debug Asset
+        working-directory: ./pyro_magma
+        run: |
+          mkdir -p release_assets
+          cp build/app/outputs/flutter-apk/app-debug.apk release_assets/pyro_magma-v${{ env.APP_VERSION }}-debug.apk
+          ls -lh release_assets/
+
+      - name: Publish Debug APK to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.APP_VERSION }}-debug
+          name: "Debug Build v${{ env.APP_VERSION }}"
+          body: |
+            ## 日常测试 Debug 构建 #${{ github.run_number }}
+            - **版本**: `${{ env.APP_VERSION }}`
+            - **Commit**: ${{ github.sha }}
+            - **说明**: 日常开发与快速验证包，保留完整调试符号，免 R8 混淆，即开即测。
+          draft: false
+          prerelease: true
+          files: ./pyro_magma/release_assets/*.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
