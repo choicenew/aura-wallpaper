@@ -1,2590 +1,4377 @@
 [
     {
-        "Value": "自动",
-        "baidu": "auto",
-        "cloudTranslation": "all",
-        "deepl": "auto",
-        "google": "auto",
-        "itranslate": "auto",
-        "qqFanyi": "auto"
-    },
-    {
-        "Value": "中文",
-        "alibaba": "zh",
-        "argos": "zh",
-        "baidu": "zh",
-        "bing": "zh-Hans",
-        "caiyun": "zh",
-        "cloudTranslation": "zh-cn",
-        "deepl": "zh",
-        "google": "zh-CN",
-        "iflyrec": "zh",
-        "itranslate": "zh-CN",
-        "lingvanex": "zh-Hans_CN",
-        "mglip": "zh",
-        "modernMt": "zh-CN",
-        "papago": "zh-CN",
-        "qqFanyi": "zh",
-        "qqTranSmart": "zh",
-        "reverso": "zh",
-        "sogou": "zh-CHS",
-        "translateCom": "zh",
-        "utibet": "zh",
-        "yandex": "zh"
-    },
-    {
-        "Value": "中文(台湾)",
-        "alibaba": "zh-tw",
-        "argos": "zt",
-        "baidu": "cht",
-        "bing": "zh-Hant",
-        "cloudTranslation": "zh-tw",
-        "google": "zh-TW",
-        "itranslate": "zh-TW",
-        "lingvanex": "zh-Hant_TW",
-        "modernMt": "zh-TW",
-        "papago": "zh-TW",
-        "translateCom": "zh-TW",
-        "yandex": "zh"
-    },
-    {
-        "Value": "中文(香港)",
-        "itranslate": "zh-HK"
-    },
-    {
-        "Value": "中文(粤语)",
-        "alibaba": "yue",
-        "baidu": "yue",
-        "bing": "yue",
-        "cloudTranslation": "yue",
-        "iflyrec": "yue"
-    },
-    {
-        "Value": "中文(文言文)",
-        "baidu": "wyw",
-        "bing": "lzh"
-    },
-    {
-        "Value": "藏语",
-        "alibaba": "bo",
-        "bing": "bo",
-        "cloudTranslation": "bo",
-        "modernMt": "bo",
-        "qqTranSmart": "bo",
-        "utibet": "ti"
-    },
-    {
-        "Value": "壮语",
-        "alibaba": "za"
-    },
-    {
-        "Value": "苗语",
-        "alibaba": "hmn",
-        "baidu": "hmn",
-        "bing": "mww",
-        "google": "hmn",
-        "itranslate": "hmn",
-        "lingvanex": "hmn_CN"
-    },
-    {
-        "Value": "彝语",
-        "alibaba": "ii"
-    },
-    {
-        "Value": "蒙古语",
-        "alibaba": "mn",
-        "cloudTranslation": "mn",
-        "google": "mn",
-        "itranslate": "mn",
-        "lingvanex": "mn_MN",
-        "modernMt": "mn",
-        "qqTranSmart": "mn"
-    },
-    {
-        "Value": "蒙古语(西里尔文)",
-        "bing": "mn-Cyrl",
-        "mglip": "xle",
-        "qqTranSmart": "mnk"
-    },
-    {
-        "Value": "蒙古语(传统蒙古字母)",
-        "bing": "mn-Mong",
-        "mglip": "mon"
-    },
-    {
-        "Value": "德语",
-        "alibaba": "de",
-        "argos": "de",
-        "baidu": "de",
-        "bing": "de",
-        "cloudTranslation": "de",
-        "deepl": "de",
-        "google": "de",
-        "iflyrec": "de",
-        "itranslate": "de",
-        "languageWire": "de",
-        "lingvanex": "de_DE",
-        "modernMt": "de",
-        "papago": "de",
-        "qqFanyi": "de",
-        "qqTranSmart": "de",
-        "reverso": "de",
-        "sogou": "de",
-        "translateCom": "de"
-    },
-    {
-        "Value": "俄语",
-        "alibaba": "ru",
-        "apertium": "rus",
-        "argos": "ru",
-        "baidu": "ru",
-        "bing": "ru",
-        "caiyun": "ru",
-        "cloudTranslation": "ru",
-        "deepl": "ru",
-        "google": "ru",
-        "iflyrec": "ru",
-        "itranslate": "ru",
-        "lingvanex": "ru_RU",
-        "modernMt": "ru",
-        "papago": "ru",
-        "qqFanyi": "ru",
-        "qqTranSmart": "ru",
-        "reverso": "ru",
-        "sogou": "ru",
-        "translateCom": "ru"
-    },
-    {
-        "Value": "日语",
-        "alibaba": "ja",
-        "argos": "ja",
-        "baidu": "jp",
-        "bing": "ja",
-        "caiyun": "ja",
-        "cloudTranslation": "ja",
-        "deepl": "ja",
-        "google": "ja",
-        "iflyrec": "ja",
-        "itranslate": "ja",
-        "lingvanex": "ja_JP",
-        "modernMt": "ja",
-        "papago": "ja",
-        "qqFanyi": "jp",
-        "qqTranSmart": "ja",
-        "reverso": "ja",
-        "sogou": "ja",
-        "translateCom": "ja"
-    },
-    {
-        "Value": "英语",
-        "alibaba": "en",
-        "apertium": "eng",
-        "argos": "en",
-        "baidu": "en",
-        "bing": "en",
-        "caiyun": "en",
-        "cloudTranslation": "en-us",
-        "deepl": "en",
-        "elia": "en",
-        "google": "en",
-        "iflyrec": "en",
-        "itranslate": "en",
-        "languageWire": "en",
-        "modernMt": "en",
-        "papago": "en",
-        "qqFanyi": "en",
-        "qqTranSmart": "en",
-        "reverso": "en",
-        "sogou": "en",
-        "translateCom": "en"
-    },
-    {
-        "Value": "英语(澳大利亚)",
-        "itranslate": "en-AU"
-    },
-    {
-        "Value": "英语(英国)",
-        "itranslate": "en-UK",
-        "languageWire": "en-GB",
-        "lingvanex": "en_GB",
-        "translateCom": "en-gb"
-    },
-    {
-        "Value": "英语(美国)",
-        "itranslate": "en-US",
-        "languageWire": "en-US"
-    },
-    {
-        "Value": "韩语",
-        "alibaba": "ko",
-        "argos": "ko",
-        "baidu": "kor",
-        "bing": "ko",
-        "caiyun": "ko",
-        "cloudTranslation": "ko",
-        "deepl": "ko",
-        "google": "ko",
-        "iflyrec": "ko",
-        "itranslate": "ko",
-        "lingvanex": "ko_KR",
-        "modernMt": "ko",
-        "papago": "ko",
-        "qqFanyi": "kr",
-        "qqTranSmart": "ko",
-        "reverso": "ko",
-        "sogou": "ko",
-        "translateCom": "ko"
-    },
-    {
-        "Value": "西班牙语",
-        "alibaba": "es",
-        "apertium": "spa",
-        "argos": "es",
-        "baidu": "spa",
-        "bing": "es",
-        "caiyun": "es",
-        "cloudTranslation": "es",
-        "deepl": "es",
-        "elia": "es",
-        "google": "es",
-        "iflyrec": "es",
-        "itranslate": "es-ES",
-        "languageWire": "es",
-        "lingvanex": "es_ES",
-        "modernMt": "es-ES",
-        "papago": "es",
-        "qqFanyi": "es",
-        "qqTranSmart": "es",
-        "reverso": "es",
-        "sogou": "es",
-        "translateCom": "es"
-    },
-    {
-        "Value": "西班牙语(墨西哥)",
-        "itranslate": "es-MX"
-    },
-    {
-        "Value": "西班牙语(美国)",
-        "itranslate": "es-US"
-    },
-    {
-        "Value": "西班牙语(拉丁美洲)",
-        "modernMt": "es-419"
-    },
-    {
-        "Value": "荷兰语",
-        "alibaba": "nl",
-        "apertium": "nld",
-        "argos": "nl",
-        "baidu": "nl",
-        "bing": "nl",
-        "cloudTranslation": "nl",
-        "deepl": "nl",
-        "google": "nl",
-        "itranslate": "nl",
-        "languageWire": "nl",
-        "lingvanex": "nl_NL",
-        "modernMt": "nl",
-        "qqTranSmart": "nl",
-        "reverso": "nl",
-        "sogou": "nl",
-        "translateCom": "nl"
-    },
-    {
-        "Value": "法语",
-        "alibaba": "fr",
-        "apertium": "fra",
-        "argos": "fr",
-        "baidu": "fra",
-        "bing": "fr",
-        "caiyun": "fr",
-        "cloudTranslation": "fr",
-        "deepl": "fr",
-        "elia": "fr",
-        "google": "fr",
-        "iflyrec": "fr",
-        "itranslate": "fr-FR",
-        "languageWire": "fr",
-        "lingvanex": "fr_FR",
-        "modernMt": "fr",
-        "papago": "fr",
-        "qqFanyi": "fr",
-        "qqTranSmart": "fr",
-        "reverso": "fr",
-        "sogou": "fr",
-        "translateCom": "fr"
-    },
-    {
-        "Value": "中古法语",
-        "baidu": "frm"
-    },
-    {
-        "Value": "加拿大法语",
-        "baidu": "frn",
-        "bing": "fr-CA",
-        "itranslate": "fr-CA",
-        "lingvanex": "fr_CA",
-        "translateCom": "fr-ca"
-    },
-    {
-        "Value": "意大利语",
-        "alibaba": "it",
-        "apertium": "ita",
-        "argos": "it",
-        "baidu": "it",
-        "bing": "it",
-        "cloudTranslation": "it",
-        "deepl": "it",
-        "google": "it",
-        "iflyrec": "it",
-        "itranslate": "it",
-        "lingvanex": "it_IT",
-        "modernMt": "it",
-        "papago": "it",
-        "qqFanyi": "it",
-        "qqTranSmart": "it",
-        "reverso": "it",
-        "sogou": "it",
-        "translateCom": "it"
-    },
-    {
-        "Value": "阿布哈兹语",
-        "alibaba": "ab"
-    },
-    {
-        "Value": "亚齐语",
-        "alibaba": "ace",
-        "baidu": "ach",
-        "modernMt": "ace",
-        "qqTranSmart": "ach"
-    },
-    {
-        "Value": "圣卢西亚克里奥尔法语"
-    },
-    {
-        "Value": "南非语",
-        "alibaba": "af",
-        "bing": "af",
-        "google": "af",
-        "itranslate": "af",
-        "lingvanex": "af_ZA",
-        "modernMt": "af",
-        "qqTranSmart": "af",
-        "reverso": "af"
-    },
-    {
-        "Value": "南非荷兰语",
-        "apertium": "afr",
-        "baidu": "afr"
-    },
-    {
-        "Value": "安提瓜和巴布达克里奥尔语"
-    },
-    {
-        "Value": "阿肯语",
-        "alibaba": "ak",
-        "baidu": "aka",
-        "google": "ak",
-        "modernMt": "ak",
-        "qqTranSmart": "ak"
-    },
-    {
-        "Value": "托斯克阿尔巴尼亚语",
-        "modernMt": "als"
-    },
-    {
-        "Value": "阿姆哈拉语",
+        "Value": "am",
         "alibaba": "am",
-        "baidu": "amh",
         "bing": "am",
         "google": "am",
-        "lingvanex": "am_ET",
+        "iciba": "am",
         "modernMt": "am",
-        "qqTranSmart": "am"
-    },
-    {
-        "Value": "阿拉贡语",
-        "alibaba": "an",
-        "apertium": "arg",
-        "baidu": "arg",
-        "qqTranSmart": "an"
-    },
-    {
-        "Value": "古英语",
-        "alibaba": "ang",
-        "baidu": "eno"
+        "qqTranSmart": "am",
+        "xunjie": "am",
+        "youdao": "am"
     },
     {
         "Value": "阿拉伯语",
         "alibaba": "ar",
         "apertium": "ara",
-        "argos": "ar",
-        "baidu": "ara",
         "bing": "ar",
+        "caiyun": "ar",
         "cloudTranslation": "ar",
-        "deepl": "ar",
         "google": "ar",
+        "iciba": "ar",
         "iflyrec": "ar",
+        "lara": "ar",
         "modernMt": "ar",
-        "qqFanyi": "ar",
         "qqTranSmart": "ar",
         "reverso": "ar",
         "sogou": "ar",
-        "translateCom": "ar"
+        "sysTran": "ar",
+        "translateCom": "ar",
+        "xunjie": "ar",
+        "youdao": "ar"
     },
     {
-        "Value": "阿拉伯语(阿联酋)",
-        "itranslate": "ar-AE"
-    },
-    {
-        "Value": "阿拉伯语(沙特阿拉伯)",
-        "itranslate": "ar-SA",
-        "lingvanex": "ar_SA"
-    },
-    {
-        "Value": "阿拉伯语(埃及)",
-        "itranslate": "ar-EG",
-        "lingvanex": "ar_EG"
-    },
-    {
-        "Value": "阿尔及利亚阿拉伯语",
-        "baidu": "arq"
-    },
-    {
-        "Value": "阿萨姆语",
-        "alibaba": "as",
-        "baidu": "asm",
-        "bing": "as",
-        "google": "as",
-        "lingvanex": "as_IN",
-        "modernMt": "as"
-    },
-    {
-        "Value": "阿斯图里亚斯语",
-        "alibaba": "ast",
-        "apertium": "ast",
-        "baidu": "ast",
-        "modernMt": "ast",
-        "qqTranSmart": "ast"
-    },
-    {
-        "Value": "阿瓦德语",
-        "modernMt": "awa"
-    },
-    {
-        "Value": "艾马拉语",
-        "alibaba": "ay",
-        "baidu": "aym",
-        "google": "ay",
-        "modernMt": "ayr",
-        "qqTranSmart": "ay"
-    },
-    {
-        "Value": "阿塞拜疆语",
+        "Value": "az",
         "alibaba": "az",
-        "argos": "az",
-        "baidu": "aze",
         "bing": "az",
         "google": "az",
+        "iciba": "az",
         "itranslate": "az",
-        "lingvanex": "az_AZ",
         "modernMt": "az",
-        "qqTranSmart": "az"
+        "qqTranSmart": "az",
+        "xunjie": "az",
+        "yandex": "az",
+        "youdao": "az"
     },
     {
-        "Value": "南阿塞拜疆语",
-        "modernMt": "azb"
-    },
-    {
-        "Value": "北阿塞拜疆语",
-        "modernMt": "azj"
-    },
-    {
-        "Value": "巴什基尔语",
-        "alibaba": "ba",
-        "baidu": "bak",
-        "bing": "ba",
-        "modernMt": "ba"
-    },
-    {
-        "Value": "巴哈马克里奥尔语"
-    },
-    {
-        "Value": "俾路支语",
-        "alibaba": "bal",
-        "baidu": "bal"
-    },
-    {
-        "Value": "白俄罗斯语",
+        "Value": "be",
         "alibaba": "be",
-        "apertium": "bel",
-        "baidu": "bel",
+        "bing": "be",
         "google": "be",
+        "iciba": "be",
         "itranslate": "be",
-        "lingvanex": "be_BY",
         "modernMt": "be",
-        "qqTranSmart": "be"
+        "qqTranSmart": "be",
+        "sysTran": "be",
+        "xunjie": "be",
+        "yandex": "be",
+        "youdao": "be"
     },
     {
-        "Value": "本巴语",
-        "alibaba": "bem",
-        "baidu": "bem",
-        "modernMt": "bem"
-    },
-    {
-        "Value": "巴厘语",
-        "modernMt": "ban"
-    },
-    {
-        "Value": "柏柏尔语",
-        "alibaba": "ber",
-        "baidu": "ber"
-    },
-    {
-        "Value": "保加利亚语",
+        "Value": "bg",
         "alibaba": "bg",
-        "apertium": "bul",
-        "argos": "bg",
-        "baidu": "bul",
         "bing": "bg",
-        "deepl": "bg",
         "google": "bg",
+        "iciba": "bg",
         "itranslate": "bg",
-        "lingvanex": "bg_BG",
+        "lara": "bg",
         "modernMt": "bg",
         "qqTranSmart": "bg",
         "reverso": "bg",
-        "translateCom": "bg"
+        "sysTran": "bg",
+        "translateCom": "bg",
+        "xunjie": "bg",
+        "yandex": "bg",
+        "youdao": "bg"
     },
     {
-        "Value": "博杰普尔语",
-        "alibaba": "bho",
-        "baidu": "bho",
-        "bing": "bho",
-        "google": "bho",
-        "modernMt": "bho"
-    },
-    {
-        "Value": "比斯拉马语",
-        "alibaba": "bi",
-        "baidu": "bis"
-    },
-    {
-        "Value": "班查语",
-        "modernMt": "bjn"
-    },
-    {
-        "Value": "巴巴多斯克里奥尔语"
-    },
-    {
-        "Value": "班巴拉语",
-        "alibaba": "bm",
-        "google": "bm",
-        "modernMt": "bm"
-    },
-    {
-        "Value": "孟加拉语",
+        "Value": "bn",
         "alibaba": "bn",
-        "argos": "bn",
-        "baidu": "ben",
         "bing": "bn",
         "google": "bn",
+        "iciba": "bn",
         "itranslate": "bn",
-        "lingvanex": "bn_BD",
         "modernMt": "bn",
         "qqTranSmart": "bn",
-        "reverso": "bn"
+        "reverso": "bn",
+        "sysTran": "bn",
+        "xunjie": "bn",
+        "youdao": "bn"
     },
     {
-        "Value": "布列塔尼语",
-        "alibaba": "br",
-        "apertium": "bre",
-        "baidu": "bre",
-        "bing": "brx",
-        "qqTranSmart": "br"
+        "Value": "bs-Latn",
+        "youdao": "bs-Latn"
     },
     {
-        "Value": "波斯尼亚语",
-        "alibaba": "bs",
-        "baidu": "bos",
-        "bing": "bs",
-        "google": "bs",
-        "itranslate": "bs",
-        "lingvanex": "bs_BA",
-        "modernMt": "bs",
-        "qqTranSmart": "bs"
-    },
-    {
-        "Value": "波斯尼亚语(西里尔文)"
-    },
-    {
-        "Value": "布吉语",
-        "modernMt": "bug"
-    },
-    {
-        "Value": "比林语",
-        "alibaba": "byn",
-        "baidu": "bli"
-    },
-    {
-        "Value": "加泰罗尼亚语",
+        "Value": "ca",
         "alibaba": "ca",
-        "apertium": "cat",
-        "argos": "ca",
-        "baidu": "cat",
         "bing": "ca",
         "elia": "ca",
         "google": "ca",
+        "iciba": "ca",
         "itranslate": "ca",
-        "lingvanex": "ca_ES",
+        "lara": "ca",
         "modernMt": "ca",
-        "qqTranSmart": "ca"
+        "qqTranSmart": "ca",
+        "sysTran": "ca",
+        "yandex": "ca",
+        "youdao": "ca"
     },
     {
-        "Value": "瓦伦西亚语",
-        "apertium": "cat_valencia"
-    },
-    {
-        "Value": "查瓦卡诺语",
-        "alibaba": "cbk"
-    },
-    {
-        "Value": "宿务语",
+        "Value": "ceb",
         "alibaba": "ceb",
-        "baidu": "ceb",
+        "bing": "ceb",
         "google": "ceb",
+        "iciba": "ceb",
         "itranslate": "ceb",
-        "lingvanex": "ceb_PH",
-        "modernMt": "ceb"
+        "modernMt": "ceb",
+        "youdao": "ceb"
     },
     {
-        "Value": "查莫罗语",
-        "alibaba": "ch"
-    },
-    {
-        "Value": "马里语（俄罗斯）",
-        "alibaba": "chm"
-    },
-    {
-        "Value": "切罗基语",
-        "alibaba": "chr",
-        "baidu": "chr"
-    },
-    {
-        "Value": "乔克韦语",
-        "modernMt": "cjk"
-    },
-    {
-        "Value": "库尔德语(索拉尼)",
-        "google": "ckb",
-        "modernMt": "ckb"
-    },
-    {
-        "Value": "黑山语",
-        "alibaba": "cnr",
-        "baidu": "mot",
-        "qqTranSmart": "cnr"
-    },
-    {
-        "Value": "科西嘉语",
+        "Value": "co",
         "alibaba": "co",
-        "baidu": "cos",
+        "bing": "co",
         "google": "co",
-        "lingvanex": "co_FR"
+        "iciba": "co",
+        "youdao": "co"
     },
     {
-        "Value": "科普特语"
-    },
-    {
-        "Value": "康瓦尔语",
-        "baidu": "cor"
-    },
-    {
-        "Value": "克里米亚鞑靼语",
-        "alibaba": "crh",
-        "apertium": "crh",
-        "baidu": "cri",
-        "modernMt": "crh"
-    },
-    {
-        "Value": "塞舌尔克里奥尔语"
-    },
-    {
-        "Value": "捷克语",
+        "Value": "cs",
         "alibaba": "cs",
-        "argos": "cs",
-        "baidu": "cs",
         "bing": "cs",
-        "deepl": "cs",
         "google": "cs",
+        "iciba": "cs",
         "itranslate": "cs",
-        "lingvanex": "cs_CZ",
+        "lara": "cs",
         "modernMt": "cs",
         "qqTranSmart": "cs",
         "reverso": "cs",
         "sogou": "cs",
-        "translateCom": "cs"
+        "sysTran": "cs",
+        "translateCom": "cs",
+        "xunjie": "cs",
+        "yandex": "cs",
+        "youdao": "cs"
     },
     {
-        "Value": "卡舒比语",
-        "alibaba": "csb",
-        "baidu": "kah",
-        "qqTranSmart": "csb"
-    },
-    {
-        "Value": "楚瓦什语",
-        "alibaba": "cv",
-        "baidu": "chv"
-    },
-    {
-        "Value": "威尔士语",
+        "Value": "cy",
         "alibaba": "cy",
-        "apertium": "cym",
-        "baidu": "wel",
         "bing": "cy",
         "google": "cy",
+        "iciba": "cy",
         "itranslate": "cy",
-        "lingvanex": "cy_GB",
         "modernMt": "cy",
-        "qqTranSmart": "cy"
+        "qqTranSmart": "cy",
+        "youdao": "cy"
     },
     {
-        "Value": "丹麦语",
+        "Value": "da",
         "alibaba": "da",
-        "apertium": "dan",
-        "argos": "da",
-        "baidu": "dan",
         "bing": "da",
-        "deepl": "da",
         "google": "da",
+        "iciba": "da",
         "itranslate": "da",
         "languageWire": "da",
-        "lingvanex": "da_DK",
+        "lara": "da",
         "modernMt": "da",
         "qqTranSmart": "da",
         "reverso": "da",
         "sogou": "da",
-        "translateCom": "da"
+        "sysTran": "da",
+        "translateCom": "da",
+        "xunjie": "da",
+        "yandex": "da",
+        "youdao": "da"
     },
     {
-        "Value": "瑞典德语"
+        "Value": "德语",
+        "alibaba": "de",
+        "bing": "de",
+        "caiyun": "de",
+        "cloudTranslation": "de",
+        "google": "de",
+        "iciba": "de",
+        "iflyrec": "de",
+        "itranslate": "de",
+        "languageWire": "de",
+        "lara": "de",
+        "modernMt": "de",
+        "qqTranSmart": "de",
+        "reverso": "de",
+        "sogou": "de",
+        "sysTran": "de",
+        "translateCom": "de",
+        "xunjie": "de",
+        "yandex": "de",
+        "youdao": "de"
     },
     {
-        "Value": "西南丁卡语",
-        "modernMt": "dik"
-    },
-    {
-        "Value": "迪姆利语",
-        "modernMt": "diq"
-    },
-    {
-        "Value": "杜顺语",
-        "alibaba": "dtp",
-        "baidu": "div",
-        "bing": "doi",
-        "google": "doi"
-    },
-    {
-        "Value": "迪维西语",
-        "alibaba": "dv",
-        "bing": "dv",
-        "google": "dv",
-        "qqTranSmart": "dev"
-    },
-    {
-        "Value": "迪乌拉语",
-        "modernMt": "dyu"
-    },
-    {
-        "Value": "宗喀语",
-        "modernMt": "dz",
-        "qqTranSmart": "dz"
-    },
-    {
-        "Value": "埃维语",
-        "alibaba": "ee",
-        "google": "ee",
-        "modernMt": "ee"
-    },
-    {
-        "Value": "现代希腊语",
+        "Value": "el",
         "alibaba": "el",
-        "argos": "el",
-        "baidu": "el",
         "bing": "el",
-        "deepl": "el",
+        "caiyun": "el",
         "google": "el",
+        "iciba": "el",
         "itranslate": "el",
-        "lingvanex": "el_GR",
+        "lara": "el",
         "modernMt": "el",
         "qqTranSmart": "el",
         "reverso": "el",
-        "translateCom": "el"
+        "sysTran": "el",
+        "translateCom": "el",
+        "xunjie": "el",
+        "yandex": "el",
+        "youdao": "el"
     },
     {
-        "Value": "世界语",
+        "Value": "英语",
+        "alibaba": "en",
+        "bing": "en",
+        "caiyun": "en",
+        "elia": "en",
+        "google": "en",
+        "iciba": "en",
+        "iflyrec": "en",
+        "itranslate": "en",
+        "languageWire": "en",
+        "lara": "en",
+        "modernMt": "en",
+        "qqTranSmart": "en",
+        "reverso": "en",
+        "sogou": "en",
+        "sysTran": "en",
+        "translateCom": "en",
+        "xunjie": "en",
+        "yandex": "en",
+        "youdao": "en"
+    },
+    {
+        "Value": "eo",
         "alibaba": "eo",
-        "apertium": "epo",
-        "argos": "eo",
-        "baidu": "epo",
         "google": "eo",
+        "iciba": "eo",
         "itranslate": "eo",
-        "lingvanex": "eo_WORLD",
         "modernMt": "eo",
-        "qqTranSmart": "eo"
+        "qqTranSmart": "eo",
+        "xunjie": "eo",
+        "youdao": "eo"
     },
     {
-        "Value": "爱沙尼亚语",
+        "Value": "西班牙语",
+        "alibaba": "es",
+        "apertium": "spa",
+        "bing": "es",
+        "caiyun": "es",
+        "cloudTranslation": "es",
+        "elia": "es",
+        "google": "es",
+        "iciba": "es",
+        "iflyrec": "es",
+        "languageWire": "es",
+        "lara": "es",
+        "qqTranSmart": "es",
+        "reverso": "es",
+        "sogou": "es",
+        "sysTran": "es",
+        "translateCom": "es",
+        "xunjie": "es",
+        "yandex": "es",
+        "youdao": "es"
+    },
+    {
+        "Value": "et",
         "alibaba": "et",
-        "argos": "et",
-        "baidu": "est",
         "bing": "et",
-        "deepl": "et",
         "google": "et",
+        "iciba": "et",
         "itranslate": "et",
-        "lingvanex": "et_EE",
         "modernMt": "et",
         "qqTranSmart": "et",
-        "reverso": "et"
+        "reverso": "et",
+        "sysTran": "et",
+        "xunjie": "et",
+        "yandex": "et",
+        "youdao": "et"
     },
     {
-        "Value": "巴斯克语",
+        "Value": "eu",
         "alibaba": "eu",
-        "apertium": "eus",
-        "baidu": "baq",
         "bing": "eu",
         "elia": "eu",
         "google": "eu",
+        "iciba": "eu",
         "itranslate": "eu",
-        "lingvanex": "eu_ES",
-        "qqTranSmart": "eu"
+        "qqTranSmart": "eu",
+        "youdao": "eu"
     },
     {
-        "Value": "波斯语",
+        "Value": "fa",
         "alibaba": "fa",
-        "argos": "fa",
-        "baidu": "per",
         "bing": "fa",
         "cloudTranslation": "fa",
         "google": "fa",
+        "iciba": "fa",
         "itranslate": "fa",
-        "lingvanex": "fa_IR",
         "qqTranSmart": "fa",
         "reverso": "fa",
-        "translateCom": "fa"
+        "sysTran": "fa",
+        "translateCom": "fa",
+        "xunjie": "fa",
+        "youdao": "fa"
     },
     {
-        "Value": "芬兰语",
+        "Value": "fi",
         "alibaba": "fi",
-        "argos": "fi",
-        "baidu": "fin",
         "bing": "fi",
-        "deepl": "fi",
         "google": "fi",
+        "iciba": "fi",
         "itranslate": "fi",
-        "lingvanex": "fi_FI",
+        "lara": "fi",
         "modernMt": "fi",
         "qqTranSmart": "fi",
         "reverso": "fi",
         "sogou": "fi",
-        "translateCom": "fi"
+        "sysTran": "fi",
+        "translateCom": "fi",
+        "xunjie": "fi",
+        "yandex": "fi",
+        "youdao": "fi"
     },
     {
-        "Value": "菲律宾语",
-        "alibaba": "fil",
-        "baidu": "fil",
-        "bing": "fil",
-        "qqTranSmart": "fil"
+        "Value": "法语",
+        "alibaba": "fr",
+        "apertium": "fra",
+        "bing": "fr",
+        "caiyun": "fr",
+        "cloudTranslation": "fr",
+        "elia": "fr",
+        "google": "fr",
+        "iciba": "fr",
+        "iflyrec": "fr",
+        "languageWire": "fr",
+        "lara": "fr",
+        "modernMt": "fr",
+        "qqTranSmart": "fr",
+        "reverso": "fr",
+        "sogou": "fr",
+        "sysTran": "fr",
+        "translateCom": "fr",
+        "xunjie": "fr",
+        "yandex": "fr",
+        "youdao": "fr"
     },
     {
-        "Value": "斐济语",
-        "alibaba": "fj",
-        "bing": "fj",
-        "modernMt": "fj"
-    },
-    {
-        "Value": "法纳柯罗语"
-    },
-    {
-        "Value": "法罗语",
-        "alibaba": "fo",
-        "baidu": "fao",
-        "bing": "fo",
-        "modernMt": "fo",
-        "qqTranSmart": "fo"
-    },
-    {
-        "Value": "丰语",
-        "modernMt": "fon"
-    },
-    {
-        "Value": "法兰克-普罗旺斯语",
-        "apertium": "frp"
-    },
-    {
-        "Value": "弗留利语",
-        "alibaba": "fur",
-        "baidu": "fri",
-        "modernMt": "fur",
-        "qqTranSmart": "fur"
-    },
-    {
-        "Value": "富拉尼语",
-        "baidu": "ful"
-    },
-    {
-        "Value": "尼日利亚富拉语",
-        "modernMt": "fuv"
-    },
-    {
-        "Value": "富尔语",
-        "alibaba": "fvr"
-    },
-    {
-        "Value": "西弗里斯兰语",
+        "Value": "fy",
         "alibaba": "fy",
-        "baidu": "fry",
+        "bing": "fy",
         "google": "fy",
-        "lingvanex": "fy_NL",
-        "qqTranSmart": "fy"
+        "iciba": "fy",
+        "qqTranSmart": "fy",
+        "youdao": "fy"
     },
     {
-        "Value": "爱尔兰语",
+        "Value": "ga",
         "alibaba": "ga",
-        "argos": "ga",
-        "baidu": "gle",
         "bing": "ga",
-        "deepl": "ga",
         "google": "ga",
+        "iciba": "ga",
         "itranslate": "ga",
-        "lingvanex": "ga_IE",
         "modernMt": "ga",
-        "qqTranSmart": "ga"
+        "qqTranSmart": "ga",
+        "sysTran": "ga",
+        "xunjie": "ga",
+        "youdao": "ga"
     },
     {
-        "Value": "苏格兰盖尔语",
+        "Value": "gd",
         "alibaba": "gd",
-        "baidu": "gla",
         "google": "gd",
-        "lingvanex": "gd_GB",
+        "iciba": "gd",
         "modernMt": "gd",
-        "qqTranSmart": "gd"
+        "qqTranSmart": "gd",
+        "youdao": "gd"
     },
     {
-        "Value": "基里巴斯语",
-        "alibaba": "gil"
-    },
-    {
-        "Value": "加利西亚语",
+        "Value": "gl",
         "alibaba": "gl",
-        "apertium": "glg",
-        "baidu": "glg",
         "bing": "gl",
         "elia": "gl",
         "google": "gl",
+        "iciba": "gl",
         "itranslate": "gl",
-        "lingvanex": "gl_ES",
         "modernMt": "gl",
-        "qqTranSmart": "gl"
+        "qqTranSmart": "gl",
+        "youdao": "gl"
     },
     {
-        "Value": "瓜拉尼语",
-        "alibaba": "gn",
-        "baidu": "grn",
-        "google": "gn",
-        "modernMt": "gn"
-    },
-    {
-        "Value": "贡根语",
-        "google": "gom"
-    },
-    {
-        "Value": "格罗宁根方言",
-        "alibaba": "gos"
-    },
-    {
-        "Value": "古希腊语",
-        "baidu": "gra"
-    },
-    {
-        "Value": "古吉拉特语",
+        "Value": "gu",
         "alibaba": "gu",
-        "baidu": "guj",
         "bing": "gu",
         "google": "gu",
+        "iciba": "gu",
         "itranslate": "gu",
-        "lingvanex": "gu_IN",
         "modernMt": "gu",
-        "qqTranSmart": "gu"
+        "qqTranSmart": "gu",
+        "youdao": "gu"
     },
     {
-        "Value": "马恩语",
-        "alibaba": "gv",
-        "baidu": "glv",
-        "qqTranSmart": "gun"
-    },
-    {
-        "Value": "豪萨语",
+        "Value": "ha",
         "alibaba": "ha",
-        "baidu": "hau",
         "bing": "ha",
         "google": "ha",
+        "iciba": "ha",
         "itranslate": "ha",
-        "lingvanex": "ha_NE",
         "modernMt": "ha",
         "qqTranSmart": "ha",
-        "reverso": "ha"
+        "reverso": "ha",
+        "sysTran": "ha",
+        "xunjie": "ha",
+        "youdao": "ha"
     },
     {
-        "Value": "哈卡钦语",
-        "baidu": "hak"
-    },
-    {
-        "Value": "夏威夷语",
+        "Value": "haw",
         "alibaba": "haw",
-        "baidu": "haw",
         "google": "haw",
-        "lingvanex": "haw_US"
+        "iciba": "haw",
+        "xunjie": "haw",
+        "youdao": "haw"
     },
     {
-        "Value": "克罗地亚语",
-        "alibaba": "hbs",
-        "apertium": "hbs",
-        "baidu": "hrv",
-        "bing": "hr",
-        "deepl": "hr",
-        "google": "hr",
-        "itranslate": "hr",
-        "lingvanex": "hr_HR",
-        "modernMt": "hr",
-        "qqTranSmart": "hr"
-    },
-    {
-        "Value": "希伯来语",
+        "Value": "he",
         "alibaba": "he",
-        "argos": "he",
-        "baidu": "heb",
         "bing": "he",
-        "google": "iw",
+        "iciba": "he",
         "itranslate": "he",
-        "lingvanex": "he_IL",
+        "lara": "he",
         "modernMt": "he",
         "qqTranSmart": "he",
-        "reverso": "he"
+        "reverso": "he",
+        "sysTran": "he",
+        "xunjie": "he",
+        "youdao": "he"
     },
     {
         "Value": "印地语",
         "alibaba": "hi",
         "apertium": "hin",
-        "argos": "hi",
-        "baidu": "hi",
         "bing": "hi",
         "cloudTranslation": "hi",
         "google": "hi",
+        "iciba": "hi",
         "itranslate": "hi",
-        "lingvanex": "hi_IN",
         "modernMt": "hi",
-        "papago": "hi",
-        "qqFanyi": "hi",
         "qqTranSmart": "hi",
-        "reverso": "hi"
+        "reverso": "hi",
+        "sysTran": "hi",
+        "xunjie": "hi",
+        "youdao": "hi"
     },
     {
-        "Value": "希利盖农语",
-        "alibaba": "hil",
-        "baidu": "hil"
+        "Value": "hmn",
+        "alibaba": "hmn",
+        "google": "hmn",
+        "itranslate": "hmn",
+        "youdao": "hmn"
     },
     {
-        "Value": "恰蒂斯加尔语",
-        "modernMt": "hne"
+        "Value": "hr",
+        "bing": "hr",
+        "google": "hr",
+        "iciba": "hr",
+        "itranslate": "hr",
+        "lara": "hr",
+        "modernMt": "hr",
+        "qqTranSmart": "hr",
+        "sysTran": "hr",
+        "xunjie": "hr",
+        "yandex": "hr",
+        "youdao": "hr"
     },
     {
-        "Value": "上索布语",
-        "alibaba": "hsb",
-        "bing": "hsb"
-    },
-    {
-        "Value": "海地克里奥尔语",
+        "Value": "ht",
         "alibaba": "ht",
-        "baidu": "ht",
         "bing": "ht",
         "google": "ht",
+        "iciba": "ht",
         "itranslate": "ht",
-        "lingvanex": "ht_HT",
         "modernMt": "ht",
-        "qqTranSmart": "ht"
+        "qqTranSmart": "ht",
+        "youdao": "ht"
     },
     {
-        "Value": "匈牙利语",
+        "Value": "hu",
         "alibaba": "hu",
-        "argos": "hu",
-        "baidu": "hu",
         "bing": "hu",
-        "deepl": "hu",
         "google": "hu",
+        "iciba": "hu",
         "itranslate": "hu",
-        "lingvanex": "hu_HU",
+        "lara": "hu",
         "modernMt": "hu",
         "qqTranSmart": "hu",
         "reverso": "hu",
         "sogou": "hu",
-        "translateCom": "hu"
+        "sysTran": "hu",
+        "translateCom": "hu",
+        "xunjie": "hu",
+        "yandex": "hu",
+        "youdao": "hu"
     },
     {
-        "Value": "胡帕语",
-        "alibaba": "hup",
-        "baidu": "hup"
-    },
-    {
-        "Value": "亚美尼亚语",
+        "Value": "hy",
         "alibaba": "hy",
-        "baidu": "arm",
         "bing": "hy",
         "google": "hy",
+        "iciba": "hy",
         "itranslate": "hy",
-        "lingvanex": "hy_AM",
         "modernMt": "hy",
-        "qqTranSmart": "hy"
+        "qqTranSmart": "hy",
+        "sysTran": "hy",
+        "xunjie": "hy",
+        "yandex": "hy",
+        "youdao": "hy"
     },
     {
-        "Value": "因特语",
-        "alibaba": "ia",
-        "baidu": "ina",
-        "qqTranSmart": "ia"
-    },
-    {
-        "Value": "伊班语",
-        "alibaba": "iba"
-    },
-    {
-        "Value": "印度尼西亚语",
+        "Value": "印尼语",
         "alibaba": "id",
         "apertium": "ind",
-        "argos": "id",
-        "baidu": "id",
         "bing": "id",
+        "caiyun": "id",
         "cloudTranslation": "id",
-        "deepl": "id",
         "google": "id",
+        "iciba": "id",
         "itranslate": "id",
-        "lingvanex": "id_ID",
+        "lara": "id",
         "modernMt": "id",
-        "papago": "id",
-        "qqFanyi": "id",
         "qqTranSmart": "id",
         "reverso": "id",
-        "translateCom": "id"
+        "sysTran": "id",
+        "translateCom": "id",
+        "xunjie": "id",
+        "youdao": "id"
     },
     {
-        "Value": "西方国际语",
-        "alibaba": "ie"
-    },
-    {
-        "Value": "伊博语",
+        "Value": "ig",
         "alibaba": "ig",
-        "baidu": "ibo",
         "bing": "ig",
         "google": "ig",
+        "iciba": "ig",
         "itranslate": "ig",
-        "lingvanex": "ig_NG",
-        "modernMt": "ig"
+        "modernMt": "ig",
+        "youdao": "ig"
     },
     {
-        "Value": "因纽特语",
-        "bing": "ikt"
-    },
-    {
-        "Value": "伊洛卡诺语",
-        "alibaba": "ilo",
-        "google": "ilo",
-        "modernMt": "ilo"
-    },
-    {
-        "Value": "印古什语",
-        "alibaba": "inh",
-        "baidu": "ing"
-    },
-    {
-        "Value": "伊多语",
-        "alibaba": "io",
-        "baidu": "ido"
-    },
-    {
-        "Value": "冰岛语",
+        "Value": "is",
         "alibaba": "is",
-        "apertium": "isl",
-        "baidu": "ice",
         "bing": "is",
-        "deepl": "is",
         "google": "is",
+        "iciba": "is",
         "itranslate": "is",
-        "lingvanex": "is_IS",
         "modernMt": "is",
-        "qqTranSmart": "is"
+        "qqTranSmart": "is",
+        "sysTran": "is",
+        "xunjie": "is",
+        "youdao": "is"
     },
     {
-        "Value": "伊努克提图特语(拉丁文)",
-        "alibaba": "iu",
-        "baidu": "iku",
-        "bing": "iu",
-        "qqTranSmart": "iw",
-        "translateCom": "iw"
+        "Value": "意大利语",
+        "alibaba": "it",
+        "apertium": "ita",
+        "bing": "it",
+        "caiyun": "it",
+        "cloudTranslation": "it",
+        "google": "it",
+        "iciba": "it",
+        "iflyrec": "it",
+        "itranslate": "it",
+        "lara": "it",
+        "modernMt": "it",
+        "qqTranSmart": "it",
+        "reverso": "it",
+        "sogou": "it",
+        "sysTran": "it",
+        "translateCom": "it",
+        "xunjie": "it",
+        "yandex": "it",
+        "youdao": "it"
     },
     {
-        "Value": "伊努克提图特语",
-        "bing": "iu-Latn"
+        "Value": "日语",
+        "alibaba": "ja",
+        "bing": "ja",
+        "caiyun": "ja",
+        "cloudTranslation": "ja",
+        "google": "ja",
+        "iciba": "ja",
+        "iflyrec": "ja",
+        "itranslate": "ja",
+        "lara": "ja",
+        "modernMt": "ja",
+        "qqTranSmart": "ja",
+        "reverso": "ja",
+        "sogou": "ja",
+        "sysTran": "ja",
+        "translateCom": "ja",
+        "xunjie": "ja",
+        "youdao": "ja"
     },
     {
-        "Value": "逻辑语",
-        "alibaba": "jbo",
-        "baidu": "loj",
-        "qqTranSmart": "jbo"
-    },
-    {
-        "Value": "爪哇语",
-        "alibaba": "jv",
-        "baidu": "jav",
+        "Value": "jw",
         "google": "jw",
         "itranslate": "jw",
-        "lingvanex": "jv_ID",
+        "youdao": "jw"
+    },
+    {
+        "Value": "ka",
+        "alibaba": "ka",
+        "bing": "ka",
+        "google": "ka",
+        "iciba": "ka",
+        "itranslate": "ka",
+        "modernMt": "ka",
+        "qqTranSmart": "ka",
+        "sysTran": "ka",
+        "xunjie": "ka",
+        "youdao": "ka"
+    },
+    {
+        "Value": "kk",
+        "alibaba": "kk",
+        "bing": "kk",
+        "cloudTranslation": "kk",
+        "google": "kk",
+        "iciba": "kk",
+        "itranslate": "kk",
+        "modernMt": "kk",
+        "qqTranSmart": "kk",
+        "sysTran": "kk",
+        "youdao": "kk"
+    },
+    {
+        "Value": "km",
+        "alibaba": "km",
+        "bing": "km",
+        "cloudTranslation": "km",
+        "google": "km",
+        "iciba": "km",
+        "itranslate": "km",
+        "modernMt": "km",
+        "qqTranSmart": "km",
+        "xunjie": "km",
+        "youdao": "km"
+    },
+    {
+        "Value": "kn",
+        "alibaba": "kn",
+        "bing": "kn",
+        "google": "kn",
+        "iciba": "kn",
+        "itranslate": "kn",
+        "modernMt": "kn",
+        "qqTranSmart": "kn",
+        "youdao": "kn"
+    },
+    {
+        "Value": "韩语",
+        "alibaba": "ko",
+        "bing": "ko",
+        "caiyun": "ko",
+        "cloudTranslation": "ko",
+        "google": "ko",
+        "iciba": "ko",
+        "iflyrec": "ko",
+        "itranslate": "ko",
+        "lara": "ko",
+        "modernMt": "ko",
+        "qqTranSmart": "ko",
+        "reverso": "ko",
+        "sogou": "ko",
+        "sysTran": "ko",
+        "translateCom": "ko",
+        "xunjie": "kor",
+        "youdao": "ko"
+    },
+    {
+        "Value": "ku",
+        "alibaba": "ku",
+        "bing": "ku",
+        "google": "ku",
+        "iciba": "ku",
+        "qqTranSmart": "ku",
+        "sysTran": "ku",
+        "youdao": "ku"
+    },
+    {
+        "Value": "ky",
+        "alibaba": "ky",
+        "bing": "ky",
+        "cloudTranslation": "ky",
+        "google": "ky",
+        "iciba": "ky",
+        "modernMt": "ky",
+        "qqTranSmart": "ky",
+        "xunjie": "ky",
+        "youdao": "ky"
+    },
+    {
+        "Value": "la",
+        "alibaba": "la",
+        "bing": "la",
+        "google": "la",
+        "iciba": "la",
+        "itranslate": "la",
+        "modernMt": "la",
+        "xunjie": "la",
+        "youdao": "la"
+    },
+    {
+        "Value": "lb",
+        "alibaba": "lb",
+        "bing": "lb",
+        "google": "lb",
+        "iciba": "lb",
+        "modernMt": "lb",
+        "qqTranSmart": "lb",
+        "youdao": "lb"
+    },
+    {
+        "Value": "lo",
+        "alibaba": "lo",
+        "bing": "lo",
+        "cloudTranslation": "lo",
+        "google": "lo",
+        "iciba": "lo",
+        "itranslate": "lo",
+        "modernMt": "lo",
+        "qqTranSmart": "lo",
+        "xunjie": "lo",
+        "youdao": "lo"
+    },
+    {
+        "Value": "lt",
+        "alibaba": "lt",
+        "bing": "lt",
+        "google": "lt",
+        "iciba": "lt",
+        "itranslate": "lt",
+        "modernMt": "lt",
+        "qqTranSmart": "lt",
+        "reverso": "lt",
+        "sysTran": "lt",
+        "xunjie": "lt",
+        "yandex": "lt",
+        "youdao": "lt"
+    },
+    {
+        "Value": "lv",
+        "alibaba": "lv",
+        "bing": "lv",
+        "google": "lv",
+        "iciba": "lv",
+        "itranslate": "lv",
+        "modernMt": "lv",
+        "qqTranSmart": "lv",
+        "sysTran": "lv",
+        "xunjie": "lv",
+        "yandex": "lv",
+        "youdao": "lv"
+    },
+    {
+        "Value": "mg",
+        "alibaba": "mg",
+        "bing": "mg",
+        "google": "mg",
+        "iciba": "mg",
+        "itranslate": "mg",
+        "modernMt": "mg",
+        "qqTranSmart": "mg",
+        "youdao": "mg"
+    },
+    {
+        "Value": "mi",
+        "alibaba": "mi",
+        "bing": "mi",
+        "google": "mi",
+        "iciba": "mi",
+        "itranslate": "mi",
+        "modernMt": "mi",
+        "qqTranSmart": "mi",
+        "xunjie": "mi",
+        "youdao": "mi"
+    },
+    {
+        "Value": "mk",
+        "alibaba": "mk",
+        "bing": "mk",
+        "google": "mk",
+        "iciba": "mk",
+        "itranslate": "mk",
+        "modernMt": "mk",
+        "qqTranSmart": "mk",
+        "sysTran": "mk",
+        "yandex": "mk",
+        "youdao": "mk"
+    },
+    {
+        "Value": "ml",
+        "alibaba": "ml",
+        "bing": "ml",
+        "google": "ml",
+        "iciba": "ml",
+        "itranslate": "ml",
+        "modernMt": "ml",
+        "qqTranSmart": "ml",
+        "youdao": "ml"
+    },
+    {
+        "Value": "mn",
+        "alibaba": "mn",
+        "google": "mn",
+        "iciba": "mn",
+        "itranslate": "mn",
+        "modernMt": "mn",
+        "qqTranSmart": "mn",
+        "sysTran": "mn",
+        "xunjie": "mn",
+        "youdao": "mn"
+    },
+    {
+        "Value": "mr",
+        "alibaba": "mr",
+        "bing": "mr",
+        "google": "mr",
+        "iciba": "mr",
+        "itranslate": "mr",
+        "modernMt": "mr",
+        "qqTranSmart": "mr",
+        "youdao": "mr"
+    },
+    {
+        "Value": "ms",
+        "alibaba": "ms",
+        "bing": "ms",
+        "cloudTranslation": "ms",
+        "google": "ms",
+        "iciba": "ms",
+        "itranslate": "ms",
+        "lara": "ms",
+        "modernMt": "ms",
+        "qqTranSmart": "ms",
+        "sysTran": "ms",
+        "translateCom": "ms",
+        "xunjie": "ms",
+        "youdao": "ms"
+    },
+    {
+        "Value": "mt",
+        "alibaba": "mt",
+        "bing": "mt",
+        "google": "mt",
+        "iciba": "mt",
+        "itranslate": "mt",
+        "modernMt": "mt",
+        "qqTranSmart": "mt",
+        "sysTran": "mt",
+        "youdao": "mt"
+    },
+    {
+        "Value": "mww",
+        "bing": "mww",
+        "iciba": "mww",
+        "youdao": "mww"
+    },
+    {
+        "Value": "my",
+        "alibaba": "my",
+        "bing": "my",
+        "cloudTranslation": "my",
+        "google": "my",
+        "iciba": "my",
+        "itranslate": "my",
+        "modernMt": "my",
+        "sysTran": "my",
+        "xunjie": "my",
+        "youdao": "my"
+    },
+    {
+        "Value": "ne",
+        "alibaba": "ne",
+        "bing": "ne",
+        "cloudTranslation": "ne",
+        "google": "ne",
+        "iciba": "ne",
+        "itranslate": "ne",
+        "modernMt": "ne",
+        "qqTranSmart": "ne",
+        "sysTran": "ne",
+        "xunjie": "ne",
+        "youdao": "ne"
+    },
+    {
+        "Value": "荷兰语",
+        "alibaba": "nl",
+        "apertium": "nld",
+        "bing": "nl",
+        "cloudTranslation": "nl",
+        "google": "nl",
+        "iciba": "nl",
+        "itranslate": "nl",
+        "languageWire": "nl",
+        "lara": "nl",
+        "modernMt": "nl",
+        "qqTranSmart": "nl",
+        "reverso": "nl",
+        "sogou": "nl",
+        "sysTran": "nl",
+        "translateCom": "nl",
+        "xunjie": "nl",
+        "yandex": "nl",
+        "youdao": "nl"
+    },
+    {
+        "Value": "no",
+        "alibaba": "no",
+        "google": "no",
+        "iciba": "no",
+        "itranslate": "no",
+        "qqTranSmart": "no",
+        "reverso": "no",
+        "sysTran": "no",
+        "translateCom": "no",
+        "xunjie": "no",
+        "yandex": "no",
+        "youdao": "no"
+    },
+    {
+        "Value": "ny",
+        "alibaba": "ny",
+        "google": "ny",
+        "iciba": "ny",
+        "itranslate": "ny",
+        "modernMt": "ny",
+        "youdao": "ny"
+    },
+    {
+        "Value": "otq",
+        "bing": "otq",
+        "iciba": "otq",
+        "youdao": "otq"
+    },
+    {
+        "Value": "pa",
+        "alibaba": "pa",
+        "bing": "pa",
+        "google": "pa",
+        "iciba": "pa",
+        "itranslate": "pa",
+        "modernMt": "pa",
+        "qqTranSmart": "pa",
+        "sysTran": "pa",
+        "youdao": "pa"
+    },
+    {
+        "Value": "波兰语",
+        "alibaba": "pl",
+        "apertium": "pol",
+        "bing": "pl",
+        "caiyun": "pl",
+        "cloudTranslation": "pl",
+        "google": "pl",
+        "iciba": "pl",
+        "itranslate": "pl",
+        "lara": "pl",
+        "modernMt": "pl",
+        "qqTranSmart": "pl",
+        "reverso": "pl",
+        "sogou": "pl",
+        "sysTran": "pl",
+        "translateCom": "pl",
+        "xunjie": "pl",
+        "yandex": "pl",
+        "youdao": "pl"
+    },
+    {
+        "Value": "ps",
+        "alibaba": "ps",
+        "bing": "ps",
+        "cloudTranslation": "ps",
+        "google": "ps",
+        "iciba": "ps",
+        "modernMt": "ps",
+        "qqTranSmart": "ps",
+        "reverso": "ps",
+        "sysTran": "ps",
+        "youdao": "ps"
+    },
+    {
+        "Value": "葡萄牙语",
+        "alibaba": "pt",
+        "apertium": "por",
+        "bing": "pt",
+        "caiyun": "pt",
+        "cloudTranslation": "pt",
+        "google": "pt",
+        "iciba": "pt",
+        "qqTranSmart": "pt",
+        "reverso": "pt",
+        "sogou": "pt",
+        "sysTran": "pt",
+        "translateCom": "pt",
+        "xunjie": "pt",
+        "yandex": "pt",
+        "youdao": "pt"
+    },
+    {
+        "Value": "ro",
+        "alibaba": "ro",
+        "bing": "ro",
+        "google": "ro",
+        "iciba": "ro",
+        "itranslate": "ro",
+        "modernMt": "ro",
+        "qqTranSmart": "ro",
+        "reverso": "ro",
+        "sysTran": "ro",
+        "translateCom": "ro",
+        "xunjie": "ro",
+        "yandex": "ro",
+        "youdao": "ro"
+    },
+    {
+        "Value": "俄语",
+        "alibaba": "ru",
+        "apertium": "rus",
+        "bing": "ru",
+        "caiyun": "ru",
+        "cloudTranslation": "ru",
+        "google": "ru",
+        "iciba": "ru",
+        "iflyrec": "ru",
+        "itranslate": "ru",
+        "lara": "ru",
+        "modernMt": "ru",
+        "qqTranSmart": "ru",
+        "reverso": "ru",
+        "sogou": "ru",
+        "sysTran": "ru",
+        "translateCom": "ru",
+        "xunjie": "ru",
+        "yandex": "ru",
+        "youdao": "ru"
+    },
+    {
+        "Value": "sd",
+        "alibaba": "sd",
+        "bing": "sd",
+        "google": "sd",
+        "iciba": "sd",
+        "modernMt": "sd",
+        "youdao": "sd"
+    },
+    {
+        "Value": "si",
+        "alibaba": "si",
+        "bing": "si",
+        "google": "si",
+        "iciba": "si",
+        "itranslate": "si",
+        "modernMt": "si",
+        "qqTranSmart": "si",
+        "youdao": "si"
+    },
+    {
+        "Value": "sk",
+        "alibaba": "sk",
+        "bing": "sk",
+        "cloudTranslation": "sk",
+        "google": "sk",
+        "iciba": "sk",
+        "itranslate": "sk",
+        "lara": "sk",
+        "modernMt": "sk",
+        "qqTranSmart": "sk",
+        "reverso": "sk",
+        "sysTran": "sk",
+        "translateCom": "sk",
+        "yandex": "sk",
+        "youdao": "sk"
+    },
+    {
+        "Value": "sl",
+        "alibaba": "sl",
+        "bing": "sl",
+        "google": "sl",
+        "iciba": "sl",
+        "itranslate": "sl",
+        "modernMt": "sl",
+        "qqTranSmart": "sl",
+        "reverso": "sl",
+        "sysTran": "sl",
+        "xunjie": "sl",
+        "yandex": "sl",
+        "youdao": "sl"
+    },
+    {
+        "Value": "sm",
+        "alibaba": "sm",
+        "bing": "sm",
+        "google": "sm",
+        "iciba": "sm",
+        "modernMt": "sm",
+        "youdao": "sm"
+    },
+    {
+        "Value": "sn",
+        "alibaba": "sn",
+        "bing": "sn",
+        "google": "sn",
+        "iciba": "sn",
+        "modernMt": "sn",
+        "youdao": "sn"
+    },
+    {
+        "Value": "so",
+        "alibaba": "so",
+        "bing": "so",
+        "google": "so",
+        "iciba": "so",
+        "itranslate": "so",
+        "modernMt": "so",
+        "qqTranSmart": "so",
+        "reverso": "so",
+        "sysTran": "so",
+        "youdao": "so"
+    },
+    {
+        "Value": "sq",
+        "alibaba": "sq",
+        "bing": "sq",
+        "google": "sq",
+        "iciba": "sq",
+        "itranslate": "sq",
+        "modernMt": "sq",
+        "qqTranSmart": "sq",
+        "sysTran": "sq",
+        "yandex": "sq",
+        "youdao": "sq"
+    },
+    {
+        "Value": "sr-Cyrl",
+        "bing": "sr-Cyrl",
+        "modernMt": "sr-Cyrl",
+        "youdao": "sr-Cyrl"
+    },
+    {
+        "Value": "sr-Latn",
+        "bing": "sr-Latn",
+        "modernMt": "sr-Latn",
+        "youdao": "sr-Latn"
+    },
+    {
+        "Value": "st",
+        "alibaba": "st",
+        "bing": "st",
+        "google": "st",
+        "iciba": "st",
+        "itranslate": "st",
+        "modernMt": "st",
+        "youdao": "st"
+    },
+    {
+        "Value": "su",
+        "alibaba": "su",
+        "bing": "su",
+        "google": "su",
+        "iciba": "su",
+        "itranslate": "su",
+        "modernMt": "su",
+        "qqTranSmart": "su",
+        "youdao": "su"
+    },
+    {
+        "Value": "瑞典语",
+        "alibaba": "sv",
+        "apertium": "swe",
+        "bing": "sv",
+        "google": "sv",
+        "iciba": "sv",
+        "itranslate": "sv",
+        "languageWire": "sv",
+        "lara": "sv",
+        "modernMt": "sv",
+        "qqTranSmart": "sv",
+        "reverso": "sv",
+        "sogou": "sv",
+        "sysTran": "sv",
+        "translateCom": "sv",
+        "xunjie": "sv",
+        "yandex": "sv",
+        "youdao": "sv"
+    },
+    {
+        "Value": "sw",
+        "alibaba": "sw",
+        "bing": "sw",
+        "caiyun": "sw",
+        "google": "sw",
+        "iciba": "sw",
+        "itranslate": "sw",
+        "modernMt": "sw",
+        "qqTranSmart": "sw",
+        "sysTran": "sw",
+        "xunjie": "sw",
+        "youdao": "sw"
+    },
+    {
+        "Value": "ta",
+        "alibaba": "ta",
+        "bing": "ta",
+        "google": "ta",
+        "iciba": "ta",
+        "itranslate": "ta",
+        "modernMt": "ta",
+        "qqTranSmart": "ta",
+        "sysTran": "ta",
+        "youdao": "ta"
+    },
+    {
+        "Value": "te",
+        "alibaba": "te",
+        "bing": "te",
+        "google": "te",
+        "iciba": "te",
+        "itranslate": "te",
+        "modernMt": "te",
+        "qqTranSmart": "te",
+        "youdao": "te"
+    },
+    {
+        "Value": "tg",
+        "alibaba": "tg",
+        "cloudTranslation": "tg",
+        "google": "tg",
+        "iciba": "tg",
+        "itranslate": "tg",
+        "modernMt": "tg",
+        "qqTranSmart": "tg",
+        "sysTran": "tg",
+        "xunjie": "tg",
+        "youdao": "tg"
+    },
+    {
+        "Value": "泰语",
+        "alibaba": "th",
+        "bing": "th",
+        "caiyun": "th",
+        "cloudTranslation": "th",
+        "google": "th",
+        "iciba": "th",
+        "itranslate": "th",
+        "lara": "th",
+        "modernMt": "th",
+        "qqTranSmart": "th",
+        "reverso": "th",
+        "sogou": "th",
+        "sysTran": "th",
+        "translateCom": "th",
+        "xunjie": "th",
+        "youdao": "th"
+    },
+    {
+        "Value": "tl",
+        "alibaba": "tl",
+        "cloudTranslation": "tl",
+        "google": "tl",
+        "itranslate": "tl",
+        "modernMt": "tl",
+        "qqTranSmart": "tl",
+        "sysTran": "tl",
+        "translateCom": "tl",
+        "youdao": "tl"
+    },
+    {
+        "Value": "tlh",
+        "alibaba": "tlh",
+        "youdao": "tlh"
+    },
+    {
+        "Value": "土耳其语",
+        "alibaba": "tr",
+        "apertium": "tur",
+        "bing": "tr",
+        "caiyun": "tr",
+        "cloudTranslation": "tr",
+        "google": "tr",
+        "iciba": "tr",
+        "itranslate": "tr",
+        "lara": "tr",
+        "modernMt": "tr",
+        "qqTranSmart": "tr",
+        "reverso": "tr",
+        "sysTran": "tr",
+        "translateCom": "tr",
+        "xunjie": "tr",
+        "yandex": "tr",
+        "youdao": "tr"
+    },
+    {
+        "Value": "uk",
+        "alibaba": "uk",
+        "bing": "uk",
+        "cloudTranslation": "uk",
+        "google": "uk",
+        "iciba": "uk",
+        "itranslate": "uk",
+        "lara": "uk",
+        "modernMt": "uk",
+        "qqTranSmart": "uk",
+        "reverso": "uk",
+        "sysTran": "uk",
+        "translateCom": "uk",
+        "xunjie": "uk",
+        "yandex": "uk",
+        "youdao": "uk"
+    },
+    {
+        "Value": "ur",
+        "alibaba": "ur",
+        "bing": "ur",
+        "cloudTranslation": "ur",
+        "google": "ur",
+        "iciba": "ur",
+        "itranslate": "ur",
+        "modernMt": "ur",
+        "qqTranSmart": "ur",
+        "reverso": "ur",
+        "sysTran": "ur",
+        "xunjie": "ur",
+        "youdao": "ur"
+    },
+    {
+        "Value": "uz",
+        "alibaba": "uz",
+        "bing": "uz",
+        "cloudTranslation": "uz",
+        "google": "uz",
+        "iciba": "uz",
+        "itranslate": "uz",
+        "qqTranSmart": "uz",
+        "xunjie": "uz",
+        "youdao": "uz"
+    },
+    {
+        "Value": "越南语",
+        "alibaba": "vi",
+        "bing": "vi",
+        "caiyun": "vi",
+        "cloudTranslation": "vi",
+        "google": "vi",
+        "iciba": "vi",
+        "iflyrec": "vi",
+        "itranslate": "vi",
+        "modernMt": "vi",
+        "qqTranSmart": "vi",
+        "reverso": "vi",
+        "sogou": "vi",
+        "sysTran": "vi",
+        "translateCom": "vi",
+        "xunjie": "vi",
+        "youdao": "vi"
+    },
+    {
+        "Value": "xh",
+        "alibaba": "xh",
+        "bing": "xh",
+        "google": "xh",
+        "iciba": "xh",
+        "modernMt": "xh",
+        "youdao": "xh"
+    },
+    {
+        "Value": "yi",
+        "alibaba": "yi",
+        "google": "yi",
+        "iciba": "yi",
+        "itranslate": "yi",
+        "youdao": "yi"
+    },
+    {
+        "Value": "yo",
+        "alibaba": "yo",
+        "bing": "yo",
+        "google": "yo",
+        "iciba": "yo",
+        "itranslate": "yo",
+        "modernMt": "yo",
+        "qqTranSmart": "yo",
+        "youdao": "yo"
+    },
+    {
+        "Value": "yua",
+        "bing": "yua",
+        "google": "yua",
+        "iciba": "yua",
+        "youdao": "yua"
+    },
+    {
+        "Value": "中文",
+        "alibaba": "zh",
+        "bing": "zh-Hans",
+        "caiyun": "zh",
+        "cloudTranslation": "zh-cn",
+        "google": "zh-CN",
+        "iciba": "zh",
+        "iflyrec": "zh",
+        "itranslate": "zh-CN",
+        "lara": "zh-CN",
+        "mglip": "zh",
+        "modernMt": "zh-CN",
+        "qqTranSmart": "zh",
+        "reverso": "zh",
+        "sogou": "zh-CHS",
+        "sysTran": "zh",
+        "translateCom": "zh",
+        "utibet": "zh",
+        "xunjie": "zh",
+        "yandex": "zh",
+        "youdao": "zh-CHS"
+    },
+    {
+        "Value": "zh-CHT",
+        "youdao": "zh-CHT"
+    },
+    {
+        "Value": "zh-lzh",
+        "youdao": "zh-lzh"
+    },
+    {
+        "Value": "zu",
+        "alibaba": "zu",
+        "bing": "zu",
+        "google": "zu",
+        "iciba": "zu",
+        "itranslate": "zu",
+        "modernMt": "zu",
+        "youdao": "zu"
+    },
+    {
+        "Value": "nn",
+        "caiyun": "nn",
+        "modernMt": "nn",
+        "qqTranSmart": "nn"
+    },
+    {
+        "Value": "中文(台湾)",
+        "alibaba": "zh-tw",
+        "bing": "zh-Hant",
+        "caiyun": "zh-Hant",
+        "cloudTranslation": "zh-tw",
+        "google": "zh-TW",
+        "itranslate": "zh-TW",
+        "lara": "zh-TW",
+        "modernMt": "zh-TW",
+        "translateCom": "zh-TW"
+    },
+    {
+        "Value": "afr",
+        "apertium": "afr"
+    },
+    {
+        "Value": "arg",
+        "apertium": "arg"
+    },
+    {
+        "Value": "bel",
+        "apertium": "bel"
+    },
+    {
+        "Value": "bre",
+        "apertium": "bre"
+    },
+    {
+        "Value": "bul",
+        "apertium": "bul"
+    },
+    {
+        "Value": "cat",
+        "apertium": "cat"
+    },
+    {
+        "Value": "crh",
+        "alibaba": "crh",
+        "apertium": "crh",
+        "google": "crh",
+        "modernMt": "crh"
+    },
+    {
+        "Value": "cym",
+        "apertium": "cym"
+    },
+    {
+        "Value": "dan",
+        "apertium": "dan"
+    },
+    {
+        "Value": "eng",
+        "apertium": "eng"
+    },
+    {
+        "Value": "epo",
+        "apertium": "epo",
+        "bing": "epo"
+    },
+    {
+        "Value": "eus",
+        "apertium": "eus"
+    },
+    {
+        "Value": "frp",
+        "apertium": "frp"
+    },
+    {
+        "Value": "glg",
+        "apertium": "glg"
+    },
+    {
+        "Value": "hbs",
+        "alibaba": "hbs",
+        "apertium": "hbs"
+    },
+    {
+        "Value": "isl",
+        "apertium": "isl"
+    },
+    {
+        "Value": "kaz",
+        "apertium": "kaz"
+    },
+    {
+        "Value": "mkd",
+        "apertium": "mkd"
+    },
+    {
+        "Value": "mlt",
+        "apertium": "mlt"
+    },
+    {
+        "Value": "nno",
+        "apertium": "nno",
+        "bing": "nno"
+    },
+    {
+        "Value": "nno_e",
+        "apertium": "nno_e"
+    },
+    {
+        "Value": "nob",
+        "apertium": "nob"
+    },
+    {
+        "Value": "oci",
+        "apertium": "oci"
+    },
+    {
+        "Value": "oci_aran",
+        "apertium": "oci_aran"
+    },
+    {
+        "Value": "oci_gascon",
+        "apertium": "oci_gascon"
+    },
+    {
+        "Value": "ron",
+        "apertium": "ron"
+    },
+    {
+        "Value": "slv",
+        "apertium": "slv"
+    },
+    {
+        "Value": "sme",
+        "apertium": "sme"
+    },
+    {
+        "Value": "srd",
+        "apertium": "srd",
+        "bing": "srd"
+    },
+    {
+        "Value": "szl",
+        "alibaba": "szl",
+        "apertium": "szl",
+        "google": "szl",
+        "modernMt": "szl"
+    },
+    {
+        "Value": "tat",
+        "apertium": "tat"
+    },
+    {
+        "Value": "ukr",
+        "apertium": "ukr"
+    },
+    {
+        "Value": "urd",
+        "apertium": "urd"
+    },
+    {
+        "Value": "zlm",
+        "apertium": "zlm"
+    },
+    {
+        "Value": "ace",
+        "alibaba": "ace",
+        "bing": "ace",
+        "google": "ace",
+        "iciba": "ace",
+        "modernMt": "ace"
+    },
+    {
+        "Value": "acu",
+        "iciba": "acu"
+    },
+    {
+        "Value": "af",
+        "alibaba": "af",
+        "bing": "af",
+        "google": "af",
+        "iciba": "af",
+        "itranslate": "af",
+        "modernMt": "af",
+        "qqTranSmart": "af",
+        "reverso": "af",
+        "sysTran": "af"
+    },
+    {
+        "Value": "agr",
+        "iciba": "agr"
+    },
+    {
+        "Value": "ake",
+        "iciba": "ake"
+    },
+    {
+        "Value": "amu",
+        "iciba": "amu"
+    },
+    {
+        "Value": "ba",
+        "alibaba": "ba",
+        "bing": "ba",
+        "google": "ba",
+        "iciba": "ba",
+        "modernMt": "ba"
+    },
+    {
+        "Value": "bem",
+        "alibaba": "bem",
+        "google": "bem",
+        "iciba": "bem",
+        "modernMt": "bem"
+    },
+    {
+        "Value": "ber",
+        "alibaba": "ber",
+        "google": "ber",
+        "iciba": "ber"
+    },
+    {
+        "Value": "bi",
+        "alibaba": "bi",
+        "iciba": "bi"
+    },
+    {
+        "Value": "br",
+        "alibaba": "br",
+        "google": "br",
+        "iciba": "br",
+        "qqTranSmart": "br"
+    },
+    {
+        "Value": "bs",
+        "alibaba": "bs",
+        "bing": "bs",
+        "google": "bs",
+        "iciba": "bs",
+        "itranslate": "bs",
+        "modernMt": "bs",
+        "qqTranSmart": "bs",
+        "sysTran": "bs"
+    },
+    {
+        "Value": "bsn",
+        "iciba": "bsn"
+    },
+    {
+        "Value": "cak",
+        "iciba": "cak"
+    },
+    {
+        "Value": "cha",
+        "iciba": "cha"
+    },
+    {
+        "Value": "chq",
+        "iciba": "chq"
+    },
+    {
+        "Value": "chr",
+        "alibaba": "chr",
+        "iciba": "chr"
+    },
+    {
+        "Value": "cht",
+        "iciba": "cht",
+        "xunjie": "cht"
+    },
+    {
+        "Value": "cjp",
+        "iciba": "cjp"
+    },
+    {
+        "Value": "cni",
+        "iciba": "cni"
+    },
+    {
+        "Value": "cop",
+        "iciba": "cop"
+    },
+    {
+        "Value": "crs",
+        "bing": "crs",
+        "google": "crs",
+        "iciba": "crs"
+    },
+    {
+        "Value": "cv",
+        "alibaba": "cv",
+        "google": "cv",
+        "iciba": "cv"
+    },
+    {
+        "Value": "dik",
+        "iciba": "dik",
+        "modernMt": "dik"
+    },
+    {
+        "Value": "dje",
+        "iciba": "dje"
+    },
+    {
+        "Value": "djk",
+        "iciba": "djk"
+    },
+    {
+        "Value": "dop",
+        "iciba": "dop"
+    },
+    {
+        "Value": "dv",
+        "alibaba": "dv",
+        "bing": "dv",
+        "google": "dv",
+        "iciba": "dv"
+    },
+    {
+        "Value": "dz",
+        "google": "dz",
+        "iciba": "dz",
+        "modernMt": "dz",
+        "qqTranSmart": "dz"
+    },
+    {
+        "Value": "ee",
+        "alibaba": "ee",
+        "google": "ee",
+        "iciba": "ee",
+        "modernMt": "ee"
+    },
+    {
+        "Value": "fil",
+        "alibaba": "fil",
+        "bing": "fil",
+        "iciba": "fil",
+        "qqTranSmart": "fil",
+        "xunjie": "fil"
+    },
+    {
+        "Value": "fj",
+        "alibaba": "fj",
+        "bing": "fj",
+        "google": "fj",
+        "iciba": "fj",
+        "modernMt": "fj"
+    },
+    {
+        "Value": "fo",
+        "alibaba": "fo",
+        "bing": "fo",
+        "google": "fo",
+        "iciba": "fo",
+        "modernMt": "fo",
+        "qqTranSmart": "fo"
+    },
+    {
+        "Value": "gbi",
+        "iciba": "gbi"
+    },
+    {
+        "Value": "gv",
+        "alibaba": "gv",
+        "google": "gv",
+        "iciba": "gv"
+    },
+    {
+        "Value": "jac",
+        "iciba": "jac"
+    },
+    {
+        "Value": "jiv",
+        "iciba": "jiv"
+    },
+    {
+        "Value": "jv",
+        "alibaba": "jv",
+        "iciba": "jv",
         "modernMt": "jv",
         "qqTranSmart": "jv"
     },
     {
-        "Value": "格鲁吉亚语",
-        "alibaba": "ka",
-        "baidu": "geo",
-        "bing": "ka",
-        "google": "ka",
-        "itranslate": "ka",
-        "lingvanex": "ka_GE",
-        "modernMt": "ka",
-        "qqTranSmart": "ka"
+        "Value": "jy",
+        "iciba": "jy",
+        "xunjie": "jy"
     },
     {
-        "Value": "卡拜尔语",
+        "Value": "kab",
         "alibaba": "kab",
-        "baidu": "kab",
+        "iciba": "kab",
         "modernMt": "kab"
     },
     {
-        "Value": "景颇语",
-        "modernMt": "kac"
+        "Value": "kbh",
+        "iciba": "kbh"
     },
     {
-        "Value": "康巴语",
-        "modernMt": "kam"
+        "Value": "kek",
+        "alibaba": "kek",
+        "google": "kek",
+        "iciba": "kek"
     },
     {
-        "Value": "卡比耶语",
-        "modernMt": "kbp"
-    },
-    {
-        "Value": "侗语",
-        "alibaba": "kdx"
-    },
-    {
-        "Value": "佛得角克里奥尔语",
-        "modernMt": "kea"
-    },
-    {
-        "Value": "玛雅语",
-        "alibaba": "kek"
-    },
-    {
-        "Value": "刚果语",
+        "Value": "kg",
         "alibaba": "kg",
-        "baidu": "kon",
+        "google": "kg",
+        "iciba": "kg",
         "modernMt": "kg"
     },
     {
-        "Value": "卡西语",
-        "alibaba": "kha"
-    },
-    {
-        "Value": "喀尔喀蒙古语",
-        "modernMt": "khk"
-    },
-    {
-        "Value": "基库尤语",
-        "modernMt": "ki"
-    },
-    {
-        "Value": "哈萨克语",
-        "alibaba": "kk",
-        "apertium": "kaz",
-        "bing": "kk",
-        "google": "kk",
-        "itranslate": "kk",
-        "lingvanex": "kk_KZ",
-        "modernMt": "kk",
-        "qqTranSmart": "kk"
-    },
-    {
-        "Value": "格陵兰语",
-        "alibaba": "kl",
-        "baidu": "kal"
-    },
-    {
-        "Value": "高棉语",
-        "alibaba": "km",
-        "baidu": "hkm",
-        "bing": "km",
-        "cloudTranslation": "km",
-        "google": "km",
-        "itranslate": "km",
-        "lingvanex": "km_KH",
-        "modernMt": "km",
-        "qqTranSmart": "km"
-    },
-    {
-        "Value": "金邦杜语",
-        "modernMt": "kmb"
-    },
-    {
-        "Value": "卡纳达语",
-        "alibaba": "kn",
-        "baidu": "kan",
-        "bing": "kn",
-        "google": "kn",
-        "itranslate": "kn",
-        "lingvanex": "kn_IN",
-        "modernMt": "kn",
-        "qqTranSmart": "kn"
-    },
-    {
-        "Value": "孔卡尼语",
-        "baidu": "kok",
-        "bing": "gom"
-    },
-    {
-        "Value": "卡努里语",
-        "alibaba": "kr",
-        "baidu": "kau",
-        "modernMt": "knc"
-    },
-    {
-        "Value": "克里奥尔语",
-        "google": "kri"
-    },
-    {
-        "Value": "克什米尔语",
-        "alibaba": "ks",
-        "baidu": "kas",
-        "bing": "ks",
-        "modernMt": "kas"
-    },
-    {
-        "Value": "克什米尔语(天城文)",
-        "modernMt": "ks"
-    },
-    {
-        "Value": "库尔德语(中)",
-        "alibaba": "ku",
-        "baidu": "kur",
-        "bing": "ku",
-        "google": "ku",
-        "lingvanex": "ku_IR",
-        "qqTranSmart": "ku"
-    },
-    {
-        "Value": "库尔德语(北)",
-        "bing": "kmr",
-        "modernMt": "kmr"
-    },
-    {
-        "Value": "康沃尔语",
-        "alibaba": "kw",
-        "qqTranSmart": "kw"
-    },
-    {
-        "Value": "吉尔吉斯斯坦语",
-        "alibaba": "ky",
-        "baidu": "kir",
-        "bing": "ky",
-        "google": "ky",
-        "lingvanex": "ky_KG",
-        "modernMt": "ky",
-        "qqTranSmart": "ky"
-    },
-    {
-        "Value": "拉丁语",
-        "alibaba": "la",
-        "baidu": "lat",
-        "google": "la",
-        "itranslate": "la",
-        "lingvanex": "la_VAT",
-        "modernMt": "la"
-    },
-    {
-        "Value": "卢森堡语",
-        "alibaba": "lb",
-        "baidu": "ltz",
-        "google": "lb",
-        "lingvanex": "lb_LU",
-        "modernMt": "lb",
-        "qqTranSmart": "lb"
-    },
-    {
-        "Value": "新共同语言",
-        "alibaba": "lfn"
-    },
-    {
-        "Value": "卢干达语",
+        "Value": "lg",
         "alibaba": "lg",
-        "baidu": "lug",
-        "bing": "lug",
         "google": "lg",
+        "iciba": "lg",
         "modernMt": "lg"
     },
     {
-        "Value": "林堡语",
-        "alibaba": "li",
-        "baidu": "lim",
-        "modernMt": "li"
-    },
-    {
-        "Value": "利古里亚语",
-        "modernMt": "lij"
-    },
-    {
-        "Value": "伦巴底语",
-        "modernMt": "lmo"
-    },
-    {
-        "Value": "林加拉语",
+        "Value": "ln",
         "alibaba": "ln",
-        "baidu": "lin",
         "bing": "ln",
         "google": "ln",
+        "iciba": "ln",
         "modernMt": "ln",
         "qqTranSmart": "ln"
     },
     {
-        "Value": "老挝语",
-        "alibaba": "lo",
-        "baidu": "lao",
-        "bing": "lo",
-        "cloudTranslation": "lo",
-        "google": "lo",
-        "itranslate": "lo",
-        "lingvanex": "lo_LA",
-        "modernMt": "lo",
-        "qqTranSmart": "lo"
+        "Value": "mam",
+        "google": "mam",
+        "iciba": "mam"
     },
     {
-        "Value": "下索布语",
-        "baidu": "los",
-        "bing": "dsb"
+        "Value": "me",
+        "iciba": "me",
+        "sysTran": "me"
     },
     {
-        "Value": "立陶宛语",
-        "alibaba": "lt",
-        "argos": "lt",
-        "baidu": "lit",
-        "bing": "lt",
-        "deepl": "lt",
-        "google": "lt",
-        "itranslate": "lt",
-        "lingvanex": "lt_LT",
-        "modernMt": "lt",
-        "qqTranSmart": "lt",
-        "reverso": "lt"
+        "Value": "mhr",
+        "iciba": "mhr"
     },
     {
-        "Value": "拉特加莱语",
+        "Value": "mrj",
+        "iciba": "mrj"
+    },
+    {
+        "Value": "nhg",
+        "iciba": "nhg"
+    },
+    {
+        "Value": "ojb",
+        "iciba": "ojb"
+    },
+    {
+        "Value": "om",
+        "alibaba": "om",
+        "google": "om",
+        "iciba": "om",
+        "sysTran": "om"
+    },
+    {
+        "Value": "or",
+        "alibaba": "or",
+        "bing": "or",
+        "google": "or",
+        "iciba": "or",
+        "modernMt": "or",
+        "qqTranSmart": "or"
+    },
+    {
+        "Value": "os",
+        "alibaba": "os",
+        "google": "os",
+        "iciba": "os"
+    },
+    {
+        "Value": "pap",
+        "alibaba": "pap",
+        "bing": "pap",
+        "google": "pap",
+        "iciba": "pap",
+        "modernMt": "pap",
+        "qqTranSmart": "pap"
+    },
+    {
+        "Value": "pck",
+        "iciba": "pck"
+    },
+    {
+        "Value": "pot",
+        "iciba": "pot"
+    },
+    {
+        "Value": "ppk",
+        "iciba": "ppk"
+    },
+    {
+        "Value": "quc",
+        "alibaba": "quc",
+        "iciba": "quc"
+    },
+    {
+        "Value": "quw",
+        "iciba": "quw"
+    },
+    {
+        "Value": "rmn",
+        "iciba": "rmn"
+    },
+    {
+        "Value": "rn",
+        "alibaba": "rn",
+        "google": "rn",
+        "iciba": "rn",
+        "modernMt": "rn"
+    },
+    {
+        "Value": "rw",
+        "alibaba": "rw",
+        "bing": "rw",
+        "google": "rw",
+        "iciba": "rw",
+        "modernMt": "rw"
+    },
+    {
+        "Value": "sg",
+        "alibaba": "sg",
+        "google": "sg",
+        "iciba": "sg",
+        "modernMt": "sg"
+    },
+    {
+        "Value": "shi",
+        "iciba": "shi"
+    },
+    {
+        "Value": "sr",
+        "alibaba": "sr",
+        "google": "sr",
+        "iciba": "sr",
+        "itranslate": "sr",
+        "qqTranSmart": "sr",
+        "reverso": "sr",
+        "sysTran": "sr",
+        "translateCom": "sr",
+        "xunjie": "sr",
+        "yandex": "sr"
+    },
+    {
+        "Value": "syc",
+        "iciba": "syc"
+    },
+    {
+        "Value": "tet",
+        "alibaba": "tet",
+        "bing": "tet",
+        "google": "tet",
+        "iciba": "tet"
+    },
+    {
+        "Value": "ti",
+        "alibaba": "ti",
+        "bing": "ti",
+        "google": "ti",
+        "iciba": "ti",
+        "modernMt": "ti",
+        "qqTranSmart": "ti",
+        "utibet": "ti",
+        "xunjie": "ti"
+    },
+    {
+        "Value": "tig",
+        "iciba": "tig"
+    },
+    {
+        "Value": "tk",
+        "alibaba": "tk",
+        "bing": "tk",
+        "google": "tk",
+        "iciba": "tk",
+        "modernMt": "tk",
+        "qqTranSmart": "tk"
+    },
+    {
+        "Value": "tmh",
+        "iciba": "tmh"
+    },
+    {
+        "Value": "tn",
+        "bing": "tn",
+        "google": "tn",
+        "iciba": "tn",
+        "modernMt": "tn"
+    },
+    {
+        "Value": "to",
+        "bing": "to",
+        "google": "to",
+        "iciba": "to"
+    },
+    {
+        "Value": "tpi",
+        "alibaba": "tpi",
+        "bing": "tpi",
+        "google": "tpi",
+        "iciba": "tpi",
+        "modernMt": "tpi"
+    },
+    {
+        "Value": "ts",
+        "alibaba": "ts",
+        "google": "ts",
+        "iciba": "ts",
+        "modernMt": "ts"
+    },
+    {
+        "Value": "tt",
+        "alibaba": "tt",
+        "bing": "tt",
+        "google": "tt",
+        "iciba": "tt",
+        "modernMt": "tt",
+        "qqTranSmart": "tt"
+    },
+    {
+        "Value": "tw",
+        "alibaba": "tw",
+        "iciba": "tw",
+        "modernMt": "tw"
+    },
+    {
+        "Value": "ty",
+        "alibaba": "ty",
+        "bing": "ty",
+        "google": "ty",
+        "iciba": "ty"
+    },
+    {
+        "Value": "udm",
+        "alibaba": "udm",
+        "google": "udm",
+        "iciba": "udm"
+    },
+    {
+        "Value": "usp",
+        "iciba": "usp"
+    },
+    {
+        "Value": "uy",
+        "iciba": "uy",
+        "xunjie": "uy"
+    },
+    {
+        "Value": "ve",
+        "alibaba": "ve",
+        "google": "ve",
+        "iciba": "ve"
+    },
+    {
+        "Value": "wal",
+        "iciba": "wal"
+    },
+    {
+        "Value": "war",
+        "alibaba": "war",
+        "bing": "war",
+        "google": "war",
+        "iciba": "war",
+        "modernMt": "war"
+    },
+    {
+        "Value": "wol",
+        "iciba": "wol"
+    },
+    {
+        "Value": "中文(粤语)",
+        "alibaba": "yue",
+        "bing": "yue",
+        "cloudTranslation": "yue",
+        "google": "yue",
+        "iciba": "yue",
+        "iflyrec": "yue",
+        "xunjie": "yue"
+    },
+    {
+        "Value": "ak",
+        "alibaba": "ak",
+        "google": "ak",
+        "modernMt": "ak",
+        "qqTranSmart": "ak"
+    },
+    {
+        "Value": "als",
+        "modernMt": "als"
+    },
+    {
+        "Value": "as",
+        "alibaba": "as",
+        "bing": "as",
+        "google": "as",
+        "modernMt": "as"
+    },
+    {
+        "Value": "ast",
+        "alibaba": "ast",
+        "bing": "ast",
+        "modernMt": "ast",
+        "qqTranSmart": "ast"
+    },
+    {
+        "Value": "awa",
+        "google": "awa",
+        "modernMt": "awa"
+    },
+    {
+        "Value": "ayr",
+        "modernMt": "ayr"
+    },
+    {
+        "Value": "azb",
+        "modernMt": "azb"
+    },
+    {
+        "Value": "azj",
+        "modernMt": "azj"
+    },
+    {
+        "Value": "ban",
+        "bing": "ban",
+        "google": "ban",
+        "modernMt": "ban"
+    },
+    {
+        "Value": "bho",
+        "alibaba": "bho",
+        "bing": "bho",
+        "google": "bho",
+        "modernMt": "bho"
+    },
+    {
+        "Value": "bjn",
+        "modernMt": "bjn"
+    },
+    {
+        "Value": "bm",
+        "alibaba": "bm",
+        "google": "bm",
+        "modernMt": "bm"
+    },
+    {
+        "Value": "bo",
+        "alibaba": "bo",
+        "bing": "bo",
+        "google": "bo",
+        "modernMt": "bo",
+        "qqTranSmart": "bo"
+    },
+    {
+        "Value": "bug",
+        "modernMt": "bug"
+    },
+    {
+        "Value": "cjk",
+        "modernMt": "cjk"
+    },
+    {
+        "Value": "ckb",
+        "google": "ckb",
+        "modernMt": "ckb"
+    },
+    {
+        "Value": "diq",
+        "modernMt": "diq"
+    },
+    {
+        "Value": "dyu",
+        "google": "dyu",
+        "modernMt": "dyu"
+    },
+    {
+        "Value": "es-419",
+        "lara": "es-419",
+        "modernMt": "es-419"
+    },
+    {
+        "Value": "es-ES",
+        "itranslate": "es-ES",
+        "lara": "es-ES",
+        "modernMt": "es-ES"
+    },
+    {
+        "Value": "fon",
+        "google": "fon",
+        "modernMt": "fon"
+    },
+    {
+        "Value": "fur",
+        "alibaba": "fur",
+        "bing": "fur",
+        "google": "fur",
+        "modernMt": "fur",
+        "qqTranSmart": "fur"
+    },
+    {
+        "Value": "fuv",
+        "modernMt": "fuv"
+    },
+    {
+        "Value": "gaz",
+        "modernMt": "gaz"
+    },
+    {
+        "Value": "gn",
+        "alibaba": "gn",
+        "google": "gn",
+        "modernMt": "gn"
+    },
+    {
+        "Value": "hne",
+        "bing": "hne",
+        "modernMt": "hne"
+    },
+    {
+        "Value": "ilo",
+        "alibaba": "ilo",
+        "bing": "ilo",
+        "google": "ilo",
+        "modernMt": "ilo"
+    },
+    {
+        "Value": "kac",
+        "google": "kac",
+        "modernMt": "kac"
+    },
+    {
+        "Value": "kam",
+        "modernMt": "kam"
+    },
+    {
+        "Value": "kas",
+        "modernMt": "kas"
+    },
+    {
+        "Value": "kbp",
+        "modernMt": "kbp"
+    },
+    {
+        "Value": "kea",
+        "bing": "kea",
+        "modernMt": "kea"
+    },
+    {
+        "Value": "khk",
+        "modernMt": "khk"
+    },
+    {
+        "Value": "ki",
+        "modernMt": "ki"
+    },
+    {
+        "Value": "kmb",
+        "modernMt": "kmb"
+    },
+    {
+        "Value": "kmr",
+        "bing": "kmr",
+        "modernMt": "kmr"
+    },
+    {
+        "Value": "knc",
+        "modernMt": "knc"
+    },
+    {
+        "Value": "ks",
+        "alibaba": "ks",
+        "bing": "ks",
+        "modernMt": "ks"
+    },
+    {
+        "Value": "li",
+        "alibaba": "li",
+        "google": "li",
+        "modernMt": "li"
+    },
+    {
+        "Value": "lij",
+        "bing": "lij",
+        "google": "lij",
+        "modernMt": "lij"
+    },
+    {
+        "Value": "lmo",
+        "bing": "lmo",
+        "google": "lmo",
+        "modernMt": "lmo"
+    },
+    {
+        "Value": "ltg",
         "alibaba": "ltg",
-        "baidu": "lag",
+        "google": "ltg",
         "modernMt": "ltg"
     },
     {
-        "Value": "卢巴卡塞语",
+        "Value": "lua",
+        "google": "lua",
         "modernMt": "lua"
     },
     {
-        "Value": "卢奥语",
+        "Value": "luo",
+        "google": "luo",
         "modernMt": "luo"
     },
     {
-        "Value": "米佐语",
+        "Value": "lus",
         "google": "lus",
         "modernMt": "lus"
     },
     {
-        "Value": "拉脱维亚语",
-        "alibaba": "lv",
-        "argos": "lv",
-        "baidu": "lav",
-        "bing": "lv",
-        "deepl": "lv",
-        "google": "lv",
-        "itranslate": "lv",
-        "lingvanex": "lv_LV",
-        "modernMt": "lv",
-        "qqTranSmart": "lv"
-    },
-    {
-        "Value": "标准拉脱维亚语",
+        "Value": "lvs",
         "modernMt": "lvs"
     },
     {
-        "Value": "马加希语",
+        "Value": "mag",
         "modernMt": "mag"
     },
     {
-        "Value": "迈蒂利语",
+        "Value": "mai",
         "alibaba": "mai",
-        "baidu": "mai",
         "bing": "mai",
         "google": "mai",
         "modernMt": "mai",
         "qqTranSmart": "mai"
     },
     {
-        "Value": "毛里求斯克里奥尔语",
-        "alibaba": "mfe",
-        "baidu": "mau",
-        "qqTranSmart": "mfe"
-    },
-    {
-        "Value": "马达加斯加语",
-        "alibaba": "mg",
-        "baidu": "mg",
-        "bing": "mg",
-        "google": "mg",
-        "itranslate": "mg",
-        "lingvanex": "mg_MG",
-        "modernMt": "mg",
-        "qqTranSmart": "mg"
-    },
-    {
-        "Value": "马绍尔语",
-        "alibaba": "mh",
-        "baidu": "mah"
-    },
-    {
-        "Value": "毛利语",
-        "alibaba": "mi",
-        "baidu": "mao",
-        "bing": "mi",
-        "google": "mi",
-        "itranslate": "mi",
-        "lingvanex": "mi_NZ",
-        "modernMt": "mi",
-        "qqTranSmart": "mi"
-    },
-    {
-        "Value": "米南佳保语",
+        "Value": "min",
+        "bing": "min",
+        "google": "min",
         "modernMt": "min"
     },
     {
-        "Value": "马其顿语",
-        "alibaba": "mk",
-        "apertium": "mkd",
-        "baidu": "mac",
-        "bing": "mk",
-        "google": "mk",
-        "itranslate": "mk",
-        "lingvanex": "mk_MK",
-        "modernMt": "mk",
-        "qqTranSmart": "mk"
-    },
-    {
-        "Value": "马拉雅拉姆语",
-        "alibaba": "ml",
-        "baidu": "mal",
-        "bing": "ml",
-        "google": "ml",
-        "itranslate": "ml",
-        "lingvanex": "ml_IN",
-        "modernMt": "ml",
-        "qqTranSmart": "ml"
-    },
-    {
-        "Value": "梅泰语(曼尼普尔语)",
-        "google": "mni-Mtei",
+        "Value": "mni",
         "modernMt": "mni"
     },
     {
-        "Value": "莫西语",
+        "Value": "mos",
         "modernMt": "mos"
     },
     {
-        "Value": "马拉地语",
-        "alibaba": "mr",
-        "baidu": "mar",
-        "bing": "mr",
-        "google": "mr",
-        "itranslate": "mr",
-        "lingvanex": "mr_IN",
-        "modernMt": "mr",
-        "qqTranSmart": "mr"
-    },
-    {
-        "Value": "马来语",
-        "alibaba": "ms",
-        "apertium": "zlm",
-        "argos": "ms",
-        "baidu": "may",
-        "bing": "ms",
-        "cloudTranslation": "ms",
-        "google": "ms",
-        "itranslate": "ms",
-        "lingvanex": "ms_MY",
-        "modernMt": "ms",
-        "qqFanyi": "ms",
-        "qqTranSmart": "ms",
-        "translateCom": "ms"
-    },
-    {
-        "Value": "马耳他语",
-        "alibaba": "mt",
-        "apertium": "mlt",
-        "baidu": "mlt",
-        "bing": "mt",
-        "deepl": "mt",
-        "google": "mt",
-        "itranslate": "mt",
-        "lingvanex": "mt_MT",
-        "modernMt": "mt",
-        "qqTranSmart": "mt"
-    },
-    {
-        "Value": "克里克语",
-        "alibaba": "mus",
-        "baidu": "cre"
-    },
-    {
-        "Value": "缅甸语",
-        "alibaba": "my",
-        "baidu": "bur",
-        "bing": "my",
-        "cloudTranslation": "my",
-        "google": "my",
-        "itranslate": "my",
-        "lingvanex": "my_MM",
-        "modernMt": "my"
-    },
-    {
-        "Value": "南恩德贝莱语",
-        "baidu": "nbl"
-    },
-    {
-        "Value": "阿兹特克语",
-        "alibaba": "nch"
-    },
-    {
-        "Value": "低地德语",
-        "alibaba": "nds",
-        "baidu": "log"
-    },
-    {
-        "Value": "尼泊尔语",
-        "alibaba": "ne",
-        "baidu": "nep",
-        "bing": "ne",
-        "google": "ne",
-        "itranslate": "ne",
-        "lingvanex": "ne_NP",
-        "modernMt": "ne",
-        "qqTranSmart": "ne"
-    },
-    {
-        "Value": "那不勒斯语",
-        "baidu": "nea"
-    },
-    {
-        "Value": "格雷罗纳瓦特尔语",
-        "alibaba": "ngu"
-    },
-    {
-        "Value": "纽埃语",
-        "alibaba": "niu"
-    },
-    {
-        "Value": "新挪威语",
-        "apertium": "nno",
-        "baidu": "nno",
-        "modernMt": "nn",
-        "qqTranSmart": "nn"
-    },
-    {
-        "Value": "东挪威语",
-        "apertium": "nno_e"
-    },
-    {
-        "Value": "挪威语",
-        "alibaba": "no",
-        "baidu": "nor",
-        "deepl": "no",
-        "google": "no",
-        "itranslate": "no",
-        "lingvanex": "no_NO",
-        "qqTranSmart": "no",
-        "reverso": "no",
-        "translateCom": "no"
-    },
-    {
-        "Value": "书面挪威语",
-        "apertium": "nob",
-        "argos": "nb",
-        "baidu": "nob",
+        "Value": "nb",
         "bing": "nb",
-        "deepl": "nb",
         "languageWire": "nb",
+        "lara": "nb",
         "modernMt": "nb",
         "qqTranSmart": "nb"
     },
     {
-        "Value": "西非书面语",
-        "baidu": "nqo"
-    },
-    {
-        "Value": "塞佩蒂语",
-        "google": "nso"
-    },
-    {
-        "Value": "努尔语",
-        "modernMt": "nus"
-    },
-    {
-        "Value": "纳瓦霍语",
-        "alibaba": "nv"
-    },
-    {
-        "Value": "齐切瓦语",
-        "alibaba": "ny",
-        "baidu": "nya",
-        "bing": "nya",
-        "google": "ny",
-        "itranslate": "ny",
-        "lingvanex": "ny_MW",
-        "modernMt": "ny"
-    },
-    {
-        "Value": "奥克语",
-        "alibaba": "oc",
-        "baidu": "oci",
-        "modernMt": "oc",
-        "qqTranSmart": "oc"
-    },
-    {
-        "Value": "奥克西坦语",
-        "apertium": "oci"
-    },
-    {
-        "Value": "阿兰语",
-        "apertium": "oci_aran"
-    },
-    {
-        "Value": "加斯科尼语",
-        "apertium": "oci_gascon"
-    },
-    {
-        "Value": "奥杰布瓦语",
-        "alibaba": "oj",
-        "baidu": "oji"
-    },
-    {
-        "Value": "奥罗莫语",
-        "alibaba": "om",
-        "baidu": "orm",
-        "google": "om",
-        "modernMt": "gaz"
-    },
-    {
-        "Value": "奥里亚语",
-        "alibaba": "or",
-        "baidu": "ori",
-        "bing": "or",
-        "google": "or",
-        "lingvanex": "or_OR",
-        "modernMt": "or",
-        "qqTranSmart": "or"
-    },
-    {
-        "Value": "奥塞梯语",
-        "alibaba": "os",
-        "baidu": "oss"
-    },
-    {
-        "Value": "克雷塔罗奥托米语",
-        "bing": "otq"
-    },
-    {
-        "Value": "旁遮普语",
-        "alibaba": "pa",
-        "baidu": "pan",
-        "bing": "pa",
-        "google": "pa",
-        "itranslate": "pa",
-        "lingvanex": "pa_PK",
-        "modernMt": "pa",
-        "qqTranSmart": "pa"
-    },
-    {
-        "Value": "邦阿西楠语",
-        "alibaba": "pag",
-        "modernMt": "pag"
-    },
-    {
-        "Value": "邦板牙语",
-        "baidu": "pam"
-    },
-    {
-        "Value": "帕皮阿门托语",
-        "alibaba": "pap",
-        "baidu": "pap",
-        "modernMt": "pap",
-        "qqTranSmart": "pap"
-    },
-    {
-        "Value": "北索托语",
-        "baidu": "ped",
+        "Value": "nso",
         "bing": "nso",
+        "google": "nso",
         "modernMt": "nso",
         "qqTranSmart": "nso"
     },
     {
-        "Value": "西波斯语",
-        "modernMt": "pes",
-        "reverso": "pe"
+        "Value": "nus",
+        "google": "nus",
+        "modernMt": "nus"
     },
     {
-        "Value": "波兰语",
-        "alibaba": "pl",
-        "apertium": "pol",
-        "argos": "pl",
-        "baidu": "pl",
-        "bing": "pl",
-        "cloudTranslation": "pl",
-        "deepl": "pl",
-        "google": "pl",
-        "itranslate": "pl",
-        "lingvanex": "pl_PL",
-        "modernMt": "pl",
-        "qqTranSmart": "pl",
-        "reverso": "pl",
-        "sogou": "pl",
-        "translateCom": "pl"
+        "Value": "oc",
+        "alibaba": "oc",
+        "bing": "oc",
+        "google": "oc",
+        "modernMt": "oc",
+        "qqTranSmart": "oc"
     },
     {
-        "Value": "高原马拉加斯语",
-        "modernMt": "plt"
+        "Value": "pag",
+        "alibaba": "pag",
+        "google": "pag",
+        "modernMt": "pag"
     },
     {
-        "Value": "帕姆语",
-        "alibaba": "pmn",
-        "qqTranSmart": "pms"
-    },
-    {
-        "Value": "普什图语",
-        "alibaba": "ps",
-        "baidu": "pus",
-        "bing": "ps",
-        "google": "ps",
-        "lingvanex": "ps_AF",
-        "modernMt": "ps",
-        "qqTranSmart": "ps",
-        "reverso": "ps"
-    },
-    {
-        "Value": "南普什图语",
+        "Value": "pbt",
         "modernMt": "pbt"
     },
     {
-        "Value": "达利语",
+        "Value": "pes",
+        "modernMt": "pes"
+    },
+    {
+        "Value": "plt",
+        "modernMt": "plt"
+    },
+    {
+        "Value": "prs",
         "bing": "prs",
         "modernMt": "prs"
     },
     {
-        "Value": "葡萄牙语",
-        "alibaba": "pt",
-        "apertium": "por",
-        "argos": "pt",
-        "baidu": "pt",
-        "bing": "pt",
-        "cloudTranslation": "pt",
-        "deepl": "pt",
-        "google": "pt",
-        "papago": "pt",
-        "qqFanyi": "pt",
-        "qqTranSmart": "pt",
-        "reverso": "pt",
-        "sogou": "pt",
-        "translateCom": "pt"
-    },
-    {
-        "Value": "巴西葡萄牙语",
-        "apertium": "por_BR",
-        "baidu": "pot",
+        "Value": "pt-BR",
         "itranslate": "pt-BR",
+        "lara": "pt-BR",
         "modernMt": "pt-BR",
-        "qqTranSmart": "pt-BR",
-        "reverso": "ptb",
-        "translateCom": "pt-br"
+        "qqTranSmart": "pt-BR"
     },
     {
-        "Value": "欧洲葡萄牙语",
-        "apertium": "por_PTpre1990",
+        "Value": "pt-PT",
         "bing": "pt-PT",
+        "google": "pt-PT",
         "itranslate": "pt-PT",
-        "lingvanex": "pt_PT",
+        "lara": "pt-PT",
         "modernMt": "pt-PT",
         "qqTranSmart": "pt-PT"
     },
     {
-        "Value": "克丘亚语",
-        "alibaba": "qu",
-        "baidu": "que",
-        "google": "qu"
-    },
-    {
-        "Value": "基切语",
-        "alibaba": "quc"
-    },
-    {
-        "Value": "阿亚库乔克丘亚语",
+        "Value": "quy",
         "modernMt": "quy"
     },
     {
-        "Value": "罗曼什语",
-        "alibaba": "rm",
-        "baidu": "roh",
-        "qqTranSmart": "rm"
-    },
-    {
-        "Value": "基隆迪语",
-        "alibaba": "rn",
-        "bing": "run",
-        "modernMt": "rn"
-    },
-    {
-        "Value": "罗马尼亚语",
-        "alibaba": "ro",
-        "apertium": "ron",
-        "argos": "ro",
-        "baidu": "ro",
-        "bing": "ro",
-        "deepl": "ro",
-        "google": "ro",
-        "itranslate": "ro",
-        "lingvanex": "ro_RO",
-        "modernMt": "ro",
-        "qqTranSmart": "ro",
-        "reverso": "ro",
-        "translateCom": "ro"
-    },
-    {
-        "Value": "罗姆语",
-        "alibaba": "rom",
-        "baidu": "rom"
-    },
-    {
-        "Value": "卢森尼亚语",
-        "alibaba": "rue",
-        "baidu": "ruy"
-    },
-    {
-        "Value": "卢旺达语",
-        "alibaba": "rw",
-        "baidu": "kin",
-        "bing": "rw",
-        "google": "rw",
-        "lingvanex": "rw_RW",
-        "modernMt": "rw"
-    },
-    {
-        "Value": "梵语",
+        "Value": "sa",
         "alibaba": "sa",
-        "baidu": "san",
+        "bing": "sa",
         "google": "sa",
         "modernMt": "sa"
     },
     {
-        "Value": "萨哈语",
-        "qqTranSmart": "sah"
-    },
-    {
-        "Value": "桑塔利语",
+        "Value": "sat",
+        "google": "sat",
         "modernMt": "sat"
     },
     {
-        "Value": "西西里语",
-        "modernMt": "scn"
-    },
-    {
-        "Value": "低地苏格兰语",
-        "alibaba": "sco",
-        "baidu": "sco",
-        "qqTranSmart": "sco"
-    },
-    {
-        "Value": "信德语",
-        "alibaba": "sd",
-        "baidu": "snd",
-        "bing": "sd",
-        "google": "sd",
-        "lingvanex": "sd_PK",
-        "modernMt": "sd"
-    },
-    {
-        "Value": "北萨米语",
-        "alibaba": "se",
-        "apertium": "sme",
-        "baidu": "sme",
-        "qqTranSmart": "se"
-    },
-    {
-        "Value": "塞克语",
-        "baidu": "sec"
-    },
-    {
-        "Value": "桑戈语",
-        "alibaba": "sg",
-        "modernMt": "sg"
-    },
-    {
-        "Value": "掸语",
-        "alibaba": "shn",
-        "baidu": "sha",
-        "modernMt": "shn"
-    },
-    {
-        "Value": "僧伽罗语",
-        "alibaba": "si",
-        "baidu": "sin",
-        "bing": "si",
-        "google": "si",
-        "itranslate": "si",
-        "lingvanex": "si_LK",
-        "modernMt": "si",
-        "qqTranSmart": "si"
-    },
-    {
-        "Value": "斯诺伐克语",
-        "alibaba": "sk",
-        "argos": "sk",
-        "baidu": "sk",
-        "bing": "sk",
-        "cloudTranslation": "sk",
-        "deepl": "sk",
-        "google": "sk",
-        "itranslate": "sk",
-        "lingvanex": "sk_SK",
-        "modernMt": "sk",
-        "qqTranSmart": "sk",
-        "reverso": "sk",
-        "translateCom": "sk"
-    },
-    {
-        "Value": "斯洛文尼亚语",
-        "alibaba": "sl",
-        "apertium": "slv",
-        "argos": "sl",
-        "baidu": "slo",
-        "bing": "sl",
-        "deepl": "sl",
-        "google": "sl",
-        "itranslate": "sl",
-        "lingvanex": "sl_SI",
-        "modernMt": "sl",
-        "qqTranSmart": "sl",
-        "reverso": "sl"
-    },
-    {
-        "Value": "萨摩亚语",
-        "alibaba": "sm",
-        "baidu": "sm",
-        "bing": "sm",
-        "google": "sm",
-        "lingvanex": "sm_WS",
-        "modernMt": "sm"
-    },
-    {
-        "Value": "修纳语",
-        "alibaba": "sn",
-        "baidu": "sna",
-        "bing": "sn",
-        "google": "sn",
-        "lingvanex": "sn_ZW",
-        "modernMt": "sn"
-    },
-    {
-        "Value": "索马里语",
-        "alibaba": "so",
-        "baidu": "som",
-        "bing": "so",
-        "google": "so",
-        "itranslate": "so",
-        "lingvanex": "so_SO",
-        "modernMt": "so",
-        "qqTranSmart": "so",
-        "reverso": "so"
-    },
-    {
-        "Value": "桑海语",
-        "baidu": "sol",
-        "qqTranSmart": "son"
-    },
-    {
-        "Value": "南索托语",
-        "baidu": "sot"
-    },
-    {
-        "Value": "阿尔巴尼亚语",
-        "alibaba": "sq",
-        "argos": "sq",
-        "baidu": "alb",
-        "bing": "sq",
-        "google": "sq",
-        "itranslate": "sq",
-        "lingvanex": "sq_AL",
-        "modernMt": "sq",
-        "qqTranSmart": "sq"
-    },
-    {
-        "Value": "塞尔维亚语",
-        "alibaba": "sr",
-        "argos": "sr",
-        "google": "sr",
-        "itranslate": "sr",
-        "qqTranSmart": "sr",
-        "reverso": "sr",
-        "translateCom": "sr"
-    },
-    {
-        "Value": "塞尔维亚语(西里尔文)",
-        "baidu": "src",
-        "bing": "sr-Cyrl",
-        "lingvanex": "sr-Cyrl_RS",
-        "modernMt": "sr-Cyrl"
-    },
-    {
-        "Value": "塞尔维亚语(拉丁文)",
-        "baidu": "srp",
-        "bing": "sr-Latn",
-        "modernMt": "sr-Latn"
-    },
-    {
-        "Value": "萨丁尼亚语",
-        "apertium": "srd",
-        "baidu": "srd",
+        "Value": "sc",
         "modernMt": "sc"
     },
     {
-        "Value": "斯瓦特语",
+        "Value": "scn",
+        "bing": "scn",
+        "google": "scn",
+        "modernMt": "scn"
+    },
+    {
+        "Value": "shn",
+        "alibaba": "shn",
+        "google": "shn",
+        "modernMt": "shn"
+    },
+    {
+        "Value": "ss",
+        "google": "ss",
         "modernMt": "ss"
     },
     {
-        "Value": "塞索托语",
-        "alibaba": "st",
-        "bing": "st",
-        "google": "st",
-        "itranslate": "st",
-        "lingvanex": "st_LS",
-        "modernMt": "st"
-    },
-    {
-        "Value": "巽他语",
-        "alibaba": "su",
-        "baidu": "sun",
-        "google": "su",
-        "itranslate": "su",
-        "lingvanex": "su_ID",
-        "modernMt": "su",
-        "qqTranSmart": "su"
-    },
-    {
-        "Value": "瑞典语",
-        "alibaba": "sv",
-        "apertium": "swe",
-        "argos": "sv",
-        "baidu": "swe",
-        "bing": "sv",
-        "deepl": "sv",
-        "google": "sv",
-        "itranslate": "sv",
-        "languageWire": "sv",
-        "lingvanex": "sv_SE",
-        "modernMt": "sv",
-        "qqTranSmart": "sv",
-        "reverso": "sv",
-        "sogou": "sv",
-        "translateCom": "sv"
-    },
-    {
-        "Value": "斯瓦希里语",
-        "alibaba": "sw",
-        "baidu": "swa",
-        "bing": "sw",
-        "google": "sw",
-        "itranslate": "sw",
-        "lingvanex": "sw_TZ",
-        "modernMt": "sw",
-        "qqTranSmart": "sw"
-    },
-    {
-        "Value": "叙利亚语",
-        "alibaba": "syr",
-        "baidu": "syr"
-    },
-    {
-        "Value": "西里西亚语",
-        "alibaba": "szl",
-        "apertium": "szl",
-        "baidu": "sil",
-        "modernMt": "szl"
-    },
-    {
-        "Value": "泰米尔语",
-        "alibaba": "ta",
-        "baidu": "tam",
-        "bing": "ta",
-        "google": "ta",
-        "itranslate": "ta",
-        "lingvanex": "ta_IN",
-        "modernMt": "ta",
-        "qqTranSmart": "ta"
-    },
-    {
-        "Value": "图阿雷格语",
+        "Value": "taq",
         "modernMt": "taq"
     },
     {
-        "Value": "泰卢固语",
-        "alibaba": "te",
-        "baidu": "tel",
-        "bing": "te",
-        "google": "te",
-        "itranslate": "te",
-        "lingvanex": "te_IN",
-        "modernMt": "te",
-        "qqTranSmart": "te"
-    },
-    {
-        "Value": "德顿语",
-        "alibaba": "tet",
-        "baidu": "tet"
-    },
-    {
-        "Value": "塔吉克语",
-        "alibaba": "tg",
-        "baidu": "tgk",
-        "google": "tg",
-        "itranslate": "tg",
-        "lingvanex": "tg_TJ",
-        "modernMt": "tg",
-        "qqTranSmart": "tg"
-    },
-    {
-        "Value": "泰语",
-        "alibaba": "th",
-        "argos": "th",
-        "baidu": "th",
-        "bing": "th",
-        "cloudTranslation": "th",
-        "google": "th",
-        "itranslate": "th",
-        "lingvanex": "th_TH",
-        "modernMt": "th",
-        "papago": "th",
-        "qqFanyi": "th",
-        "qqTranSmart": "th",
-        "reverso": "th",
-        "sogou": "th",
-        "translateCom": "th"
-    },
-    {
-        "Value": "提格雷尼亚语",
-        "alibaba": "ti",
-        "baidu": "tir",
-        "bing": "ti",
-        "google": "ti",
-        "modernMt": "ti",
-        "qqTranSmart": "ti"
-    },
-    {
-        "Value": "土库曼语",
-        "alibaba": "tk",
-        "baidu": "tuk",
-        "bing": "tk",
-        "google": "tk",
-        "lingvanex": "tk_TM",
-        "modernMt": "tk",
-        "qqTranSmart": "tk"
-    },
-    {
-        "Value": "他加禄语",
-        "alibaba": "tl",
-        "argos": "tl",
-        "baidu": "tgl",
-        "cloudTranslation": "tl",
-        "google": "tl",
-        "itranslate": "tl",
-        "lingvanex": "tl_PH",
-        "modernMt": "tl",
-        "qqTranSmart": "tl",
-        "translateCom": "tl"
-    },
-    {
-        "Value": "克林贡语",
-        "alibaba": "tlh",
-        "baidu": "kli",
-        "bing": "tlh-Latn"
-    },
-    {
-        "Value": "茨瓦纳语",
-        "bing": "tn",
-        "modernMt": "tn"
-    },
-    {
-        "Value": "汤加语(汤加群岛)",
-        "alibaba": "to",
-        "bing": "to"
-    },
-    {
-        "Value": "汤加语(汤加群岛)",
-        "alibaba": "toi"
-    },
-    {
-        "Value": "巴布亚皮钦语",
-        "alibaba": "tpi",
-        "modernMt": "tpi"
-    },
-    {
-        "Value": "土耳其语",
-        "alibaba": "tr",
-        "apertium": "tur",
-        "argos": "tr",
-        "baidu": "tr",
-        "bing": "tr",
-        "deepl": "tr",
-        "google": "tr",
-        "itranslate": "tr",
-        "lingvanex": "tr_TR",
-        "modernMt": "tr",
-        "qqFanyi": "tr",
-        "qqTranSmart": "tr",
-        "reverso": "tr",
-        "translateCom": "tr"
-    },
-    {
-        "Value": "聪加语",
-        "alibaba": "ts",
-        "baidu": "tso",
-        "google": "ts",
-        "modernMt": "ts"
-    },
-    {
-        "Value": "鞑靼语",
-        "alibaba": "tt",
-        "apertium": "tat",
-        "baidu": "tat",
-        "bing": "tt",
-        "google": "tt",
-        "lingvanex": "tt_TT",
-        "modernMt": "tt",
-        "qqTranSmart": "tt"
-    },
-    {
-        "Value": "突尼斯阿拉伯语",
-        "baidu": "tua"
-    },
-    {
-        "Value": "通布卡语",
+        "Value": "tum",
+        "google": "tum",
         "modernMt": "tum"
     },
     {
-        "Value": "图瓦卢语",
-        "alibaba": "tvl"
-    },
-    {
-        "Value": "契维语",
-        "alibaba": "tw",
-        "baidu": "twi",
-        "modernMt": "tw"
-    },
-    {
-        "Value": "塔希提语",
-        "alibaba": "ty",
-        "bing": "ty"
-    },
-    {
-        "Value": "图瓦语",
-        "alibaba": "tyv"
-    },
-    {
-        "Value": "塔马齐格特语",
+        "Value": "tzm",
         "modernMt": "tzm"
     },
     {
-        "Value": "乌德穆尔特语",
-        "alibaba": "udm"
-    },
-    {
-        "Value": "维吾尔语",
+        "Value": "ug",
         "alibaba": "ug",
         "bing": "ug",
-        "cloudTranslation": "ug",
         "google": "ug",
-        "lingvanex": "ug_CN",
         "modernMt": "ug",
         "qqTranSmart": "ug"
     },
     {
-        "Value": "乌克兰语",
-        "alibaba": "uk",
-        "apertium": "ukr",
-        "argos": "uk",
-        "baidu": "ukr",
-        "bing": "uk",
-        "cloudTranslation": "uk",
-        "deepl": "uk",
-        "google": "uk",
-        "itranslate": "uk",
-        "lingvanex": "uk_UA",
-        "modernMt": "uk",
-        "qqTranSmart": "uk",
-        "reverso": "uk",
-        "translateCom": "uk"
-    },
-    {
-        "Value": "姆班杜语",
+        "Value": "umb",
         "alibaba": "umb",
         "modernMt": "umb"
     },
     {
-        "Value": "高地索布语",
-        "baidu": "ups"
-    },
-    {
-        "Value": "乌尔都语",
-        "alibaba": "ur",
-        "apertium": "urd",
-        "argos": "ur",
-        "baidu": "urd",
-        "bing": "ur",
-        "google": "ur",
-        "itranslate": "ur",
-        "lingvanex": "ur_PK",
-        "modernMt": "ur",
-        "qqTranSmart": "ur",
-        "reverso": "ur"
-    },
-    {
-        "Value": "乌孜别克语",
-        "alibaba": "uz",
-        "bing": "uz",
-        "google": "uz",
-        "itranslate": "uz",
-        "lingvanex": "uz_UZ",
-        "qqTranSmart": "uz"
-    },
-    {
-        "Value": "北乌孜别克语",
+        "Value": "uzn",
         "modernMt": "uzn"
     },
     {
-        "Value": "文达语",
-        "alibaba": "ve",
-        "baidu": "ven"
-    },
-    {
-        "Value": "威尼斯语",
+        "Value": "vec",
+        "bing": "vec",
+        "google": "vec",
         "modernMt": "vec"
     },
     {
-        "Value": "越南语",
-        "alibaba": "vi",
-        "argos": "vi",
-        "baidu": "vie",
-        "bing": "vi",
-        "cloudTranslation": "vi",
-        "google": "vi",
-        "iflyrec": "vi",
-        "itranslate": "vi",
-        "lingvanex": "vi_VN",
-        "modernMt": "vi",
-        "papago": "vi",
-        "qqFanyi": "vi",
-        "qqTranSmart": "vi",
-        "reverso": "vi",
-        "sogou": "vi",
-        "translateCom": "vi"
-    },
-    {
-        "Value": "沃拉普克语",
-        "alibaba": "vo"
-    },
-    {
-        "Value": "瓦隆语",
-        "alibaba": "wa",
-        "baidu": "wln",
-        "qqTranSmart": "wa"
-    },
-    {
-        "Value": "瓦瑞语(菲律宾)",
-        "alibaba": "war",
-        "modernMt": "war"
-    },
-    {
-        "Value": "沃洛夫语",
+        "Value": "wo",
         "alibaba": "wo",
-        "baidu": "wol",
+        "google": "wo",
         "modernMt": "wo",
         "qqTranSmart": "wo"
     },
     {
-        "Value": "科萨语",
-        "alibaba": "xh",
-        "baidu": "xho",
-        "bing": "xh",
-        "google": "xh",
-        "lingvanex": "xh_ZA",
-        "modernMt": "xh"
-    },
-    {
-        "Value": "意第绪语",
-        "alibaba": "yi",
-        "baidu": "yid",
-        "google": "yi",
-        "itranslate": "yi",
-        "lingvanex": "yi_IL",
+        "Value": "ydd",
+        "bing": "ydd",
         "modernMt": "ydd"
     },
     {
-        "Value": "约鲁巴语",
-        "alibaba": "yo",
-        "baidu": "yor",
-        "bing": "yo",
-        "google": "yo",
-        "itranslate": "yo",
-        "lingvanex": "yo_NG",
-        "modernMt": "yo",
-        "qqTranSmart": "yo"
-    },
-    {
-        "Value": "尤卡特克玛雅语",
-        "bing": "yua"
-    },
-    {
-        "Value": "标准马来语",
+        "Value": "zsm",
         "modernMt": "zsm"
     },
     {
-        "Value": "祖鲁语",
-        "alibaba": "zu",
-        "baidu": "zul",
-        "bing": "zu",
-        "google": "zu",
-        "itranslate": "zu",
-        "lingvanex": "zu_ZA",
-        "modernMt": "zu"
+        "Value": "af_ZA",
+        "lingvanex": "af_ZA"
     },
     {
-        "Value": "扎扎其语",
-        "alibaba": "zza",
-        "baidu": "zaz"
+        "Value": "am_ET",
+        "lingvanex": "am_ET"
+    },
+    {
+        "Value": "ar_EG",
+        "lingvanex": "ar_EG"
+    },
+    {
+        "Value": "as_IN",
+        "lingvanex": "as_IN"
+    },
+    {
+        "Value": "az_AZ",
+        "lingvanex": "az_AZ"
+    },
+    {
+        "Value": "be_BY",
+        "lingvanex": "be_BY"
+    },
+    {
+        "Value": "bg_BG",
+        "lingvanex": "bg_BG"
+    },
+    {
+        "Value": "bn_BD",
+        "lingvanex": "bn_BD"
+    },
+    {
+        "Value": "bs_BA",
+        "lingvanex": "bs_BA"
+    },
+    {
+        "Value": "ca_ES",
+        "lingvanex": "ca_ES"
+    },
+    {
+        "Value": "ceb_PH",
+        "lingvanex": "ceb_PH"
+    },
+    {
+        "Value": "co_FR",
+        "lingvanex": "co_FR"
+    },
+    {
+        "Value": "cs_CZ",
+        "lingvanex": "cs_CZ"
+    },
+    {
+        "Value": "cy_GB",
+        "lingvanex": "cy_GB"
+    },
+    {
+        "Value": "da_DK",
+        "lingvanex": "da_DK"
+    },
+    {
+        "Value": "de_DE",
+        "lingvanex": "de_DE"
+    },
+    {
+        "Value": "el_GR",
+        "lingvanex": "el_GR"
+    },
+    {
+        "Value": "en_AU",
+        "lingvanex": "en_AU"
+    },
+    {
+        "Value": "en_GB",
+        "lingvanex": "en_GB"
+    },
+    {
+        "Value": "en_US",
+        "lingvanex": "en_US"
+    },
+    {
+        "Value": "eo_WORLD",
+        "lingvanex": "eo_WORLD"
+    },
+    {
+        "Value": "es_ES",
+        "lingvanex": "es_ES"
+    },
+    {
+        "Value": "es_MX",
+        "lingvanex": "es_MX"
+    },
+    {
+        "Value": "es_US",
+        "lingvanex": "es_US"
+    },
+    {
+        "Value": "et_EE",
+        "lingvanex": "et_EE"
+    },
+    {
+        "Value": "eu_ES",
+        "lingvanex": "eu_ES"
+    },
+    {
+        "Value": "fa_IR",
+        "lingvanex": "fa_IR"
+    },
+    {
+        "Value": "fi_FI",
+        "lingvanex": "fi_FI"
+    },
+    {
+        "Value": "fr_CA",
+        "lingvanex": "fr_CA"
+    },
+    {
+        "Value": "fr_FR",
+        "lingvanex": "fr_FR"
+    },
+    {
+        "Value": "fy_NL",
+        "lingvanex": "fy_NL"
+    },
+    {
+        "Value": "ga_IE",
+        "lingvanex": "ga_IE"
+    },
+    {
+        "Value": "gd_GB",
+        "lingvanex": "gd_GB"
+    },
+    {
+        "Value": "gl_ES",
+        "lingvanex": "gl_ES"
+    },
+    {
+        "Value": "gu_IN",
+        "lingvanex": "gu_IN"
+    },
+    {
+        "Value": "ha_NE",
+        "lingvanex": "ha_NE"
+    },
+    {
+        "Value": "haw_US",
+        "lingvanex": "haw_US"
+    },
+    {
+        "Value": "he_IL",
+        "lingvanex": "he_IL"
+    },
+    {
+        "Value": "hi_IN",
+        "lingvanex": "hi_IN"
+    },
+    {
+        "Value": "hmn_CN",
+        "lingvanex": "hmn_CN"
+    },
+    {
+        "Value": "hr_HR",
+        "lingvanex": "hr_HR"
+    },
+    {
+        "Value": "ht_HT",
+        "lingvanex": "ht_HT"
+    },
+    {
+        "Value": "hu_HU",
+        "lingvanex": "hu_HU"
+    },
+    {
+        "Value": "hy_AM",
+        "lingvanex": "hy_AM"
+    },
+    {
+        "Value": "id_ID",
+        "lingvanex": "id_ID"
+    },
+    {
+        "Value": "ig_NG",
+        "lingvanex": "ig_NG"
+    },
+    {
+        "Value": "is_IS",
+        "lingvanex": "is_IS"
+    },
+    {
+        "Value": "it_IT",
+        "lingvanex": "it_IT"
+    },
+    {
+        "Value": "ja_JP",
+        "lingvanex": "ja_JP"
+    },
+    {
+        "Value": "jv_ID",
+        "lingvanex": "jv_ID"
+    },
+    {
+        "Value": "ka_GE",
+        "lingvanex": "ka_GE"
+    },
+    {
+        "Value": "kk_KZ",
+        "lingvanex": "kk_KZ"
+    },
+    {
+        "Value": "km_KH",
+        "lingvanex": "km_KH"
+    },
+    {
+        "Value": "kn_IN",
+        "lingvanex": "kn_IN"
+    },
+    {
+        "Value": "ko_KR",
+        "lingvanex": "ko_KR"
+    },
+    {
+        "Value": "ku_IR",
+        "lingvanex": "ku_IR"
+    },
+    {
+        "Value": "ky_KG",
+        "lingvanex": "ky_KG"
+    },
+    {
+        "Value": "la_VAT",
+        "lingvanex": "la_VAT"
+    },
+    {
+        "Value": "lb_LU",
+        "lingvanex": "lb_LU"
+    },
+    {
+        "Value": "lo_LA",
+        "lingvanex": "lo_LA"
+    },
+    {
+        "Value": "lt_LT",
+        "lingvanex": "lt_LT"
+    },
+    {
+        "Value": "lv_LV",
+        "lingvanex": "lv_LV"
+    },
+    {
+        "Value": "mg_MG",
+        "lingvanex": "mg_MG"
+    },
+    {
+        "Value": "mi_NZ",
+        "lingvanex": "mi_NZ"
+    },
+    {
+        "Value": "mk_MK",
+        "lingvanex": "mk_MK"
+    },
+    {
+        "Value": "ml_IN",
+        "lingvanex": "ml_IN"
+    },
+    {
+        "Value": "mn_MN",
+        "lingvanex": "mn_MN"
+    },
+    {
+        "Value": "mr_IN",
+        "lingvanex": "mr_IN"
+    },
+    {
+        "Value": "ms_MY",
+        "lingvanex": "ms_MY"
+    },
+    {
+        "Value": "mt_MT",
+        "lingvanex": "mt_MT"
+    },
+    {
+        "Value": "my_MM",
+        "lingvanex": "my_MM"
+    },
+    {
+        "Value": "ne_NP",
+        "lingvanex": "ne_NP"
+    },
+    {
+        "Value": "nl_NL",
+        "lingvanex": "nl_NL"
+    },
+    {
+        "Value": "no_NO",
+        "lingvanex": "no_NO"
+    },
+    {
+        "Value": "ny_MW",
+        "lingvanex": "ny_MW"
+    },
+    {
+        "Value": "or_OR",
+        "lingvanex": "or_OR"
+    },
+    {
+        "Value": "pa_PK",
+        "lingvanex": "pa_PK"
+    },
+    {
+        "Value": "pl_PL",
+        "lingvanex": "pl_PL"
+    },
+    {
+        "Value": "ps_AF",
+        "lingvanex": "ps_AF"
+    },
+    {
+        "Value": "pt_BR",
+        "lingvanex": "pt_BR"
+    },
+    {
+        "Value": "pt_PT",
+        "lingvanex": "pt_PT"
+    },
+    {
+        "Value": "ro_RO",
+        "lingvanex": "ro_RO"
+    },
+    {
+        "Value": "ru_RU",
+        "lingvanex": "ru_RU"
+    },
+    {
+        "Value": "rw_RW",
+        "lingvanex": "rw_RW"
+    },
+    {
+        "Value": "sd_PK",
+        "lingvanex": "sd_PK"
+    },
+    {
+        "Value": "si_LK",
+        "lingvanex": "si_LK"
+    },
+    {
+        "Value": "sk_SK",
+        "lingvanex": "sk_SK"
+    },
+    {
+        "Value": "sl_SI",
+        "lingvanex": "sl_SI"
+    },
+    {
+        "Value": "sm_WS",
+        "lingvanex": "sm_WS"
+    },
+    {
+        "Value": "sn_ZW",
+        "lingvanex": "sn_ZW"
+    },
+    {
+        "Value": "so_SO",
+        "lingvanex": "so_SO"
+    },
+    {
+        "Value": "sq_AL",
+        "lingvanex": "sq_AL"
+    },
+    {
+        "Value": "sr-Cyrl_RS",
+        "lingvanex": "sr-Cyrl_RS"
+    },
+    {
+        "Value": "st_LS",
+        "lingvanex": "st_LS"
+    },
+    {
+        "Value": "su_ID",
+        "lingvanex": "su_ID"
+    },
+    {
+        "Value": "sv_SE",
+        "lingvanex": "sv_SE"
+    },
+    {
+        "Value": "sw_TZ",
+        "lingvanex": "sw_TZ"
+    },
+    {
+        "Value": "ta_IN",
+        "lingvanex": "ta_IN"
+    },
+    {
+        "Value": "te_IN",
+        "lingvanex": "te_IN"
+    },
+    {
+        "Value": "tg_TJ",
+        "lingvanex": "tg_TJ"
+    },
+    {
+        "Value": "th_TH",
+        "lingvanex": "th_TH"
+    },
+    {
+        "Value": "tk_TM",
+        "lingvanex": "tk_TM"
+    },
+    {
+        "Value": "tl_PH",
+        "lingvanex": "tl_PH"
+    },
+    {
+        "Value": "tr_TR",
+        "lingvanex": "tr_TR"
+    },
+    {
+        "Value": "tt_TT",
+        "lingvanex": "tt_TT"
+    },
+    {
+        "Value": "ug_CN",
+        "lingvanex": "ug_CN"
+    },
+    {
+        "Value": "uk_UA",
+        "lingvanex": "uk_UA"
+    },
+    {
+        "Value": "ur_PK",
+        "lingvanex": "ur_PK"
+    },
+    {
+        "Value": "uz_UZ",
+        "lingvanex": "uz_UZ"
+    },
+    {
+        "Value": "vi_VN",
+        "lingvanex": "vi_VN"
+    },
+    {
+        "Value": "xh_ZA",
+        "lingvanex": "xh_ZA"
+    },
+    {
+        "Value": "yi_IL",
+        "lingvanex": "yi_IL"
+    },
+    {
+        "Value": "yo_NG",
+        "lingvanex": "yo_NG"
+    },
+    {
+        "Value": "zh-Hans_CN",
+        "lingvanex": "zh-Hans_CN"
+    },
+    {
+        "Value": "zh-Hant_TW",
+        "lingvanex": "zh-Hant_TW"
+    },
+    {
+        "Value": "zu_ZA",
+        "lingvanex": "zu_ZA"
+    },
+    {
+        "Value": "mon",
+        "mglip": "mon"
+    },
+    {
+        "Value": "xle",
+        "mglip": "xle"
+    },
+    {
+        "Value": "ach",
+        "google": "ach",
+        "qqTranSmart": "ach"
+    },
+    {
+        "Value": "an",
+        "alibaba": "an",
+        "qqTranSmart": "an"
+    },
+    {
+        "Value": "arn",
+        "qqTranSmart": "arn"
+    },
+    {
+        "Value": "ay",
+        "alibaba": "ay",
+        "google": "ay",
+        "qqTranSmart": "ay"
+    },
+    {
+        "Value": "cgg",
+        "google": "cgg",
+        "qqTranSmart": "cgg"
+    },
+    {
+        "Value": "cnr",
+        "alibaba": "cnr",
+        "qqTranSmart": "cnr"
+    },
+    {
+        "Value": "csb",
+        "alibaba": "csb",
+        "qqTranSmart": "csb"
+    },
+    {
+        "Value": "dev",
+        "qqTranSmart": "dev"
+    },
+    {
+        "Value": "gun",
+        "qqTranSmart": "gun"
+    },
+    {
+        "Value": "ia",
+        "alibaba": "ia",
+        "qqTranSmart": "ia"
+    },
+    {
+        "Value": "iw",
+        "google": "iw",
+        "qqTranSmart": "iw",
+        "translateCom": "iw"
+    },
+    {
+        "Value": "jbo",
+        "alibaba": "jbo",
+        "qqTranSmart": "jbo"
+    },
+    {
+        "Value": "kw",
+        "alibaba": "kw",
+        "qqTranSmart": "kw"
+    },
+    {
+        "Value": "mfe",
+        "alibaba": "mfe",
+        "bing": "mfe",
+        "google": "mfe",
+        "qqTranSmart": "mfe"
+    },
+    {
+        "Value": "mnk",
+        "qqTranSmart": "mnk"
+    },
+    {
+        "Value": "nah",
+        "qqTranSmart": "nah"
+    },
+    {
+        "Value": "nap",
+        "qqTranSmart": "nap"
+    },
+    {
+        "Value": "pms",
+        "qqTranSmart": "pms"
+    },
+    {
+        "Value": "rm",
+        "alibaba": "rm",
+        "qqTranSmart": "rm"
+    },
+    {
+        "Value": "sah",
+        "google": "sah",
+        "qqTranSmart": "sah"
+    },
+    {
+        "Value": "sco",
+        "alibaba": "sco",
+        "qqTranSmart": "sco"
+    },
+    {
+        "Value": "se",
+        "alibaba": "se",
+        "google": "se",
+        "qqTranSmart": "se"
+    },
+    {
+        "Value": "son",
+        "qqTranSmart": "son"
+    },
+    {
+        "Value": "wa",
+        "alibaba": "wa",
+        "qqTranSmart": "wa"
+    },
+    {
+        "Value": "中文(文言文)",
+        "bing": "lzh",
+        "xunjie": "wyw"
+    },
+    {
+        "Value": "ab",
+        "alibaba": "ab",
+        "google": "ab"
+    },
+    {
+        "Value": "ang",
+        "alibaba": "ang"
+    },
+    {
+        "Value": "bal",
+        "alibaba": "bal",
+        "google": "bal"
+    },
+    {
+        "Value": "byn",
+        "alibaba": "byn"
+    },
+    {
+        "Value": "cbk",
+        "alibaba": "cbk"
+    },
+    {
+        "Value": "ch",
+        "alibaba": "ch",
+        "google": "ch"
+    },
+    {
+        "Value": "chm",
+        "alibaba": "chm",
+        "google": "chm"
+    },
+    {
+        "Value": "dtp",
+        "alibaba": "dtp"
+    },
+    {
+        "Value": "fvr",
+        "alibaba": "fvr"
+    },
+    {
+        "Value": "gil",
+        "alibaba": "gil"
+    },
+    {
+        "Value": "gos",
+        "alibaba": "gos"
+    },
+    {
+        "Value": "hil",
+        "alibaba": "hil",
+        "bing": "hil",
+        "google": "hil"
+    },
+    {
+        "Value": "hsb",
+        "alibaba": "hsb",
+        "bing": "hsb"
+    },
+    {
+        "Value": "hup",
+        "alibaba": "hup"
+    },
+    {
+        "Value": "iba",
+        "alibaba": "iba",
+        "bing": "iba",
+        "google": "iba"
+    },
+    {
+        "Value": "ie",
+        "alibaba": "ie"
+    },
+    {
+        "Value": "ii",
+        "alibaba": "ii"
+    },
+    {
+        "Value": "inh",
+        "alibaba": "inh"
+    },
+    {
+        "Value": "io",
+        "alibaba": "io"
+    },
+    {
+        "Value": "iu",
+        "alibaba": "iu",
+        "bing": "iu",
+        "google": "iu"
+    },
+    {
+        "Value": "kdx",
+        "alibaba": "kdx"
+    },
+    {
+        "Value": "kha",
+        "alibaba": "kha",
+        "google": "kha"
+    },
+    {
+        "Value": "kl",
+        "alibaba": "kl",
+        "google": "kl"
+    },
+    {
+        "Value": "kr",
+        "alibaba": "kr",
+        "google": "kr"
+    },
+    {
+        "Value": "mh",
+        "alibaba": "mh",
+        "google": "mh"
+    },
+    {
+        "Value": "mus",
+        "alibaba": "mus"
+    },
+    {
+        "Value": "nch",
+        "alibaba": "nch"
+    },
+    {
+        "Value": "nds",
+        "alibaba": "nds"
+    },
+    {
+        "Value": "ngu",
+        "alibaba": "ngu"
+    },
+    {
+        "Value": "niu",
+        "alibaba": "niu"
+    },
+    {
+        "Value": "nv",
+        "alibaba": "nv"
+    },
+    {
+        "Value": "oj",
+        "alibaba": "oj"
+    },
+    {
+        "Value": "pmn",
+        "alibaba": "pmn"
+    },
+    {
+        "Value": "qu",
+        "alibaba": "qu",
+        "google": "qu"
+    },
+    {
+        "Value": "rom",
+        "alibaba": "rom",
+        "google": "rom"
+    },
+    {
+        "Value": "rue",
+        "alibaba": "rue"
+    },
+    {
+        "Value": "syr",
+        "alibaba": "syr"
+    },
+    {
+        "Value": "toi",
+        "alibaba": "toi"
+    },
+    {
+        "Value": "tvl",
+        "alibaba": "tvl"
+    },
+    {
+        "Value": "tyv",
+        "alibaba": "tyv",
+        "google": "tyv"
+    },
+    {
+        "Value": "vo",
+        "alibaba": "vo"
+    },
+    {
+        "Value": "za",
+        "alibaba": "za"
+    },
+    {
+        "Value": "zza",
+        "alibaba": "zza"
+    },
+    {
+        "Value": "pe",
+        "reverso": "pe"
+    },
+    {
+        "Value": "ptb",
+        "reverso": "ptb"
+    },
+    {
+        "Value": "自动",
+        "cloudTranslation": "all",
+        "google": "auto",
+        "itranslate": "auto"
+    },
+    {
+        "Value": "en-us",
+        "cloudTranslation": "en-us"
+    },
+    {
+        "Value": "aa",
+        "google": "aa"
+    },
+    {
+        "Value": "alz",
+        "google": "alz"
+    },
+    {
+        "Value": "av",
+        "google": "av"
+    },
+    {
+        "Value": "bbc",
+        "bing": "bbc",
+        "google": "bbc"
+    },
+    {
+        "Value": "bci",
+        "google": "bci"
+    },
+    {
+        "Value": "ber-Latn",
+        "google": "ber-Latn"
+    },
+    {
+        "Value": "bew",
+        "google": "bew"
+    },
+    {
+        "Value": "bik",
+        "bing": "bik",
+        "google": "bik"
+    },
+    {
+        "Value": "bm-Nkoo",
+        "google": "bm-Nkoo"
+    },
+    {
+        "Value": "bts",
+        "google": "bts"
+    },
+    {
+        "Value": "btx",
+        "google": "btx"
+    },
+    {
+        "Value": "bua",
+        "google": "bua"
+    },
+    {
+        "Value": "ce",
+        "google": "ce"
+    },
+    {
+        "Value": "chk",
+        "google": "chk"
+    },
+    {
+        "Value": "cnh",
+        "google": "cnh"
+    },
+    {
+        "Value": "crh-Latn",
+        "google": "crh-Latn"
+    },
+    {
+        "Value": "din",
+        "google": "din"
+    },
+    {
+        "Value": "doi",
+        "bing": "doi",
+        "google": "doi"
+    },
+    {
+        "Value": "dov",
+        "google": "dov"
+    },
+    {
+        "Value": "fa-AF",
+        "google": "fa-AF"
+    },
+    {
+        "Value": "ff",
+        "google": "ff"
+    },
+    {
+        "Value": "fr-CA",
+        "bing": "fr-CA",
+        "google": "fr-CA",
+        "itranslate": "fr-CA",
+        "lara": "fr-CA"
+    },
+    {
+        "Value": "gaa",
+        "google": "gaa"
+    },
+    {
+        "Value": "gom",
+        "bing": "gom",
+        "google": "gom"
+    },
+    {
+        "Value": "hrx",
+        "google": "hrx"
+    },
+    {
+        "Value": "iu-Latn",
+        "bing": "iu-Latn",
+        "google": "iu-Latn"
+    },
+    {
+        "Value": "jam",
+        "bing": "jam",
+        "google": "jam"
+    },
+    {
+        "Value": "kri",
+        "bing": "kri",
+        "google": "kri"
+    },
+    {
+        "Value": "ktu",
+        "google": "ktu"
+    },
+    {
+        "Value": "kv",
+        "google": "kv"
+    },
+    {
+        "Value": "mad",
+        "google": "mad"
+    },
+    {
+        "Value": "mak",
+        "google": "mak"
+    },
+    {
+        "Value": "mni-Mtei",
+        "google": "mni-Mtei"
+    },
+    {
+        "Value": "ms-Arab",
+        "google": "ms-Arab"
+    },
+    {
+        "Value": "mwr",
+        "bing": "mwr",
+        "google": "mwr"
+    },
+    {
+        "Value": "ndc-ZW",
+        "google": "ndc-ZW"
+    },
+    {
+        "Value": "new",
+        "google": "new"
+    },
+    {
+        "Value": "nhe",
+        "google": "nhe"
+    },
+    {
+        "Value": "nr",
+        "google": "nr"
+    },
+    {
+        "Value": "pa-Arab",
+        "google": "pa-Arab"
+    },
+    {
+        "Value": "pam",
+        "bing": "pam",
+        "google": "pam"
+    },
+    {
+        "Value": "sat-Latn",
+        "google": "sat-Latn"
+    },
+    {
+        "Value": "sus",
+        "google": "sus"
+    },
+    {
+        "Value": "tcy",
+        "google": "tcy"
+    },
+    {
+        "Value": "tiv",
+        "google": "tiv"
+    },
+    {
+        "Value": "trp",
+        "google": "trp"
+    },
+    {
+        "Value": "zap",
+        "google": "zap"
+    },
+    {
+        "Value": "arb",
+        "bing": "arb"
+    },
+    {
+        "Value": "ary",
+        "bing": "ary"
+    },
+    {
+        "Value": "arz",
+        "bing": "arz"
+    },
+    {
+        "Value": "brx",
+        "bing": "brx"
+    },
+    {
+        "Value": "dsb",
+        "bing": "dsb"
+    },
+    {
+        "Value": "en-GB",
+        "bing": "en-GB",
+        "lara": "en-GB"
+    },
+    {
+        "Value": "ikt",
+        "bing": "ikt"
+    },
+    {
+        "Value": "jav",
+        "bing": "jav"
+    },
+    {
+        "Value": "lim",
+        "bing": "lim"
+    },
+    {
+        "Value": "lug",
+        "bing": "lug"
+    },
+    {
+        "Value": "mn-Cyrl",
+        "bing": "mn-Cyrl"
+    },
+    {
+        "Value": "mn-Mong",
+        "bing": "mn-Mong"
+    },
+    {
+        "Value": "nya",
+        "bing": "nya"
+    },
+    {
+        "Value": "pnb",
+        "bing": "pnb"
+    },
+    {
+        "Value": "run",
+        "bing": "run"
+    },
+    {
+        "Value": "tgk",
+        "bing": "tgk"
+    },
+    {
+        "Value": "tlh-Latn",
+        "bing": "tlh-Latn"
+    },
+    {
+        "Value": "zt",
+        "sysTran": "zt"
+    },
+    {
+        "Value": "en-gb",
+        "translateCom": "en-gb"
+    },
+    {
+        "Value": "es-la",
+        "translateCom": "es-la"
+    },
+    {
+        "Value": "fr-ca",
+        "translateCom": "fr-ca"
+    },
+    {
+        "Value": "pt-br",
+        "translateCom": "pt-br"
+    },
+    {
+        "Value": "ace-ID",
+        "lara": "ace-ID"
+    },
+    {
+        "Value": "af-ZA",
+        "lara": "af-ZA"
+    },
+    {
+        "Value": "ak-GH",
+        "lara": "ak-GH"
+    },
+    {
+        "Value": "als-AL",
+        "lara": "als-AL"
+    },
+    {
+        "Value": "am-ET",
+        "lara": "am-ET"
+    },
+    {
+        "Value": "ar-SA",
+        "itranslate": "ar-SA",
+        "lara": "ar-SA"
+    },
+    {
+        "Value": "as-IN",
+        "lara": "as-IN"
+    },
+    {
+        "Value": "ast-ES",
+        "lara": "ast-ES"
+    },
+    {
+        "Value": "awa-IN",
+        "lara": "awa-IN"
+    },
+    {
+        "Value": "ayr-BO",
+        "lara": "ayr-BO"
+    },
+    {
+        "Value": "az-AZ",
+        "lara": "az-AZ"
+    },
+    {
+        "Value": "azb-AZ",
+        "lara": "azb-AZ"
+    },
+    {
+        "Value": "ba-RU",
+        "lara": "ba-RU"
+    },
+    {
+        "Value": "ban-ID",
+        "lara": "ban-ID"
+    },
+    {
+        "Value": "be-BY",
+        "lara": "be-BY"
+    },
+    {
+        "Value": "bem-ZM",
+        "lara": "bem-ZM"
+    },
+    {
+        "Value": "bho-IN",
+        "lara": "bho-IN"
+    },
+    {
+        "Value": "bjn-ID",
+        "lara": "bjn-ID"
+    },
+    {
+        "Value": "bm-ML",
+        "lara": "bm-ML"
+    },
+    {
+        "Value": "bn-BD",
+        "lara": "bn-BD"
+    },
+    {
+        "Value": "bo-CN",
+        "lara": "bo-CN"
+    },
+    {
+        "Value": "bs-BA",
+        "lara": "bs-BA"
+    },
+    {
+        "Value": "bug-ID",
+        "lara": "bug-ID"
+    },
+    {
+        "Value": "ceb-PH",
+        "lara": "ceb-PH"
+    },
+    {
+        "Value": "cjk-AO",
+        "lara": "cjk-AO"
+    },
+    {
+        "Value": "ckb-IQ",
+        "lara": "ckb-IQ"
+    },
+    {
+        "Value": "crh-RU",
+        "lara": "crh-RU"
+    },
+    {
+        "Value": "cy-GB",
+        "lara": "cy-GB"
+    },
+    {
+        "Value": "dik-SS",
+        "lara": "dik-SS"
+    },
+    {
+        "Value": "diq-TR",
+        "lara": "diq-TR"
+    },
+    {
+        "Value": "dyu-CI",
+        "lara": "dyu-CI"
+    },
+    {
+        "Value": "dz-BT",
+        "lara": "dz-BT"
+    },
+    {
+        "Value": "ee-GH",
+        "lara": "ee-GH"
+    },
+    {
+        "Value": "en-AU",
+        "itranslate": "en-AU",
+        "lara": "en-AU"
+    },
+    {
+        "Value": "en-CA",
+        "lara": "en-CA"
+    },
+    {
+        "Value": "en-IE",
+        "lara": "en-IE"
+    },
+    {
+        "Value": "en-US",
+        "itranslate": "en-US",
+        "lara": "en-US"
+    },
+    {
+        "Value": "eo-EU",
+        "lara": "eo-EU"
+    },
+    {
+        "Value": "es-AR",
+        "lara": "es-AR"
+    },
+    {
+        "Value": "es-MX",
+        "itranslate": "es-MX",
+        "lara": "es-MX"
+    },
+    {
+        "Value": "et-EE",
+        "lara": "et-EE"
+    },
+    {
+        "Value": "eu-ES",
+        "lara": "eu-ES"
+    },
+    {
+        "Value": "fa-IR",
+        "lara": "fa-IR"
+    },
+    {
+        "Value": "fil-PH",
+        "lara": "fil-PH"
+    },
+    {
+        "Value": "fj-FJ",
+        "lara": "fj-FJ"
+    },
+    {
+        "Value": "fo-FO",
+        "lara": "fo-FO"
+    },
+    {
+        "Value": "fon-BJ",
+        "lara": "fon-BJ"
+    },
+    {
+        "Value": "fr-FR",
+        "itranslate": "fr-FR",
+        "lara": "fr-FR"
+    },
+    {
+        "Value": "fur-IT",
+        "lara": "fur-IT"
+    },
+    {
+        "Value": "fuv-NG",
+        "lara": "fuv-NG"
+    },
+    {
+        "Value": "ga-IE",
+        "lara": "ga-IE"
+    },
+    {
+        "Value": "gaz-ET",
+        "lara": "gaz-ET"
+    },
+    {
+        "Value": "gd-GB",
+        "lara": "gd-GB"
+    },
+    {
+        "Value": "gl-ES",
+        "lara": "gl-ES"
+    },
+    {
+        "Value": "gn-PY",
+        "lara": "gn-PY"
+    },
+    {
+        "Value": "gu-IN",
+        "lara": "gu-IN"
+    },
+    {
+        "Value": "ha-NE",
+        "lara": "ha-NE"
+    },
+    {
+        "Value": "hi-IN",
+        "lara": "hi-IN"
+    },
+    {
+        "Value": "hne-IN",
+        "lara": "hne-IN"
+    },
+    {
+        "Value": "ht-HT",
+        "lara": "ht-HT"
+    },
+    {
+        "Value": "hy-AM",
+        "lara": "hy-AM"
+    },
+    {
+        "Value": "ig-NG",
+        "lara": "ig-NG"
+    },
+    {
+        "Value": "ilo-PH",
+        "lara": "ilo-PH"
+    },
+    {
+        "Value": "is-IS",
+        "lara": "is-IS"
+    },
+    {
+        "Value": "jv-ID",
+        "lara": "jv-ID"
+    },
+    {
+        "Value": "ka-GE",
+        "lara": "ka-GE"
+    },
+    {
+        "Value": "kab-DZ",
+        "lara": "kab-DZ"
+    },
+    {
+        "Value": "kac-MM",
+        "lara": "kac-MM"
+    },
+    {
+        "Value": "kam-KE",
+        "lara": "kam-KE"
+    },
+    {
+        "Value": "kas-IN",
+        "lara": "kas-IN"
+    },
+    {
+        "Value": "kbp-TG",
+        "lara": "kbp-TG"
+    },
+    {
+        "Value": "kea-CV",
+        "lara": "kea-CV"
+    },
+    {
+        "Value": "kg-CG",
+        "lara": "kg-CG"
+    },
+    {
+        "Value": "khk-MN",
+        "lara": "khk-MN"
+    },
+    {
+        "Value": "ki-KE",
+        "lara": "ki-KE"
+    },
+    {
+        "Value": "kk-KZ",
+        "lara": "kk-KZ"
+    },
+    {
+        "Value": "km-KH",
+        "lara": "km-KH"
+    },
+    {
+        "Value": "kmb-AO",
+        "lara": "kmb-AO"
+    },
+    {
+        "Value": "kmr-TR",
+        "lara": "kmr-TR"
+    },
+    {
+        "Value": "kn-IN",
+        "lara": "kn-IN"
+    },
+    {
+        "Value": "knc-NG",
+        "lara": "knc-NG"
+    },
+    {
+        "Value": "ks-IN",
+        "lara": "ks-IN"
+    },
+    {
+        "Value": "ky-KG",
+        "lara": "ky-KG"
+    },
+    {
+        "Value": "la-VA",
+        "lara": "la-VA"
+    },
+    {
+        "Value": "lb-LU",
+        "lara": "lb-LU"
+    },
+    {
+        "Value": "lg-UG",
+        "lara": "lg-UG"
+    },
+    {
+        "Value": "li-NL",
+        "lara": "li-NL"
+    },
+    {
+        "Value": "lij-IT",
+        "lara": "lij-IT"
+    },
+    {
+        "Value": "lmo-IT",
+        "lara": "lmo-IT"
+    },
+    {
+        "Value": "ln-CD",
+        "lara": "ln-CD"
+    },
+    {
+        "Value": "lo-LA",
+        "lara": "lo-LA"
+    },
+    {
+        "Value": "lt-LT",
+        "lara": "lt-LT"
+    },
+    {
+        "Value": "ltg-LV",
+        "lara": "ltg-LV"
+    },
+    {
+        "Value": "lua-CD",
+        "lara": "lua-CD"
+    },
+    {
+        "Value": "luo-KE",
+        "lara": "luo-KE"
+    },
+    {
+        "Value": "lus-IN",
+        "lara": "lus-IN"
+    },
+    {
+        "Value": "lv-LV",
+        "lara": "lv-LV"
+    },
+    {
+        "Value": "mag-IN",
+        "lara": "mag-IN"
+    },
+    {
+        "Value": "mai-IN",
+        "lara": "mai-IN"
+    },
+    {
+        "Value": "mg-MG",
+        "lara": "mg-MG"
+    },
+    {
+        "Value": "mi-NZ",
+        "lara": "mi-NZ"
+    },
+    {
+        "Value": "min-ID",
+        "lara": "min-ID"
+    },
+    {
+        "Value": "mk-MK",
+        "lara": "mk-MK"
+    },
+    {
+        "Value": "ml-IN",
+        "lara": "ml-IN"
+    },
+    {
+        "Value": "mn-MN",
+        "lara": "mn-MN"
+    },
+    {
+        "Value": "mni-IN",
+        "lara": "mni-IN"
+    },
+    {
+        "Value": "mos-BF",
+        "lara": "mos-BF"
+    },
+    {
+        "Value": "mr-IN",
+        "lara": "mr-IN"
+    },
+    {
+        "Value": "mt-MT",
+        "lara": "mt-MT"
+    },
+    {
+        "Value": "my-MM",
+        "lara": "my-MM"
+    },
+    {
+        "Value": "nb-NO",
+        "lara": "nb-NO"
+    },
+    {
+        "Value": "ne-NP",
+        "lara": "ne-NP"
+    },
+    {
+        "Value": "nl-BE",
+        "lara": "nl-BE"
+    },
+    {
+        "Value": "nl-NL",
+        "lara": "nl-NL"
+    },
+    {
+        "Value": "nso-ZA",
+        "lara": "nso-ZA"
+    },
+    {
+        "Value": "nus-SS",
+        "lara": "nus-SS"
+    },
+    {
+        "Value": "ny-MW",
+        "lara": "ny-MW"
+    },
+    {
+        "Value": "oc-FR",
+        "lara": "oc-FR"
+    },
+    {
+        "Value": "or-IN",
+        "lara": "or-IN"
+    },
+    {
+        "Value": "pa-IN",
+        "lara": "pa-IN"
+    },
+    {
+        "Value": "pag-PH",
+        "lara": "pag-PH"
+    },
+    {
+        "Value": "pap-CW",
+        "lara": "pap-CW"
+    },
+    {
+        "Value": "pbt-PK",
+        "lara": "pbt-PK"
+    },
+    {
+        "Value": "plt-MG",
+        "lara": "plt-MG"
+    },
+    {
+        "Value": "prs-AF",
+        "lara": "prs-AF"
+    },
+    {
+        "Value": "ps-PK",
+        "lara": "ps-PK"
+    },
+    {
+        "Value": "quy-PE",
+        "lara": "quy-PE"
+    },
+    {
+        "Value": "rn-BI",
+        "lara": "rn-BI"
+    },
+    {
+        "Value": "ro-RO",
+        "lara": "ro-RO"
+    },
+    {
+        "Value": "rw-RW",
+        "lara": "rw-RW"
+    },
+    {
+        "Value": "sa-IN",
+        "lara": "sa-IN"
+    },
+    {
+        "Value": "sat-IN",
+        "lara": "sat-IN"
+    },
+    {
+        "Value": "sc-IT",
+        "lara": "sc-IT"
+    },
+    {
+        "Value": "scn-IT",
+        "lara": "scn-IT"
+    },
+    {
+        "Value": "sd-PK",
+        "lara": "sd-PK"
+    },
+    {
+        "Value": "sg-CF",
+        "lara": "sg-CF"
+    },
+    {
+        "Value": "shn-MM",
+        "lara": "shn-MM"
+    },
+    {
+        "Value": "si-LK",
+        "lara": "si-LK"
+    },
+    {
+        "Value": "sl-SI",
+        "lara": "sl-SI"
+    },
+    {
+        "Value": "sm-WS",
+        "lara": "sm-WS"
+    },
+    {
+        "Value": "sn-ZW",
+        "lara": "sn-ZW"
+    },
+    {
+        "Value": "so-SO",
+        "lara": "so-SO"
+    },
+    {
+        "Value": "sq-AL",
+        "lara": "sq-AL"
+    },
+    {
+        "Value": "sr-Cyrl-RS",
+        "lara": "sr-Cyrl-RS"
+    },
+    {
+        "Value": "sr-Latn-RS",
+        "lara": "sr-Latn-RS"
+    },
+    {
+        "Value": "sr-ME",
+        "lara": "sr-ME"
+    },
+    {
+        "Value": "ss-SZ",
+        "lara": "ss-SZ"
+    },
+    {
+        "Value": "st-LS",
+        "lara": "st-LS"
+    },
+    {
+        "Value": "su-ID",
+        "lara": "su-ID"
+    },
+    {
+        "Value": "sw-KE",
+        "lara": "sw-KE"
+    },
+    {
+        "Value": "szl-PL",
+        "lara": "szl-PL"
+    },
+    {
+        "Value": "ta-IN",
+        "lara": "ta-IN"
+    },
+    {
+        "Value": "taq-ML",
+        "lara": "taq-ML"
+    },
+    {
+        "Value": "te-IN",
+        "lara": "te-IN"
+    },
+    {
+        "Value": "tg-TJ",
+        "lara": "tg-TJ"
+    },
+    {
+        "Value": "ti-ET",
+        "lara": "ti-ET"
+    },
+    {
+        "Value": "tk-TM",
+        "lara": "tk-TM"
+    },
+    {
+        "Value": "tl-PH",
+        "lara": "tl-PH"
+    },
+    {
+        "Value": "tn-ZA",
+        "lara": "tn-ZA"
+    },
+    {
+        "Value": "tpi-PG",
+        "lara": "tpi-PG"
+    },
+    {
+        "Value": "ts-ZA",
+        "lara": "ts-ZA"
+    },
+    {
+        "Value": "tt-RU",
+        "lara": "tt-RU"
+    },
+    {
+        "Value": "tum-MW",
+        "lara": "tum-MW"
+    },
+    {
+        "Value": "tw-GH",
+        "lara": "tw-GH"
+    },
+    {
+        "Value": "tzm-MA",
+        "lara": "tzm-MA"
+    },
+    {
+        "Value": "ug-CN",
+        "lara": "ug-CN"
+    },
+    {
+        "Value": "umb-AO",
+        "lara": "umb-AO"
+    },
+    {
+        "Value": "ur-PK",
+        "lara": "ur-PK"
+    },
+    {
+        "Value": "uzn-UZ",
+        "lara": "uzn-UZ"
+    },
+    {
+        "Value": "vec-IT",
+        "lara": "vec-IT"
+    },
+    {
+        "Value": "vi-VN",
+        "lara": "vi-VN"
+    },
+    {
+        "Value": "vls-BE",
+        "lara": "vls-BE"
+    },
+    {
+        "Value": "war-PH",
+        "lara": "war-PH"
+    },
+    {
+        "Value": "wo-SN",
+        "lara": "wo-SN"
+    },
+    {
+        "Value": "xh-ZA",
+        "lara": "xh-ZA"
+    },
+    {
+        "Value": "ydd-US",
+        "lara": "ydd-US"
+    },
+    {
+        "Value": "yo-NG",
+        "lara": "yo-NG"
+    },
+    {
+        "Value": "中文(香港)",
+        "itranslate": "zh-HK",
+        "lara": "zh-HK"
+    },
+    {
+        "Value": "zu-ZA",
+        "lara": "zu-ZA"
+    },
+    {
+        "Value": "ar-AE",
+        "itranslate": "ar-AE"
+    },
+    {
+        "Value": "ar-EG",
+        "itranslate": "ar-EG"
+    },
+    {
+        "Value": "en-UK",
+        "itranslate": "en-UK"
+    },
+    {
+        "Value": "es-US",
+        "itranslate": "es-US"
     }
 ]
