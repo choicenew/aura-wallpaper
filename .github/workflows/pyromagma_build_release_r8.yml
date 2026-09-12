@@ -1,4 +1,4 @@
-name: Build Release APK & AAB with Full R8 Obfuscation
+name: "[PyroMagma] Build Release APK & AAB with Full R8 Obfuscation"
 
 on:
   push:

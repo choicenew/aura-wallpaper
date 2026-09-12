@@ -1,4 +1,4 @@
-name: PyroMagma Master Build Pipeline
+name: "[PyroMagma] Master Build Pipeline"
 
 on:
   push:

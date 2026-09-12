@@ -1,4 +1,4 @@
-name: Build Fast Track Debug APK
+name: "[PyroMagma] Build Fast Track Debug APK"
 
 on:
   workflow_dispatch:

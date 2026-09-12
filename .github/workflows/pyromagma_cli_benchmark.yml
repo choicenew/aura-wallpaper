@@ -1,4 +1,4 @@
-name: CLI Benchmark & Matrix Tests
+name: "[PyroMagma] CLI Benchmark & Matrix Tests"
 
 on:
   push:

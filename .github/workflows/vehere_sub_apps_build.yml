@@ -1,4 +1,4 @@
-name: Vehere Sub-Apps Build & Test Workflow
+name: "[Vehere Sub-Apps] Build Perk Dock & Yijing Compass Test APK"
 
 on:
   workflow_dispatch:

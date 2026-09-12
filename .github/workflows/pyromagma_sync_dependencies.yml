@@ -1,12 +1,10 @@
-name: 1. [Expert] Dependency Governance & Safety Gate
+name: "[PyroMagma] Dependency Governance & Safety Gate"
 
 concurrency:
   group: pyro-global-governance-lock
   cancel-in-progress: true
 
 on:
-  push:
-    branches: [ main, master ]
   workflow_dispatch:
 
 permissions:

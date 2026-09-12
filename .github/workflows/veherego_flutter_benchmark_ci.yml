@@ -1,4 +1,4 @@
-name: VehereGo CI & Benchmark Test Workflow
+name: "[VehereGo] CI & Benchmark Test Workflow"
 
 on:
   issue_comment:

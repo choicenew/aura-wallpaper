@@ -1,23 +1,16 @@
-name: VehereGo Android Release & AAB Build Workflow
+name: "[VehereGo] Android Release & AAB Build (Gradle Cached)"
 
 on:
-  workflow_run:
-    workflows: ["VehereGo CI & Benchmark Test Workflow"]
-    types:
-      - completed
-    branches:
-      - master
+  workflow_dispatch:
   push:
     tags:
-      - 'v*'
-  workflow_dispatch:
+      - 'v-cached-*'
 
 jobs:
-  build_and_release:
-    name: Build AAB & Universal APK
+  build_and_release_cached:
+    name: Build AAB & Universal APK (Gradle Cached)
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    if: ${{ github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/') || github.event.workflow_run.conclusion == 'success' }}
     permissions:
       contents: write
     outputs:
@@ -72,6 +65,11 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '17'
+
+      - name: Setup Gradle Cache
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          cache-read-only: false
 
       - name: Restore Deterministic Fixed Release Signing Key
         env:

@@ -1,4 +1,4 @@
-name: Weekly Sync Supported Languages from Translators & CSV
+name: "[I18n] Weekly Sync Supported Languages from Translators & CSV"
 
 on:
   schedule:
