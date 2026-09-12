@@ -41,7 +41,7 @@ jobs:
         with:
           repository: ${{ github.repository_owner }}/veherego
           path: veherego
-          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
           ref: ${{ steps.pr_sha.outputs.sha || github.sha }}
 
       - name: Set up Java 17
