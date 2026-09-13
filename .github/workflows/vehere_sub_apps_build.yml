@@ -51,6 +51,7 @@ jobs:
           APP_VER="${BASE_VER}.${BUILD_NUM}"
           echo "APP_VERSION=${APP_VER}" >> $GITHUB_ENV
           echo "APP_BUILD_NUMBER=${BUILD_NUM}" >> $GITHUB_ENV
+          echo "COMMIT_MSG=$(git log -1 --format='%h - %s')" >> $GITHUB_ENV
           echo "🏷️ [Vehere Perk Dock] 版本号: ${APP_VER}+${BUILD_NUM}"
 
       - name: Set up Java 17
@@ -116,12 +117,13 @@ jobs:
       - name: Publish APK to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v-vehere_perk_dock-v${{ env.APP_VERSION }}
-          name: "Vehere Perk Dock v${{ env.APP_VERSION }}"
+          tag_name: vehere_perk_dock-v${{ env.APP_VERSION }}
+          name: "vehere_perk_dock Release v${{ env.APP_VERSION }}"
           body: |
-            ## Vehere Perk Dock 构建 #${{ env.APP_BUILD_NUMBER }}
-            - **应用**: `Vehere Perk Dock` (`vehere_perk_dock`)
+            ## vehere_perk_dock - 构建 #${{ env.APP_BUILD_NUMBER }}
+            - **应用**: `vehere_perk_dock`
             - **版本号**: `${{ env.APP_VERSION }}`
+            - **最新 Commit 记录**: `${{ env.COMMIT_MSG }}`
             - **产物文件**:
               - `vehere_perk_dock-v${{ env.APP_VERSION }}-release.apk` (正式签名包)
               - `vehere_perk_dock-v${{ env.APP_VERSION }}-debug.apk` (开发调试包)
@@ -162,6 +164,7 @@ jobs:
           APP_VER="${BASE_VER}.${BUILD_NUM}"
           echo "APP_VERSION=${APP_VER}" >> $GITHUB_ENV
           echo "APP_BUILD_NUMBER=${BUILD_NUM}" >> $GITHUB_ENV
+          echo "COMMIT_MSG=$(git log -1 --format='%h - %s')" >> $GITHUB_ENV
           echo "🏷️ [Vehere Yijing Compass] 版本号: ${APP_VER}+${BUILD_NUM}"
 
       - name: Set up Java 17
@@ -227,12 +230,13 @@ jobs:
       - name: Publish APK to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v-vehere_yijing_compass-v${{ env.APP_VERSION }}
-          name: "Vehere Yijing Compass v${{ env.APP_VERSION }}"
+          tag_name: vehere_yijing_compass-v${{ env.APP_VERSION }}
+          name: "vehere_yijing_compass Release v${{ env.APP_VERSION }}"
           body: |
-            ## Vehere Yijing Compass 构建 #${{ env.APP_BUILD_NUMBER }}
-            - **应用**: `Vehere Yijing Compass` (`vehere_yijing_compass`)
+            ## vehere_yijing_compass - 构建 #${{ env.APP_BUILD_NUMBER }}
+            - **应用**: `vehere_yijing_compass`
             - **版本号**: `${{ env.APP_VERSION }}`
+            - **最新 Commit 记录**: `${{ env.COMMIT_MSG }}`
             - **产物文件**:
               - `vehere_yijing_compass-v${{ env.APP_VERSION }}-release.apk` (正式签名包)
               - `vehere_yijing_compass-v${{ env.APP_VERSION }}-debug.apk` (开发调试包)

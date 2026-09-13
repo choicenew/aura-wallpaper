@@ -80,6 +80,7 @@ jobs:
           echo "short_sha=$(echo "${GITHUB_SHA}" | cut -c1-7)" >> $GITHUB_OUTPUT
           echo "APP_VERSION=${APP_VER}" >> $GITHUB_ENV
           echo "APP_BUILD_NUMBER=${BUILD_NUM}" >> $GITHUB_ENV
+          echo "COMMIT_MSG=$(git log -1 --format='%h - %s')" >> $GITHUB_ENV
           echo "=========================================================================="
           echo "🏷️ [Release Version] 发布版本号: ${APP_VER}+${BUILD_NUM}"
           echo "=========================================================================="
@@ -148,13 +149,14 @@ jobs:
       - name: Publish Release to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ env.APP_VERSION }}
-          name: "Release v${{ env.APP_VERSION }} (Release Build)"
+          tag_name: veherego-v${{ env.APP_VERSION }}-release
+          name: "veherego Release v${{ env.APP_VERSION }}"
           body: |
-            ## 正式发布版本 #${{ env.APP_BUILD_NUMBER }}
+            ## veherego - 正式发布版本 #${{ env.APP_BUILD_NUMBER }}
+            - **应用名**: `veherego`
             - **版本号**: `${{ env.APP_VERSION }}`
             - **Build Number**: `${{ env.APP_BUILD_NUMBER }}`
-            - **Commit**: ${{ github.sha }}
+            - **最新 Commit 记录**: `${{ env.COMMIT_MSG }}`
             - **打包产物**: `veherego-v${{ env.APP_VERSION }}-release.apk` / `veherego-v${{ env.APP_VERSION }}-release.aab` (统一固定签名，支持直装实机测试)
           draft: false
           prerelease: false

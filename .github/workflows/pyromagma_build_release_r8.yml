@@ -89,6 +89,7 @@ jobs:
           APP_VER="${BASE_VER}.${BUILD_NUM}"
           echo "APP_VERSION=${APP_VER}" >> $GITHUB_ENV
           echo "APP_BUILD_NUMBER=${BUILD_NUM}" >> $GITHUB_ENV
+          echo "COMMIT_MSG=$(git log -1 --format='%h - %s')" >> $GITHUB_ENV
           echo "=========================================================================="
           echo "🏷️ [Release Version] 发布版本号: ${APP_VER}+${BUILD_NUM}"
           echo "=========================================================================="
@@ -126,12 +127,13 @@ jobs:
       - name: Publish R8 Release APK & AAB to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ env.APP_VERSION }}-release
-          name: "Release v${{ env.APP_VERSION }} (R8 Obfuscated)"
+          tag_name: pyromagma-v${{ env.APP_VERSION }}-release-r8
+          name: "pyromagma Release v${{ env.APP_VERSION }} (R8 Obfuscated)"
           body: |
-            ## 正式发布版本 v${{ env.APP_VERSION }} (Build #${{ env.APP_BUILD_NUMBER }})
+            ## pyromagma - 正式发布版本 v${{ env.APP_VERSION }} (Build #${{ env.APP_BUILD_NUMBER }})
+            - **应用名**: `pyromagma`
             - **版本号**: `${{ env.APP_VERSION }}`
-            - **Commit**: ${{ github.sha }}
+            - **最新 Commit 记录**: `${{ env.COMMIT_MSG }}`
             - **混淆状态**: 已通过全量 R8 混淆、字节码压缩与 Proguard 规则校验
             - **产物 1**: `pyro_magma-v${{ env.APP_VERSION }}-release-r8.apk` (直接测试安装包)
             - **产物 2**: `pyro_magma-v${{ env.APP_VERSION }}-release-r8.aab` (Google Play 上架专用包)

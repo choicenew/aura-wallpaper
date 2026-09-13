@@ -124,6 +124,7 @@ jobs:
           APP_VER="${BASE_VER}.${{ github.run_number }}"
           echo "APP_VERSION=${APP_VER}" >> $GITHUB_ENV
           echo "APP_BUILD_NUMBER=${{ github.run_number }}" >> $GITHUB_ENV
+          echo "COMMIT_MSG=$(git log -1 --format='%h - %s')" >> $GITHUB_ENV
           echo "🏷️ [Master Version] 版本号: ${APP_VER}+${{ github.run_number }}"
 
       - name: 6. 编译同步后的 Debug APK (Master Synced)
@@ -144,12 +145,12 @@ jobs:
       - name: 8. Publish Master APK to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ env.APP_VERSION }}-master
-          name: "Master Synced Build v${{ env.APP_VERSION }}"
+          tag_name: pyromagma-v${{ env.APP_VERSION }}-master
+          name: "pyromagma Master Synced Build v${{ env.APP_VERSION }}"
           body: |
-            ## Master 治理同步构建 #${{ github.run_number }}
+            ## pyromagma - Master 治理同步构建 #${{ github.run_number }}
             - **版本**: `${{ env.APP_VERSION }}`
-            - **Commit**: ${{ github.sha }}
+            - **最新 Commit 记录**: `${{ env.COMMIT_MSG }}`
             - **说明**: 经过依赖治理与国际化同步后的 Master 分支构建产物。
           draft: false
           prerelease: false

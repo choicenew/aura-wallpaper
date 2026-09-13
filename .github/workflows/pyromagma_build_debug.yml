@@ -89,6 +89,7 @@ jobs:
           APP_VER="${BASE_VER}.${BUILD_NUM}"
           echo "APP_VERSION=${APP_VER}" >> $GITHUB_ENV
           echo "APP_BUILD_NUMBER=${BUILD_NUM}" >> $GITHUB_ENV
+          echo "COMMIT_MSG=$(git log -1 --format='%h - %s')" >> $GITHUB_ENV
           echo "=========================================================================="
           echo "🏷️ [Debug Version] 版本号: ${APP_VER}+${BUILD_NUM}"
           echo "=========================================================================="
@@ -114,12 +115,13 @@ jobs:
       - name: Publish Debug APK to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ env.APP_VERSION }}-debug
-          name: "Debug Build v${{ env.APP_VERSION }}"
+          tag_name: pyromagma-v${{ env.APP_VERSION }}-debug
+          name: "pyromagma Debug Build v${{ env.APP_VERSION }}"
           body: |
-            ## 日常测试 Debug 构建 #${{ github.run_number }}
+            ## pyromagma - 日常测试 Debug 构建 #${{ github.run_number }}
+            - **应用名**: `pyromagma`
             - **版本**: `${{ env.APP_VERSION }}`
-            - **Commit**: ${{ github.sha }}
+            - **最新 Commit 记录**: `${{ env.COMMIT_MSG }}`
             - **说明**: 日常开发与快速验证包，保留完整调试符号，免 R8 混淆，即开即测。
           draft: false
           prerelease: true
