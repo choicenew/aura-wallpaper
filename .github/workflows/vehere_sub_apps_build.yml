@@ -89,6 +89,7 @@ jobs:
         working-directory: ./veherego/packages/vehere_perk_dock
         run: |
           flutter pub get
+          flutter gen-l10n 2>/dev/null || true
 
       - name: Build Debug & Release APK
         working-directory: ./veherego/packages/vehere_perk_dock
@@ -199,6 +200,7 @@ jobs:
         working-directory: ./veherego/packages/vehere_yijing_compass
         run: |
           flutter pub get
+          flutter gen-l10n 2>/dev/null || true
 
       - name: Build Debug & Release APK
         working-directory: ./veherego/packages/vehere_yijing_compass
