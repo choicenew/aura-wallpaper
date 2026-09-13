@@ -70,26 +70,6 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Restore Deterministic Fixed Release Signing Key
-        env:
-          KEYSTORE_SECRET: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
-        run: |
-          TARGET_ANDROID_DIR="veherego/packages/vehere_perk_dock/android"
-          mkdir -p ${TARGET_ANDROID_DIR}/app
-          if [ -n "$KEYSTORE_SECRET" ]; then
-            echo "$KEYSTORE_SECRET" | base64 -d > ${TARGET_ANDROID_DIR}/app/release_deterministic.jks
-          else
-            B64_KEY="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"
-            echo "$B64_KEY" | base64 -d > ${TARGET_ANDROID_DIR}/app/release_deterministic.jks
-          fi
-
-          cat << 'EOF' > ${TARGET_ANDROID_DIR}/key.properties
-          keyAlias=veherego_release_key
-          keyPassword=VehereGoStablePass2026
-          storeFile=release_deterministic.jks
-          storePassword=VehereGoStablePass2026
-          EOF
-
       - name: Set up Flutter SDK 3.47.1
         uses: subosito/flutter-action@v2
         with:
@@ -102,21 +82,27 @@ jobs:
         run: |
           flutter pub get
 
-      - name: Build Debug & Signed Release APK
+      - name: Run Perk Dock Static Analysis
+        working-directory: ./veherego/packages/vehere_perk_dock
+        run: |
+          flutter analyze --no-fatal-warnings --no-fatal-infos
+
+      - name: Run Perk Dock Tests
+        working-directory: ./veherego/packages/vehere_perk_dock
+        run: |
+          flutter test --reporter expanded
+
+      - name: Build Debug APK
         working-directory: ./veherego/packages/vehere_perk_dock
         run: |
           echo "=========================================================================="
-          echo "📦 开始编译 Vehere Perk Dock (Debug & Release APK)..."
+          echo "📦 开始编译 Vehere Perk Dock (Debug APK)..."
           echo "=========================================================================="
           flutter build apk --debug --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }}
-          flutter build apk --release --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
           
           mkdir -p release_assets
           if [ -f "build/app/outputs/flutter-apk/app-debug.apk" ]; then
             cp build/app/outputs/flutter-apk/app-debug.apk release_assets/vehere_perk_dock-v${{ env.APP_VERSION }}-debug.apk
-          fi
-          if [ -f "build/app/outputs/flutter-apk/app-release.apk" ]; then
-            cp build/app/outputs/flutter-apk/app-release.apk release_assets/vehere_perk_dock-v${{ env.APP_VERSION }}-release.apk
           fi
           ls -lh release_assets/
 
@@ -136,7 +122,7 @@ jobs:
             - **应用**: `Vehere Perk Dock` (`vehere_perk_dock`)
             - **版本**: `${{ env.APP_VERSION }}`
             - **Commit**: ${{ github.sha }}
-            - **产物**: 包含 Debug 与 Release 独立实机安装测试包。
+            - **产物**: Debug 独立实机安装测试包，无需发布签名密钥。
           draft: false
           prerelease: true
           files: ./veherego/packages/vehere_perk_dock/release_assets/*.apk
@@ -193,26 +179,6 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Restore Deterministic Fixed Release Signing Key
-        env:
-          KEYSTORE_SECRET: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
-        run: |
-          TARGET_ANDROID_DIR="veherego/packages/vehere_yijing_compass/android"
-          mkdir -p ${TARGET_ANDROID_DIR}/app
-          if [ -n "$KEYSTORE_SECRET" ]; then
-            echo "$KEYSTORE_SECRET" | base64 -d > ${TARGET_ANDROID_DIR}/app/release_deterministic.jks
-          else
-            B64_KEY="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"
-            echo "$B64_KEY" | base64 -d > ${TARGET_ANDROID_DIR}/app/release_deterministic.jks
-          fi
-
-          cat << 'EOF' > ${TARGET_ANDROID_DIR}/key.properties
-          keyAlias=veherego_release_key
-          keyPassword=VehereGoStablePass2026
-          storeFile=release_deterministic.jks
-          storePassword=VehereGoStablePass2026
-          EOF
-
       - name: Set up Flutter SDK 3.47.1
         uses: subosito/flutter-action@v2
         with:
@@ -225,21 +191,27 @@ jobs:
         run: |
           flutter pub get
 
-      - name: Build Debug & Signed Release APK
+      - name: Run Yijing Compass Static Analysis
+        working-directory: ./veherego/packages/vehere_yijing_compass
+        run: |
+          flutter analyze --no-fatal-warnings --no-fatal-infos
+
+      - name: Run Yijing Compass Tests
+        working-directory: ./veherego/packages/vehere_yijing_compass
+        run: |
+          flutter test --reporter expanded
+
+      - name: Build Debug APK
         working-directory: ./veherego/packages/vehere_yijing_compass
         run: |
           echo "=========================================================================="
-          echo "📦 开始编译 Vehere Yijing Compass (Debug & Release APK)..."
+          echo "📦 开始编译 Vehere Yijing Compass (Debug APK)..."
           echo "=========================================================================="
           flutter build apk --debug --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }}
-          flutter build apk --release --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
           
           mkdir -p release_assets
           if [ -f "build/app/outputs/flutter-apk/app-debug.apk" ]; then
             cp build/app/outputs/flutter-apk/app-debug.apk release_assets/vehere_yijing_compass-v${{ env.APP_VERSION }}-debug.apk
-          fi
-          if [ -f "build/app/outputs/flutter-apk/app-release.apk" ]; then
-            cp build/app/outputs/flutter-apk/app-release.apk release_assets/vehere_yijing_compass-v${{ env.APP_VERSION }}-release.apk
           fi
           ls -lh release_assets/
 
@@ -259,7 +231,7 @@ jobs:
             - **应用**: `Vehere Yijing Compass` (`vehere_yijing_compass`)
             - **版本**: `${{ env.APP_VERSION }}`
             - **Commit**: ${{ github.sha }}
-            - **产物**: 包含 Debug 与 Release 独立实机安装测试包。
+            - **产物**: Debug 独立实机安装测试包，无需发布签名密钥。
           draft: false
           prerelease: true
           files: ./veherego/packages/vehere_yijing_compass/release_assets/*.apk
