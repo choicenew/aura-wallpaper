@@ -44,6 +44,23 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           ref: ${{ steps.pr_sha.outputs.sha || github.sha }}
 
+      - name: Locate Flutter Project
+        run: |
+          VEHEREGO_DIR=$(find veherego -type f -name pubspec.yaml -print0 | while IFS= read -r -d '' manifest; do
+            project_dir=${manifest%/pubspec.yaml}
+            if [ -d "$project_dir/android" ]; then
+              printf '%s' "$project_dir"
+              break
+            fi
+          done)
+          if [ -z "$VEHEREGO_DIR" ]; then
+            echo "Unable to locate the VehereGo Flutter project"
+            find veherego -name pubspec.yaml -print
+            exit 1
+          fi
+          echo "VEHEREGO_DIR=$VEHEREGO_DIR" >> "$GITHUB_ENV"
+          echo "Using Flutter project at $VEHEREGO_DIR"
+
       - name: Set up Java 17
         uses: actions/setup-java@v5
         with:
@@ -65,17 +82,17 @@ jobs:
           dart run tools/sync_l10n.dart
 
       - name: Install Project Dependencies
+        working-directory: ${{ env.VEHEREGO_DIR }}
         run: |
-          cd veherego
           flutter pub get
           flutter gen-l10n
 
       - name: Run Flutter Static Analysis
+        working-directory: ${{ env.VEHEREGO_DIR }}
         run: |
-          cd veherego
           flutter analyze --no-fatal-warnings --no-fatal-infos
 
       - name: Run Full Test Suite, UI Flow & Stress Benchmarks
+        working-directory: ${{ env.VEHEREGO_DIR }}
         run: |
-          cd veherego
           flutter test --reporter expanded

@@ -109,7 +109,7 @@ jobs:
           echo "📦 开始编译 Vehere Perk Dock (Debug & Release APK)..."
           echo "=========================================================================="
           flutter build apk --debug --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }}
-          flutter build apk --release --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation || true
+          flutter build apk --release --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
           
           mkdir -p release_assets
           if [ -f "build/app/outputs/flutter-apk/app-debug.apk" ]; then
@@ -232,7 +232,7 @@ jobs:
           echo "📦 开始编译 Vehere Yijing Compass (Debug & Release APK)..."
           echo "=========================================================================="
           flutter build apk --debug --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }}
-          flutter build apk --release --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation || true
+          flutter build apk --release --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
           
           mkdir -p release_assets
           if [ -f "build/app/outputs/flutter-apk/app-debug.apk" ]; then
