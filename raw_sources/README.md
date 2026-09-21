@@ -1,6 +1,6 @@
 # 🌐 多源翻译语言 Difference 差异比对报告
 
-- **比对时间**: `2026-09-14 04:07:25`
+- **比对时间**: `2026-09-21 04:06:47`
 - **合并总语言条目**: `753` 种
 
 ### 各翻译源 Difference 明细表
@@ -11,13 +11,13 @@
 | `apertium` | 46 | 46 | 46 | `100.0%` | ✓ 完全一致 (100% 重合) | - | - |
 | `argos` | 0 | 0 | 0 | `0.0%` | ✕ 抓取异常 (400 Client Error: Bad Request for url: https://libretranslate.com/translate) | - | - |
 | `baidu` | 0 | 0 | 0 | `0.0%` | ✕ 抓取异常 (The function baidu() has been not certified yet. Please read for details: Status of Translator on this webpage(https://github.com/UlionTse/translators#supported-translation-services).) | - | - |
-| `bing` | 179 | 179 | 179 | `100.0%` | ✓ 完全一致 (100% 重合) | - | - |
+| `bing` | 179 | 0 | 0 | `0.0%` | ✕ 抓取异常 (401 Client Error: Unauthorized for url: https://www.bing.com/ttranslatev3?isVertical=1&&IG=3CEDFBF276DC4AC3AB7EFDEE6B68D17B&IID=translator.5026) | - | `-ace`, `-af`, `-am`, `-ar`, `-arb`, `-ary` 等 179 个 |
 | `caiyun` | 20 | 20 | 20 | `100.0%` | ✓ 完全一致 (100% 重合) | - | - |
 | `cloudTranslation` | 36 | 36 | 36 | `100.0%` | ✓ 完全一致 (100% 重合) | - | - |
 | `deepl` | 0 | 0 | 0 | `0.0%` | ✕ 抓取异常 (429 Client Error: Too Many Requests for url: https://www2.deepl.com/jsonrpc?method=LMT_split_text) | - | - |
 | `elia` | 6 | 6 | 6 | `100.0%` | ✓ 完全一致 (100% 重合) | - | - |
 | `google` | 250 | 250 | 250 | `100.0%` | ✓ 完全一致 (100% 重合) | - | - |
-| `hujiang` | 0 | 0 | 0 | `0.0%` | ✕ 抓取异常 (404 Client Error: Not Found for url: https://dict.hjenglish.com/v10/dict/translation/cn/en) | - | - |
+| `hujiang` | 0 | 0 | 0 | `0.0%` | ✕ 抓取异常 (403 Client Error: Forbidden for url: https://dict.hjenglish.com/v10/dict/translation/cn/en) | - | - |
 | `iciba` | 187 | 187 | 187 | `100.0%` | ✓ 完全一致 (100% 重合) | - | - |
 | `iflyrec` | 12 | 12 | 12 | `100.0%` | ✓ 完全一致 (100% 重合) | - | - |
 | `iflytek` | 0 | 0 | 0 | `0.0%` | ✕ 抓取异常 (The function iflytek() has been not certified yet. Please read for details: Status of Translator on this webpage(https://github.com/UlionTse/translators#supported-translation-services).) | - | - |
