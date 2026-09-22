@@ -1,0 +1,83 @@
+name: "[VehereGo] UI Overflow & Layout Guard Workflow"
+
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master, dev ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  ui-overflow-guard:
+    name: Automated UI Overflow & Multi-Screen Matrix Guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/veherego
+          path: veherego
+          token: ${{ secrets.GH_PAT }}
+          fetch-depth: 0
+
+      - name: Locate Flutter Project
+        run: |
+          VEHEREGO_DIR=$(find veherego -type f -name pubspec.yaml -print0 | while IFS= read -r -d '' manifest; do
+            project_dir=${manifest%/pubspec.yaml}
+            if [ -d "$project_dir/android" ]; then
+              printf '%s' "$project_dir"
+              break
+            fi
+          done)
+          if [ -z "$VEHEREGO_DIR" ]; then
+            echo "Unable to locate the VehereGo Flutter project"
+            find veherego -name pubspec.yaml -print
+            exit 1
+          fi
+          echo "VEHEREGO_DIR=$VEHEREGO_DIR" >> "$GITHUB_ENV"
+          echo "Using Flutter project at $VEHEREGO_DIR"
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Set up Flutter SDK 3.47.1
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.1'
+          channel: 'stable'
+          cache: true
+
+      - name: Preprocess & Sync Latest Global Brands & Holidays
+        working-directory: ./veherego
+        run: |
+          dart run tools/sync_simple_icons.dart
+          dart run tools/sync_holiday_catalog.dart
+          dart run tools/sync_l10n.dart
+
+      - name: Install Project Dependencies & Generate L10n
+        working-directory: ${{ env.VEHEREGO_DIR }}
+        run: |
+          flutter pub get
+          flutter gen-l10n
+
+      - name: Execute UI Overflow Matrix Guard Test Suite
+        working-directory: ${{ env.VEHEREGO_DIR }}
+        run: |
+          flutter test test/ui_overflow_guard_test.dart --reporter expanded
+
+      - name: Upload UI Overflow Audit Report Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-overflow-audit-report
+          path: ${{ env.VEHEREGO_DIR }}/build/ui_overflow_audit_report.md
+          if-no-files-found: ignore
