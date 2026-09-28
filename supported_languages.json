@@ -1,38 +1,8 @@
 [
     {
-        "Value": "am",
-        "alibaba": "am",
-        "bing": "am",
-        "google": "am",
-        "iciba": "am",
-        "modernMt": "am",
-        "qqTranSmart": "am",
-        "xunjie": "am",
-        "youdao": "am"
-    },
-    {
-        "Value": "阿拉伯语",
-        "alibaba": "ar",
-        "apertium": "ara",
-        "bing": "ar",
-        "caiyun": "ar",
-        "cloudTranslation": "ar",
-        "google": "ar",
-        "iciba": "ar",
-        "iflyrec": "ar",
-        "lara": "ar",
-        "modernMt": "ar",
-        "qqTranSmart": "ar",
-        "reverso": "ar",
-        "sogou": "ar",
-        "sysTran": "ar",
-        "translateCom": "ar",
-        "xunjie": "ar",
-        "youdao": "ar"
-    },
-    {
         "Value": "az",
         "alibaba": "az",
+        "argos": "az",
         "bing": "az",
         "google": "az",
         "iciba": "az",
@@ -60,6 +30,7 @@
     {
         "Value": "bg",
         "alibaba": "bg",
+        "argos": "bg",
         "bing": "bg",
         "google": "bg",
         "iciba": "bg",
@@ -75,26 +46,9 @@
         "youdao": "bg"
     },
     {
-        "Value": "bn",
-        "alibaba": "bn",
-        "bing": "bn",
-        "google": "bn",
-        "iciba": "bn",
-        "itranslate": "bn",
-        "modernMt": "bn",
-        "qqTranSmart": "bn",
-        "reverso": "bn",
-        "sysTran": "bn",
-        "xunjie": "bn",
-        "youdao": "bn"
-    },
-    {
-        "Value": "bs-Latn",
-        "youdao": "bs-Latn"
-    },
-    {
         "Value": "ca",
         "alibaba": "ca",
+        "argos": "ca",
         "bing": "ca",
         "elia": "ca",
         "google": "ca",
@@ -108,26 +62,9 @@
         "youdao": "ca"
     },
     {
-        "Value": "ceb",
-        "alibaba": "ceb",
-        "bing": "ceb",
-        "google": "ceb",
-        "iciba": "ceb",
-        "itranslate": "ceb",
-        "modernMt": "ceb",
-        "youdao": "ceb"
-    },
-    {
-        "Value": "co",
-        "alibaba": "co",
-        "bing": "co",
-        "google": "co",
-        "iciba": "co",
-        "youdao": "co"
-    },
-    {
         "Value": "cs",
         "alibaba": "cs",
+        "argos": "cs",
         "bing": "cs",
         "google": "cs",
         "iciba": "cs",
@@ -144,19 +81,9 @@
         "youdao": "cs"
     },
     {
-        "Value": "cy",
-        "alibaba": "cy",
-        "bing": "cy",
-        "google": "cy",
-        "iciba": "cy",
-        "itranslate": "cy",
-        "modernMt": "cy",
-        "qqTranSmart": "cy",
-        "youdao": "cy"
-    },
-    {
         "Value": "da",
         "alibaba": "da",
+        "argos": "da",
         "bing": "da",
         "google": "da",
         "iciba": "da",
@@ -176,6 +103,7 @@
     {
         "Value": "德语",
         "alibaba": "de",
+        "argos": "de",
         "bing": "de",
         "caiyun": "de",
         "cloudTranslation": "de",
@@ -198,6 +126,7 @@
     {
         "Value": "el",
         "alibaba": "el",
+        "argos": "el",
         "bing": "el",
         "caiyun": "el",
         "google": "el",
@@ -216,6 +145,7 @@
     {
         "Value": "英语",
         "alibaba": "en",
+        "argos": "en",
         "bing": "en",
         "caiyun": "en",
         "elia": "en",
@@ -236,20 +166,10 @@
         "youdao": "en"
     },
     {
-        "Value": "eo",
-        "alibaba": "eo",
-        "google": "eo",
-        "iciba": "eo",
-        "itranslate": "eo",
-        "modernMt": "eo",
-        "qqTranSmart": "eo",
-        "xunjie": "eo",
-        "youdao": "eo"
-    },
-    {
         "Value": "西班牙语",
         "alibaba": "es",
         "apertium": "spa",
+        "argos": "es",
         "bing": "es",
         "caiyun": "es",
         "cloudTranslation": "es",
@@ -271,6 +191,7 @@
     {
         "Value": "et",
         "alibaba": "et",
+        "argos": "et",
         "bing": "et",
         "google": "et",
         "iciba": "et",
@@ -284,34 +205,9 @@
         "youdao": "et"
     },
     {
-        "Value": "eu",
-        "alibaba": "eu",
-        "bing": "eu",
-        "elia": "eu",
-        "google": "eu",
-        "iciba": "eu",
-        "itranslate": "eu",
-        "qqTranSmart": "eu",
-        "youdao": "eu"
-    },
-    {
-        "Value": "fa",
-        "alibaba": "fa",
-        "bing": "fa",
-        "cloudTranslation": "fa",
-        "google": "fa",
-        "iciba": "fa",
-        "itranslate": "fa",
-        "qqTranSmart": "fa",
-        "reverso": "fa",
-        "sysTran": "fa",
-        "translateCom": "fa",
-        "xunjie": "fa",
-        "youdao": "fa"
-    },
-    {
         "Value": "fi",
         "alibaba": "fi",
+        "argos": "fi",
         "bing": "fi",
         "google": "fi",
         "iciba": "fi",
@@ -331,6 +227,7 @@
         "Value": "法语",
         "alibaba": "fr",
         "apertium": "fra",
+        "argos": "fr",
         "bing": "fr",
         "caiyun": "fr",
         "cloudTranslation": "fr",
@@ -351,119 +248,6 @@
         "youdao": "fr"
     },
     {
-        "Value": "fy",
-        "alibaba": "fy",
-        "bing": "fy",
-        "google": "fy",
-        "iciba": "fy",
-        "qqTranSmart": "fy",
-        "youdao": "fy"
-    },
-    {
-        "Value": "ga",
-        "alibaba": "ga",
-        "bing": "ga",
-        "google": "ga",
-        "iciba": "ga",
-        "itranslate": "ga",
-        "modernMt": "ga",
-        "qqTranSmart": "ga",
-        "sysTran": "ga",
-        "xunjie": "ga",
-        "youdao": "ga"
-    },
-    {
-        "Value": "gd",
-        "alibaba": "gd",
-        "google": "gd",
-        "iciba": "gd",
-        "modernMt": "gd",
-        "qqTranSmart": "gd",
-        "youdao": "gd"
-    },
-    {
-        "Value": "gl",
-        "alibaba": "gl",
-        "bing": "gl",
-        "elia": "gl",
-        "google": "gl",
-        "iciba": "gl",
-        "itranslate": "gl",
-        "modernMt": "gl",
-        "qqTranSmart": "gl",
-        "youdao": "gl"
-    },
-    {
-        "Value": "gu",
-        "alibaba": "gu",
-        "bing": "gu",
-        "google": "gu",
-        "iciba": "gu",
-        "itranslate": "gu",
-        "modernMt": "gu",
-        "qqTranSmart": "gu",
-        "youdao": "gu"
-    },
-    {
-        "Value": "ha",
-        "alibaba": "ha",
-        "bing": "ha",
-        "google": "ha",
-        "iciba": "ha",
-        "itranslate": "ha",
-        "modernMt": "ha",
-        "qqTranSmart": "ha",
-        "reverso": "ha",
-        "sysTran": "ha",
-        "xunjie": "ha",
-        "youdao": "ha"
-    },
-    {
-        "Value": "haw",
-        "alibaba": "haw",
-        "google": "haw",
-        "iciba": "haw",
-        "xunjie": "haw",
-        "youdao": "haw"
-    },
-    {
-        "Value": "he",
-        "alibaba": "he",
-        "bing": "he",
-        "iciba": "he",
-        "itranslate": "he",
-        "lara": "he",
-        "modernMt": "he",
-        "qqTranSmart": "he",
-        "reverso": "he",
-        "sysTran": "he",
-        "xunjie": "he",
-        "youdao": "he"
-    },
-    {
-        "Value": "印地语",
-        "alibaba": "hi",
-        "apertium": "hin",
-        "bing": "hi",
-        "cloudTranslation": "hi",
-        "google": "hi",
-        "iciba": "hi",
-        "itranslate": "hi",
-        "modernMt": "hi",
-        "qqTranSmart": "hi",
-        "reverso": "hi",
-        "sysTran": "hi",
-        "xunjie": "hi",
-        "youdao": "hi"
-    },
-    {
-        "Value": "hmn",
-        "alibaba": "hmn",
-        "google": "hmn",
-        "itranslate": "hmn",
-        "youdao": "hmn"
-    },
-    {
         "Value": "hr",
         "bing": "hr",
         "google": "hr",
@@ -478,19 +262,9 @@
         "youdao": "hr"
     },
     {
-        "Value": "ht",
-        "alibaba": "ht",
-        "bing": "ht",
-        "google": "ht",
-        "iciba": "ht",
-        "itranslate": "ht",
-        "modernMt": "ht",
-        "qqTranSmart": "ht",
-        "youdao": "ht"
-    },
-    {
         "Value": "hu",
         "alibaba": "hu",
+        "argos": "hu",
         "bing": "hu",
         "google": "hu",
         "iciba": "hu",
@@ -521,51 +295,10 @@
         "youdao": "hy"
     },
     {
-        "Value": "印尼语",
-        "alibaba": "id",
-        "apertium": "ind",
-        "bing": "id",
-        "caiyun": "id",
-        "cloudTranslation": "id",
-        "google": "id",
-        "iciba": "id",
-        "itranslate": "id",
-        "lara": "id",
-        "modernMt": "id",
-        "qqTranSmart": "id",
-        "reverso": "id",
-        "sysTran": "id",
-        "translateCom": "id",
-        "xunjie": "id",
-        "youdao": "id"
-    },
-    {
-        "Value": "ig",
-        "alibaba": "ig",
-        "bing": "ig",
-        "google": "ig",
-        "iciba": "ig",
-        "itranslate": "ig",
-        "modernMt": "ig",
-        "youdao": "ig"
-    },
-    {
-        "Value": "is",
-        "alibaba": "is",
-        "bing": "is",
-        "google": "is",
-        "iciba": "is",
-        "itranslate": "is",
-        "modernMt": "is",
-        "qqTranSmart": "is",
-        "sysTran": "is",
-        "xunjie": "is",
-        "youdao": "is"
-    },
-    {
         "Value": "意大利语",
         "alibaba": "it",
         "apertium": "ita",
+        "argos": "it",
         "bing": "it",
         "caiyun": "it",
         "cloudTranslation": "it",
@@ -585,160 +318,9 @@
         "youdao": "it"
     },
     {
-        "Value": "日语",
-        "alibaba": "ja",
-        "bing": "ja",
-        "caiyun": "ja",
-        "cloudTranslation": "ja",
-        "google": "ja",
-        "iciba": "ja",
-        "iflyrec": "ja",
-        "itranslate": "ja",
-        "lara": "ja",
-        "modernMt": "ja",
-        "qqTranSmart": "ja",
-        "reverso": "ja",
-        "sogou": "ja",
-        "sysTran": "ja",
-        "translateCom": "ja",
-        "xunjie": "ja",
-        "youdao": "ja"
-    },
-    {
-        "Value": "jw",
-        "google": "jw",
-        "itranslate": "jw",
-        "youdao": "jw"
-    },
-    {
-        "Value": "ka",
-        "alibaba": "ka",
-        "bing": "ka",
-        "google": "ka",
-        "iciba": "ka",
-        "itranslate": "ka",
-        "modernMt": "ka",
-        "qqTranSmart": "ka",
-        "sysTran": "ka",
-        "xunjie": "ka",
-        "youdao": "ka"
-    },
-    {
-        "Value": "kk",
-        "alibaba": "kk",
-        "bing": "kk",
-        "cloudTranslation": "kk",
-        "google": "kk",
-        "iciba": "kk",
-        "itranslate": "kk",
-        "modernMt": "kk",
-        "qqTranSmart": "kk",
-        "sysTran": "kk",
-        "youdao": "kk"
-    },
-    {
-        "Value": "km",
-        "alibaba": "km",
-        "bing": "km",
-        "cloudTranslation": "km",
-        "google": "km",
-        "iciba": "km",
-        "itranslate": "km",
-        "modernMt": "km",
-        "qqTranSmart": "km",
-        "xunjie": "km",
-        "youdao": "km"
-    },
-    {
-        "Value": "kn",
-        "alibaba": "kn",
-        "bing": "kn",
-        "google": "kn",
-        "iciba": "kn",
-        "itranslate": "kn",
-        "modernMt": "kn",
-        "qqTranSmart": "kn",
-        "youdao": "kn"
-    },
-    {
-        "Value": "韩语",
-        "alibaba": "ko",
-        "bing": "ko",
-        "caiyun": "ko",
-        "cloudTranslation": "ko",
-        "google": "ko",
-        "iciba": "ko",
-        "iflyrec": "ko",
-        "itranslate": "ko",
-        "lara": "ko",
-        "modernMt": "ko",
-        "qqTranSmart": "ko",
-        "reverso": "ko",
-        "sogou": "ko",
-        "sysTran": "ko",
-        "translateCom": "ko",
-        "xunjie": "kor",
-        "youdao": "ko"
-    },
-    {
-        "Value": "ku",
-        "alibaba": "ku",
-        "bing": "ku",
-        "google": "ku",
-        "iciba": "ku",
-        "qqTranSmart": "ku",
-        "sysTran": "ku",
-        "youdao": "ku"
-    },
-    {
-        "Value": "ky",
-        "alibaba": "ky",
-        "bing": "ky",
-        "cloudTranslation": "ky",
-        "google": "ky",
-        "iciba": "ky",
-        "modernMt": "ky",
-        "qqTranSmart": "ky",
-        "xunjie": "ky",
-        "youdao": "ky"
-    },
-    {
-        "Value": "la",
-        "alibaba": "la",
-        "bing": "la",
-        "google": "la",
-        "iciba": "la",
-        "itranslate": "la",
-        "modernMt": "la",
-        "xunjie": "la",
-        "youdao": "la"
-    },
-    {
-        "Value": "lb",
-        "alibaba": "lb",
-        "bing": "lb",
-        "google": "lb",
-        "iciba": "lb",
-        "modernMt": "lb",
-        "qqTranSmart": "lb",
-        "youdao": "lb"
-    },
-    {
-        "Value": "lo",
-        "alibaba": "lo",
-        "bing": "lo",
-        "cloudTranslation": "lo",
-        "google": "lo",
-        "iciba": "lo",
-        "itranslate": "lo",
-        "modernMt": "lo",
-        "qqTranSmart": "lo",
-        "xunjie": "lo",
-        "youdao": "lo"
-    },
-    {
         "Value": "lt",
         "alibaba": "lt",
+        "argos": "lt",
         "bing": "lt",
         "google": "lt",
         "iciba": "lt",
@@ -754,6 +336,7 @@
     {
         "Value": "lv",
         "alibaba": "lv",
+        "argos": "lv",
         "bing": "lv",
         "google": "lv",
         "iciba": "lv",
@@ -764,29 +347,6 @@
         "xunjie": "lv",
         "yandex": "lv",
         "youdao": "lv"
-    },
-    {
-        "Value": "mg",
-        "alibaba": "mg",
-        "bing": "mg",
-        "google": "mg",
-        "iciba": "mg",
-        "itranslate": "mg",
-        "modernMt": "mg",
-        "qqTranSmart": "mg",
-        "youdao": "mg"
-    },
-    {
-        "Value": "mi",
-        "alibaba": "mi",
-        "bing": "mi",
-        "google": "mi",
-        "iciba": "mi",
-        "itranslate": "mi",
-        "modernMt": "mi",
-        "qqTranSmart": "mi",
-        "xunjie": "mi",
-        "youdao": "mi"
     },
     {
         "Value": "mk",
@@ -802,104 +362,10 @@
         "youdao": "mk"
     },
     {
-        "Value": "ml",
-        "alibaba": "ml",
-        "bing": "ml",
-        "google": "ml",
-        "iciba": "ml",
-        "itranslate": "ml",
-        "modernMt": "ml",
-        "qqTranSmart": "ml",
-        "youdao": "ml"
-    },
-    {
-        "Value": "mn",
-        "alibaba": "mn",
-        "google": "mn",
-        "iciba": "mn",
-        "itranslate": "mn",
-        "modernMt": "mn",
-        "qqTranSmart": "mn",
-        "sysTran": "mn",
-        "xunjie": "mn",
-        "youdao": "mn"
-    },
-    {
-        "Value": "mr",
-        "alibaba": "mr",
-        "bing": "mr",
-        "google": "mr",
-        "iciba": "mr",
-        "itranslate": "mr",
-        "modernMt": "mr",
-        "qqTranSmart": "mr",
-        "youdao": "mr"
-    },
-    {
-        "Value": "ms",
-        "alibaba": "ms",
-        "bing": "ms",
-        "cloudTranslation": "ms",
-        "google": "ms",
-        "iciba": "ms",
-        "itranslate": "ms",
-        "lara": "ms",
-        "modernMt": "ms",
-        "qqTranSmart": "ms",
-        "sysTran": "ms",
-        "translateCom": "ms",
-        "xunjie": "ms",
-        "youdao": "ms"
-    },
-    {
-        "Value": "mt",
-        "alibaba": "mt",
-        "bing": "mt",
-        "google": "mt",
-        "iciba": "mt",
-        "itranslate": "mt",
-        "modernMt": "mt",
-        "qqTranSmart": "mt",
-        "sysTran": "mt",
-        "youdao": "mt"
-    },
-    {
-        "Value": "mww",
-        "bing": "mww",
-        "iciba": "mww",
-        "youdao": "mww"
-    },
-    {
-        "Value": "my",
-        "alibaba": "my",
-        "bing": "my",
-        "cloudTranslation": "my",
-        "google": "my",
-        "iciba": "my",
-        "itranslate": "my",
-        "modernMt": "my",
-        "sysTran": "my",
-        "xunjie": "my",
-        "youdao": "my"
-    },
-    {
-        "Value": "ne",
-        "alibaba": "ne",
-        "bing": "ne",
-        "cloudTranslation": "ne",
-        "google": "ne",
-        "iciba": "ne",
-        "itranslate": "ne",
-        "modernMt": "ne",
-        "qqTranSmart": "ne",
-        "sysTran": "ne",
-        "xunjie": "ne",
-        "youdao": "ne"
-    },
-    {
         "Value": "荷兰语",
         "alibaba": "nl",
         "apertium": "nld",
+        "argos": "nl",
         "bing": "nl",
         "cloudTranslation": "nl",
         "google": "nl",
@@ -932,36 +398,10 @@
         "youdao": "no"
     },
     {
-        "Value": "ny",
-        "alibaba": "ny",
-        "google": "ny",
-        "iciba": "ny",
-        "itranslate": "ny",
-        "modernMt": "ny",
-        "youdao": "ny"
-    },
-    {
-        "Value": "otq",
-        "bing": "otq",
-        "iciba": "otq",
-        "youdao": "otq"
-    },
-    {
-        "Value": "pa",
-        "alibaba": "pa",
-        "bing": "pa",
-        "google": "pa",
-        "iciba": "pa",
-        "itranslate": "pa",
-        "modernMt": "pa",
-        "qqTranSmart": "pa",
-        "sysTran": "pa",
-        "youdao": "pa"
-    },
-    {
         "Value": "波兰语",
         "alibaba": "pl",
         "apertium": "pol",
+        "argos": "pl",
         "bing": "pl",
         "caiyun": "pl",
         "cloudTranslation": "pl",
@@ -980,22 +420,10 @@
         "youdao": "pl"
     },
     {
-        "Value": "ps",
-        "alibaba": "ps",
-        "bing": "ps",
-        "cloudTranslation": "ps",
-        "google": "ps",
-        "iciba": "ps",
-        "modernMt": "ps",
-        "qqTranSmart": "ps",
-        "reverso": "ps",
-        "sysTran": "ps",
-        "youdao": "ps"
-    },
-    {
         "Value": "葡萄牙语",
         "alibaba": "pt",
         "apertium": "por",
+        "argos": "pt",
         "bing": "pt",
         "caiyun": "pt",
         "cloudTranslation": "pt",
@@ -1013,6 +441,7 @@
     {
         "Value": "ro",
         "alibaba": "ro",
+        "argos": "ro",
         "bing": "ro",
         "google": "ro",
         "iciba": "ro",
@@ -1030,6 +459,7 @@
         "Value": "俄语",
         "alibaba": "ru",
         "apertium": "rus",
+        "argos": "ru",
         "bing": "ru",
         "caiyun": "ru",
         "cloudTranslation": "ru",
@@ -1049,28 +479,9 @@
         "youdao": "ru"
     },
     {
-        "Value": "sd",
-        "alibaba": "sd",
-        "bing": "sd",
-        "google": "sd",
-        "iciba": "sd",
-        "modernMt": "sd",
-        "youdao": "sd"
-    },
-    {
-        "Value": "si",
-        "alibaba": "si",
-        "bing": "si",
-        "google": "si",
-        "iciba": "si",
-        "itranslate": "si",
-        "modernMt": "si",
-        "qqTranSmart": "si",
-        "youdao": "si"
-    },
-    {
         "Value": "sk",
         "alibaba": "sk",
+        "argos": "sk",
         "bing": "sk",
         "cloudTranslation": "sk",
         "google": "sk",
@@ -1088,6 +499,7 @@
     {
         "Value": "sl",
         "alibaba": "sl",
+        "argos": "sl",
         "bing": "sl",
         "google": "sl",
         "iciba": "sl",
@@ -1101,39 +513,9 @@
         "youdao": "sl"
     },
     {
-        "Value": "sm",
-        "alibaba": "sm",
-        "bing": "sm",
-        "google": "sm",
-        "iciba": "sm",
-        "modernMt": "sm",
-        "youdao": "sm"
-    },
-    {
-        "Value": "sn",
-        "alibaba": "sn",
-        "bing": "sn",
-        "google": "sn",
-        "iciba": "sn",
-        "modernMt": "sn",
-        "youdao": "sn"
-    },
-    {
-        "Value": "so",
-        "alibaba": "so",
-        "bing": "so",
-        "google": "so",
-        "iciba": "so",
-        "itranslate": "so",
-        "modernMt": "so",
-        "qqTranSmart": "so",
-        "reverso": "so",
-        "sysTran": "so",
-        "youdao": "so"
-    },
-    {
         "Value": "sq",
         "alibaba": "sq",
+        "argos": "sq",
         "bing": "sq",
         "google": "sq",
         "iciba": "sq",
@@ -1145,42 +527,24 @@
         "youdao": "sq"
     },
     {
-        "Value": "sr-Cyrl",
-        "bing": "sr-Cyrl",
-        "modernMt": "sr-Cyrl",
-        "youdao": "sr-Cyrl"
-    },
-    {
-        "Value": "sr-Latn",
-        "bing": "sr-Latn",
-        "modernMt": "sr-Latn",
-        "youdao": "sr-Latn"
-    },
-    {
-        "Value": "st",
-        "alibaba": "st",
-        "bing": "st",
-        "google": "st",
-        "iciba": "st",
-        "itranslate": "st",
-        "modernMt": "st",
-        "youdao": "st"
-    },
-    {
-        "Value": "su",
-        "alibaba": "su",
-        "bing": "su",
-        "google": "su",
-        "iciba": "su",
-        "itranslate": "su",
-        "modernMt": "su",
-        "qqTranSmart": "su",
-        "youdao": "su"
+        "Value": "sr",
+        "alibaba": "sr",
+        "argos": "sr",
+        "google": "sr",
+        "iciba": "sr",
+        "itranslate": "sr",
+        "qqTranSmart": "sr",
+        "reverso": "sr",
+        "sysTran": "sr",
+        "translateCom": "sr",
+        "xunjie": "sr",
+        "yandex": "sr"
     },
     {
         "Value": "瑞典语",
         "alibaba": "sv",
         "apertium": "swe",
+        "argos": "sv",
         "bing": "sv",
         "google": "sv",
         "iciba": "sv",
@@ -1198,95 +562,10 @@
         "youdao": "sv"
     },
     {
-        "Value": "sw",
-        "alibaba": "sw",
-        "bing": "sw",
-        "caiyun": "sw",
-        "google": "sw",
-        "iciba": "sw",
-        "itranslate": "sw",
-        "modernMt": "sw",
-        "qqTranSmart": "sw",
-        "sysTran": "sw",
-        "xunjie": "sw",
-        "youdao": "sw"
-    },
-    {
-        "Value": "ta",
-        "alibaba": "ta",
-        "bing": "ta",
-        "google": "ta",
-        "iciba": "ta",
-        "itranslate": "ta",
-        "modernMt": "ta",
-        "qqTranSmart": "ta",
-        "sysTran": "ta",
-        "youdao": "ta"
-    },
-    {
-        "Value": "te",
-        "alibaba": "te",
-        "bing": "te",
-        "google": "te",
-        "iciba": "te",
-        "itranslate": "te",
-        "modernMt": "te",
-        "qqTranSmart": "te",
-        "youdao": "te"
-    },
-    {
-        "Value": "tg",
-        "alibaba": "tg",
-        "cloudTranslation": "tg",
-        "google": "tg",
-        "iciba": "tg",
-        "itranslate": "tg",
-        "modernMt": "tg",
-        "qqTranSmart": "tg",
-        "sysTran": "tg",
-        "xunjie": "tg",
-        "youdao": "tg"
-    },
-    {
-        "Value": "泰语",
-        "alibaba": "th",
-        "bing": "th",
-        "caiyun": "th",
-        "cloudTranslation": "th",
-        "google": "th",
-        "iciba": "th",
-        "itranslate": "th",
-        "lara": "th",
-        "modernMt": "th",
-        "qqTranSmart": "th",
-        "reverso": "th",
-        "sogou": "th",
-        "sysTran": "th",
-        "translateCom": "th",
-        "xunjie": "th",
-        "youdao": "th"
-    },
-    {
-        "Value": "tl",
-        "alibaba": "tl",
-        "cloudTranslation": "tl",
-        "google": "tl",
-        "itranslate": "tl",
-        "modernMt": "tl",
-        "qqTranSmart": "tl",
-        "sysTran": "tl",
-        "translateCom": "tl",
-        "youdao": "tl"
-    },
-    {
-        "Value": "tlh",
-        "alibaba": "tlh",
-        "youdao": "tlh"
-    },
-    {
         "Value": "土耳其语",
         "alibaba": "tr",
         "apertium": "tur",
+        "argos": "tr",
         "bing": "tr",
         "caiyun": "tr",
         "cloudTranslation": "tr",
@@ -1306,6 +585,7 @@
     {
         "Value": "uk",
         "alibaba": "uk",
+        "argos": "uk",
         "bing": "uk",
         "cloudTranslation": "uk",
         "google": "uk",
@@ -1322,89 +602,9 @@
         "youdao": "uk"
     },
     {
-        "Value": "ur",
-        "alibaba": "ur",
-        "bing": "ur",
-        "cloudTranslation": "ur",
-        "google": "ur",
-        "iciba": "ur",
-        "itranslate": "ur",
-        "modernMt": "ur",
-        "qqTranSmart": "ur",
-        "reverso": "ur",
-        "sysTran": "ur",
-        "xunjie": "ur",
-        "youdao": "ur"
-    },
-    {
-        "Value": "uz",
-        "alibaba": "uz",
-        "bing": "uz",
-        "cloudTranslation": "uz",
-        "google": "uz",
-        "iciba": "uz",
-        "itranslate": "uz",
-        "qqTranSmart": "uz",
-        "xunjie": "uz",
-        "youdao": "uz"
-    },
-    {
-        "Value": "越南语",
-        "alibaba": "vi",
-        "bing": "vi",
-        "caiyun": "vi",
-        "cloudTranslation": "vi",
-        "google": "vi",
-        "iciba": "vi",
-        "iflyrec": "vi",
-        "itranslate": "vi",
-        "modernMt": "vi",
-        "qqTranSmart": "vi",
-        "reverso": "vi",
-        "sogou": "vi",
-        "sysTran": "vi",
-        "translateCom": "vi",
-        "xunjie": "vi",
-        "youdao": "vi"
-    },
-    {
-        "Value": "xh",
-        "alibaba": "xh",
-        "bing": "xh",
-        "google": "xh",
-        "iciba": "xh",
-        "modernMt": "xh",
-        "youdao": "xh"
-    },
-    {
-        "Value": "yi",
-        "alibaba": "yi",
-        "google": "yi",
-        "iciba": "yi",
-        "itranslate": "yi",
-        "youdao": "yi"
-    },
-    {
-        "Value": "yo",
-        "alibaba": "yo",
-        "bing": "yo",
-        "google": "yo",
-        "iciba": "yo",
-        "itranslate": "yo",
-        "modernMt": "yo",
-        "qqTranSmart": "yo",
-        "youdao": "yo"
-    },
-    {
-        "Value": "yua",
-        "bing": "yua",
-        "google": "yua",
-        "iciba": "yua",
-        "youdao": "yua"
-    },
-    {
         "Value": "中文",
         "alibaba": "zh",
+        "argos": "zh-Hans",
         "bing": "zh-Hans",
         "caiyun": "zh",
         "cloudTranslation": "zh-cn",
@@ -1426,40 +626,107 @@
         "youdao": "zh-CHS"
     },
     {
-        "Value": "zh-CHT",
-        "youdao": "zh-CHT"
+        "Value": "阿拉伯语",
+        "alibaba": "ar",
+        "apertium": "ara",
+        "argos": "ar",
+        "bing": "ar",
+        "caiyun": "ar",
+        "cloudTranslation": "ar",
+        "google": "ar",
+        "iciba": "ar",
+        "iflyrec": "ar",
+        "lara": "ar",
+        "modernMt": "ar",
+        "qqTranSmart": "ar",
+        "reverso": "ar",
+        "sogou": "ar",
+        "sysTran": "ar",
+        "translateCom": "ar",
+        "xunjie": "ar",
+        "youdao": "ar"
     },
     {
-        "Value": "zh-lzh",
-        "youdao": "zh-lzh"
+        "Value": "日语",
+        "alibaba": "ja",
+        "argos": "ja",
+        "bing": "ja",
+        "caiyun": "ja",
+        "cloudTranslation": "ja",
+        "google": "ja",
+        "iciba": "ja",
+        "iflyrec": "ja",
+        "itranslate": "ja",
+        "lara": "ja",
+        "modernMt": "ja",
+        "qqTranSmart": "ja",
+        "reverso": "ja",
+        "sogou": "ja",
+        "sysTran": "ja",
+        "translateCom": "ja",
+        "xunjie": "ja",
+        "youdao": "ja"
     },
     {
-        "Value": "zu",
-        "alibaba": "zu",
-        "bing": "zu",
-        "google": "zu",
-        "iciba": "zu",
-        "itranslate": "zu",
-        "modernMt": "zu",
-        "youdao": "zu"
+        "Value": "韩语",
+        "alibaba": "ko",
+        "argos": "ko",
+        "bing": "ko",
+        "caiyun": "ko",
+        "cloudTranslation": "ko",
+        "google": "ko",
+        "iciba": "ko",
+        "iflyrec": "ko",
+        "itranslate": "ko",
+        "lara": "ko",
+        "modernMt": "ko",
+        "qqTranSmart": "ko",
+        "reverso": "ko",
+        "sogou": "ko",
+        "sysTran": "ko",
+        "translateCom": "ko",
+        "xunjie": "kor",
+        "youdao": "ko"
     },
     {
-        "Value": "nn",
-        "caiyun": "nn",
-        "modernMt": "nn",
-        "qqTranSmart": "nn"
+        "Value": "泰语",
+        "alibaba": "th",
+        "argos": "th",
+        "bing": "th",
+        "caiyun": "th",
+        "cloudTranslation": "th",
+        "google": "th",
+        "iciba": "th",
+        "itranslate": "th",
+        "lara": "th",
+        "modernMt": "th",
+        "qqTranSmart": "th",
+        "reverso": "th",
+        "sogou": "th",
+        "sysTran": "th",
+        "translateCom": "th",
+        "xunjie": "th",
+        "youdao": "th"
     },
     {
-        "Value": "中文(台湾)",
-        "alibaba": "zh-tw",
-        "bing": "zh-Hant",
-        "caiyun": "zh-Hant",
-        "cloudTranslation": "zh-tw",
-        "google": "zh-TW",
-        "itranslate": "zh-TW",
-        "lara": "zh-TW",
-        "modernMt": "zh-TW",
-        "translateCom": "zh-TW"
+        "Value": "越南语",
+        "alibaba": "vi",
+        "argos": "vi",
+        "bing": "vi",
+        "caiyun": "vi",
+        "cloudTranslation": "vi",
+        "google": "vi",
+        "iciba": "vi",
+        "iflyrec": "vi",
+        "itranslate": "vi",
+        "modernMt": "vi",
+        "qqTranSmart": "vi",
+        "reverso": "vi",
+        "sogou": "vi",
+        "sysTran": "vi",
+        "translateCom": "vi",
+        "xunjie": "vi",
+        "youdao": "vi"
     },
     {
         "Value": "afr",
@@ -1525,6 +792,43 @@
         "Value": "hbs",
         "alibaba": "hbs",
         "apertium": "hbs"
+    },
+    {
+        "Value": "印地语",
+        "alibaba": "hi",
+        "apertium": "hin",
+        "argos": "hi",
+        "bing": "hi",
+        "cloudTranslation": "hi",
+        "google": "hi",
+        "iciba": "hi",
+        "itranslate": "hi",
+        "modernMt": "hi",
+        "qqTranSmart": "hi",
+        "reverso": "hi",
+        "sysTran": "hi",
+        "xunjie": "hi",
+        "youdao": "hi"
+    },
+    {
+        "Value": "印尼语",
+        "alibaba": "id",
+        "apertium": "ind",
+        "argos": "id",
+        "bing": "id",
+        "caiyun": "id",
+        "cloudTranslation": "id",
+        "google": "id",
+        "iciba": "id",
+        "itranslate": "id",
+        "lara": "id",
+        "modernMt": "id",
+        "qqTranSmart": "id",
+        "reverso": "id",
+        "sysTran": "id",
+        "translateCom": "id",
+        "xunjie": "id",
+        "youdao": "id"
     },
     {
         "Value": "isl",
@@ -1608,16 +912,358 @@
         "apertium": "zlm"
     },
     {
-        "Value": "ace",
-        "alibaba": "ace",
-        "bing": "ace",
-        "google": "ace",
-        "iciba": "ace",
-        "modernMt": "ace"
+        "Value": "am",
+        "alibaba": "am",
+        "bing": "am",
+        "google": "am",
+        "iciba": "am",
+        "modernMt": "am",
+        "qqTranSmart": "am",
+        "xunjie": "am",
+        "youdao": "am"
     },
     {
-        "Value": "acu",
-        "iciba": "acu"
+        "Value": "bn",
+        "alibaba": "bn",
+        "argos": "bn",
+        "bing": "bn",
+        "google": "bn",
+        "iciba": "bn",
+        "itranslate": "bn",
+        "modernMt": "bn",
+        "qqTranSmart": "bn",
+        "reverso": "bn",
+        "sysTran": "bn",
+        "xunjie": "bn",
+        "youdao": "bn"
+    },
+    {
+        "Value": "cht",
+        "iciba": "cht",
+        "xunjie": "cht"
+    },
+    {
+        "Value": "eo",
+        "alibaba": "eo",
+        "argos": "eo",
+        "google": "eo",
+        "iciba": "eo",
+        "itranslate": "eo",
+        "modernMt": "eo",
+        "qqTranSmart": "eo",
+        "xunjie": "eo",
+        "youdao": "eo"
+    },
+    {
+        "Value": "fa",
+        "alibaba": "fa",
+        "argos": "fa",
+        "bing": "fa",
+        "cloudTranslation": "fa",
+        "google": "fa",
+        "iciba": "fa",
+        "itranslate": "fa",
+        "qqTranSmart": "fa",
+        "reverso": "fa",
+        "sysTran": "fa",
+        "translateCom": "fa",
+        "xunjie": "fa",
+        "youdao": "fa"
+    },
+    {
+        "Value": "fil",
+        "alibaba": "fil",
+        "bing": "fil",
+        "iciba": "fil",
+        "qqTranSmart": "fil",
+        "xunjie": "fil"
+    },
+    {
+        "Value": "ga",
+        "alibaba": "ga",
+        "argos": "ga",
+        "bing": "ga",
+        "google": "ga",
+        "iciba": "ga",
+        "itranslate": "ga",
+        "modernMt": "ga",
+        "qqTranSmart": "ga",
+        "sysTran": "ga",
+        "xunjie": "ga",
+        "youdao": "ga"
+    },
+    {
+        "Value": "ha",
+        "alibaba": "ha",
+        "bing": "ha",
+        "google": "ha",
+        "iciba": "ha",
+        "itranslate": "ha",
+        "modernMt": "ha",
+        "qqTranSmart": "ha",
+        "reverso": "ha",
+        "sysTran": "ha",
+        "xunjie": "ha",
+        "youdao": "ha"
+    },
+    {
+        "Value": "haw",
+        "alibaba": "haw",
+        "google": "haw",
+        "iciba": "haw",
+        "xunjie": "haw",
+        "youdao": "haw"
+    },
+    {
+        "Value": "he",
+        "alibaba": "he",
+        "argos": "he",
+        "bing": "he",
+        "iciba": "he",
+        "itranslate": "he",
+        "lara": "he",
+        "modernMt": "he",
+        "qqTranSmart": "he",
+        "reverso": "he",
+        "sysTran": "he",
+        "xunjie": "he",
+        "youdao": "he"
+    },
+    {
+        "Value": "is",
+        "alibaba": "is",
+        "bing": "is",
+        "google": "is",
+        "iciba": "is",
+        "itranslate": "is",
+        "modernMt": "is",
+        "qqTranSmart": "is",
+        "sysTran": "is",
+        "xunjie": "is",
+        "youdao": "is"
+    },
+    {
+        "Value": "jy",
+        "iciba": "jy",
+        "xunjie": "jy"
+    },
+    {
+        "Value": "ka",
+        "alibaba": "ka",
+        "bing": "ka",
+        "google": "ka",
+        "iciba": "ka",
+        "itranslate": "ka",
+        "modernMt": "ka",
+        "qqTranSmart": "ka",
+        "sysTran": "ka",
+        "xunjie": "ka",
+        "youdao": "ka"
+    },
+    {
+        "Value": "km",
+        "alibaba": "km",
+        "bing": "km",
+        "cloudTranslation": "km",
+        "google": "km",
+        "iciba": "km",
+        "itranslate": "km",
+        "modernMt": "km",
+        "qqTranSmart": "km",
+        "xunjie": "km",
+        "youdao": "km"
+    },
+    {
+        "Value": "ky",
+        "alibaba": "ky",
+        "argos": "ky",
+        "bing": "ky",
+        "cloudTranslation": "ky",
+        "google": "ky",
+        "iciba": "ky",
+        "modernMt": "ky",
+        "qqTranSmart": "ky",
+        "xunjie": "ky",
+        "youdao": "ky"
+    },
+    {
+        "Value": "la",
+        "alibaba": "la",
+        "bing": "la",
+        "google": "la",
+        "iciba": "la",
+        "itranslate": "la",
+        "modernMt": "la",
+        "xunjie": "la",
+        "youdao": "la"
+    },
+    {
+        "Value": "lo",
+        "alibaba": "lo",
+        "bing": "lo",
+        "cloudTranslation": "lo",
+        "google": "lo",
+        "iciba": "lo",
+        "itranslate": "lo",
+        "modernMt": "lo",
+        "qqTranSmart": "lo",
+        "xunjie": "lo",
+        "youdao": "lo"
+    },
+    {
+        "Value": "mi",
+        "alibaba": "mi",
+        "bing": "mi",
+        "google": "mi",
+        "iciba": "mi",
+        "itranslate": "mi",
+        "modernMt": "mi",
+        "qqTranSmart": "mi",
+        "xunjie": "mi",
+        "youdao": "mi"
+    },
+    {
+        "Value": "mn",
+        "alibaba": "mn",
+        "google": "mn",
+        "iciba": "mn",
+        "itranslate": "mn",
+        "modernMt": "mn",
+        "qqTranSmart": "mn",
+        "sysTran": "mn",
+        "xunjie": "mn",
+        "youdao": "mn"
+    },
+    {
+        "Value": "ms",
+        "alibaba": "ms",
+        "argos": "ms",
+        "bing": "ms",
+        "cloudTranslation": "ms",
+        "google": "ms",
+        "iciba": "ms",
+        "itranslate": "ms",
+        "lara": "ms",
+        "modernMt": "ms",
+        "qqTranSmart": "ms",
+        "sysTran": "ms",
+        "translateCom": "ms",
+        "xunjie": "ms",
+        "youdao": "ms"
+    },
+    {
+        "Value": "my",
+        "alibaba": "my",
+        "bing": "my",
+        "cloudTranslation": "my",
+        "google": "my",
+        "iciba": "my",
+        "itranslate": "my",
+        "modernMt": "my",
+        "sysTran": "my",
+        "xunjie": "my",
+        "youdao": "my"
+    },
+    {
+        "Value": "ne",
+        "alibaba": "ne",
+        "bing": "ne",
+        "cloudTranslation": "ne",
+        "google": "ne",
+        "iciba": "ne",
+        "itranslate": "ne",
+        "modernMt": "ne",
+        "qqTranSmart": "ne",
+        "sysTran": "ne",
+        "xunjie": "ne",
+        "youdao": "ne"
+    },
+    {
+        "Value": "sw",
+        "alibaba": "sw",
+        "argos": "sw",
+        "bing": "sw",
+        "caiyun": "sw",
+        "google": "sw",
+        "iciba": "sw",
+        "itranslate": "sw",
+        "modernMt": "sw",
+        "qqTranSmart": "sw",
+        "sysTran": "sw",
+        "xunjie": "sw",
+        "youdao": "sw"
+    },
+    {
+        "Value": "tg",
+        "alibaba": "tg",
+        "cloudTranslation": "tg",
+        "google": "tg",
+        "iciba": "tg",
+        "itranslate": "tg",
+        "modernMt": "tg",
+        "qqTranSmart": "tg",
+        "sysTran": "tg",
+        "xunjie": "tg",
+        "youdao": "tg"
+    },
+    {
+        "Value": "ti",
+        "alibaba": "ti",
+        "bing": "ti",
+        "google": "ti",
+        "iciba": "ti",
+        "modernMt": "ti",
+        "qqTranSmart": "ti",
+        "utibet": "ti",
+        "xunjie": "ti"
+    },
+    {
+        "Value": "ur",
+        "alibaba": "ur",
+        "argos": "ur",
+        "bing": "ur",
+        "cloudTranslation": "ur",
+        "google": "ur",
+        "iciba": "ur",
+        "itranslate": "ur",
+        "modernMt": "ur",
+        "qqTranSmart": "ur",
+        "reverso": "ur",
+        "sysTran": "ur",
+        "xunjie": "ur",
+        "youdao": "ur"
+    },
+    {
+        "Value": "uy",
+        "iciba": "uy",
+        "xunjie": "uy"
+    },
+    {
+        "Value": "uz",
+        "alibaba": "uz",
+        "bing": "uz",
+        "cloudTranslation": "uz",
+        "google": "uz",
+        "iciba": "uz",
+        "itranslate": "uz",
+        "qqTranSmart": "uz",
+        "xunjie": "uz",
+        "youdao": "uz"
+    },
+    {
+        "Value": "中文(文言文)",
+        "bing": "lzh",
+        "xunjie": "wyw"
+    },
+    {
+        "Value": "中文(粤语)",
+        "alibaba": "yue",
+        "bing": "yue",
+        "cloudTranslation": "yue",
+        "google": "yue",
+        "iciba": "yue",
+        "iflyrec": "yue",
+        "xunjie": "yue"
     },
     {
         "Value": "af",
@@ -1632,49 +1278,23 @@
         "sysTran": "af"
     },
     {
-        "Value": "agr",
-        "iciba": "agr"
+        "Value": "ar-AE",
+        "itranslate": "ar-AE"
     },
     {
-        "Value": "ake",
-        "iciba": "ake"
+        "Value": "ar-EG",
+        "itranslate": "ar-EG"
     },
     {
-        "Value": "amu",
-        "iciba": "amu"
+        "Value": "ar-SA",
+        "itranslate": "ar-SA",
+        "lara": "ar-SA"
     },
     {
-        "Value": "ba",
-        "alibaba": "ba",
-        "bing": "ba",
-        "google": "ba",
-        "iciba": "ba",
-        "modernMt": "ba"
-    },
-    {
-        "Value": "bem",
-        "alibaba": "bem",
-        "google": "bem",
-        "iciba": "bem",
-        "modernMt": "bem"
-    },
-    {
-        "Value": "ber",
-        "alibaba": "ber",
-        "google": "ber",
-        "iciba": "ber"
-    },
-    {
-        "Value": "bi",
-        "alibaba": "bi",
-        "iciba": "bi"
-    },
-    {
-        "Value": "br",
-        "alibaba": "br",
-        "google": "br",
-        "iciba": "br",
-        "qqTranSmart": "br"
+        "Value": "自动",
+        "cloudTranslation": "all",
+        "google": "auto",
+        "itranslate": "auto"
     },
     {
         "Value": "bs",
@@ -1688,443 +1308,384 @@
         "sysTran": "bs"
     },
     {
-        "Value": "bsn",
-        "iciba": "bsn"
+        "Value": "ceb",
+        "alibaba": "ceb",
+        "bing": "ceb",
+        "google": "ceb",
+        "iciba": "ceb",
+        "itranslate": "ceb",
+        "modernMt": "ceb",
+        "youdao": "ceb"
     },
     {
-        "Value": "cak",
-        "iciba": "cak"
+        "Value": "cy",
+        "alibaba": "cy",
+        "bing": "cy",
+        "google": "cy",
+        "iciba": "cy",
+        "itranslate": "cy",
+        "modernMt": "cy",
+        "qqTranSmart": "cy",
+        "youdao": "cy"
     },
     {
-        "Value": "cha",
-        "iciba": "cha"
+        "Value": "en-AU",
+        "itranslate": "en-AU",
+        "lara": "en-AU"
+    },
+    {
+        "Value": "en-UK",
+        "itranslate": "en-UK"
     },
-    {
-        "Value": "chq",
-        "iciba": "chq"
-    },
-    {
-        "Value": "chr",
-        "alibaba": "chr",
-        "iciba": "chr"
-    },
-    {
-        "Value": "cht",
-        "iciba": "cht",
-        "xunjie": "cht"
-    },
-    {
-        "Value": "cjp",
-        "iciba": "cjp"
-    },
-    {
-        "Value": "cni",
-        "iciba": "cni"
-    },
-    {
-        "Value": "cop",
-        "iciba": "cop"
-    },
-    {
-        "Value": "crs",
-        "bing": "crs",
-        "google": "crs",
-        "iciba": "crs"
-    },
-    {
-        "Value": "cv",
-        "alibaba": "cv",
-        "google": "cv",
-        "iciba": "cv"
-    },
-    {
-        "Value": "dik",
-        "iciba": "dik",
-        "modernMt": "dik"
-    },
-    {
-        "Value": "dje",
-        "iciba": "dje"
-    },
-    {
-        "Value": "djk",
-        "iciba": "djk"
-    },
-    {
-        "Value": "dop",
-        "iciba": "dop"
-    },
-    {
-        "Value": "dv",
-        "alibaba": "dv",
-        "bing": "dv",
-        "google": "dv",
-        "iciba": "dv"
-    },
-    {
-        "Value": "dz",
-        "google": "dz",
-        "iciba": "dz",
-        "modernMt": "dz",
-        "qqTranSmart": "dz"
-    },
-    {
-        "Value": "ee",
-        "alibaba": "ee",
-        "google": "ee",
-        "iciba": "ee",
-        "modernMt": "ee"
-    },
-    {
-        "Value": "fil",
-        "alibaba": "fil",
-        "bing": "fil",
-        "iciba": "fil",
-        "qqTranSmart": "fil",
-        "xunjie": "fil"
-    },
-    {
-        "Value": "fj",
-        "alibaba": "fj",
-        "bing": "fj",
-        "google": "fj",
-        "iciba": "fj",
-        "modernMt": "fj"
-    },
-    {
-        "Value": "fo",
-        "alibaba": "fo",
-        "bing": "fo",
-        "google": "fo",
-        "iciba": "fo",
-        "modernMt": "fo",
-        "qqTranSmart": "fo"
-    },
-    {
-        "Value": "gbi",
-        "iciba": "gbi"
-    },
-    {
-        "Value": "gv",
-        "alibaba": "gv",
-        "google": "gv",
-        "iciba": "gv"
-    },
-    {
-        "Value": "jac",
-        "iciba": "jac"
-    },
-    {
-        "Value": "jiv",
-        "iciba": "jiv"
-    },
-    {
-        "Value": "jv",
-        "alibaba": "jv",
-        "iciba": "jv",
-        "modernMt": "jv",
-        "qqTranSmart": "jv"
-    },
-    {
-        "Value": "jy",
-        "iciba": "jy",
-        "xunjie": "jy"
-    },
-    {
-        "Value": "kab",
-        "alibaba": "kab",
-        "iciba": "kab",
-        "modernMt": "kab"
-    },
-    {
-        "Value": "kbh",
-        "iciba": "kbh"
-    },
-    {
-        "Value": "kek",
-        "alibaba": "kek",
-        "google": "kek",
-        "iciba": "kek"
-    },
-    {
-        "Value": "kg",
-        "alibaba": "kg",
-        "google": "kg",
-        "iciba": "kg",
-        "modernMt": "kg"
-    },
-    {
-        "Value": "lg",
-        "alibaba": "lg",
-        "google": "lg",
-        "iciba": "lg",
-        "modernMt": "lg"
-    },
-    {
-        "Value": "ln",
-        "alibaba": "ln",
-        "bing": "ln",
-        "google": "ln",
-        "iciba": "ln",
-        "modernMt": "ln",
-        "qqTranSmart": "ln"
-    },
-    {
-        "Value": "mam",
-        "google": "mam",
-        "iciba": "mam"
-    },
-    {
-        "Value": "me",
-        "iciba": "me",
-        "sysTran": "me"
-    },
-    {
-        "Value": "mhr",
-        "iciba": "mhr"
-    },
-    {
-        "Value": "mrj",
-        "iciba": "mrj"
-    },
-    {
-        "Value": "nhg",
-        "iciba": "nhg"
-    },
-    {
-        "Value": "ojb",
-        "iciba": "ojb"
-    },
-    {
-        "Value": "om",
-        "alibaba": "om",
-        "google": "om",
-        "iciba": "om",
-        "sysTran": "om"
-    },
-    {
-        "Value": "or",
-        "alibaba": "or",
-        "bing": "or",
-        "google": "or",
-        "iciba": "or",
-        "modernMt": "or",
-        "qqTranSmart": "or"
-    },
-    {
-        "Value": "os",
-        "alibaba": "os",
-        "google": "os",
-        "iciba": "os"
-    },
-    {
-        "Value": "pap",
-        "alibaba": "pap",
-        "bing": "pap",
-        "google": "pap",
-        "iciba": "pap",
-        "modernMt": "pap",
-        "qqTranSmart": "pap"
-    },
-    {
-        "Value": "pck",
-        "iciba": "pck"
-    },
-    {
-        "Value": "pot",
-        "iciba": "pot"
-    },
-    {
-        "Value": "ppk",
-        "iciba": "ppk"
-    },
-    {
-        "Value": "quc",
-        "alibaba": "quc",
-        "iciba": "quc"
-    },
-    {
-        "Value": "quw",
-        "iciba": "quw"
-    },
-    {
-        "Value": "rmn",
-        "iciba": "rmn"
-    },
-    {
-        "Value": "rn",
-        "alibaba": "rn",
-        "google": "rn",
-        "iciba": "rn",
-        "modernMt": "rn"
-    },
-    {
-        "Value": "rw",
-        "alibaba": "rw",
-        "bing": "rw",
-        "google": "rw",
-        "iciba": "rw",
-        "modernMt": "rw"
-    },
-    {
-        "Value": "sg",
-        "alibaba": "sg",
-        "google": "sg",
-        "iciba": "sg",
-        "modernMt": "sg"
-    },
-    {
-        "Value": "shi",
-        "iciba": "shi"
-    },
-    {
-        "Value": "sr",
-        "alibaba": "sr",
-        "google": "sr",
-        "iciba": "sr",
-        "itranslate": "sr",
-        "qqTranSmart": "sr",
-        "reverso": "sr",
-        "sysTran": "sr",
-        "translateCom": "sr",
-        "xunjie": "sr",
-        "yandex": "sr"
-    },
-    {
-        "Value": "syc",
-        "iciba": "syc"
-    },
-    {
-        "Value": "tet",
-        "alibaba": "tet",
-        "bing": "tet",
-        "google": "tet",
-        "iciba": "tet"
-    },
-    {
-        "Value": "ti",
-        "alibaba": "ti",
-        "bing": "ti",
-        "google": "ti",
-        "iciba": "ti",
-        "modernMt": "ti",
-        "qqTranSmart": "ti",
-        "utibet": "ti",
-        "xunjie": "ti"
-    },
-    {
-        "Value": "tig",
-        "iciba": "tig"
-    },
-    {
-        "Value": "tk",
-        "alibaba": "tk",
-        "bing": "tk",
-        "google": "tk",
-        "iciba": "tk",
-        "modernMt": "tk",
-        "qqTranSmart": "tk"
-    },
-    {
-        "Value": "tmh",
-        "iciba": "tmh"
-    },
-    {
-        "Value": "tn",
-        "bing": "tn",
-        "google": "tn",
-        "iciba": "tn",
-        "modernMt": "tn"
-    },
-    {
-        "Value": "to",
-        "bing": "to",
-        "google": "to",
-        "iciba": "to"
-    },
-    {
-        "Value": "tpi",
-        "alibaba": "tpi",
-        "bing": "tpi",
-        "google": "tpi",
-        "iciba": "tpi",
-        "modernMt": "tpi"
-    },
-    {
-        "Value": "ts",
-        "alibaba": "ts",
-        "google": "ts",
-        "iciba": "ts",
-        "modernMt": "ts"
-    },
-    {
-        "Value": "tt",
-        "alibaba": "tt",
-        "bing": "tt",
-        "google": "tt",
-        "iciba": "tt",
-        "modernMt": "tt",
-        "qqTranSmart": "tt"
-    },
-    {
-        "Value": "tw",
-        "alibaba": "tw",
-        "iciba": "tw",
-        "modernMt": "tw"
-    },
-    {
-        "Value": "ty",
-        "alibaba": "ty",
-        "bing": "ty",
-        "google": "ty",
-        "iciba": "ty"
-    },
-    {
-        "Value": "udm",
-        "alibaba": "udm",
-        "google": "udm",
-        "iciba": "udm"
-    },
-    {
-        "Value": "usp",
-        "iciba": "usp"
-    },
-    {
-        "Value": "uy",
-        "iciba": "uy",
-        "xunjie": "uy"
-    },
-    {
-        "Value": "ve",
-        "alibaba": "ve",
-        "google": "ve",
-        "iciba": "ve"
-    },
-    {
-        "Value": "wal",
-        "iciba": "wal"
-    },
-    {
-        "Value": "war",
-        "alibaba": "war",
-        "bing": "war",
-        "google": "war",
-        "iciba": "war",
-        "modernMt": "war"
-    },
-    {
-        "Value": "wol",
-        "iciba": "wol"
+    {
+        "Value": "en-US",
+        "itranslate": "en-US",
+        "lara": "en-US"
     },
     {
-        "Value": "中文(粤语)",
-        "alibaba": "yue",
-        "bing": "yue",
-        "cloudTranslation": "yue",
-        "google": "yue",
-        "iciba": "yue",
-        "iflyrec": "yue",
-        "xunjie": "yue"
+        "Value": "es-ES",
+        "itranslate": "es-ES",
+        "lara": "es-ES",
+        "modernMt": "es-ES"
+    },
+    {
+        "Value": "es-MX",
+        "itranslate": "es-MX",
+        "lara": "es-MX"
+    },
+    {
+        "Value": "es-US",
+        "itranslate": "es-US"
+    },
+    {
+        "Value": "eu",
+        "alibaba": "eu",
+        "argos": "eu",
+        "bing": "eu",
+        "elia": "eu",
+        "google": "eu",
+        "iciba": "eu",
+        "itranslate": "eu",
+        "qqTranSmart": "eu",
+        "youdao": "eu"
+    },
+    {
+        "Value": "fr-CA",
+        "bing": "fr-CA",
+        "google": "fr-CA",
+        "itranslate": "fr-CA",
+        "lara": "fr-CA"
+    },
+    {
+        "Value": "fr-FR",
+        "itranslate": "fr-FR",
+        "lara": "fr-FR"
+    },
+    {
+        "Value": "gl",
+        "alibaba": "gl",
+        "argos": "gl",
+        "bing": "gl",
+        "elia": "gl",
+        "google": "gl",
+        "iciba": "gl",
+        "itranslate": "gl",
+        "modernMt": "gl",
+        "qqTranSmart": "gl",
+        "youdao": "gl"
+    },
+    {
+        "Value": "gu",
+        "alibaba": "gu",
+        "bing": "gu",
+        "google": "gu",
+        "iciba": "gu",
+        "itranslate": "gu",
+        "modernMt": "gu",
+        "qqTranSmart": "gu",
+        "youdao": "gu"
+    },
+    {
+        "Value": "hmn",
+        "alibaba": "hmn",
+        "google": "hmn",
+        "itranslate": "hmn",
+        "youdao": "hmn"
+    },
+    {
+        "Value": "ht",
+        "alibaba": "ht",
+        "bing": "ht",
+        "google": "ht",
+        "iciba": "ht",
+        "itranslate": "ht",
+        "modernMt": "ht",
+        "qqTranSmart": "ht",
+        "youdao": "ht"
+    },
+    {
+        "Value": "ig",
+        "alibaba": "ig",
+        "bing": "ig",
+        "google": "ig",
+        "iciba": "ig",
+        "itranslate": "ig",
+        "modernMt": "ig",
+        "youdao": "ig"
+    },
+    {
+        "Value": "jw",
+        "google": "jw",
+        "itranslate": "jw",
+        "youdao": "jw"
+    },
+    {
+        "Value": "kk",
+        "alibaba": "kk",
+        "bing": "kk",
+        "cloudTranslation": "kk",
+        "google": "kk",
+        "iciba": "kk",
+        "itranslate": "kk",
+        "modernMt": "kk",
+        "qqTranSmart": "kk",
+        "sysTran": "kk",
+        "youdao": "kk"
+    },
+    {
+        "Value": "kn",
+        "alibaba": "kn",
+        "bing": "kn",
+        "google": "kn",
+        "iciba": "kn",
+        "itranslate": "kn",
+        "modernMt": "kn",
+        "qqTranSmart": "kn",
+        "youdao": "kn"
+    },
+    {
+        "Value": "mg",
+        "alibaba": "mg",
+        "bing": "mg",
+        "google": "mg",
+        "iciba": "mg",
+        "itranslate": "mg",
+        "modernMt": "mg",
+        "qqTranSmart": "mg",
+        "youdao": "mg"
+    },
+    {
+        "Value": "ml",
+        "alibaba": "ml",
+        "bing": "ml",
+        "google": "ml",
+        "iciba": "ml",
+        "itranslate": "ml",
+        "modernMt": "ml",
+        "qqTranSmart": "ml",
+        "youdao": "ml"
+    },
+    {
+        "Value": "mr",
+        "alibaba": "mr",
+        "bing": "mr",
+        "google": "mr",
+        "iciba": "mr",
+        "itranslate": "mr",
+        "modernMt": "mr",
+        "qqTranSmart": "mr",
+        "youdao": "mr"
+    },
+    {
+        "Value": "mt",
+        "alibaba": "mt",
+        "bing": "mt",
+        "google": "mt",
+        "iciba": "mt",
+        "itranslate": "mt",
+        "modernMt": "mt",
+        "qqTranSmart": "mt",
+        "sysTran": "mt",
+        "youdao": "mt"
+    },
+    {
+        "Value": "ny",
+        "alibaba": "ny",
+        "google": "ny",
+        "iciba": "ny",
+        "itranslate": "ny",
+        "modernMt": "ny",
+        "youdao": "ny"
+    },
+    {
+        "Value": "pa",
+        "alibaba": "pa",
+        "bing": "pa",
+        "google": "pa",
+        "iciba": "pa",
+        "itranslate": "pa",
+        "modernMt": "pa",
+        "qqTranSmart": "pa",
+        "sysTran": "pa",
+        "youdao": "pa"
+    },
+    {
+        "Value": "pt-BR",
+        "argos": "pt-BR",
+        "itranslate": "pt-BR",
+        "lara": "pt-BR",
+        "modernMt": "pt-BR",
+        "qqTranSmart": "pt-BR"
+    },
+    {
+        "Value": "pt-PT",
+        "bing": "pt-PT",
+        "google": "pt-PT",
+        "itranslate": "pt-PT",
+        "lara": "pt-PT",
+        "modernMt": "pt-PT",
+        "qqTranSmart": "pt-PT"
+    },
+    {
+        "Value": "si",
+        "alibaba": "si",
+        "bing": "si",
+        "google": "si",
+        "iciba": "si",
+        "itranslate": "si",
+        "modernMt": "si",
+        "qqTranSmart": "si",
+        "youdao": "si"
+    },
+    {
+        "Value": "so",
+        "alibaba": "so",
+        "bing": "so",
+        "google": "so",
+        "iciba": "so",
+        "itranslate": "so",
+        "modernMt": "so",
+        "qqTranSmart": "so",
+        "reverso": "so",
+        "sysTran": "so",
+        "youdao": "so"
+    },
+    {
+        "Value": "st",
+        "alibaba": "st",
+        "bing": "st",
+        "google": "st",
+        "iciba": "st",
+        "itranslate": "st",
+        "modernMt": "st",
+        "youdao": "st"
+    },
+    {
+        "Value": "su",
+        "alibaba": "su",
+        "bing": "su",
+        "google": "su",
+        "iciba": "su",
+        "itranslate": "su",
+        "modernMt": "su",
+        "qqTranSmart": "su",
+        "youdao": "su"
+    },
+    {
+        "Value": "ta",
+        "alibaba": "ta",
+        "bing": "ta",
+        "google": "ta",
+        "iciba": "ta",
+        "itranslate": "ta",
+        "modernMt": "ta",
+        "qqTranSmart": "ta",
+        "sysTran": "ta",
+        "youdao": "ta"
+    },
+    {
+        "Value": "te",
+        "alibaba": "te",
+        "bing": "te",
+        "google": "te",
+        "iciba": "te",
+        "itranslate": "te",
+        "modernMt": "te",
+        "qqTranSmart": "te",
+        "youdao": "te"
+    },
+    {
+        "Value": "tl",
+        "alibaba": "tl",
+        "argos": "tl",
+        "cloudTranslation": "tl",
+        "google": "tl",
+        "itranslate": "tl",
+        "modernMt": "tl",
+        "qqTranSmart": "tl",
+        "sysTran": "tl",
+        "translateCom": "tl",
+        "youdao": "tl"
+    },
+    {
+        "Value": "yi",
+        "alibaba": "yi",
+        "google": "yi",
+        "iciba": "yi",
+        "itranslate": "yi",
+        "youdao": "yi"
+    },
+    {
+        "Value": "yo",
+        "alibaba": "yo",
+        "bing": "yo",
+        "google": "yo",
+        "iciba": "yo",
+        "itranslate": "yo",
+        "modernMt": "yo",
+        "qqTranSmart": "yo",
+        "youdao": "yo"
+    },
+    {
+        "Value": "中文(香港)",
+        "itranslate": "zh-HK",
+        "lara": "zh-HK"
+    },
+    {
+        "Value": "中文(台湾)",
+        "alibaba": "zh-tw",
+        "argos": "zh-Hant",
+        "bing": "zh-Hant",
+        "caiyun": "zh-Hant",
+        "cloudTranslation": "zh-tw",
+        "google": "zh-TW",
+        "itranslate": "zh-TW",
+        "lara": "zh-TW",
+        "modernMt": "zh-TW",
+        "translateCom": "zh-TW"
+    },
+    {
+        "Value": "zu",
+        "alibaba": "zu",
+        "bing": "zu",
+        "google": "zu",
+        "iciba": "zu",
+        "itranslate": "zu",
+        "modernMt": "zu",
+        "youdao": "zu"
+    },
+    {
+        "Value": "ab",
+        "alibaba": "ab",
+        "google": "ab"
+    },
+    {
+        "Value": "ace",
+        "alibaba": "ace",
+        "bing": "ace",
+        "google": "ace",
+        "iciba": "ace",
+        "modernMt": "ace"
     },
     {
         "Value": "ak",
@@ -2134,8 +1695,13 @@
         "qqTranSmart": "ak"
     },
     {
-        "Value": "als",
-        "modernMt": "als"
+        "Value": "an",
+        "alibaba": "an",
+        "qqTranSmart": "an"
+    },
+    {
+        "Value": "ang",
+        "alibaba": "ang"
     },
     {
         "Value": "as",
@@ -2152,27 +1718,36 @@
         "qqTranSmart": "ast"
     },
     {
-        "Value": "awa",
-        "google": "awa",
-        "modernMt": "awa"
+        "Value": "ay",
+        "alibaba": "ay",
+        "google": "ay",
+        "qqTranSmart": "ay"
     },
     {
-        "Value": "ayr",
-        "modernMt": "ayr"
+        "Value": "ba",
+        "alibaba": "ba",
+        "bing": "ba",
+        "google": "ba",
+        "iciba": "ba",
+        "modernMt": "ba"
     },
     {
-        "Value": "azb",
-        "modernMt": "azb"
+        "Value": "bal",
+        "alibaba": "bal",
+        "google": "bal"
     },
     {
-        "Value": "azj",
-        "modernMt": "azj"
+        "Value": "bem",
+        "alibaba": "bem",
+        "google": "bem",
+        "iciba": "bem",
+        "modernMt": "bem"
     },
     {
-        "Value": "ban",
-        "bing": "ban",
-        "google": "ban",
-        "modernMt": "ban"
+        "Value": "ber",
+        "alibaba": "ber",
+        "google": "ber",
+        "iciba": "ber"
     },
     {
         "Value": "bho",
@@ -2182,8 +1757,9 @@
         "modernMt": "bho"
     },
     {
-        "Value": "bjn",
-        "modernMt": "bjn"
+        "Value": "bi",
+        "alibaba": "bi",
+        "iciba": "bi"
     },
     {
         "Value": "bm",
@@ -2200,958 +1776,11 @@
         "qqTranSmart": "bo"
     },
     {
-        "Value": "bug",
-        "modernMt": "bug"
-    },
-    {
-        "Value": "cjk",
-        "modernMt": "cjk"
-    },
-    {
-        "Value": "ckb",
-        "google": "ckb",
-        "modernMt": "ckb"
-    },
-    {
-        "Value": "diq",
-        "modernMt": "diq"
-    },
-    {
-        "Value": "dyu",
-        "google": "dyu",
-        "modernMt": "dyu"
-    },
-    {
-        "Value": "es-419",
-        "lara": "es-419",
-        "modernMt": "es-419"
-    },
-    {
-        "Value": "es-ES",
-        "itranslate": "es-ES",
-        "lara": "es-ES",
-        "modernMt": "es-ES"
-    },
-    {
-        "Value": "fon",
-        "google": "fon",
-        "modernMt": "fon"
-    },
-    {
-        "Value": "fur",
-        "alibaba": "fur",
-        "bing": "fur",
-        "google": "fur",
-        "modernMt": "fur",
-        "qqTranSmart": "fur"
-    },
-    {
-        "Value": "fuv",
-        "modernMt": "fuv"
-    },
-    {
-        "Value": "gaz",
-        "modernMt": "gaz"
-    },
-    {
-        "Value": "gn",
-        "alibaba": "gn",
-        "google": "gn",
-        "modernMt": "gn"
-    },
-    {
-        "Value": "hne",
-        "bing": "hne",
-        "modernMt": "hne"
-    },
-    {
-        "Value": "ilo",
-        "alibaba": "ilo",
-        "bing": "ilo",
-        "google": "ilo",
-        "modernMt": "ilo"
-    },
-    {
-        "Value": "kac",
-        "google": "kac",
-        "modernMt": "kac"
-    },
-    {
-        "Value": "kam",
-        "modernMt": "kam"
-    },
-    {
-        "Value": "kas",
-        "modernMt": "kas"
-    },
-    {
-        "Value": "kbp",
-        "modernMt": "kbp"
-    },
-    {
-        "Value": "kea",
-        "bing": "kea",
-        "modernMt": "kea"
-    },
-    {
-        "Value": "khk",
-        "modernMt": "khk"
-    },
-    {
-        "Value": "ki",
-        "modernMt": "ki"
-    },
-    {
-        "Value": "kmb",
-        "modernMt": "kmb"
-    },
-    {
-        "Value": "kmr",
-        "bing": "kmr",
-        "modernMt": "kmr"
-    },
-    {
-        "Value": "knc",
-        "modernMt": "knc"
-    },
-    {
-        "Value": "ks",
-        "alibaba": "ks",
-        "bing": "ks",
-        "modernMt": "ks"
-    },
-    {
-        "Value": "li",
-        "alibaba": "li",
-        "google": "li",
-        "modernMt": "li"
-    },
-    {
-        "Value": "lij",
-        "bing": "lij",
-        "google": "lij",
-        "modernMt": "lij"
-    },
-    {
-        "Value": "lmo",
-        "bing": "lmo",
-        "google": "lmo",
-        "modernMt": "lmo"
-    },
-    {
-        "Value": "ltg",
-        "alibaba": "ltg",
-        "google": "ltg",
-        "modernMt": "ltg"
-    },
-    {
-        "Value": "lua",
-        "google": "lua",
-        "modernMt": "lua"
-    },
-    {
-        "Value": "luo",
-        "google": "luo",
-        "modernMt": "luo"
-    },
-    {
-        "Value": "lus",
-        "google": "lus",
-        "modernMt": "lus"
-    },
-    {
-        "Value": "lvs",
-        "modernMt": "lvs"
-    },
-    {
-        "Value": "mag",
-        "modernMt": "mag"
-    },
-    {
-        "Value": "mai",
-        "alibaba": "mai",
-        "bing": "mai",
-        "google": "mai",
-        "modernMt": "mai",
-        "qqTranSmart": "mai"
-    },
-    {
-        "Value": "min",
-        "bing": "min",
-        "google": "min",
-        "modernMt": "min"
-    },
-    {
-        "Value": "mni",
-        "modernMt": "mni"
-    },
-    {
-        "Value": "mos",
-        "modernMt": "mos"
-    },
-    {
-        "Value": "nb",
-        "bing": "nb",
-        "languageWire": "nb",
-        "lara": "nb",
-        "modernMt": "nb",
-        "qqTranSmart": "nb"
-    },
-    {
-        "Value": "nso",
-        "bing": "nso",
-        "google": "nso",
-        "modernMt": "nso",
-        "qqTranSmart": "nso"
-    },
-    {
-        "Value": "nus",
-        "google": "nus",
-        "modernMt": "nus"
-    },
-    {
-        "Value": "oc",
-        "alibaba": "oc",
-        "bing": "oc",
-        "google": "oc",
-        "modernMt": "oc",
-        "qqTranSmart": "oc"
-    },
-    {
-        "Value": "pag",
-        "alibaba": "pag",
-        "google": "pag",
-        "modernMt": "pag"
-    },
-    {
-        "Value": "pbt",
-        "modernMt": "pbt"
-    },
-    {
-        "Value": "pes",
-        "modernMt": "pes"
-    },
-    {
-        "Value": "plt",
-        "modernMt": "plt"
-    },
-    {
-        "Value": "prs",
-        "bing": "prs",
-        "modernMt": "prs"
-    },
-    {
-        "Value": "pt-BR",
-        "itranslate": "pt-BR",
-        "lara": "pt-BR",
-        "modernMt": "pt-BR",
-        "qqTranSmart": "pt-BR"
-    },
-    {
-        "Value": "pt-PT",
-        "bing": "pt-PT",
-        "google": "pt-PT",
-        "itranslate": "pt-PT",
-        "lara": "pt-PT",
-        "modernMt": "pt-PT",
-        "qqTranSmart": "pt-PT"
-    },
-    {
-        "Value": "quy",
-        "modernMt": "quy"
-    },
-    {
-        "Value": "sa",
-        "alibaba": "sa",
-        "bing": "sa",
-        "google": "sa",
-        "modernMt": "sa"
-    },
-    {
-        "Value": "sat",
-        "google": "sat",
-        "modernMt": "sat"
-    },
-    {
-        "Value": "sc",
-        "modernMt": "sc"
-    },
-    {
-        "Value": "scn",
-        "bing": "scn",
-        "google": "scn",
-        "modernMt": "scn"
-    },
-    {
-        "Value": "shn",
-        "alibaba": "shn",
-        "google": "shn",
-        "modernMt": "shn"
-    },
-    {
-        "Value": "ss",
-        "google": "ss",
-        "modernMt": "ss"
-    },
-    {
-        "Value": "taq",
-        "modernMt": "taq"
-    },
-    {
-        "Value": "tum",
-        "google": "tum",
-        "modernMt": "tum"
-    },
-    {
-        "Value": "tzm",
-        "modernMt": "tzm"
-    },
-    {
-        "Value": "ug",
-        "alibaba": "ug",
-        "bing": "ug",
-        "google": "ug",
-        "modernMt": "ug",
-        "qqTranSmart": "ug"
-    },
-    {
-        "Value": "umb",
-        "alibaba": "umb",
-        "modernMt": "umb"
-    },
-    {
-        "Value": "uzn",
-        "modernMt": "uzn"
-    },
-    {
-        "Value": "vec",
-        "bing": "vec",
-        "google": "vec",
-        "modernMt": "vec"
-    },
-    {
-        "Value": "wo",
-        "alibaba": "wo",
-        "google": "wo",
-        "modernMt": "wo",
-        "qqTranSmart": "wo"
-    },
-    {
-        "Value": "ydd",
-        "bing": "ydd",
-        "modernMt": "ydd"
-    },
-    {
-        "Value": "zsm",
-        "modernMt": "zsm"
-    },
-    {
-        "Value": "af_ZA",
-        "lingvanex": "af_ZA"
-    },
-    {
-        "Value": "am_ET",
-        "lingvanex": "am_ET"
-    },
-    {
-        "Value": "ar_EG",
-        "lingvanex": "ar_EG"
-    },
-    {
-        "Value": "as_IN",
-        "lingvanex": "as_IN"
-    },
-    {
-        "Value": "az_AZ",
-        "lingvanex": "az_AZ"
-    },
-    {
-        "Value": "be_BY",
-        "lingvanex": "be_BY"
-    },
-    {
-        "Value": "bg_BG",
-        "lingvanex": "bg_BG"
-    },
-    {
-        "Value": "bn_BD",
-        "lingvanex": "bn_BD"
-    },
-    {
-        "Value": "bs_BA",
-        "lingvanex": "bs_BA"
-    },
-    {
-        "Value": "ca_ES",
-        "lingvanex": "ca_ES"
-    },
-    {
-        "Value": "ceb_PH",
-        "lingvanex": "ceb_PH"
-    },
-    {
-        "Value": "co_FR",
-        "lingvanex": "co_FR"
-    },
-    {
-        "Value": "cs_CZ",
-        "lingvanex": "cs_CZ"
-    },
-    {
-        "Value": "cy_GB",
-        "lingvanex": "cy_GB"
-    },
-    {
-        "Value": "da_DK",
-        "lingvanex": "da_DK"
-    },
-    {
-        "Value": "de_DE",
-        "lingvanex": "de_DE"
-    },
-    {
-        "Value": "el_GR",
-        "lingvanex": "el_GR"
-    },
-    {
-        "Value": "en_AU",
-        "lingvanex": "en_AU"
-    },
-    {
-        "Value": "en_GB",
-        "lingvanex": "en_GB"
-    },
-    {
-        "Value": "en_US",
-        "lingvanex": "en_US"
-    },
-    {
-        "Value": "eo_WORLD",
-        "lingvanex": "eo_WORLD"
-    },
-    {
-        "Value": "es_ES",
-        "lingvanex": "es_ES"
-    },
-    {
-        "Value": "es_MX",
-        "lingvanex": "es_MX"
-    },
-    {
-        "Value": "es_US",
-        "lingvanex": "es_US"
-    },
-    {
-        "Value": "et_EE",
-        "lingvanex": "et_EE"
-    },
-    {
-        "Value": "eu_ES",
-        "lingvanex": "eu_ES"
-    },
-    {
-        "Value": "fa_IR",
-        "lingvanex": "fa_IR"
-    },
-    {
-        "Value": "fi_FI",
-        "lingvanex": "fi_FI"
-    },
-    {
-        "Value": "fr_CA",
-        "lingvanex": "fr_CA"
-    },
-    {
-        "Value": "fr_FR",
-        "lingvanex": "fr_FR"
-    },
-    {
-        "Value": "fy_NL",
-        "lingvanex": "fy_NL"
-    },
-    {
-        "Value": "ga_IE",
-        "lingvanex": "ga_IE"
-    },
-    {
-        "Value": "gd_GB",
-        "lingvanex": "gd_GB"
-    },
-    {
-        "Value": "gl_ES",
-        "lingvanex": "gl_ES"
-    },
-    {
-        "Value": "gu_IN",
-        "lingvanex": "gu_IN"
-    },
-    {
-        "Value": "ha_NE",
-        "lingvanex": "ha_NE"
-    },
-    {
-        "Value": "haw_US",
-        "lingvanex": "haw_US"
-    },
-    {
-        "Value": "he_IL",
-        "lingvanex": "he_IL"
-    },
-    {
-        "Value": "hi_IN",
-        "lingvanex": "hi_IN"
-    },
-    {
-        "Value": "hmn_CN",
-        "lingvanex": "hmn_CN"
-    },
-    {
-        "Value": "hr_HR",
-        "lingvanex": "hr_HR"
-    },
-    {
-        "Value": "ht_HT",
-        "lingvanex": "ht_HT"
-    },
-    {
-        "Value": "hu_HU",
-        "lingvanex": "hu_HU"
-    },
-    {
-        "Value": "hy_AM",
-        "lingvanex": "hy_AM"
-    },
-    {
-        "Value": "id_ID",
-        "lingvanex": "id_ID"
-    },
-    {
-        "Value": "ig_NG",
-        "lingvanex": "ig_NG"
-    },
-    {
-        "Value": "is_IS",
-        "lingvanex": "is_IS"
-    },
-    {
-        "Value": "it_IT",
-        "lingvanex": "it_IT"
-    },
-    {
-        "Value": "ja_JP",
-        "lingvanex": "ja_JP"
-    },
-    {
-        "Value": "jv_ID",
-        "lingvanex": "jv_ID"
-    },
-    {
-        "Value": "ka_GE",
-        "lingvanex": "ka_GE"
-    },
-    {
-        "Value": "kk_KZ",
-        "lingvanex": "kk_KZ"
-    },
-    {
-        "Value": "km_KH",
-        "lingvanex": "km_KH"
-    },
-    {
-        "Value": "kn_IN",
-        "lingvanex": "kn_IN"
-    },
-    {
-        "Value": "ko_KR",
-        "lingvanex": "ko_KR"
-    },
-    {
-        "Value": "ku_IR",
-        "lingvanex": "ku_IR"
-    },
-    {
-        "Value": "ky_KG",
-        "lingvanex": "ky_KG"
-    },
-    {
-        "Value": "la_VAT",
-        "lingvanex": "la_VAT"
-    },
-    {
-        "Value": "lb_LU",
-        "lingvanex": "lb_LU"
-    },
-    {
-        "Value": "lo_LA",
-        "lingvanex": "lo_LA"
-    },
-    {
-        "Value": "lt_LT",
-        "lingvanex": "lt_LT"
-    },
-    {
-        "Value": "lv_LV",
-        "lingvanex": "lv_LV"
-    },
-    {
-        "Value": "mg_MG",
-        "lingvanex": "mg_MG"
-    },
-    {
-        "Value": "mi_NZ",
-        "lingvanex": "mi_NZ"
-    },
-    {
-        "Value": "mk_MK",
-        "lingvanex": "mk_MK"
-    },
-    {
-        "Value": "ml_IN",
-        "lingvanex": "ml_IN"
-    },
-    {
-        "Value": "mn_MN",
-        "lingvanex": "mn_MN"
-    },
-    {
-        "Value": "mr_IN",
-        "lingvanex": "mr_IN"
-    },
-    {
-        "Value": "ms_MY",
-        "lingvanex": "ms_MY"
-    },
-    {
-        "Value": "mt_MT",
-        "lingvanex": "mt_MT"
-    },
-    {
-        "Value": "my_MM",
-        "lingvanex": "my_MM"
-    },
-    {
-        "Value": "ne_NP",
-        "lingvanex": "ne_NP"
-    },
-    {
-        "Value": "nl_NL",
-        "lingvanex": "nl_NL"
-    },
-    {
-        "Value": "no_NO",
-        "lingvanex": "no_NO"
-    },
-    {
-        "Value": "ny_MW",
-        "lingvanex": "ny_MW"
-    },
-    {
-        "Value": "or_OR",
-        "lingvanex": "or_OR"
-    },
-    {
-        "Value": "pa_PK",
-        "lingvanex": "pa_PK"
-    },
-    {
-        "Value": "pl_PL",
-        "lingvanex": "pl_PL"
-    },
-    {
-        "Value": "ps_AF",
-        "lingvanex": "ps_AF"
-    },
-    {
-        "Value": "pt_BR",
-        "lingvanex": "pt_BR"
-    },
-    {
-        "Value": "pt_PT",
-        "lingvanex": "pt_PT"
-    },
-    {
-        "Value": "ro_RO",
-        "lingvanex": "ro_RO"
-    },
-    {
-        "Value": "ru_RU",
-        "lingvanex": "ru_RU"
-    },
-    {
-        "Value": "rw_RW",
-        "lingvanex": "rw_RW"
-    },
-    {
-        "Value": "sd_PK",
-        "lingvanex": "sd_PK"
-    },
-    {
-        "Value": "si_LK",
-        "lingvanex": "si_LK"
-    },
-    {
-        "Value": "sk_SK",
-        "lingvanex": "sk_SK"
-    },
-    {
-        "Value": "sl_SI",
-        "lingvanex": "sl_SI"
-    },
-    {
-        "Value": "sm_WS",
-        "lingvanex": "sm_WS"
-    },
-    {
-        "Value": "sn_ZW",
-        "lingvanex": "sn_ZW"
-    },
-    {
-        "Value": "so_SO",
-        "lingvanex": "so_SO"
-    },
-    {
-        "Value": "sq_AL",
-        "lingvanex": "sq_AL"
-    },
-    {
-        "Value": "sr-Cyrl_RS",
-        "lingvanex": "sr-Cyrl_RS"
-    },
-    {
-        "Value": "st_LS",
-        "lingvanex": "st_LS"
-    },
-    {
-        "Value": "su_ID",
-        "lingvanex": "su_ID"
-    },
-    {
-        "Value": "sv_SE",
-        "lingvanex": "sv_SE"
-    },
-    {
-        "Value": "sw_TZ",
-        "lingvanex": "sw_TZ"
-    },
-    {
-        "Value": "ta_IN",
-        "lingvanex": "ta_IN"
-    },
-    {
-        "Value": "te_IN",
-        "lingvanex": "te_IN"
-    },
-    {
-        "Value": "tg_TJ",
-        "lingvanex": "tg_TJ"
-    },
-    {
-        "Value": "th_TH",
-        "lingvanex": "th_TH"
-    },
-    {
-        "Value": "tk_TM",
-        "lingvanex": "tk_TM"
-    },
-    {
-        "Value": "tl_PH",
-        "lingvanex": "tl_PH"
-    },
-    {
-        "Value": "tr_TR",
-        "lingvanex": "tr_TR"
-    },
-    {
-        "Value": "tt_TT",
-        "lingvanex": "tt_TT"
-    },
-    {
-        "Value": "ug_CN",
-        "lingvanex": "ug_CN"
-    },
-    {
-        "Value": "uk_UA",
-        "lingvanex": "uk_UA"
-    },
-    {
-        "Value": "ur_PK",
-        "lingvanex": "ur_PK"
-    },
-    {
-        "Value": "uz_UZ",
-        "lingvanex": "uz_UZ"
-    },
-    {
-        "Value": "vi_VN",
-        "lingvanex": "vi_VN"
-    },
-    {
-        "Value": "xh_ZA",
-        "lingvanex": "xh_ZA"
-    },
-    {
-        "Value": "yi_IL",
-        "lingvanex": "yi_IL"
-    },
-    {
-        "Value": "yo_NG",
-        "lingvanex": "yo_NG"
-    },
-    {
-        "Value": "zh-Hans_CN",
-        "lingvanex": "zh-Hans_CN"
-    },
-    {
-        "Value": "zh-Hant_TW",
-        "lingvanex": "zh-Hant_TW"
-    },
-    {
-        "Value": "zu_ZA",
-        "lingvanex": "zu_ZA"
-    },
-    {
-        "Value": "mon",
-        "mglip": "mon"
-    },
-    {
-        "Value": "xle",
-        "mglip": "xle"
-    },
-    {
-        "Value": "ach",
-        "google": "ach",
-        "qqTranSmart": "ach"
-    },
-    {
-        "Value": "an",
-        "alibaba": "an",
-        "qqTranSmart": "an"
-    },
-    {
-        "Value": "arn",
-        "qqTranSmart": "arn"
-    },
-    {
-        "Value": "ay",
-        "alibaba": "ay",
-        "google": "ay",
-        "qqTranSmart": "ay"
-    },
-    {
-        "Value": "cgg",
-        "google": "cgg",
-        "qqTranSmart": "cgg"
-    },
-    {
-        "Value": "cnr",
-        "alibaba": "cnr",
-        "qqTranSmart": "cnr"
-    },
-    {
-        "Value": "csb",
-        "alibaba": "csb",
-        "qqTranSmart": "csb"
-    },
-    {
-        "Value": "dev",
-        "qqTranSmart": "dev"
-    },
-    {
-        "Value": "gun",
-        "qqTranSmart": "gun"
-    },
-    {
-        "Value": "ia",
-        "alibaba": "ia",
-        "qqTranSmart": "ia"
-    },
-    {
-        "Value": "iw",
-        "google": "iw",
-        "qqTranSmart": "iw",
-        "translateCom": "iw"
-    },
-    {
-        "Value": "jbo",
-        "alibaba": "jbo",
-        "qqTranSmart": "jbo"
-    },
-    {
-        "Value": "kw",
-        "alibaba": "kw",
-        "qqTranSmart": "kw"
-    },
-    {
-        "Value": "mfe",
-        "alibaba": "mfe",
-        "bing": "mfe",
-        "google": "mfe",
-        "qqTranSmart": "mfe"
-    },
-    {
-        "Value": "mnk",
-        "qqTranSmart": "mnk"
-    },
-    {
-        "Value": "nah",
-        "qqTranSmart": "nah"
-    },
-    {
-        "Value": "nap",
-        "qqTranSmart": "nap"
-    },
-    {
-        "Value": "pms",
-        "qqTranSmart": "pms"
-    },
-    {
-        "Value": "rm",
-        "alibaba": "rm",
-        "qqTranSmart": "rm"
-    },
-    {
-        "Value": "sah",
-        "google": "sah",
-        "qqTranSmart": "sah"
-    },
-    {
-        "Value": "sco",
-        "alibaba": "sco",
-        "qqTranSmart": "sco"
-    },
-    {
-        "Value": "se",
-        "alibaba": "se",
-        "google": "se",
-        "qqTranSmart": "se"
-    },
-    {
-        "Value": "son",
-        "qqTranSmart": "son"
-    },
-    {
-        "Value": "wa",
-        "alibaba": "wa",
-        "qqTranSmart": "wa"
-    },
-    {
-        "Value": "中文(文言文)",
-        "bing": "lzh",
-        "xunjie": "wyw"
-    },
-    {
-        "Value": "ab",
-        "alibaba": "ab",
-        "google": "ab"
-    },
-    {
-        "Value": "ang",
-        "alibaba": "ang"
-    },
-    {
-        "Value": "bal",
-        "alibaba": "bal",
-        "google": "bal"
+        "Value": "br",
+        "alibaba": "br",
+        "google": "br",
+        "iciba": "br",
+        "qqTranSmart": "br"
     },
     {
         "Value": "byn",
@@ -3172,20 +1801,118 @@
         "google": "chm"
     },
     {
+        "Value": "chr",
+        "alibaba": "chr",
+        "iciba": "chr"
+    },
+    {
+        "Value": "cnr",
+        "alibaba": "cnr",
+        "qqTranSmart": "cnr"
+    },
+    {
+        "Value": "co",
+        "alibaba": "co",
+        "bing": "co",
+        "google": "co",
+        "iciba": "co",
+        "youdao": "co"
+    },
+    {
+        "Value": "csb",
+        "alibaba": "csb",
+        "qqTranSmart": "csb"
+    },
+    {
+        "Value": "cv",
+        "alibaba": "cv",
+        "google": "cv",
+        "iciba": "cv"
+    },
+    {
         "Value": "dtp",
         "alibaba": "dtp"
+    },
+    {
+        "Value": "dv",
+        "alibaba": "dv",
+        "bing": "dv",
+        "google": "dv",
+        "iciba": "dv"
+    },
+    {
+        "Value": "ee",
+        "alibaba": "ee",
+        "google": "ee",
+        "iciba": "ee",
+        "modernMt": "ee"
+    },
+    {
+        "Value": "fj",
+        "alibaba": "fj",
+        "bing": "fj",
+        "google": "fj",
+        "iciba": "fj",
+        "modernMt": "fj"
+    },
+    {
+        "Value": "fo",
+        "alibaba": "fo",
+        "bing": "fo",
+        "google": "fo",
+        "iciba": "fo",
+        "modernMt": "fo",
+        "qqTranSmart": "fo"
+    },
+    {
+        "Value": "fur",
+        "alibaba": "fur",
+        "bing": "fur",
+        "google": "fur",
+        "modernMt": "fur",
+        "qqTranSmart": "fur"
     },
     {
         "Value": "fvr",
         "alibaba": "fvr"
     },
     {
+        "Value": "fy",
+        "alibaba": "fy",
+        "bing": "fy",
+        "google": "fy",
+        "iciba": "fy",
+        "qqTranSmart": "fy",
+        "youdao": "fy"
+    },
+    {
+        "Value": "gd",
+        "alibaba": "gd",
+        "google": "gd",
+        "iciba": "gd",
+        "modernMt": "gd",
+        "qqTranSmart": "gd",
+        "youdao": "gd"
+    },
+    {
         "Value": "gil",
         "alibaba": "gil"
     },
     {
+        "Value": "gn",
+        "alibaba": "gn",
+        "google": "gn",
+        "modernMt": "gn"
+    },
+    {
         "Value": "gos",
         "alibaba": "gos"
+    },
+    {
+        "Value": "gv",
+        "alibaba": "gv",
+        "google": "gv",
+        "iciba": "gv"
     },
     {
         "Value": "hil",
@@ -3203,6 +1930,11 @@
         "alibaba": "hup"
     },
     {
+        "Value": "ia",
+        "alibaba": "ia",
+        "qqTranSmart": "ia"
+    },
+    {
         "Value": "iba",
         "alibaba": "iba",
         "bing": "iba",
@@ -3215,6 +1947,13 @@
     {
         "Value": "ii",
         "alibaba": "ii"
+    },
+    {
+        "Value": "ilo",
+        "alibaba": "ilo",
+        "bing": "ilo",
+        "google": "ilo",
+        "modernMt": "ilo"
     },
     {
         "Value": "inh",
@@ -3231,8 +1970,39 @@
         "google": "iu"
     },
     {
+        "Value": "jbo",
+        "alibaba": "jbo",
+        "qqTranSmart": "jbo"
+    },
+    {
+        "Value": "jv",
+        "alibaba": "jv",
+        "iciba": "jv",
+        "modernMt": "jv",
+        "qqTranSmart": "jv"
+    },
+    {
+        "Value": "kab",
+        "alibaba": "kab",
+        "iciba": "kab",
+        "modernMt": "kab"
+    },
+    {
         "Value": "kdx",
         "alibaba": "kdx"
+    },
+    {
+        "Value": "kek",
+        "alibaba": "kek",
+        "google": "kek",
+        "iciba": "kek"
+    },
+    {
+        "Value": "kg",
+        "alibaba": "kg",
+        "google": "kg",
+        "iciba": "kg",
+        "modernMt": "kg"
     },
     {
         "Value": "kha",
@@ -3248,6 +2018,80 @@
         "Value": "kr",
         "alibaba": "kr",
         "google": "kr"
+    },
+    {
+        "Value": "ks",
+        "alibaba": "ks",
+        "bing": "ks",
+        "modernMt": "ks"
+    },
+    {
+        "Value": "ku",
+        "alibaba": "ku",
+        "bing": "ku",
+        "google": "ku",
+        "iciba": "ku",
+        "qqTranSmart": "ku",
+        "sysTran": "ku",
+        "youdao": "ku"
+    },
+    {
+        "Value": "kw",
+        "alibaba": "kw",
+        "qqTranSmart": "kw"
+    },
+    {
+        "Value": "lb",
+        "alibaba": "lb",
+        "bing": "lb",
+        "google": "lb",
+        "iciba": "lb",
+        "modernMt": "lb",
+        "qqTranSmart": "lb",
+        "youdao": "lb"
+    },
+    {
+        "Value": "lg",
+        "alibaba": "lg",
+        "google": "lg",
+        "iciba": "lg",
+        "modernMt": "lg"
+    },
+    {
+        "Value": "li",
+        "alibaba": "li",
+        "google": "li",
+        "modernMt": "li"
+    },
+    {
+        "Value": "ln",
+        "alibaba": "ln",
+        "bing": "ln",
+        "google": "ln",
+        "iciba": "ln",
+        "modernMt": "ln",
+        "qqTranSmart": "ln"
+    },
+    {
+        "Value": "ltg",
+        "alibaba": "ltg",
+        "google": "ltg",
+        "modernMt": "ltg"
+    },
+    {
+        "Value": "mai",
+        "alibaba": "mai",
+        "bing": "mai",
+        "google": "mai",
+        "modernMt": "mai",
+        "qqTranSmart": "mai"
+    },
+    {
+        "Value": "mfe",
+        "alibaba": "mfe",
+        "bing": "mfe",
+        "google": "mfe",
+        "qqTranSmart": "mfe"
     },
     {
         "Value": "mh",
@@ -3279,17 +2123,92 @@
         "alibaba": "nv"
     },
     {
+        "Value": "oc",
+        "alibaba": "oc",
+        "bing": "oc",
+        "google": "oc",
+        "modernMt": "oc",
+        "qqTranSmart": "oc"
+    },
+    {
         "Value": "oj",
         "alibaba": "oj"
+    },
+    {
+        "Value": "om",
+        "alibaba": "om",
+        "google": "om",
+        "iciba": "om",
+        "sysTran": "om"
+    },
+    {
+        "Value": "or",
+        "alibaba": "or",
+        "bing": "or",
+        "google": "or",
+        "iciba": "or",
+        "modernMt": "or",
+        "qqTranSmart": "or"
+    },
+    {
+        "Value": "os",
+        "alibaba": "os",
+        "google": "os",
+        "iciba": "os"
+    },
+    {
+        "Value": "pag",
+        "alibaba": "pag",
+        "google": "pag",
+        "modernMt": "pag"
+    },
+    {
+        "Value": "pap",
+        "alibaba": "pap",
+        "bing": "pap",
+        "google": "pap",
+        "iciba": "pap",
+        "modernMt": "pap",
+        "qqTranSmart": "pap"
     },
     {
         "Value": "pmn",
         "alibaba": "pmn"
     },
     {
+        "Value": "ps",
+        "alibaba": "ps",
+        "bing": "ps",
+        "cloudTranslation": "ps",
+        "google": "ps",
+        "iciba": "ps",
+        "modernMt": "ps",
+        "qqTranSmart": "ps",
+        "reverso": "ps",
+        "sysTran": "ps",
+        "youdao": "ps"
+    },
+    {
         "Value": "qu",
         "alibaba": "qu",
         "google": "qu"
+    },
+    {
+        "Value": "quc",
+        "alibaba": "quc",
+        "iciba": "quc"
+    },
+    {
+        "Value": "rm",
+        "alibaba": "rm",
+        "qqTranSmart": "rm"
+    },
+    {
+        "Value": "rn",
+        "alibaba": "rn",
+        "google": "rn",
+        "iciba": "rn",
+        "modernMt": "rn"
     },
     {
         "Value": "rom",
@@ -3301,16 +2220,140 @@
         "alibaba": "rue"
     },
     {
+        "Value": "rw",
+        "alibaba": "rw",
+        "bing": "rw",
+        "google": "rw",
+        "iciba": "rw",
+        "modernMt": "rw"
+    },
+    {
+        "Value": "sa",
+        "alibaba": "sa",
+        "bing": "sa",
+        "google": "sa",
+        "modernMt": "sa"
+    },
+    {
+        "Value": "sco",
+        "alibaba": "sco",
+        "qqTranSmart": "sco"
+    },
+    {
+        "Value": "sd",
+        "alibaba": "sd",
+        "bing": "sd",
+        "google": "sd",
+        "iciba": "sd",
+        "modernMt": "sd",
+        "youdao": "sd"
+    },
+    {
+        "Value": "se",
+        "alibaba": "se",
+        "google": "se",
+        "qqTranSmart": "se"
+    },
+    {
+        "Value": "sg",
+        "alibaba": "sg",
+        "google": "sg",
+        "iciba": "sg",
+        "modernMt": "sg"
+    },
+    {
+        "Value": "shn",
+        "alibaba": "shn",
+        "google": "shn",
+        "modernMt": "shn"
+    },
+    {
+        "Value": "sm",
+        "alibaba": "sm",
+        "bing": "sm",
+        "google": "sm",
+        "iciba": "sm",
+        "modernMt": "sm",
+        "youdao": "sm"
+    },
+    {
+        "Value": "sn",
+        "alibaba": "sn",
+        "bing": "sn",
+        "google": "sn",
+        "iciba": "sn",
+        "modernMt": "sn",
+        "youdao": "sn"
+    },
+    {
         "Value": "syr",
         "alibaba": "syr"
+    },
+    {
+        "Value": "tet",
+        "alibaba": "tet",
+        "bing": "tet",
+        "google": "tet",
+        "iciba": "tet"
+    },
+    {
+        "Value": "tk",
+        "alibaba": "tk",
+        "bing": "tk",
+        "google": "tk",
+        "iciba": "tk",
+        "modernMt": "tk",
+        "qqTranSmart": "tk"
+    },
+    {
+        "Value": "tlh",
+        "alibaba": "tlh",
+        "youdao": "tlh"
     },
     {
         "Value": "toi",
         "alibaba": "toi"
     },
     {
+        "Value": "tpi",
+        "alibaba": "tpi",
+        "bing": "tpi",
+        "google": "tpi",
+        "iciba": "tpi",
+        "modernMt": "tpi"
+    },
+    {
+        "Value": "ts",
+        "alibaba": "ts",
+        "google": "ts",
+        "iciba": "ts",
+        "modernMt": "ts"
+    },
+    {
+        "Value": "tt",
+        "alibaba": "tt",
+        "bing": "tt",
+        "google": "tt",
+        "iciba": "tt",
+        "modernMt": "tt",
+        "qqTranSmart": "tt"
+    },
+    {
         "Value": "tvl",
         "alibaba": "tvl"
+    },
+    {
+        "Value": "tw",
+        "alibaba": "tw",
+        "iciba": "tw",
+        "modernMt": "tw"
+    },
+    {
+        "Value": "ty",
+        "alibaba": "ty",
+        "bing": "ty",
+        "google": "ty",
+        "iciba": "ty"
     },
     {
         "Value": "tyv",
@@ -3318,8 +2361,62 @@
         "google": "tyv"
     },
     {
+        "Value": "udm",
+        "alibaba": "udm",
+        "google": "udm",
+        "iciba": "udm"
+    },
+    {
+        "Value": "ug",
+        "alibaba": "ug",
+        "bing": "ug",
+        "google": "ug",
+        "modernMt": "ug",
+        "qqTranSmart": "ug"
+    },
+    {
+        "Value": "umb",
+        "alibaba": "umb",
+        "modernMt": "umb"
+    },
+    {
+        "Value": "ve",
+        "alibaba": "ve",
+        "google": "ve",
+        "iciba": "ve"
+    },
+    {
         "Value": "vo",
         "alibaba": "vo"
+    },
+    {
+        "Value": "wa",
+        "alibaba": "wa",
+        "qqTranSmart": "wa"
+    },
+    {
+        "Value": "war",
+        "alibaba": "war",
+        "bing": "war",
+        "google": "war",
+        "iciba": "war",
+        "modernMt": "war"
+    },
+    {
+        "Value": "wo",
+        "alibaba": "wo",
+        "google": "wo",
+        "modernMt": "wo",
+        "qqTranSmart": "wo"
+    },
+    {
+        "Value": "xh",
+        "alibaba": "xh",
+        "bing": "xh",
+        "google": "xh",
+        "iciba": "xh",
+        "modernMt": "xh",
+        "youdao": "xh"
     },
     {
         "Value": "za",
@@ -3330,295 +2427,17 @@
         "alibaba": "zza"
     },
     {
-        "Value": "pe",
-        "reverso": "pe"
-    },
-    {
-        "Value": "ptb",
-        "reverso": "ptb"
-    },
-    {
-        "Value": "自动",
-        "cloudTranslation": "all",
-        "google": "auto",
-        "itranslate": "auto"
+        "Value": "nb",
+        "argos": "nb",
+        "bing": "nb",
+        "languageWire": "nb",
+        "lara": "nb",
+        "modernMt": "nb",
+        "qqTranSmart": "nb"
     },
     {
         "Value": "en-us",
         "cloudTranslation": "en-us"
-    },
-    {
-        "Value": "aa",
-        "google": "aa"
-    },
-    {
-        "Value": "alz",
-        "google": "alz"
-    },
-    {
-        "Value": "av",
-        "google": "av"
-    },
-    {
-        "Value": "bbc",
-        "bing": "bbc",
-        "google": "bbc"
-    },
-    {
-        "Value": "bci",
-        "google": "bci"
-    },
-    {
-        "Value": "ber-Latn",
-        "google": "ber-Latn"
-    },
-    {
-        "Value": "bew",
-        "google": "bew"
-    },
-    {
-        "Value": "bik",
-        "bing": "bik",
-        "google": "bik"
-    },
-    {
-        "Value": "bm-Nkoo",
-        "google": "bm-Nkoo"
-    },
-    {
-        "Value": "bts",
-        "google": "bts"
-    },
-    {
-        "Value": "btx",
-        "google": "btx"
-    },
-    {
-        "Value": "bua",
-        "google": "bua"
-    },
-    {
-        "Value": "ce",
-        "google": "ce"
-    },
-    {
-        "Value": "chk",
-        "google": "chk"
-    },
-    {
-        "Value": "cnh",
-        "google": "cnh"
-    },
-    {
-        "Value": "crh-Latn",
-        "google": "crh-Latn"
-    },
-    {
-        "Value": "din",
-        "google": "din"
-    },
-    {
-        "Value": "doi",
-        "bing": "doi",
-        "google": "doi"
-    },
-    {
-        "Value": "dov",
-        "google": "dov"
-    },
-    {
-        "Value": "fa-AF",
-        "google": "fa-AF"
-    },
-    {
-        "Value": "ff",
-        "google": "ff"
-    },
-    {
-        "Value": "fr-CA",
-        "bing": "fr-CA",
-        "google": "fr-CA",
-        "itranslate": "fr-CA",
-        "lara": "fr-CA"
-    },
-    {
-        "Value": "gaa",
-        "google": "gaa"
-    },
-    {
-        "Value": "gom",
-        "bing": "gom",
-        "google": "gom"
-    },
-    {
-        "Value": "hrx",
-        "google": "hrx"
-    },
-    {
-        "Value": "iu-Latn",
-        "bing": "iu-Latn",
-        "google": "iu-Latn"
-    },
-    {
-        "Value": "jam",
-        "bing": "jam",
-        "google": "jam"
-    },
-    {
-        "Value": "kri",
-        "bing": "kri",
-        "google": "kri"
-    },
-    {
-        "Value": "ktu",
-        "google": "ktu"
-    },
-    {
-        "Value": "kv",
-        "google": "kv"
-    },
-    {
-        "Value": "mad",
-        "google": "mad"
-    },
-    {
-        "Value": "mak",
-        "google": "mak"
-    },
-    {
-        "Value": "mni-Mtei",
-        "google": "mni-Mtei"
-    },
-    {
-        "Value": "ms-Arab",
-        "google": "ms-Arab"
-    },
-    {
-        "Value": "mwr",
-        "bing": "mwr",
-        "google": "mwr"
-    },
-    {
-        "Value": "ndc-ZW",
-        "google": "ndc-ZW"
-    },
-    {
-        "Value": "new",
-        "google": "new"
-    },
-    {
-        "Value": "nhe",
-        "google": "nhe"
-    },
-    {
-        "Value": "nr",
-        "google": "nr"
-    },
-    {
-        "Value": "pa-Arab",
-        "google": "pa-Arab"
-    },
-    {
-        "Value": "pam",
-        "bing": "pam",
-        "google": "pam"
-    },
-    {
-        "Value": "sat-Latn",
-        "google": "sat-Latn"
-    },
-    {
-        "Value": "sus",
-        "google": "sus"
-    },
-    {
-        "Value": "tcy",
-        "google": "tcy"
-    },
-    {
-        "Value": "tiv",
-        "google": "tiv"
-    },
-    {
-        "Value": "trp",
-        "google": "trp"
-    },
-    {
-        "Value": "zap",
-        "google": "zap"
-    },
-    {
-        "Value": "arb",
-        "bing": "arb"
-    },
-    {
-        "Value": "ary",
-        "bing": "ary"
-    },
-    {
-        "Value": "arz",
-        "bing": "arz"
-    },
-    {
-        "Value": "brx",
-        "bing": "brx"
-    },
-    {
-        "Value": "dsb",
-        "bing": "dsb"
-    },
-    {
-        "Value": "en-GB",
-        "bing": "en-GB",
-        "lara": "en-GB"
-    },
-    {
-        "Value": "ikt",
-        "bing": "ikt"
-    },
-    {
-        "Value": "jav",
-        "bing": "jav"
-    },
-    {
-        "Value": "lim",
-        "bing": "lim"
-    },
-    {
-        "Value": "lug",
-        "bing": "lug"
-    },
-    {
-        "Value": "mn-Cyrl",
-        "bing": "mn-Cyrl"
-    },
-    {
-        "Value": "mn-Mong",
-        "bing": "mn-Mong"
-    },
-    {
-        "Value": "nya",
-        "bing": "nya"
-    },
-    {
-        "Value": "pnb",
-        "bing": "pnb"
-    },
-    {
-        "Value": "run",
-        "bing": "run"
-    },
-    {
-        "Value": "tgk",
-        "bing": "tgk"
-    },
-    {
-        "Value": "tlh-Latn",
-        "bing": "tlh-Latn"
-    },
-    {
-        "Value": "zt",
-        "sysTran": "zt"
     },
     {
         "Value": "en-gb",
@@ -3633,8 +2452,22 @@
         "translateCom": "fr-ca"
     },
     {
+        "Value": "iw",
+        "google": "iw",
+        "qqTranSmart": "iw",
+        "translateCom": "iw"
+    },
+    {
         "Value": "pt-br",
         "translateCom": "pt-br"
+    },
+    {
+        "Value": "mon",
+        "mglip": "mon"
+    },
+    {
+        "Value": "xle",
+        "mglip": "xle"
     },
     {
         "Value": "ace-ID",
@@ -3655,11 +2488,6 @@
     {
         "Value": "am-ET",
         "lara": "am-ET"
-    },
-    {
-        "Value": "ar-SA",
-        "itranslate": "ar-SA",
-        "lara": "ar-SA"
     },
     {
         "Value": "as-IN",
@@ -3770,35 +2598,30 @@
         "lara": "ee-GH"
     },
     {
-        "Value": "en-AU",
-        "itranslate": "en-AU",
-        "lara": "en-AU"
-    },
-    {
         "Value": "en-CA",
         "lara": "en-CA"
+    },
+    {
+        "Value": "en-GB",
+        "bing": "en-GB",
+        "lara": "en-GB"
     },
     {
         "Value": "en-IE",
         "lara": "en-IE"
     },
     {
-        "Value": "en-US",
-        "itranslate": "en-US",
-        "lara": "en-US"
-    },
-    {
         "Value": "eo-EU",
         "lara": "eo-EU"
     },
     {
-        "Value": "es-AR",
-        "lara": "es-AR"
+        "Value": "es-419",
+        "lara": "es-419",
+        "modernMt": "es-419"
     },
     {
-        "Value": "es-MX",
-        "itranslate": "es-MX",
-        "lara": "es-MX"
+        "Value": "es-AR",
+        "lara": "es-AR"
     },
     {
         "Value": "et-EE",
@@ -3827,11 +2650,6 @@
     {
         "Value": "fon-BJ",
         "lara": "fon-BJ"
-    },
-    {
-        "Value": "fr-FR",
-        "itranslate": "fr-FR",
-        "lara": "fr-FR"
     },
     {
         "Value": "fur-IT",
@@ -4350,28 +3168,1261 @@
         "lara": "yo-NG"
     },
     {
-        "Value": "中文(香港)",
-        "itranslate": "zh-HK",
-        "lara": "zh-HK"
-    },
-    {
         "Value": "zu-ZA",
         "lara": "zu-ZA"
     },
     {
-        "Value": "ar-AE",
-        "itranslate": "ar-AE"
+        "Value": "bs-Latn",
+        "youdao": "bs-Latn"
     },
     {
-        "Value": "ar-EG",
-        "itranslate": "ar-EG"
+        "Value": "mww",
+        "bing": "mww",
+        "iciba": "mww",
+        "youdao": "mww"
     },
     {
-        "Value": "en-UK",
-        "itranslate": "en-UK"
+        "Value": "otq",
+        "bing": "otq",
+        "iciba": "otq",
+        "youdao": "otq"
     },
     {
-        "Value": "es-US",
-        "itranslate": "es-US"
+        "Value": "sr-Cyrl",
+        "bing": "sr-Cyrl",
+        "modernMt": "sr-Cyrl",
+        "youdao": "sr-Cyrl"
+    },
+    {
+        "Value": "sr-Latn",
+        "bing": "sr-Latn",
+        "modernMt": "sr-Latn",
+        "youdao": "sr-Latn"
+    },
+    {
+        "Value": "yua",
+        "bing": "yua",
+        "google": "yua",
+        "iciba": "yua",
+        "youdao": "yua"
+    },
+    {
+        "Value": "zh-CHT",
+        "youdao": "zh-CHT"
+    },
+    {
+        "Value": "zh-lzh",
+        "youdao": "zh-lzh"
+    },
+    {
+        "Value": "als",
+        "modernMt": "als"
+    },
+    {
+        "Value": "awa",
+        "google": "awa",
+        "modernMt": "awa"
+    },
+    {
+        "Value": "ayr",
+        "modernMt": "ayr"
+    },
+    {
+        "Value": "azb",
+        "modernMt": "azb"
+    },
+    {
+        "Value": "azj",
+        "modernMt": "azj"
+    },
+    {
+        "Value": "ban",
+        "bing": "ban",
+        "google": "ban",
+        "modernMt": "ban"
+    },
+    {
+        "Value": "bjn",
+        "modernMt": "bjn"
+    },
+    {
+        "Value": "bug",
+        "modernMt": "bug"
+    },
+    {
+        "Value": "cjk",
+        "modernMt": "cjk"
+    },
+    {
+        "Value": "ckb",
+        "google": "ckb",
+        "modernMt": "ckb"
+    },
+    {
+        "Value": "dik",
+        "iciba": "dik",
+        "modernMt": "dik"
+    },
+    {
+        "Value": "diq",
+        "modernMt": "diq"
+    },
+    {
+        "Value": "dyu",
+        "google": "dyu",
+        "modernMt": "dyu"
+    },
+    {
+        "Value": "dz",
+        "google": "dz",
+        "iciba": "dz",
+        "modernMt": "dz",
+        "qqTranSmart": "dz"
+    },
+    {
+        "Value": "fon",
+        "google": "fon",
+        "modernMt": "fon"
+    },
+    {
+        "Value": "fuv",
+        "modernMt": "fuv"
+    },
+    {
+        "Value": "gaz",
+        "modernMt": "gaz"
+    },
+    {
+        "Value": "hne",
+        "bing": "hne",
+        "modernMt": "hne"
+    },
+    {
+        "Value": "kac",
+        "google": "kac",
+        "modernMt": "kac"
+    },
+    {
+        "Value": "kam",
+        "modernMt": "kam"
+    },
+    {
+        "Value": "kas",
+        "modernMt": "kas"
+    },
+    {
+        "Value": "kbp",
+        "modernMt": "kbp"
+    },
+    {
+        "Value": "kea",
+        "bing": "kea",
+        "modernMt": "kea"
+    },
+    {
+        "Value": "khk",
+        "modernMt": "khk"
+    },
+    {
+        "Value": "ki",
+        "modernMt": "ki"
+    },
+    {
+        "Value": "kmb",
+        "modernMt": "kmb"
+    },
+    {
+        "Value": "kmr",
+        "bing": "kmr",
+        "modernMt": "kmr"
+    },
+    {
+        "Value": "knc",
+        "modernMt": "knc"
+    },
+    {
+        "Value": "lij",
+        "bing": "lij",
+        "google": "lij",
+        "modernMt": "lij"
+    },
+    {
+        "Value": "lmo",
+        "bing": "lmo",
+        "google": "lmo",
+        "modernMt": "lmo"
+    },
+    {
+        "Value": "lua",
+        "google": "lua",
+        "modernMt": "lua"
+    },
+    {
+        "Value": "luo",
+        "google": "luo",
+        "modernMt": "luo"
+    },
+    {
+        "Value": "lus",
+        "google": "lus",
+        "modernMt": "lus"
+    },
+    {
+        "Value": "lvs",
+        "modernMt": "lvs"
+    },
+    {
+        "Value": "mag",
+        "modernMt": "mag"
+    },
+    {
+        "Value": "min",
+        "bing": "min",
+        "google": "min",
+        "modernMt": "min"
+    },
+    {
+        "Value": "mni",
+        "modernMt": "mni"
+    },
+    {
+        "Value": "mos",
+        "modernMt": "mos"
+    },
+    {
+        "Value": "nn",
+        "caiyun": "nn",
+        "modernMt": "nn",
+        "qqTranSmart": "nn"
+    },
+    {
+        "Value": "nso",
+        "bing": "nso",
+        "google": "nso",
+        "modernMt": "nso",
+        "qqTranSmart": "nso"
+    },
+    {
+        "Value": "nus",
+        "google": "nus",
+        "modernMt": "nus"
+    },
+    {
+        "Value": "pbt",
+        "modernMt": "pbt"
+    },
+    {
+        "Value": "pes",
+        "modernMt": "pes"
+    },
+    {
+        "Value": "plt",
+        "modernMt": "plt"
+    },
+    {
+        "Value": "prs",
+        "bing": "prs",
+        "modernMt": "prs"
+    },
+    {
+        "Value": "quy",
+        "modernMt": "quy"
+    },
+    {
+        "Value": "sat",
+        "google": "sat",
+        "modernMt": "sat"
+    },
+    {
+        "Value": "sc",
+        "modernMt": "sc"
+    },
+    {
+        "Value": "scn",
+        "bing": "scn",
+        "google": "scn",
+        "modernMt": "scn"
+    },
+    {
+        "Value": "ss",
+        "google": "ss",
+        "modernMt": "ss"
+    },
+    {
+        "Value": "taq",
+        "modernMt": "taq"
+    },
+    {
+        "Value": "tn",
+        "bing": "tn",
+        "google": "tn",
+        "iciba": "tn",
+        "modernMt": "tn"
+    },
+    {
+        "Value": "tum",
+        "google": "tum",
+        "modernMt": "tum"
+    },
+    {
+        "Value": "tzm",
+        "modernMt": "tzm"
+    },
+    {
+        "Value": "uzn",
+        "modernMt": "uzn"
+    },
+    {
+        "Value": "vec",
+        "bing": "vec",
+        "google": "vec",
+        "modernMt": "vec"
+    },
+    {
+        "Value": "ydd",
+        "bing": "ydd",
+        "modernMt": "ydd"
+    },
+    {
+        "Value": "zsm",
+        "modernMt": "zsm"
+    },
+    {
+        "Value": "af_ZA",
+        "lingvanex": "af_ZA"
+    },
+    {
+        "Value": "am_ET",
+        "lingvanex": "am_ET"
+    },
+    {
+        "Value": "ar_EG",
+        "lingvanex": "ar_EG"
+    },
+    {
+        "Value": "as_IN",
+        "lingvanex": "as_IN"
+    },
+    {
+        "Value": "az_AZ",
+        "lingvanex": "az_AZ"
+    },
+    {
+        "Value": "be_BY",
+        "lingvanex": "be_BY"
+    },
+    {
+        "Value": "bg_BG",
+        "lingvanex": "bg_BG"
+    },
+    {
+        "Value": "bn_BD",
+        "lingvanex": "bn_BD"
+    },
+    {
+        "Value": "bs_BA",
+        "lingvanex": "bs_BA"
+    },
+    {
+        "Value": "ca_ES",
+        "lingvanex": "ca_ES"
+    },
+    {
+        "Value": "ceb_PH",
+        "lingvanex": "ceb_PH"
+    },
+    {
+        "Value": "co_FR",
+        "lingvanex": "co_FR"
+    },
+    {
+        "Value": "cs_CZ",
+        "lingvanex": "cs_CZ"
+    },
+    {
+        "Value": "cy_GB",
+        "lingvanex": "cy_GB"
+    },
+    {
+        "Value": "da_DK",
+        "lingvanex": "da_DK"
+    },
+    {
+        "Value": "de_DE",
+        "lingvanex": "de_DE"
+    },
+    {
+        "Value": "el_GR",
+        "lingvanex": "el_GR"
+    },
+    {
+        "Value": "en_AU",
+        "lingvanex": "en_AU"
+    },
+    {
+        "Value": "en_GB",
+        "lingvanex": "en_GB"
+    },
+    {
+        "Value": "en_US",
+        "lingvanex": "en_US"
+    },
+    {
+        "Value": "eo_WORLD",
+        "lingvanex": "eo_WORLD"
+    },
+    {
+        "Value": "es_ES",
+        "lingvanex": "es_ES"
+    },
+    {
+        "Value": "es_MX",
+        "lingvanex": "es_MX"
+    },
+    {
+        "Value": "es_US",
+        "lingvanex": "es_US"
+    },
+    {
+        "Value": "et_EE",
+        "lingvanex": "et_EE"
+    },
+    {
+        "Value": "eu_ES",
+        "lingvanex": "eu_ES"
+    },
+    {
+        "Value": "fa_IR",
+        "lingvanex": "fa_IR"
+    },
+    {
+        "Value": "fi_FI",
+        "lingvanex": "fi_FI"
+    },
+    {
+        "Value": "fr_CA",
+        "lingvanex": "fr_CA"
+    },
+    {
+        "Value": "fr_FR",
+        "lingvanex": "fr_FR"
+    },
+    {
+        "Value": "fy_NL",
+        "lingvanex": "fy_NL"
+    },
+    {
+        "Value": "ga_IE",
+        "lingvanex": "ga_IE"
+    },
+    {
+        "Value": "gd_GB",
+        "lingvanex": "gd_GB"
+    },
+    {
+        "Value": "gl_ES",
+        "lingvanex": "gl_ES"
+    },
+    {
+        "Value": "gu_IN",
+        "lingvanex": "gu_IN"
+    },
+    {
+        "Value": "ha_NE",
+        "lingvanex": "ha_NE"
+    },
+    {
+        "Value": "haw_US",
+        "lingvanex": "haw_US"
+    },
+    {
+        "Value": "he_IL",
+        "lingvanex": "he_IL"
+    },
+    {
+        "Value": "hi_IN",
+        "lingvanex": "hi_IN"
+    },
+    {
+        "Value": "hmn_CN",
+        "lingvanex": "hmn_CN"
+    },
+    {
+        "Value": "hr_HR",
+        "lingvanex": "hr_HR"
+    },
+    {
+        "Value": "ht_HT",
+        "lingvanex": "ht_HT"
+    },
+    {
+        "Value": "hu_HU",
+        "lingvanex": "hu_HU"
+    },
+    {
+        "Value": "hy_AM",
+        "lingvanex": "hy_AM"
+    },
+    {
+        "Value": "id_ID",
+        "lingvanex": "id_ID"
+    },
+    {
+        "Value": "ig_NG",
+        "lingvanex": "ig_NG"
+    },
+    {
+        "Value": "is_IS",
+        "lingvanex": "is_IS"
+    },
+    {
+        "Value": "it_IT",
+        "lingvanex": "it_IT"
+    },
+    {
+        "Value": "ja_JP",
+        "lingvanex": "ja_JP"
+    },
+    {
+        "Value": "jv_ID",
+        "lingvanex": "jv_ID"
+    },
+    {
+        "Value": "ka_GE",
+        "lingvanex": "ka_GE"
+    },
+    {
+        "Value": "kk_KZ",
+        "lingvanex": "kk_KZ"
+    },
+    {
+        "Value": "km_KH",
+        "lingvanex": "km_KH"
+    },
+    {
+        "Value": "kn_IN",
+        "lingvanex": "kn_IN"
+    },
+    {
+        "Value": "ko_KR",
+        "lingvanex": "ko_KR"
+    },
+    {
+        "Value": "ku_IR",
+        "lingvanex": "ku_IR"
+    },
+    {
+        "Value": "ky_KG",
+        "lingvanex": "ky_KG"
+    },
+    {
+        "Value": "la_VAT",
+        "lingvanex": "la_VAT"
+    },
+    {
+        "Value": "lb_LU",
+        "lingvanex": "lb_LU"
+    },
+    {
+        "Value": "lo_LA",
+        "lingvanex": "lo_LA"
+    },
+    {
+        "Value": "lt_LT",
+        "lingvanex": "lt_LT"
+    },
+    {
+        "Value": "lv_LV",
+        "lingvanex": "lv_LV"
+    },
+    {
+        "Value": "mg_MG",
+        "lingvanex": "mg_MG"
+    },
+    {
+        "Value": "mi_NZ",
+        "lingvanex": "mi_NZ"
+    },
+    {
+        "Value": "mk_MK",
+        "lingvanex": "mk_MK"
+    },
+    {
+        "Value": "ml_IN",
+        "lingvanex": "ml_IN"
+    },
+    {
+        "Value": "mn_MN",
+        "lingvanex": "mn_MN"
+    },
+    {
+        "Value": "mr_IN",
+        "lingvanex": "mr_IN"
+    },
+    {
+        "Value": "ms_MY",
+        "lingvanex": "ms_MY"
+    },
+    {
+        "Value": "mt_MT",
+        "lingvanex": "mt_MT"
+    },
+    {
+        "Value": "my_MM",
+        "lingvanex": "my_MM"
+    },
+    {
+        "Value": "ne_NP",
+        "lingvanex": "ne_NP"
+    },
+    {
+        "Value": "nl_NL",
+        "lingvanex": "nl_NL"
+    },
+    {
+        "Value": "no_NO",
+        "lingvanex": "no_NO"
+    },
+    {
+        "Value": "ny_MW",
+        "lingvanex": "ny_MW"
+    },
+    {
+        "Value": "or_OR",
+        "lingvanex": "or_OR"
+    },
+    {
+        "Value": "pa_PK",
+        "lingvanex": "pa_PK"
+    },
+    {
+        "Value": "pl_PL",
+        "lingvanex": "pl_PL"
+    },
+    {
+        "Value": "ps_AF",
+        "lingvanex": "ps_AF"
+    },
+    {
+        "Value": "pt_BR",
+        "lingvanex": "pt_BR"
+    },
+    {
+        "Value": "pt_PT",
+        "lingvanex": "pt_PT"
+    },
+    {
+        "Value": "ro_RO",
+        "lingvanex": "ro_RO"
+    },
+    {
+        "Value": "ru_RU",
+        "lingvanex": "ru_RU"
+    },
+    {
+        "Value": "rw_RW",
+        "lingvanex": "rw_RW"
+    },
+    {
+        "Value": "sd_PK",
+        "lingvanex": "sd_PK"
+    },
+    {
+        "Value": "si_LK",
+        "lingvanex": "si_LK"
+    },
+    {
+        "Value": "sk_SK",
+        "lingvanex": "sk_SK"
+    },
+    {
+        "Value": "sl_SI",
+        "lingvanex": "sl_SI"
+    },
+    {
+        "Value": "sm_WS",
+        "lingvanex": "sm_WS"
+    },
+    {
+        "Value": "sn_ZW",
+        "lingvanex": "sn_ZW"
+    },
+    {
+        "Value": "so_SO",
+        "lingvanex": "so_SO"
+    },
+    {
+        "Value": "sq_AL",
+        "lingvanex": "sq_AL"
+    },
+    {
+        "Value": "sr-Cyrl_RS",
+        "lingvanex": "sr-Cyrl_RS"
+    },
+    {
+        "Value": "st_LS",
+        "lingvanex": "st_LS"
+    },
+    {
+        "Value": "su_ID",
+        "lingvanex": "su_ID"
+    },
+    {
+        "Value": "sv_SE",
+        "lingvanex": "sv_SE"
+    },
+    {
+        "Value": "sw_TZ",
+        "lingvanex": "sw_TZ"
+    },
+    {
+        "Value": "ta_IN",
+        "lingvanex": "ta_IN"
+    },
+    {
+        "Value": "te_IN",
+        "lingvanex": "te_IN"
+    },
+    {
+        "Value": "tg_TJ",
+        "lingvanex": "tg_TJ"
+    },
+    {
+        "Value": "th_TH",
+        "lingvanex": "th_TH"
+    },
+    {
+        "Value": "tk_TM",
+        "lingvanex": "tk_TM"
+    },
+    {
+        "Value": "tl_PH",
+        "lingvanex": "tl_PH"
+    },
+    {
+        "Value": "tr_TR",
+        "lingvanex": "tr_TR"
+    },
+    {
+        "Value": "tt_TT",
+        "lingvanex": "tt_TT"
+    },
+    {
+        "Value": "ug_CN",
+        "lingvanex": "ug_CN"
+    },
+    {
+        "Value": "uk_UA",
+        "lingvanex": "uk_UA"
+    },
+    {
+        "Value": "ur_PK",
+        "lingvanex": "ur_PK"
+    },
+    {
+        "Value": "uz_UZ",
+        "lingvanex": "uz_UZ"
+    },
+    {
+        "Value": "vi_VN",
+        "lingvanex": "vi_VN"
+    },
+    {
+        "Value": "xh_ZA",
+        "lingvanex": "xh_ZA"
+    },
+    {
+        "Value": "yi_IL",
+        "lingvanex": "yi_IL"
+    },
+    {
+        "Value": "yo_NG",
+        "lingvanex": "yo_NG"
+    },
+    {
+        "Value": "zh-Hans_CN",
+        "lingvanex": "zh-Hans_CN"
+    },
+    {
+        "Value": "zh-Hant_TW",
+        "lingvanex": "zh-Hant_TW"
+    },
+    {
+        "Value": "zu_ZA",
+        "lingvanex": "zu_ZA"
+    },
+    {
+        "Value": "acu",
+        "iciba": "acu"
+    },
+    {
+        "Value": "agr",
+        "iciba": "agr"
+    },
+    {
+        "Value": "ake",
+        "iciba": "ake"
+    },
+    {
+        "Value": "amu",
+        "iciba": "amu"
+    },
+    {
+        "Value": "bsn",
+        "iciba": "bsn"
+    },
+    {
+        "Value": "cak",
+        "iciba": "cak"
+    },
+    {
+        "Value": "cha",
+        "iciba": "cha"
+    },
+    {
+        "Value": "chq",
+        "iciba": "chq"
+    },
+    {
+        "Value": "cjp",
+        "iciba": "cjp"
+    },
+    {
+        "Value": "cni",
+        "iciba": "cni"
+    },
+    {
+        "Value": "cop",
+        "iciba": "cop"
+    },
+    {
+        "Value": "crs",
+        "bing": "crs",
+        "google": "crs",
+        "iciba": "crs"
+    },
+    {
+        "Value": "dje",
+        "iciba": "dje"
+    },
+    {
+        "Value": "djk",
+        "iciba": "djk"
+    },
+    {
+        "Value": "dop",
+        "iciba": "dop"
+    },
+    {
+        "Value": "gbi",
+        "iciba": "gbi"
+    },
+    {
+        "Value": "jac",
+        "iciba": "jac"
+    },
+    {
+        "Value": "jiv",
+        "iciba": "jiv"
+    },
+    {
+        "Value": "kbh",
+        "iciba": "kbh"
+    },
+    {
+        "Value": "mam",
+        "google": "mam",
+        "iciba": "mam"
+    },
+    {
+        "Value": "me",
+        "iciba": "me",
+        "sysTran": "me"
+    },
+    {
+        "Value": "mhr",
+        "iciba": "mhr"
+    },
+    {
+        "Value": "mrj",
+        "iciba": "mrj"
+    },
+    {
+        "Value": "nhg",
+        "iciba": "nhg"
+    },
+    {
+        "Value": "ojb",
+        "iciba": "ojb"
+    },
+    {
+        "Value": "pck",
+        "iciba": "pck"
+    },
+    {
+        "Value": "pot",
+        "iciba": "pot"
+    },
+    {
+        "Value": "ppk",
+        "iciba": "ppk"
+    },
+    {
+        "Value": "quw",
+        "iciba": "quw"
+    },
+    {
+        "Value": "rmn",
+        "iciba": "rmn"
+    },
+    {
+        "Value": "shi",
+        "iciba": "shi"
+    },
+    {
+        "Value": "syc",
+        "iciba": "syc"
+    },
+    {
+        "Value": "tig",
+        "iciba": "tig"
+    },
+    {
+        "Value": "tmh",
+        "iciba": "tmh"
+    },
+    {
+        "Value": "to",
+        "bing": "to",
+        "google": "to",
+        "iciba": "to"
+    },
+    {
+        "Value": "usp",
+        "iciba": "usp"
+    },
+    {
+        "Value": "wal",
+        "iciba": "wal"
+    },
+    {
+        "Value": "wol",
+        "iciba": "wol"
+    },
+    {
+        "Value": "arb",
+        "bing": "arb"
+    },
+    {
+        "Value": "ary",
+        "bing": "ary"
+    },
+    {
+        "Value": "arz",
+        "bing": "arz"
+    },
+    {
+        "Value": "bbc",
+        "bing": "bbc",
+        "google": "bbc"
+    },
+    {
+        "Value": "bik",
+        "bing": "bik",
+        "google": "bik"
+    },
+    {
+        "Value": "brx",
+        "bing": "brx"
+    },
+    {
+        "Value": "doi",
+        "bing": "doi",
+        "google": "doi"
+    },
+    {
+        "Value": "dsb",
+        "bing": "dsb"
+    },
+    {
+        "Value": "gom",
+        "bing": "gom",
+        "google": "gom"
+    },
+    {
+        "Value": "ikt",
+        "bing": "ikt"
+    },
+    {
+        "Value": "iu-Latn",
+        "bing": "iu-Latn",
+        "google": "iu-Latn"
+    },
+    {
+        "Value": "jam",
+        "bing": "jam",
+        "google": "jam"
+    },
+    {
+        "Value": "jav",
+        "bing": "jav"
+    },
+    {
+        "Value": "kri",
+        "bing": "kri",
+        "google": "kri"
+    },
+    {
+        "Value": "lim",
+        "bing": "lim"
+    },
+    {
+        "Value": "lug",
+        "bing": "lug"
+    },
+    {
+        "Value": "mn-Cyrl",
+        "bing": "mn-Cyrl"
+    },
+    {
+        "Value": "mn-Mong",
+        "bing": "mn-Mong"
+    },
+    {
+        "Value": "mwr",
+        "bing": "mwr",
+        "google": "mwr"
+    },
+    {
+        "Value": "nya",
+        "bing": "nya"
+    },
+    {
+        "Value": "pam",
+        "bing": "pam",
+        "google": "pam"
+    },
+    {
+        "Value": "pnb",
+        "bing": "pnb"
+    },
+    {
+        "Value": "run",
+        "bing": "run"
+    },
+    {
+        "Value": "tgk",
+        "bing": "tgk"
+    },
+    {
+        "Value": "tlh-Latn",
+        "bing": "tlh-Latn"
+    },
+    {
+        "Value": "aa",
+        "google": "aa"
+    },
+    {
+        "Value": "ach",
+        "google": "ach",
+        "qqTranSmart": "ach"
+    },
+    {
+        "Value": "alz",
+        "google": "alz"
+    },
+    {
+        "Value": "av",
+        "google": "av"
+    },
+    {
+        "Value": "bci",
+        "google": "bci"
+    },
+    {
+        "Value": "ber-Latn",
+        "google": "ber-Latn"
+    },
+    {
+        "Value": "bew",
+        "google": "bew"
+    },
+    {
+        "Value": "bm-Nkoo",
+        "google": "bm-Nkoo"
+    },
+    {
+        "Value": "bts",
+        "google": "bts"
+    },
+    {
+        "Value": "btx",
+        "google": "btx"
+    },
+    {
+        "Value": "bua",
+        "google": "bua"
+    },
+    {
+        "Value": "ce",
+        "google": "ce"
+    },
+    {
+        "Value": "cgg",
+        "google": "cgg",
+        "qqTranSmart": "cgg"
+    },
+    {
+        "Value": "chk",
+        "google": "chk"
+    },
+    {
+        "Value": "cnh",
+        "google": "cnh"
+    },
+    {
+        "Value": "crh-Latn",
+        "google": "crh-Latn"
+    },
+    {
+        "Value": "din",
+        "google": "din"
+    },
+    {
+        "Value": "dov",
+        "google": "dov"
+    },
+    {
+        "Value": "fa-AF",
+        "google": "fa-AF"
+    },
+    {
+        "Value": "ff",
+        "google": "ff"
+    },
+    {
+        "Value": "gaa",
+        "google": "gaa"
+    },
+    {
+        "Value": "hrx",
+        "google": "hrx"
+    },
+    {
+        "Value": "ktu",
+        "google": "ktu"
+    },
+    {
+        "Value": "kv",
+        "google": "kv"
+    },
+    {
+        "Value": "mad",
+        "google": "mad"
+    },
+    {
+        "Value": "mak",
+        "google": "mak"
+    },
+    {
+        "Value": "mni-Mtei",
+        "google": "mni-Mtei"
+    },
+    {
+        "Value": "ms-Arab",
+        "google": "ms-Arab"
+    },
+    {
+        "Value": "ndc-ZW",
+        "google": "ndc-ZW"
+    },
+    {
+        "Value": "new",
+        "google": "new"
+    },
+    {
+        "Value": "nhe",
+        "google": "nhe"
+    },
+    {
+        "Value": "nr",
+        "google": "nr"
+    },
+    {
+        "Value": "pa-Arab",
+        "google": "pa-Arab"
+    },
+    {
+        "Value": "sah",
+        "google": "sah",
+        "qqTranSmart": "sah"
+    },
+    {
+        "Value": "sat-Latn",
+        "google": "sat-Latn"
+    },
+    {
+        "Value": "sus",
+        "google": "sus"
+    },
+    {
+        "Value": "tcy",
+        "google": "tcy"
+    },
+    {
+        "Value": "tiv",
+        "google": "tiv"
+    },
+    {
+        "Value": "trp",
+        "google": "trp"
+    },
+    {
+        "Value": "zap",
+        "google": "zap"
+    },
+    {
+        "Value": "zt",
+        "sysTran": "zt"
+    },
+    {
+        "Value": "arn",
+        "qqTranSmart": "arn"
+    },
+    {
+        "Value": "dev",
+        "qqTranSmart": "dev"
+    },
+    {
+        "Value": "gun",
+        "qqTranSmart": "gun"
+    },
+    {
+        "Value": "mnk",
+        "qqTranSmart": "mnk"
+    },
+    {
+        "Value": "nah",
+        "qqTranSmart": "nah"
+    },
+    {
+        "Value": "nap",
+        "qqTranSmart": "nap"
+    },
+    {
+        "Value": "pms",
+        "qqTranSmart": "pms"
+    },
+    {
+        "Value": "son",
+        "qqTranSmart": "son"
+    },
+    {
+        "Value": "pe",
+        "reverso": "pe"
+    },
+    {
+        "Value": "ptb",
+        "reverso": "ptb"
     }
 ]
