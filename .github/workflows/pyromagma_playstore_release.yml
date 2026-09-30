@@ -2,7 +2,7 @@ name: "[PyroMagma] Distribute AAB to Google Play Store"
 
 on:
   workflow_run:
-    workflows: ["[PyroMagma] Build Release APK & AAB with Full R8 Obfuscation"]
+    workflows: ["[PyroMagma] Build Release (R8)"]
     types:
       - completed
   workflow_dispatch:

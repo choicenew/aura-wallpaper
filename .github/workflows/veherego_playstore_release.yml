@@ -2,7 +2,7 @@ name: "[VehereGo] Distribute AAB to Google Play Store"
 
 on:
   workflow_run:
-    workflows: ["[VehereGo] Android Release & AAB Build Workflow (R8 Obfuscated)"]
+    workflows: ["[VehereGo] Build Release (R8)"]
     types:
       - completed
   workflow_dispatch:

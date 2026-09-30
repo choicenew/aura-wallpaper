@@ -1,4 +1,4 @@
-name: "[VehereGo] Android Release & AAB Build (Gradle Cached)"
+name: "[VehereGo] Build Release (Cached)"
 
 on:
   workflow_dispatch:

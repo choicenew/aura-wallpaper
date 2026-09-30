@@ -1,4 +1,4 @@
-name: "[VehereGo] Android Release & AAB Build Workflow"
+name: "[VehereGo] Build Release"
 
 on:
   workflow_run:

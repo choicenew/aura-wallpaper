@@ -1,4 +1,4 @@
-name: "[VehereGo] Android Release & AAB Build Workflow (R8 Obfuscated)"
+name: "[VehereGo] Build Release (R8)"
 
 on:
   push:
