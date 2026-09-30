@@ -1,0 +1,68 @@
+name: "[PyroMagma] Distribute Release APK to Telegram"
+
+on:
+  workflow_run:
+    workflows: ["[PyroMagma] Distribute AAB to Google Play Store"]
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  send_to_telegram:
+    name: Send PyroMagma APK to Telegram
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Fetch Release and Download APK
+        id: fetch_data
+        run: |
+          set -e
+          SOURCE_TAG=$(gh release list --repo ${{ github.repository }} --limit 10 --json tagName --jq '.[] | select(.tagName | startswith("pyromagma-v")) | .tagName' | head -n 1)
+          if [ -z "$SOURCE_TAG" ]; then
+            echo "::error::No PyroMagma release tag found."
+            exit 1
+          fi
+          echo "Found tag: $SOURCE_TAG"
+          mkdir -p release_assets
+          gh release download "$SOURCE_TAG" --repo ${{ github.repository }} --pattern "*.apk" --dir release_assets
+          echo "source_tag=${SOURCE_TAG}" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Send APK and Release Message to Telegram
+        env:
+          BOT_TOKEN: ${{ secrets.PYROMAGMA_TELEGRAM_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.PYROMAGMA_TELEGRAM_CHAT_ID || secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -z "$BOT_TOKEN" ] || [ -z "$CHAT_ID" ]; then
+            echo "Telegram Bot Token or Chat ID not set. Skipping."
+            exit 0
+          fi
+          
+          TAG="${{ steps.fetch_data.outputs.source_tag }}"
+          MESSAGE="🚀 *New PyroMagma Official Release Available: \`${TAG}\`*"
+          MESSAGE+=$'\n\n'
+          MESSAGE+="[View Release on GitHub](https://github.com/${{ github.repository }}/releases/tag/${TAG})"
+
+          echo "Sending message to Telegram..."
+          curl -s -f -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${CHAT_ID}" \
+            --data-urlencode "text=${MESSAGE}" \
+            -d "parse_mode=Markdown" \
+            -d "disable_web_page_preview=true"
+
+          APK_FILE=$(find release_assets -type f -name "*.apk" | head -n 1)
+          if [ -f "$APK_FILE" ]; then
+            echo "Sending APK document to Telegram..."
+            curl -s -f -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendDocument" \
+              -F "chat_id=${CHAT_ID}" \
+              -F "document=@${APK_FILE}" \
+              -F "caption=Direct APK download for \`${TAG}\`" \
+              -F "parse_mode=Markdown" || echo "Warning: Failed to send APK file."
+          fi
+          echo "✅ Telegram distribution completed."

@@ -127,6 +127,18 @@ jobs:
           echo "COMMIT_MSG=$(git log -1 --format='%h - %s')" >> $GITHUB_ENV
           echo "🏷️ [Master Version] 版本号: ${APP_VER}+${{ github.run_number }}"
 
+      - name: Decode keystore and create key.properties
+        working-directory: ./pyro_magma
+        run: |
+          mkdir -p android/app
+          if [ -n "${{ secrets.PYROMAGMA_KEYSTORE_BASE64 }}" ]; then
+            echo "${{ secrets.PYROMAGMA_KEYSTORE_BASE64 }}" | base64 -d > android/app/key.jks
+            echo "storePassword=${{ secrets.PYROMAGMA_KEYSTORE_PASSWORD }}" > android/key.properties
+            echo "keyPassword=${{ secrets.PYROMAGMA_KEY_PASSWORD }}" >> android/key.properties
+            echo "keyAlias=${{ secrets.PYROMAGMA_KEYSTORE_ALIAS }}" >> android/key.properties
+            echo "storeFile=key.jks" >> android/key.properties
+          fi
+
       - name: 6. 编译同步后的 Debug APK (Master Synced)
         working-directory: ./pyro_magma
         run: |

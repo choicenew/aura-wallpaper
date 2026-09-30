@@ -94,6 +94,18 @@ jobs:
           echo "🏷️ [Debug Version] 版本号: ${APP_VER}+${BUILD_NUM}"
           echo "=========================================================================="
 
+      - name: Decode keystore and create key.properties
+        working-directory: ./pyro_magma
+        run: |
+          mkdir -p android/app
+          if [ -n "${{ secrets.PYROMAGMA_KEYSTORE_BASE64 }}" ]; then
+            echo "${{ secrets.PYROMAGMA_KEYSTORE_BASE64 }}" | base64 -d > android/app/key.jks
+            echo "storePassword=${{ secrets.PYROMAGMA_KEYSTORE_PASSWORD }}" > android/key.properties
+            echo "keyPassword=${{ secrets.PYROMAGMA_KEY_PASSWORD }}" >> android/key.properties
+            echo "keyAlias=${{ secrets.PYROMAGMA_KEYSTORE_ALIAS }}" >> android/key.properties
+            echo "storeFile=key.jks" >> android/key.properties
+          fi
+
       - name: Build Fast Debug APK
         working-directory: ./pyro_magma
         run: |

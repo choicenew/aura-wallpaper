@@ -1,0 +1,51 @@
+name: "[PyroMagma] Distribute AAB to Google Play Store"
+
+on:
+  workflow_run:
+    workflows: ["[PyroMagma] Build Release APK & AAB with Full R8 Obfuscation"]
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  deploy_to_playstore:
+    name: Deploy PyroMagma AAB to Google Play
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Fetch Details and Download AAB from GitHub Release
+        id: fetch_data
+        run: |
+          set -e
+          echo "Fetching latest PyroMagma release tag..."
+          SOURCE_TAG=$(gh release list --repo ${{ github.repository }} --limit 10 --json tagName --jq '.[] | select(.tagName | startswith("pyromagma-v")) | .tagName' | head -n 1)
+          if [ -z "$SOURCE_TAG" ]; then
+            echo "::error::No PyroMagma release tag found."
+            exit 1
+          fi
+          echo "Found tag: $SOURCE_TAG"
+          mkdir -p release_assets
+          gh release download "$SOURCE_TAG" --repo ${{ github.repository }} --pattern "*.aab" --dir release_assets
+          
+          VERSION_CODE=$(echo "$SOURCE_TAG" | sed 's/.*[+|-]//')
+          echo "version_code=${VERSION_CODE}" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Create Google Play Release Notes
+        run: |
+          mkdir -p release_notes/en-US
+          echo "PyroMagma Official R8 Release Build ${{ steps.fetch_data.outputs.version_code }}" > release_notes/en-US/${{ steps.fetch_data.outputs.version_code }}.txt
+
+      - name: Deploy AAB to Google Play Store
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PYROMAGMA_PLAY_STORE_SERVICE_ACCOUNT || secrets.PLAY_STORE_SERVICE_ACCOUNT }}
+          packageName: ${{ secrets.PYROMAGMA_PACKAGE_NAME || 'com.pyromagma.pyro_magma' }}
+          releaseFiles: "release_assets/*.aab"
+          track: production
+          whatsNewDirectory: release_notes
