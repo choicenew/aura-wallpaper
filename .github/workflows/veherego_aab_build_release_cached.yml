@@ -41,6 +41,7 @@ jobs:
           path: veherego/packages
           token: ${{ secrets.GH_PAT }}
           submodules: false
+          clean: false
 
       - name: Locate Flutter Project
         run: |
