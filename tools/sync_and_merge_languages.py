@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-多源翻译支持语言纯 Diff 差异比对、合并与治理引擎
-1. 【纯集合差异比对 (Set Difference)】：比对新老数据交集、新增集 (added) 与缺失集 (removed)，计算重合相似度。
-2. 【突变防劣化保护】：若新抓取数据与老版本重合率极低或遭遇空截断，保留历史版本并输出差异警报。
-3. 【清晰 Diff 报告】：输出详尽的交集量、增量列表、删改列表及重合度百分比，无任何硬编码假设。
+多源翻译支持语言纯 Diff 差异比对、合并与治理引擎 (母语自称 Autonym 版)
+1. 【母语自称 Autonym 映射】：支持将各语言全量映射为母语原生显示名 (如 "日本語", "Français", "Deutsch", "简体中文", "Azərbaycanca")。
+2. 【纯集合差异比对 (Set Difference)】：比对新老数据交集、新增集 (added) 与缺失集 (removed)，计算重合相似度。
+3. 【突变防劣化保护】：若新抓取数据与老版本重合率极低或遭遇空截断，保留历史版本并输出差异警报。
+4. 【多路径同步写入】：自动将产物同步导出至根目录与 pyro_api_translate 资产目录。
 """
 import os
 import sys
@@ -13,60 +14,537 @@ import json
 from collections import OrderedDict
 from datetime import datetime
 
-LANG_CODE_TO_VALUE = {
-    "auto": "自动",
-    "all": "自动",
-    "zh": "中文",
-    "zh-cn": "中文",
-    "zh-CN": "中文",
-    "zh-chs": "中文",
-    "zh-CHS": "中文",
-    "zh-hans": "中文",
-    "zh-Hans": "中文",
-    "zh-tw": "中文(台湾)",
-    "zh-TW": "中文(台湾)",
-    "zh-hant": "中文(台湾)",
-    "zh-Hant": "中文(台湾)",
-    "zh-hk": "中文(香港)",
-    "zh-HK": "中文(香港)",
-    "yue": "中文(粤语)",
-    "wyw": "中文(文言文)",
-    "lzh": "中文(文言文)",
-    "en": "英语",
-    "ja": "日语",
-    "jp": "日语",
-    "ko": "韩语",
-    "kor": "韩语",
-    "fr": "法语",
-    "fra": "法语",
-    "de": "德语",
-    "deu": "德语",
-    "es": "西班牙语",
-    "spa": "西班牙语",
-    "ru": "俄语",
-    "rus": "俄语",
-    "it": "意大利语",
-    "ita": "意大利语",
-    "pt": "葡萄牙语",
-    "por": "葡萄牙语",
-    "th": "泰语",
-    "tha": "泰语",
-    "vi": "越南语",
-    "vie": "越南语",
-    "id": "印尼语",
-    "ind": "印尼语",
-    "ar": "阿拉伯语",
-    "ara": "阿拉伯语",
-    "hi": "印地语",
-    "hin": "印地语",
-    "tr": "土耳其语",
-    "tur": "土耳其语",
-    "pl": "波兰语",
-    "pol": "波兰语",
-    "nl": "荷兰语",
-    "nld": "荷兰语",
-    "sv": "瑞典语",
-    "swe": "瑞典语",
+# 全量 ISO 代码与语言名称 -> 母语自称 (Autonym) 权威映射字典
+ISO_AND_NAME_TO_AUTONYM = {
+    # 特殊标识
+    "auto": "自动 (Auto)",
+    "all": "自动 (Auto)",
+    "自动": "自动 (Auto)",
+
+    # 中文系列
+    "zh": "简体中文",
+    "zh-cn": "简体中文",
+    "zh-CN": "简体中文",
+    "zh-chs": "简体中文",
+    "zh-CHS": "简体中文",
+    "zh-hans": "简体中文",
+    "zh-Hans": "简体中文",
+    "中文": "简体中文",
+    "简体中文": "简体中文",
+    "zh-tw": "繁體中文",
+    "zh-TW": "繁體中文",
+    "zh-hant": "繁體中文",
+    "zh-Hant": "繁體中文",
+    "中文(台湾)": "繁體中文",
+    "繁体中文": "繁體中文",
+    "繁體中文": "繁體中文",
+    "zh-hk": "繁體中文 (香港)",
+    "zh-HK": "繁體中文 (香港)",
+    "中文(香港)": "繁體中文 (香港)",
+    "yue": "粵語",
+    "中文(粤语)": "粵語",
+    "粤语": "粵語",
+    "wyw": "文言文",
+    "lzh": "文言文",
+    "中文(文言文)": "文言文",
+    "藏语": "བོད་སྐད",
+    "bo": "བོད་སྐད",
+    "壮语": "Vahcuengh",
+    "za": "Vahcuengh",
+    "苗语": "Hmoob",
+    "hmn": "Hmoob",
+    "彝语": "ꆈꌠꉙ",
+    "ii": "ꆈꌠꉙ",
+    "蒙古语": "Монгол",
+    "mn": "Монгол",
+
+    # 主要通用语言
+    "en": "English",
+    "eng": "English",
+    "英语": "English",
+    "en-us": "English (US)",
+    "en-US": "English (US)",
+    "英语(美国)": "English (US)",
+    "en-uk": "English (UK)",
+    "en-UK": "English (UK)",
+    "en-gb": "English (UK)",
+    "en-GB": "English (UK)",
+    "英语(英国)": "English (UK)",
+    "en-au": "English (Australia)",
+    "en-AU": "English (Australia)",
+    "英语(澳大利亚)": "English (Australia)",
+
+    "ja": "日本語",
+    "jp": "日本語",
+    "jpn": "日本語",
+    "日语": "日本語",
+
+    "ko": "한국어",
+    "kor": "한국어",
+    "韩语": "한국어",
+
+    "fr": "Français",
+    "fra": "Français",
+    "法语": "Français",
+    "fr-ca": "Français (Canada)",
+    "fr-CA": "Français (Canada)",
+    "加拿大法语": "Français (Canada)",
+    "fr-fr": "Français (France)",
+    "fr-FR": "Français (France)",
+
+    "de": "Deutsch",
+    "deu": "Deutsch",
+    "ger": "Deutsch",
+    "德语": "Deutsch",
+
+    "es": "Español",
+    "spa": "Español",
+    "西班牙语": "Español",
+    "es-es": "Español (España)",
+    "es-ES": "Español (España)",
+    "es-mx": "Español (México)",
+    "es-MX": "Español (México)",
+    "西班牙语(墨西哥)": "Español (México)",
+    "es-us": "Español (Estados Unidos)",
+    "es-US": "Español (Estados Unidos)",
+    "西班牙语(美国)": "Español (Estados Unidos)",
+    "es-419": "Español (Latinoamérica)",
+    "西班牙语(拉丁美洲)": "Español (Latinoamérica)",
+
+    "ru": "Русский",
+    "rus": "Русский",
+    "俄语": "Русский",
+
+    "it": "Italiano",
+    "ita": "Italiano",
+    "意大利语": "Italiano",
+
+    "pt": "Português",
+    "por": "Português",
+    "葡萄牙语": "Português",
+    "pt-br": "Português (Brasil)",
+    "pt-BR": "Português (Brasil)",
+    "葡萄牙语(巴西)": "Português (Brasil)",
+    "pt-pt": "Português (Portugal)",
+    "pt-PT": "Português (Portugal)",
+    "葡萄牙语(葡萄牙)": "Português (Portugal)",
+
+    "th": "ไทย",
+    "tha": "ไทย",
+    "泰语": "ไทย",
+
+    "vi": "Tiếng Việt",
+    "vie": "Tiếng Việt",
+    "越南语": "Tiếng Việt",
+
+    "id": "Bahasa Indonesia",
+    "ind": "Bahasa Indonesia",
+    "印尼语": "Bahasa Indonesia",
+    "印度尼西亚语": "Bahasa Indonesia",
+
+    "ar": "العربية",
+    "ara": "العربية",
+    "阿拉伯语": "العربية",
+    "ar-ae": "العربية (الإمارات)",
+    "ar-AE": "العربية (الإمارات)",
+    "阿拉伯语(阿联酋)": "العربية (الإمارات)",
+    "ar-eg": "العربية (مصر)",
+    "ar-EG": "العربية (مصر)",
+    "阿拉伯语(埃及)": "العربية (مصر)",
+    "ar-sa": "العربية (السعودية)",
+    "ar-SA": "العربية (السعودية)",
+    "阿拉伯语(沙特阿拉伯)": "العربية (السعودية)",
+
+    "hi": "हिन्दी",
+    "hin": "हिन्दी",
+    "印地语": "हिन्दी",
+
+    "tr": "Türkçe",
+    "tur": "Türkçe",
+    "土耳其语": "Türkçe",
+
+    "pl": "Polski",
+    "pol": "Polski",
+    "波兰语": "Polski",
+
+    "nl": "Nederlands",
+    "nld": "Nederlands",
+    "荷兰语": "Nederlands",
+
+    "sv": "Svenska",
+    "swe": "Svenska",
+    "瑞典语": "Svenska",
+
+    "el": "Ελληνικά",
+    "ell": "Ελληνικά",
+    "希腊语": "Ελληνικά",
+    "现代希腊语": "Ελληνικά",
+
+    "he": "עברית",
+    "heb": "עברית",
+    "iw": "עברית",
+    "希伯来语": "עברית",
+
+    "cs": "Čeština",
+    "ces": "Čeština",
+    "cze": "Čeština",
+    "捷克语": "Čeština",
+
+    "da": "Dansk",
+    "dan": "Dansk",
+    "丹麦语": "Dansk",
+
+    "fi": "Suomi",
+    "fin": "Suomi",
+    "芬兰语": "Suomi",
+
+    "hu": "Magyar",
+    "hun": "Magyar",
+    "匈牙利语": "Magyar",
+
+    "no": "Norsk",
+    "nor": "Norsk",
+    "nob": "Norsk",
+    "nno": "Norsk",
+    "挪威语": "Norsk",
+
+    "ro": "Română",
+    "ron": "Română",
+    "rum": "Română",
+    "罗马尼亚语": "Română",
+
+    "sk": "Slovenčina",
+    "slk": "Slovenčina",
+    "slo": "Slovenčina",
+    "斯洛伐克语": "Slovenčina",
+
+    "uk": "Українська",
+    "ukr": "Українська",
+    "乌克兰语": "Українська",
+
+    "bg": "Български",
+    "bul": "Български",
+    "保加利亚语": "Български",
+
+    "ca": "Català",
+    "cat": "Català",
+    "加泰罗尼亚语": "Català",
+
+    "hr": "Hrvatski",
+    "hrv": "Hrvatski",
+    "hbs": "Hrvatski",
+    "克罗地亚语": "Hrvatski",
+
+    "lt": "Lietuvių",
+    "lit": "Lietuvių",
+    "立陶宛语": "Lietuvių",
+
+    "lv": "Latviešu",
+    "lav": "Latviešu",
+    "拉脱维亚语": "Latviešu",
+
+    "sr": "Српски",
+    "srp": "Српски",
+    "塞尔维亚语": "Српски",
+
+    "sl": "Slovenščina",
+    "slv": "Slovenščina",
+    "斯洛文尼亚语": "Slovenščina",
+
+    "et": "Eesti",
+    "est": "Eesti",
+    "爱沙尼亚语": "Eesti",
+
+    "fa": "فارسی",
+    "fas": "فارسی",
+    "per": "فارسی",
+    "波斯语": "فارسی",
+
+    "az": "Azərbaycanca",
+    "aze": "Azərbaycanca",
+    "阿塞拜疆语": "Azərbaycanca",
+
+    "hy": "Հայերեն",
+    "hye": "Հայերեն",
+    "arm": "Հայերեն",
+    "亚美尼亚语": "Հայերեն",
+
+    "ka": "ქართული",
+    "kat": "ქართული",
+    "geo": "ქართული",
+    "格鲁吉亚语": "ქართული",
+
+    "kk": "Қазақ тілі",
+    "kaz": "Қазақ тілі",
+    "哈萨克语": "Қазақ тілі",
+
+    "ky": "Кыргызча",
+    "kir": "Кыргызча",
+    "吉尔吉斯语": "Кыргызча",
+    "吉尔吉斯斯坦语": "Кыргызча",
+
+    "uz": "Oʻzbekcha",
+    "uzb": "Oʻzbekcha",
+    "乌兹别克语": "Oʻzbekcha",
+
+    "ur": "اردو",
+    "urd": "اردو",
+    "乌尔都语": "اردو",
+
+    "bn": "বাংলা",
+    "ben": "বাংলা",
+    "孟加拉语": "বাংলা",
+
+    "ta": "தமிழ்",
+    "tam": "தமிழ்",
+    "泰米尔语": "தமிழ்",
+
+    "te": "తెలుగు",
+    "tel": "తెలుగు",
+    "泰卢固语": "తెలుగు",
+
+    "mr": "मराठी",
+    "mar": "मराठी",
+    "马拉地语": "मराठी",
+
+    "gu": "ગુજરાતી",
+    "guj": "ગુજરાતી",
+    "古吉拉特语": "ગુજરાતી",
+
+    "kn": "ಕನ್ನಡ",
+    "kan": "ಕನ್ನಡ",
+    "卡纳达语": "ಕನ್ನಡ",
+
+    "ml": "മലയാളം",
+    "mal": "മലയാളം",
+    "马拉雅拉姆语": "മലയാളം",
+
+    "my": "မြန်မာဘာသာ",
+    "mya": "မြန်မာဘာသာ",
+    "bur": "မြန်မာဘာသာ",
+    "缅甸语": "မြန်မာဘာသာ",
+
+    "km": "ភាសាខ្មែរ",
+    "khm": "ភាសាខ្មែរ",
+    "hkm": "ភាសាខ្មែរ",
+    "高棉语": "ភាសាខ្មែរ",
+
+    "lo": "ພາສາລາວ",
+    "lao": "ພາສາລາວ",
+    "老挝语": "ພາສາລາວ",
+
+    "am": "አማርኛ",
+    "amh": "አማርኛ",
+    "阿姆哈拉语": "አማርኛ",
+
+    "sw": "Kiswahili",
+    "swa": "Kiswahili",
+    "斯瓦希里语": "Kiswahili",
+
+    "fil": "Filipino",
+    "tl": "Filipino",
+    "tgl": "Filipino",
+    "菲律宾语": "Filipino",
+
+    "ms": "Bahasa Melayu",
+    "msa": "Bahasa Melayu",
+    "may": "Bahasa Melayu",
+    "马来语": "Bahasa Melayu",
+
+    "af": "Afrikaans",
+    "afr": "Afrikaans",
+    "南非语": "Afrikaans",
+
+    "is": "Íslenska",
+    "isl": "Íslenska",
+    "ice": "Íslenska",
+    "冰岛语": "Íslenska",
+
+    "ga": "Gaeilge",
+    "gle": "Gaeilge",
+    "爱尔兰语": "Gaeilge",
+
+    "sq": "Shqip",
+    "sqi": "Shqip",
+    "alb": "Shqip",
+    "阿尔巴尼亚语": "Shqip",
+
+    "eu": "Euskara",
+    "eus": "Euskara",
+    "baq": "Euskara",
+    "巴斯克语": "Euskara",
+
+    "gl": "Galego",
+    "glg": "Galego",
+    "加利西亚语": "Galego",
+
+    "bs": "Bosanski",
+    "bos": "Bosanski",
+    "波斯尼亚语": "Bosanski",
+
+    "mk": "Македонски",
+    "mkd": "Македонски",
+    "mac": "Македонски",
+    "马其顿语": "Македонски",
+
+    "mt": "Malti",
+    "mlt": "Malti",
+    "马耳他语": "Malti",
+
+    "cy": "Cymraeg",
+    "cym": "Cymraeg",
+    "wel": "Cymraeg",
+    "威尔士语": "Cymraeg",
+
+    "yi": "ייִדיש",
+    "yid": "ייִדיש",
+    "意第绪语": "ייִדיש",
+
+    "yo": "Yorùbá",
+    "yor": "Yorùbá",
+    "约鲁巴语": "Yorùbá",
+
+    "ig": "Ásụ̀sụ́ Ìgbò",
+    "ibo": "Ásụ̀sụ́ Ìgbò",
+    "伊博语": "Ásụ̀sụ́ Ìgbò",
+
+    "ha": "Harshen Hausa",
+    "hau": "Harshen Hausa",
+    "豪萨语": "Harshen Hausa",
+
+    "so": "Soomaali",
+    "som": "Soomaali",
+    "索马里语": "Soomaali",
+
+    "st": "Sesotho",
+    "sot": "Sesotho",
+    "塞索托语": "Sesotho",
+
+    "su": "Basa Sunda",
+    "sun": "Basa Sunda",
+    "巽他语": "Basa Sunda",
+
+    "jv": "Basa Jawa",
+    "jav": "Basa Jawa",
+    "jw": "Basa Jawa",
+    "爪哇语": "Basa Jawa",
+
+    "ceb": "Cebuano",
+    "宿务语": "Cebuano",
+
+    "ny": "Chichewa",
+    "nya": "Chichewa",
+    "齐切瓦语": "Chichewa",
+
+    "mg": "Malagasy",
+    "mlg": "Malagasy",
+    "马尔加什语": "Malagasy",
+
+    "ht": "Kreyòl ayisyen",
+    "hat": "Kreyòl ayisyen",
+    "海地克里奥尔语": "Kreyòl ayisyen",
+
+    "haw": "ʻŌlelo Hawaiʻi",
+    "hawai": "ʻŌlelo Hawaiʻi",
+    "夏威夷语": "ʻŌlelo Hawaiʻi",
+
+    "mi": "Te Reo Māori",
+    "mri": "Te Reo Māori",
+    "mao": "Te Reo Māori",
+    "毛利语": "Te Reo Māori",
+
+    "sm": "Gagana Samoa",
+    "smo": "Gagana Samoa",
+    "萨摩亚语": "Gagana Samoa",
+
+    "tg": "Тоҷикӣ",
+    "tgk": "Тоҷикӣ",
+    "塔吉克语": "Тоҷикӣ",
+
+    "tk": "Türkmen dili",
+    "tuk": "Türkmen dili",
+    "土库曼语": "Türkmen dili",
+
+    "tt": "Татарча",
+    "tat": "Татарча",
+    "鞑靼语": "Татарча",
+
+    "ug": "ئۇيغۇرچە",
+    "uig": "ئۇيغۇرچە",
+    "维吾尔语": "ئۇيغۇرچە",
+
+    "ps": "پښتو",
+    "pus": "پښتو",
+    "普什图语": "پښتو",
+
+    "sd": "سنڌي",
+    "snd": "سنڌي",
+    "信德语": "سنڌي",
+
+    "ne": "नेपाली",
+    "nep": "नेपाली",
+    "尼泊尔语": "नेपाली",
+
+    "si": "සිංහල",
+    "sin": "සිංහල",
+    "僧伽罗语": "සිංහල",
+
+    "pa": "ਪੰਜਾਬੀ",
+    "pan": "ਪੰਜਾਬੀ",
+    "旁遮普语": "ਪੰਜਾਬੀ",
+
+    "fy": "Frysk",
+    "fry": "Frysk",
+    "弗里斯兰语": "Frysk",
+    "西弗里斯兰语": "Frysk",
+
+    "co": "Corsu",
+    "cos": "Corsu",
+    "科西嘉语": "Corsu",
+
+    "gd": "Gàidhlig",
+    "gla": "Gàidhlig",
+    "苏格兰盖尔语": "Gàidhlig",
+
+    "lb": "Lëtzebuergesch",
+    "ltz": "Lëtzebuergesch",
+    "卢森堡语": "Lëtzebuergesch",
+
+    "la": "Latina",
+    "lat": "Latina",
+    "拉丁语": "Latina",
+
+    "eo": "Esperanto",
+    "epo": "Esperanto",
+    "世界语": "Esperanto",
+
+    "ku": "Kurdî",
+    "kur": "Kurdî",
+    "库尔德语": "Kurdî",
+
+    "ckb": "کوردی",
+    "库尔德语(中)": "کوردی",
+    "库尔德语(索拉尼)": "کوردی",
+
+    "ti": "ትግርኛ",
+    "tir": "ትግርኛ",
+    "提格利尼亚语": "ትግርኛ",
+
+    "ay": "Aymar aru",
+    "aym": "Aymar aru",
+    "艾马拉语": "Aymar aru",
+
+    "qu": "Runa Simi",
+    "que": "Runa Simi",
+    "克丘亚语": "Runa Simi",
+
+    "sn": "chiShona",
+    "sna": "chiShona",
+    "肖纳语": "chiShona",
+
+    "zu": "isiZulu",
+    "zul": "isiZulu",
+    "祖鲁语": "isiZulu",
 }
 
 def try_import_translators():
@@ -113,6 +591,18 @@ def compute_diff(old_list, new_list):
         "similarity": round(similarity, 1)
     }
 
+def resolve_autonym(key_or_code):
+    """根据键名或 ISO 代码解析出标准母语自称 (Autonym)"""
+    if not key_or_code:
+        return key_or_code
+    s = str(key_or_code).strip()
+    if s in ISO_AND_NAME_TO_AUTONYM:
+        return ISO_AND_NAME_TO_AUTONYM[s]
+    lower_s = s.lower()
+    if lower_s in ISO_AND_NAME_TO_AUTONYM:
+        return ISO_AND_NAME_TO_AUTONYM[lower_s]
+    return s
+
 def main():
     root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     csv_file = os.path.join(root_dir, "supported_language_map.csv")
@@ -121,31 +611,40 @@ def main():
     
     value_order = []
     value_map = {}
-    code_to_value = dict(LANG_CODE_TO_VALUE)
+    code_to_value = {}
+
+    # 初始化内置的权威 Autonym 代码表
+    for code_or_name, autonym in ISO_AND_NAME_TO_AUTONYM.items():
+        code_to_value[code_or_name.lower()] = autonym
+        code_to_value[code_or_name] = autonym
     
-    # 记录每个源的差异分析结果
     diff_report_entries = []
 
-    # 1. 载入本地 CSV 基础底座
+    # 1. 载入本地 CSV 基础底座（使用 utf-8-sig 兼容 BOM 标头）
     if os.path.exists(csv_file):
         print(f"📖 [Step 1] 载入本地 CSV 基准映射: {csv_file}")
-        with open(csv_file, mode="r", encoding="utf-8") as f:
+        with open(csv_file, mode="r", encoding="utf-8-sig") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                val = row.get("Value", "").strip()
-                if not val:
+                raw_val = row.get("Value", "").strip()
+                if not raw_val:
                     continue
-                if val not in value_map:
-                    value_map[val] = {"Value": val}
-                    value_order.append(val)
+
+                # 统一转换为母语自称 (Autonym)
+                autonym = resolve_autonym(raw_val)
+
+                if autonym not in value_map:
+                    value_map[autonym] = {"Value": autonym}
+                    value_order.append(autonym)
+
                 for provider, code in row.items():
                     clean_provider = provider.strip() if provider else ""
                     clean_code = code.strip() if code else ""
                     if clean_provider and clean_provider != "Value" and clean_code:
-                        value_map[val][clean_provider] = clean_code
-                        code_to_value[clean_code.lower()] = val
-                        code_to_value[clean_code] = val
-        print(f"✓ CSV 载入完成，基准包含 {len(value_map)} 种语言。")
+                        value_map[autonym][clean_provider] = clean_code
+                        code_to_value[clean_code.lower()] = autonym
+                        code_to_value[clean_code] = autonym
+        print(f"✓ CSV 载入完成，基准映射归并为 {len(value_map)} 种母语条目。")
 
     # 2. 动态抓取 + 纯 Difference 差异比对分析
     ts = try_import_translators()
@@ -175,15 +674,12 @@ def main():
                 diff = compute_diff(old_list, fetched_list)
 
                 # 判定决策：
-                # A. 抓取为空且历史有数据 -> 判定为接口异常，保留历史
                 if diff["new_count"] == 0 and diff["old_count"] > 0:
                     status = "🛡️ 抓取为空(保留历史)"
                     final_list = old_list
-                # B. 历史有较多数据但重合相似度极低 (< 40%) -> 判定为接口反爬或脏数据，保留历史
                 elif diff["old_count"] > 10 and diff["similarity"] < 40.0:
                     status = f"⚠️ 差异突变(相似度 {diff['similarity']}% < 40%，触发保护)"
                     final_list = old_list
-                # C. 正常演进（大部分一致，包含新增或部分版本代号修正）
                 else:
                     if diff["added"] and diff["removed"]:
                         status = f"🔄 版本变更 (+{len(diff['added'])}, -{len(diff['removed'])})"
@@ -195,7 +691,6 @@ def main():
                         status = "✓ 完全一致 (100% 重合)"
                     final_list = fetched_list
 
-                    # 仅在非空且正常时写入更新
                     if final_list:
                         with open(provider_file, "w", encoding="utf-8") as f:
                             json.dump(sorted(list(set(final_list))), f, ensure_ascii=False, indent=2)
@@ -224,15 +719,18 @@ def main():
                     code_str = str(lang_code).strip()
                     if not code_str:
                         continue
-                    val_name = code_to_value.get(code_str.lower(), code_to_value.get(code_str, code_str))
-                    if val_name not in value_map:
-                        value_map[val_name] = {"Value": val_name}
-                        value_order.append(val_name)
-                    value_map[val_name][provider] = code_str
+
+                    # 优先获取对应的母语自称 (Autonym)
+                    autonym = code_to_value.get(code_str.lower(), code_to_value.get(code_str, resolve_autonym(code_str)))
+
+                    if autonym not in value_map:
+                        value_map[autonym] = {"Value": autonym}
+                        value_order.append(autonym)
+                    value_map[autonym][provider] = code_str
             except Exception as e:
                 print(f"  读取持久化缓存 {file_name} 警告: {e}")
 
-    # 4. 生成标准 JSON 文件并输出
+    # 4. 生成标准 JSON 文件并导出至多个路径
     print(f"💾 [Step 4] 导出标准 supported_languages.json...")
     def sort_key(val_name):
         if val_name in value_order:
@@ -249,15 +747,32 @@ def main():
                 ordered_item[k] = item[k]
         output_list.append(ordered_item)
 
-    # 写入根目录
+    # 写入根目录 target
     root_json = os.path.join(root_dir, "supported_languages.json")
     with open(root_json, "w", encoding="utf-8") as f:
         json.dump(output_list, f, ensure_ascii=False, indent=4)
-    print(f"✓ 产物已生成: {root_json} (合并后语言总数: {len(output_list)})")
+    print(f"✓ 产物已生成 (根目录): {root_json} (语言总数: {len(output_list)})")
 
-    # 5. 生成专业 Markdown Difference 详细对比报告并同步存入 raw_sources 文件夹
+    # 自动同步写入 pyro_api_translate 包资源路径（如果目录存在）
+    target_paths = [
+        os.path.join(root_dir, "packages", "pyro_api_translate", "assets", "supported_languages.json"),
+        os.path.join(root_dir, "packages", "core", "pyro_api_translate", "assets", "supported_languages.json"),
+        os.path.abspath(os.path.join(root_dir, "..", "wallpaper", "packages", "core", "pyro_api_translate", "assets", "supported_languages.json")),
+    ]
+
+    for pkg_json_path in target_paths:
+        pkg_dir = os.path.dirname(pkg_json_path)
+        if os.path.exists(pkg_dir):
+            try:
+                with open(pkg_json_path, "w", encoding="utf-8") as f:
+                    json.dump(output_list, f, ensure_ascii=False, indent=4)
+                print(f"✓ 产物已同步写入: {pkg_json_path}")
+            except Exception as e:
+                print(f"  警告: 无法同步写入 {pkg_json_path}: {e}")
+
+    # 5. 生成专业 Markdown Difference 详细对比报告并存入 raw_sources 文件夹
     report_content = []
-    report_content.append("# 🌐 多源翻译语言 Difference 差异比对报告\n")
+    report_content.append("# 🌐 多源翻译语言 Difference 差异比对报告 (Autonym 母语版)\n")
     report_content.append(f"- **比对时间**: `{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}`")
     report_content.append(f"- **合并总语言条目**: `{len(output_list)}` 种\n")
     report_content.append("### 各翻译源 Difference 明细表\n")
@@ -274,7 +789,6 @@ def main():
     
     full_report_text = "\n".join(report_content) + "\n"
 
-    # 存入 raw_sources/ 目录供 GitHub 仓库持久化归档与文件夹预览
     report_file = os.path.join(raw_sources_dir, "sync_diff_report.md")
     readme_file = os.path.join(raw_sources_dir, "README.md")
     

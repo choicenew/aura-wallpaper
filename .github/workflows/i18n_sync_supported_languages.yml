@@ -13,7 +13,7 @@ jobs:
     name: 抓取、合并与归档多源语言字典
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout aura-wallpaper
+      - name: Checkout pyropub
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -33,7 +33,7 @@ jobs:
             cat raw_sources/sync_diff_report.md >> $GITHUB_STEP_SUMMARY
           fi
 
-      - name: Commit and Push to aura-wallpaper Repo
+      - name: Commit and Push to pyropub Repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(i18n): update supported_languages.json and raw_sources from UlionTse/translators"
