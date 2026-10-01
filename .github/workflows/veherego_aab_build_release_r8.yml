@@ -32,6 +32,14 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           fetch-depth: 0
 
+      - name: Checkout packages repository
+        uses: actions/checkout@v4
+        with:
+          repository: choicenew/packages
+          path: veherego/packages
+          token: ${{ secrets.GH_PAT }}
+          submodules: false
+
       - name: Locate Flutter Project
         run: |
           VEHEREGO_DIR=$(find veherego -type f -name pubspec.yaml -print0 | while IFS= read -r -d '' manifest; do
