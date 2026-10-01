@@ -43,7 +43,7 @@ jobs:
         uses: r0adkll/upload-google-play@v1
         with:
           serviceAccountJsonPlainText: ${{ secrets.VEHEREGO_PLAY_STORE_SERVICE_ACCOUNT || secrets.PLAY_STORE_SERVICE_ACCOUNT }}
-          packageName: ${{ secrets.VEHEREGO_PACKAGE_NAME || 'com.vehere.go' }}
+          packageName: ${{ secrets.VEHEREGO_PACKAGE_NAME || 'com.mypyro.veherego' }}
           releaseFiles: "release_assets/*.aab"
           track: production
           whatsNewDirectory: release_notes

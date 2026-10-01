@@ -24,7 +24,7 @@ jobs:
       - name: Run Store Listing Update Script
         env:
           PLAY_STORE_CREDENTIALS: ${{ secrets.VEHEREGO_PLAY_STORE_SERVICE_ACCOUNT || secrets.PLAY_STORE_SERVICE_ACCOUNT }}
-          PACKAGE_NAME: ${{ secrets.VEHEREGO_PACKAGE_NAME || 'com.vehere.go' }}
+          PACKAGE_NAME: ${{ secrets.VEHEREGO_PACKAGE_NAME || 'com.mypyro.veherego' }}
           TRANSLATIONS_FILE: veherego_translations.json
         run: |
           if [ -z "$PLAY_STORE_CREDENTIALS" ]; then
