@@ -1,11 +1,19 @@
 ---
 name: github-actions-release-governance
-description: Comprehensive standards and guidelines for GitHub Actions CI/CD workflows in Android/Flutter projects. Standardizes concise top-level workflow titles, strict trigger control (prohibiting auto-build on push to main), prerelease vs release publishing rules, and downstream workflow_run linkages.
+description: Comprehensive standards and guidelines for GitHub Actions CI/CD workflows in Android/Flutter projects. Standardizes explicit pre-execution user authorization, concise top-level workflow titles, strict trigger control (prohibiting auto-build on push to main), prerelease vs release publishing rules, and downstream workflow_run linkages.
 ---
 
 # GitHub Actions Release & Workflow Governance Skill
 
 This skill defines mandatory rules for writing, maintaining, and refactoring GitHub Actions workflow files (`.github/workflows/*.yml`) across Android and Flutter repositories.
+
+---
+
+## 0. Mandatory Pre-Execution Communication & Authorization (事前沟通与授权原则)
+
+- **NEVER Assume Intent**: Never proceed based on self-righteous assumptions, guesses, or unilateral decisions.
+- **Explicit User Authorization Required**: BEFORE making any edits to workflow files, running git commands, deleting/moving files, or altering pipeline rules, you MUST first communicate clearly with the user, present the exact proposed changes, and ONLY proceed after receiving explicit user permission/confirmation.
+- **Strict Compliance**: Follow the user's instructions word for word without excuses, defensiveness, or unauthorized side effects.
 
 ---
 
@@ -65,6 +73,6 @@ When modifying a workflow's top-level `name:`:
 ## 5. Execution Safeguards
 
 1. **No Unauthorized File System Actions**:
-   - NEVER execute unrequested shell commands, file renames (`git mv`), file deletions, or unauthorized structural changes.
+   - NEVER execute unrequested shell commands, file renames (`git mv`), file deletions, or unauthorized structural changes without explicit user approval.
 2. **Pre-Task Inspection**:
    - Always inspect all trigger conditions (`on:`), output paths, and downstream dependencies before modifying any workflow file.
