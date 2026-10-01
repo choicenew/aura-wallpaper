@@ -134,9 +134,3 @@ jobs:
           mkdir -p release_assets
           cp build/app/outputs/flutter-apk/app-debug.apk release_assets/pyro_magma-v${{ env.APP_VERSION }}-debug.apk
           ls -lh release_assets/
-
-      - name: Upload Debug APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: pyromagma-debug-opt-apk
-          path: ./pyro_magma/release_assets/*.apk
