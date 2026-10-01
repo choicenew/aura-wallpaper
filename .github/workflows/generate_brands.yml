@@ -1,0 +1,38 @@
+name: Generate Brands from NSI
+
+on:
+  workflow_dispatch: # 允许手动触发
+  schedule:
+    - cron: '0 0 * * 1' # 每周一凌晨自动执行一次
+
+permissions:
+  contents: write # 允许自动提交代码
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Aura Wallpaper Repo
+        uses: actions/checkout@v4
+
+      - name: Checkout NSI Repo
+        uses: actions/checkout@v4
+        with:
+          repository: choicenew/name-suggestion-index
+          path: nsi_repo
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Brands Processing Script
+        run: python scripts/process_nsi_brands.py
+        env:
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(data): auto-generate brand dictionaries by country and category from NSI"
+          file_pattern: "veherego_assets/brands/**/*.json"

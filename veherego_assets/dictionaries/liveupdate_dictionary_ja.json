@@ -1,0 +1,150 @@
+{
+  "type": "live_update",
+  "locale": "ja",
+  "smart_rules": [
+    {
+      "id": "food",
+      "max_stage": 4,
+      "package_hints": [
+        "demaecan",
+        "ubereats",
+        "mcdonalds",
+        "kfc",
+        "foodpanda",
+        "wolt",
+        "dominos",
+        "delivery",
+        "food"
+      ],
+      "text_triggers": [
+        "注文",
+        "配達",
+        "お届け",
+        "デリバリー",
+        "出前",
+        "料理",
+        "レストラン"
+      ],
+      "exclude_patterns": [
+        "(お誕生日おめでとう|誕生日)",
+        "(クーポン|割引|セール|ポイント|還元)",
+        "(決済失敗|注文キャンセル|返金)"
+      ],
+      "signals": [
+        {
+          "stage": 4,
+          "pattern": "(配達が完了しました|お届けが完了しました|ご注文の商品をお届けしました|受け取り完了)"
+        },
+        {
+          "stage": 3,
+          "pattern": "(配達中|お届けに向かっています|ドライバーが出発しました|まもなく到着|配達員が向かっています)"
+        },
+        {
+          "stage": 2,
+          "pattern": "(お料理の準備ができました|受け取り待ち|ピックアップ準備完了)"
+        },
+        {
+          "stage": 1,
+          "pattern": "(調理中|お料理を準備しています|お店が注文を確認しました)"
+        },
+        {
+          "stage": 0,
+          "pattern": "(ご注文を受け付けました|注文を確定しました|注文が入りました)"
+        }
+      ]
+    },
+    {
+      "id": "package",
+      "max_stage": 4,
+      "package_hints": [
+        "yamato",
+        "sagawa",
+        "japanpost",
+        "amazon",
+        "rakuten",
+        "kuroneko",
+        "pickup",
+        "locker"
+      ],
+      "text_triggers": [
+        "お荷物",
+        "荷物",
+        "配送",
+        "宅配",
+        "宅配ボックス",
+        "郵便",
+        "受け取り",
+        "不在連絡票"
+      ],
+      "exclude_patterns": [
+        "(セール|おすすめ|ポイント)",
+        "(お荷物の発送準備中|注文キャンセル)"
+      ],
+      "signals": [
+        {
+          "stage": 4,
+          "pattern": "(配達完了|お届け完了|宅配ボックスにお届けしました|受取完了)"
+        },
+        {
+          "stage": 3,
+          "pattern": "(配達中|本日お届け予定|まもなく配達に伺います)"
+        },
+        {
+          "stage": 2,
+          "pattern": "(店舗に到着|営業所でお預かりしています|宅配ロッカーに投函済み|受取可能)"
+        },
+        {
+          "stage": 1,
+          "pattern": "(発送されました|輸送中|中継センターを通過)"
+        },
+        {
+          "stage": 0,
+          "pattern": "(発送準備中|伝票番号発行|集荷待ち)"
+        }
+      ]
+    },
+    {
+      "id": "ride",
+      "max_stage": 4,
+      "package_hints": [
+        "go.taxi",
+        "uber",
+        "didiglobal",
+        "s.ride",
+        "taxi"
+      ],
+      "text_triggers": [
+        "タクシー",
+        "配車",
+        "乗車",
+        "ドライバー",
+        "降車"
+      ],
+      "exclude_patterns": [
+        "(クーポン|キャンペーン)"
+      ],
+      "signals": [
+        {
+          "stage": 4,
+          "pattern": "(降車完了|目的地に到着しました|ご利用ありがとうございました)"
+        },
+        {
+          "stage": 3,
+          "pattern": "(ご乗車中|目的地へ向かっています)"
+        },
+        {
+          "stage": 2,
+          "pattern": "(タクシーが到着しました|乗車場所でお待ちください)"
+        },
+        {
+          "stage": 1,
+          "pattern": "(お迎えに向かっています|タクシーが向かっています)"
+        },
+        {
+          "stage": 0,
+          "pattern": "(タクシーを手配中|配車確定)"
+        }
+      ]
+    }
+  ]
+}

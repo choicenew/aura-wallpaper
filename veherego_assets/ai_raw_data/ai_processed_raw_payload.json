@@ -1,0 +1,87 @@
+{
+  "$schema": "https://veherego.app/schemas/v1/ai_processed_raw_payload.json",
+  "version": "1.0.0",
+  "description": "AI 处理原始数据快照 (包含未处理/处理后的全量原始数据、富媒体图片及多级支付通道明细)",
+  "order_id": "meituan_order_20260908001",
+  "created_at": "2026-09-08T08:50:00Z",
+  "scene_kind": "food",
+  "1_platform_source_layer": {
+    "platform_code": "meituan",
+    "platform_name": "美团外卖",
+    "platform_gross_total": 38.0,
+    "platform_discount_amount": 10.0,
+    "platform_subtotal_after_discount": 28.0,
+    "platform_discounts_detail": [
+      {
+        "discount_name": "美团外卖平台通用红包",
+        "amount": 10.0
+      }
+    ]
+  },
+  "2_merchant_brand_layer": {
+    "brand_code": "luckin",
+    "brand_name": "瑞幸咖啡",
+    "brand_avatar_url": "assets/brands/luckin.png",
+    "merchant_name": "瑞幸咖啡(科技园店)",
+    "merchant_discount_amount": 5.0,
+    "merchant_discounts_detail": [
+      {
+        "discount_name": "店铺满30减5优惠券",
+        "amount": 5.0
+      }
+    ],
+    "fulfillment_credentials": {
+      "pickup_code": "A88",
+      "qr_payload": "https://luckin.com/qr/A88",
+      "barcode_format": "QR_CODE",
+      "location": "科技园店1号自提柜",
+      "locker_number": "02号格口"
+    }
+  },
+  "3_product_items_layer": [
+    {
+      "item_id": "item_1",
+      "item_name": "苹果C美式",
+      "item_image_url": "https://img.luckin.com/product/apple_c.png",
+      "category": "coffee",
+      "specs": "大杯 / 不另外加糖 / 冰",
+      "quantity": 1,
+      "original_price": 18.0,
+      "item_discount_amount": 3.0,
+      "item_discounts_detail": [
+        {
+          "discount_name": "单品限时秒杀折",
+          "amount": 3.0
+        }
+      ],
+      "final_item_price": 15.0
+    }
+  ],
+  "4_nested_payment_settlement_layer": {
+    "total_original_amount": 38.0,
+    "payment_chain": {
+      "primary_gateway": "云闪付",
+      "secondary_funding_source": "招商银行信用卡",
+      "account_tail": "8888"
+    },
+    "payment_discounts_detail": [
+      {
+        "discount_tier": "primary_gateway_discount",
+        "discount_name": "云闪付专享首单立减",
+        "amount": 5.0
+      },
+      {
+        "discount_tier": "secondary_funding_discount",
+        "discount_name": "招商银行信用卡随机立减",
+        "amount": 5.0
+      }
+    ],
+    "final_paid_amount": 10.0
+  },
+  "raw_assets_diagnostics": {
+    "raw_text": "...",
+    "image_path": "/storage/emulated/0/Pictures/Screenshots/luckin.png",
+    "engine_used": "ppocrv6_onnx",
+    "duration_ms": 58
+  }
+}

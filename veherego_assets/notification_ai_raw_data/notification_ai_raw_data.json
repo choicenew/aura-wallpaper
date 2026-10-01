@@ -1,0 +1,188 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "notification_ai_raw_data",
+  "description": "VehereGo 全生命周期通知 AI 原始数据标准化 Schema (涵盖下单、运输、到达全过程)",
+  "type": "object",
+  "required": [
+    "action",
+    "sessionKey",
+    "entityId",
+    "category",
+    "status",
+    "title",
+    "summary",
+    "timeWindow",
+    "actors",
+    "sourceMeta"
+  ],
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "create",
+        "update",
+        "resolve",
+        "dismiss",
+        "no_action"
+      ],
+      "description": "AI 动作指令：新建、更新、结案、忽略"
+    },
+    "sessionKey": {
+      "type": "string",
+      "description": "会话唯一键，用于追踪同一快递/任务的后续增量消息 (例: pkg#orderId)"
+    },
+    "entityId": {
+      "type": "string",
+      "description": "事项全局唯一 ID"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "fulfillment",
+        "task",
+        "reminder",
+        "event",
+        "transaction",
+        "ticket",
+        "course",
+        "generic"
+      ],
+      "description": "事项大类。快递、外卖统称为 fulfillment (履约)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "in_transit",
+        "ready_for_pickup",
+        "completed",
+        "cancelled"
+      ],
+      "description": "生命周期状态：待处理、运输中、待取件/待执行、已完成、已取消"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "urgent",
+        "high",
+        "normal",
+        "low"
+      ]
+    },
+    "tag": {
+      "type": "string",
+      "description": "业务细分标签: pickup | food | express | meeting | deadline"
+    },
+    "title": {
+      "type": "string",
+      "description": "显示标题 (例: 📦 您的快递已发出)"
+    },
+    "summary": {
+      "type": "string",
+      "description": "带【类型】前缀的摘要 (例: 【履约】顺丰快递: 预计明天到达)"
+    },
+    "timeWindow": {
+      "type": "object",
+      "properties": {
+        "startTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任务开始或快递下单时间"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任务截止或快递预计到达时间"
+        },
+        "arrivedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "快递到达驿站的物理时间"
+        },
+        "deadlineTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "最晚执行时间 (例: 滞留费产生前)"
+        },
+        "timeZone": {
+          "type": "string",
+          "description": "时区名称"
+        }
+      }
+    },
+    "actors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "description": "角色: sender | receiver | carrier (承运方) | merchant (商家)"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "credentials": {
+      "type": "object",
+      "properties": {
+        "pickupCode": {
+          "type": "string",
+          "description": "取件码"
+        },
+        "trackingNumber": {
+          "type": "string",
+          "description": "物流单号，用于跨通知聚合的核心 Key"
+        },
+        "location": {
+          "type": "string",
+          "description": "具体位置: XX驿站/XX柜"
+        }
+      }
+    },
+    "reminders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "minutesBefore": {
+            "type": "integer"
+          },
+          "remindMethod": {
+            "type": "string",
+            "enum": [
+              "notification",
+              "alarm"
+            ],
+            "description": "提醒触发方式"
+          }
+        }
+      }
+    },
+    "attributes": {
+      "type": "object",
+      "description": "动态 KV 对，存储商品名、重量、备注等非索引字段",
+      "additionalProperties": true
+    },
+    "sourceMeta": {
+      "type": "object",
+      "properties": {
+        "packageName": {
+          "type": "string"
+        },
+        "appName": {
+          "type": "string"
+        },
+        "rawText": {
+          "type": "string"
+        },
+        "referenceTime": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

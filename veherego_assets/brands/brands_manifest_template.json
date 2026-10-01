@@ -1,0 +1,287 @@
+{
+  "$schema_description": "VehereGo 全球多语言生活商户、出行票务、物流自提与餐饮饮品权威标准规范模板 (Standard Certified Brand & Merchant Manifest Template)",
+  "template_version": "2.0.0",
+  "generated_at": null,
+  "source": "https://github.com/veherego/rules",
+  "total_brands": 0,
+  "cdn_providers": [
+    "https://cdn.simpleicons.org/{identifier}",
+    "https://api.iconify.design/simple-icons:{identifier}.svg",
+    "https://unavatar.io/{domain}?fallback=false",
+    "https://icons.duckduckgo.com/ip3/{domain}.ico"
+  ],
+  "supported_categories": {
+    "drink": {
+      "key": "drink",
+      "label": "茶饮咖啡",
+      "scene_type": "meal",
+      "default_color": "#0D9488",
+      "sub_categories": {
+        "milk_tea": "现制奶茶/鲜奶茶",
+        "coffee": "现磨精品/连锁咖啡",
+        "fruit_tea": "鲜果茶/纯茶饮",
+        "dessert_drink": "甜品糖水/酸奶饮品"
+      }
+    },
+    "food": {
+      "key": "food",
+      "label": "餐饮美食",
+      "scene_type": "meal",
+      "default_color": "#F97316",
+      "sub_categories": {
+        "restaurant": "正餐餐厅/酒楼正餐",
+        "cha_chaan_teng": "茶餐厅/港式点心",
+        "street_food": "路边摊/档口小吃/夜市摊位",
+        "fast_food": "中西式快餐/汉堡披萨",
+        "hotpot": "火锅烧烤/大排档",
+        "bakery": "烘焙面包/蛋糕甜品"
+      }
+    },
+    "express": {
+      "key": "express",
+      "label": "快递物流",
+      "scene_type": "pickup",
+      "default_color": "#3B82F6",
+      "sub_categories": {
+        "station": "驿站/代收点/服务站",
+        "locker": "自提柜/智能快递柜",
+        "courier": "直营速递/干线物流"
+      }
+    },
+    "travel": {
+      "key": "travel",
+      "label": "出行客票",
+      "scene_type": "ticket",
+      "default_color": "#1E88E5",
+      "sub_categories": {
+        "train": "中国铁路/高铁动车/火车票",
+        "taxi": "网约车/出租车/即时打车",
+        "bus": "客运班车/旅游专线/城际巴士"
+      }
+    },
+    "flight": {
+      "key": "flight",
+      "label": "民航机票",
+      "scene_type": "flight",
+      "default_color": "#0284C7",
+      "sub_categories": {
+        "airline": "航空公司客票/值机/登机牌",
+        "airport": "机场地面服务/航旅服务"
+      }
+    },
+    "supermarket": {
+      "key": "supermarket",
+      "label": "商超即配",
+      "scene_type": "pickup",
+      "default_color": "#16A34A",
+      "sub_categories": {
+        "fresh": "即时生鲜/前置仓买菜",
+        "convenience": "连锁便利店",
+        "hypermarket": "大型商超/会员大卖场"
+      }
+    },
+    "other": {
+      "key": "other",
+      "label": "综合生活服务",
+      "scene_type": "generic",
+      "default_color": "#64748B",
+      "sub_categories": {
+        "cinema": "电影演出/影院票务",
+        "service": "生活缴费/社区服务"
+      }
+    }
+  },
+  "item_schema_definition": {
+    "field_descriptions": {
+      "slug": {
+        "type": "string",
+        "required": true,
+        "description": "品牌/商户稳定唯一的全局标识符（小写英数，连字符分隔），用于历史记录、日志索引、资源寻址"
+      },
+      "title": {
+        "type": "string",
+        "required": true,
+        "description": "商户官方标准全称（用于卡片主标题与通知栏权威展示）"
+      },
+      "short_name": {
+        "type": "string",
+        "required": false,
+        "description": "极简日常口语简称（如 Manner, 12306, 麦当劳）"
+      },
+      "badge_text": {
+        "type": "string",
+        "required": false,
+        "description": "1~2个汉字或英文单字徽标（用于未下载或离线时快速渲染高辨识度的彩色圆形 Text Avatar 图标）"
+      },
+      "category": {
+        "type": "string",
+        "required": true,
+        "description": "一级主业态分类：drink | food | express | travel | flight | supermarket | other"
+      },
+      "sub_category": {
+        "type": "string",
+        "required": false,
+        "description": "二级细分业态分类：如 milk_tea, coffee, cha_chaan_teng, street_food, locker, train, airline 等"
+      },
+      "color": {
+        "type": "string",
+        "required": true,
+        "pattern": "^#[0-9A-Fa-f]{6}$",
+        "description": "品牌主题 HEX 十六进制代表色，用于卡片强调条、圆形徽标底色与通知背景"
+      },
+      "aliases": {
+        "type": "array<string>",
+        "required": false,
+        "description": "识别别名全集（英文全称、小写缩写、历史旧称、常见错别字等）"
+      },
+      "keywords": {
+        "type": "array<string>",
+        "required": true,
+        "description": "强特征匹配词列表（特定口令、招牌产品、专有用语，如'啡快口令'、'雪王'、'葫芦'、'取件码'、'检票口'等），按长度降序优先匹配"
+      },
+      "package_hints": {
+        "type": "array<string>",
+        "required": false,
+        "description": "关联移动客户端 Android/iOS 包名列表，用于通过捕获通知的来源应用实现精准命中"
+      },
+      "icon_url": {
+        "type": "string",
+        "required": false,
+        "description": "官方直链或自建静态托管的高清 SVG/PNG 图标地址"
+      },
+      "domain": {
+        "type": "string",
+        "required": false,
+        "description": "可选备用：官方主域名（仅作为国际 CDN 垫底可选参数，严禁强求或生造）"
+      },
+      "forces_pickup_scene": {
+        "type": "boolean",
+        "required": false,
+        "default": true,
+        "description": "命中后是否强制按取件/取餐/出票卡片与超级岛/LiveActivity 模板流转"
+      },
+      "special_rules": {
+        "type": "object",
+        "required": false,
+        "properties": {
+          "qr_pattern": "专属二维码核销特征正则",
+          "code_patterns": "专属取件码/取餐号正则规则列表",
+          "require_qr_code": "是否强制要求携带二维码才视为有效凭证"
+        }
+      },
+      "pickup_schemes": {
+        "type": "array<string>",
+        "required": false,
+        "description": "专属取件条码/卡包页 Deep Link 或 Scheme 候选列表（按优先级尝试，直接进入对应 App 专属取件页）"
+      },
+      "supports_identity_code": {
+        "type": "boolean",
+        "required": false,
+        "default": false,
+        "description": "品牌是否支持自提身份码/专属核销码（如菜鸟身份码、拼多多提货码）"
+      },
+      "identity_rules": {
+        "type": "object",
+        "required": false,
+        "description": "身份码专用核销规则、识别特征模式及扫码呈现参数"
+      },
+      "custom_metadata": {
+        "type": "object",
+        "required": false,
+        "description": "供自动化抓取脚本写入的商户扩展字段（如营业时间、热线、来源数据库 ID 等）"
+      }
+    },
+    "skeleton_contract_example": {
+      "slug": "example_slug",
+      "title": "示例商户标准名称",
+      "short_name": "示例简称",
+      "badge_text": "示",
+      "category": "food",
+      "sub_category": "cha_chaan_teng",
+      "color": "#F97316",
+      "aliases": ["Example Store", "EXAMPLE"],
+      "keywords": ["示例招牌", "示例取餐", "特制点心"],
+      "package_hints": ["com.example.app"],
+      "icon_url": "https://example.com/logo.svg",
+      "domain": "example.com",
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": "^EX[0-9]{8}$",
+        "code_patterns": ["[A-Z][0-9]{3,4}"],
+        "require_qr_code": false
+      },
+      "pickup_schemes": [
+        "example://pickup/detail",
+        "example://qrcode/scan"
+      ],
+      "supports_identity_code": false,
+      "identity_rules": {
+        "type": "barcode_or_qrcode",
+        "description": "商户自提身份码 / 提货核销二维码"
+      },
+      "custom_metadata": {}
+    }
+  },
+  "brand_aliases": {
+    "cainiao_example": {
+      "slug": "cainiao",
+      "title": "菜鸟驿站",
+      "short_name": "菜鸟",
+      "badge_text": "鸟",
+      "category": "express",
+      "sub_category": "station",
+      "color": "#FF6000",
+      "aliases": ["菜鸟网络", "CAINIAO"],
+      "keywords": ["菜鸟", "菜鸟驿站", "菜鸟速递", "cainiao"],
+      "package_hints": ["com.cainiao.wireless", "com.taobao.cainiao"],
+      "icon_url": "https://cdn.simpleicons.org/cainiao",
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": "^CN[0-9]{10,}$",
+        "code_patterns": ["\\d{1,2}-\\d{1,2}-\\d{4}"],
+        "require_qr_code": false
+      },
+      "pickup_schemes": [
+        "cainiao://app/package/detail",
+        "cainiao://app/station/identity",
+        "cainiao://",
+        "taobao://"
+      ],
+      "supports_identity_code": true,
+      "identity_rules": {
+        "type": "barcode_or_qrcode",
+        "description": "菜鸟驿站专属到店身份码 / 提货核销码"
+      },
+      "custom_metadata": {}
+    },
+    "pinduoduo_example": {
+      "slug": "pinduoduo",
+      "title": "拼多多",
+      "short_name": "拼多多",
+      "badge_text": "拼",
+      "category": "express",
+      "sub_category": "station",
+      "color": "#E02E24",
+      "aliases": ["PDD", "多多买菜"],
+      "keywords": ["多多买菜", "拼多多", "多多自提", "多多驿站"],
+      "package_hints": ["com.xunmeng.pinduoduo"],
+      "icon_url": "https://cdn.simpleicons.org/pinduoduo",
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": ["[A-Za-z0-9]{4,8}"],
+        "require_qr_code": false
+      },
+      "pickup_schemes": [
+        "pinduoduo://com.xunmeng.pinduoduo/express_station",
+        "pinduoduo://"
+      ],
+      "supports_identity_code": true,
+      "identity_rules": {
+        "type": "barcode_or_qrcode",
+        "description": "拼多多自提核销二维码 / 提货码"
+      },
+      "custom_metadata": {}
+    }
+  }
+}

@@ -1,0 +1,2944 @@
+{
+  "type": "brand",
+  "version": 6,
+  "source": "veherego_certified_lifestyle_registry",
+  "updated_at": "2026-09-05T08:58:33.165609Z",
+  "cdn_providers": [
+    "https://cdn.simpleicons.org/{identifier}",
+    "https://api.iconify.design/simple-icons:{identifier}.svg",
+    "https://unavatar.io/{domain}?fallback=false",
+    "https://icons.duckduckgo.com/ip3/{domain}.ico"
+  ],
+  "categories": [
+    "express",
+    "food",
+    "drink",
+    "coffee",
+    "travel",
+    "flight",
+    "supermarket",
+    "other"
+  ],
+  "brand_aliases": {
+    "cainiao": {
+      "slug": "cainiao",
+      "title": "菜鸟驿站",
+      "short_name": "菜鸟驿站",
+      "badge_text": "鸟",
+      "category": "express",
+      "sub_category": "station",
+      "color": "#FF6000",
+      "aliases": [],
+      "keywords": [
+        "菜鸟",
+        "菜鸟驿站",
+        "菜鸟速递",
+        "菜乌驿站",
+        "cainiao"
+      ],
+      "package_hints": [
+        "com.cainiao.wireless",
+        "com.taobao.cainiao"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "tbopen://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages-fast.m.taobao.com%2Fwow%2Fz%2Funiapp%2F1100333%2Flast-mile-fe%2Fm-end-school-tab%2Fhome",
+        "cainiao://",
+        "taobao://"
+      ],
+      "supports_identity_code": true
+    },
+    "taobao": {
+      "slug": "taobao",
+      "title": "淘宝",
+      "short_name": "淘宝",
+      "badge_text": "淘",
+      "category": "express",
+      "sub_category": "station",
+      "color": "#FF5000",
+      "aliases": [],
+      "keywords": [
+        "淘宝",
+        "手机淘宝",
+        "淘宝包裹",
+        "taobao"
+      ],
+      "package_hints": [
+        "com.taobao.taobao"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "tbopen://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fpages-fast.m.taobao.com%2Fwow%2Fz%2Funiapp%2F1100333%2Flast-mile-fe%2Fm-end-school-tab%2Fhome",
+        "taobao://",
+        "tbopen://"
+      ],
+      "supports_identity_code": true
+    },
+    "pinduoduo": {
+      "slug": "pinduoduo",
+      "title": "拼多多",
+      "short_name": "拼多多",
+      "badge_text": "拼",
+      "category": "express",
+      "sub_category": "station",
+      "color": "#E02E24",
+      "aliases": [],
+      "keywords": [
+        "拼多多",
+        "多多买菜",
+        "多多自提",
+        "pinduoduo",
+        "pdd"
+      ],
+      "package_hints": [
+        "com.xunmeng.pinduoduo"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "pinduoduo://com.xunmeng.pinduoduo/mdkd/package",
+        "pinduoduo://com.xunmeng.pinduoduo/",
+        "pinduoduo://"
+      ],
+      "supports_identity_code": true
+    },
+    "sfexpress": {
+      "slug": "sfexpress",
+      "title": "顺丰速运",
+      "short_name": "顺丰",
+      "badge_text": "顺",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#DC2626",
+      "aliases": [],
+      "keywords": [
+        "顺丰",
+        "顺丰速运",
+        "顺丰快递",
+        "sfexpress",
+        "sf-express",
+        "顺丰速递"
+      ],
+      "package_hints": [
+        "com.sf.activity",
+        "com.sf.express"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "sfexpress://track?mailNo={code}",
+        "sfexpress://",
+        "sf-express://"
+      ]
+    },
+    "fengchao": {
+      "slug": "fengchao",
+      "title": "丰巢自提柜",
+      "short_name": "丰巢",
+      "badge_text": "巢",
+      "category": "express",
+      "sub_category": "locker",
+      "color": "#FF8000",
+      "aliases": [],
+      "keywords": [
+        "丰巢",
+        "丰巢智能柜",
+        "丰巢自提柜",
+        "fcbox",
+        "hivebox"
+      ],
+      "package_hints": [
+        "com.fcbox.hivebox"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "fcbox://",
+        "hivebox://"
+      ]
+    },
+    "jdlogistics": {
+      "slug": "jdlogistics",
+      "title": "京东物流",
+      "short_name": "京东物流",
+      "badge_text": "东",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#E1251B",
+      "aliases": [],
+      "keywords": [
+        "京东物流",
+        "京东快递",
+        "京尊达",
+        "jdlogistics",
+        "jdl",
+        "京东"
+      ],
+      "package_hints": [
+        "com.jd.jdl.android",
+        "com.jingdong.app.mall"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "openapp.jdmobile://virtual?params=%7B%22category%22%3A%22jump%22%2C%22des%22%3A%22view_wuliu%22%2C%22orderId%22%3A%22{code}%22%7D",
+        "openapp.jdmobile://"
+      ]
+    },
+    "zto": {
+      "slug": "zto",
+      "title": "中通快递",
+      "short_name": "中通快递",
+      "badge_text": "中",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#0284C7",
+      "aliases": [],
+      "keywords": [
+        "中通",
+        "中通快递",
+        "中通速递",
+        "zto"
+      ],
+      "package_hints": [
+        "com.zto.express"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "yto": {
+      "slug": "yto",
+      "title": "圆通速递",
+      "short_name": "圆通",
+      "badge_text": "圆",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#7C3AED",
+      "aliases": [],
+      "keywords": [
+        "圆通",
+        "圆通速递",
+        "圆通快递",
+        "yto"
+      ],
+      "package_hints": [
+        "com.yto.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "yunda": {
+      "slug": "yunda",
+      "title": "韵达快递",
+      "short_name": "韵达快递",
+      "badge_text": "韵",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#F59E0B",
+      "aliases": [],
+      "keywords": [
+        "韵达",
+        "韵达快递",
+        "韵达速递",
+        "yunda"
+      ],
+      "package_hints": [
+        "com.yunda.express"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "sto": {
+      "slug": "sto",
+      "title": "申通快递",
+      "short_name": "申通快递",
+      "badge_text": "申",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#EA580C",
+      "aliases": [],
+      "keywords": [
+        "申通",
+        "申通快递",
+        "申通速递",
+        "sto"
+      ],
+      "package_hints": [
+        "com.sto.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "jtexpress": {
+      "slug": "jtexpress",
+      "title": "极兔速递",
+      "short_name": "极兔",
+      "badge_text": "极",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#D90429",
+      "aliases": [],
+      "keywords": [
+        "极兔",
+        "极兔速递",
+        "jtexpress",
+        "jt-express"
+      ],
+      "package_hints": [
+        "com.jtexpress.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "deppon": {
+      "slug": "deppon",
+      "title": "德邦快递",
+      "short_name": "德邦快递",
+      "badge_text": "德",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#2563EB",
+      "aliases": [],
+      "keywords": [
+        "德邦",
+        "德邦快递",
+        "德邦物流",
+        "deppon"
+      ],
+      "package_hints": [
+        "com.deppon.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "chinapost": {
+      "slug": "chinapost",
+      "title": "中国邮政 EMS",
+      "short_name": "邮政 EMS",
+      "badge_text": "邮",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#059669",
+      "aliases": [],
+      "keywords": [
+        "中国邮政",
+        "邮政速递",
+        "EMS",
+        "邮政包裹",
+        "chinapost"
+      ],
+      "package_hints": [
+        "cn.chinapost.jdapp"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "tuxi": {
+      "slug": "tuxi",
+      "title": "兔喜生活",
+      "short_name": "兔喜生活",
+      "badge_text": "兔",
+      "category": "express",
+      "sub_category": "station",
+      "color": "#EC4899",
+      "aliases": [],
+      "keywords": [
+        "兔喜生活",
+        "兔喜",
+        "免喜生活",
+        "tuxi"
+      ],
+      "package_hints": [
+        "com.zto.tuxi"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "mama": {
+      "slug": "mama",
+      "title": "妈妈驿站",
+      "short_name": "妈妈驿站",
+      "badge_text": "妈",
+      "category": "express",
+      "sub_category": "station",
+      "color": "#8B5CF6",
+      "aliases": [],
+      "keywords": [
+        "妈妈驿站",
+        "圆通妈妈驿站",
+        "mama"
+      ],
+      "package_hints": [
+        "com.yto.mama"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "kuaibao": {
+      "slug": "kuaibao",
+      "title": "快宝驿站",
+      "short_name": "快宝驿站",
+      "badge_text": "快",
+      "category": "express",
+      "sub_category": "station",
+      "color": "#06B6D4",
+      "aliases": [],
+      "keywords": [
+        "快宝驿站",
+        "快宝",
+        "kuaibao"
+      ],
+      "package_hints": [
+        "com.kuaibao.express"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "gege": {
+      "slug": "gege",
+      "title": "格格货栈",
+      "short_name": "格格货栈",
+      "badge_text": "格",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#10B981",
+      "aliases": [],
+      "keywords": [
+        "格格货栈",
+        "格格智能柜",
+        "gegebox"
+      ],
+      "package_hints": [
+        "com.gegebox.client"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "danniao": {
+      "slug": "danniao",
+      "title": "丹鸟物流",
+      "short_name": "丹鸟物流",
+      "badge_text": "丹",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#0284C7",
+      "aliases": [],
+      "keywords": [
+        "丹鸟",
+        "丹鸟速递",
+        "丹鸟物流",
+        "danniao"
+      ],
+      "package_hints": [
+        "com.cainiao.wireless"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "kuayue": {
+      "slug": "kuayue",
+      "title": "跨越速运",
+      "short_name": "跨越",
+      "badge_text": "跨",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#4F46E5",
+      "aliases": [],
+      "keywords": [
+        "跨越速运",
+        "跨越物流",
+        "kuayue"
+      ],
+      "package_hints": [
+        "com.ky.express"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "meituan": {
+      "slug": "meituan",
+      "title": "美团外卖",
+      "short_name": "美团",
+      "badge_text": "美",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#FFC300",
+      "aliases": [],
+      "keywords": [
+        "美团",
+        "美团外卖",
+        "美团送餐",
+        "meituan",
+        "sankuai"
+      ],
+      "package_hints": [
+        "com.sankuai.meituan",
+        "com.sankuai.meituan.takeoutnew"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "meituanwaimai://waimai.meituan.com/order/detail?order_id={code}",
+        "meituanwaimai://",
+        "imeituan://"
+      ]
+    },
+    "eleme": {
+      "slug": "eleme",
+      "title": "饿了么",
+      "short_name": "饿了么",
+      "badge_text": "饿",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#008AE6",
+      "aliases": [],
+      "keywords": [
+        "饿了么",
+        "饿了么外卖",
+        "eleme",
+        "ele.me"
+      ],
+      "package_hints": [
+        "me.ele"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "eleme://catering.ele.me/order/detail?orderId={code}",
+        "eleme://"
+      ]
+    },
+    "kfc": {
+      "slug": "kfc",
+      "title": "肯德基",
+      "short_name": "肯德基",
+      "badge_text": "K",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#C41230",
+      "aliases": [],
+      "keywords": [
+        "肯德基",
+        "KFC",
+        "kfc",
+        "肯悦咖啡"
+      ],
+      "package_hints": [
+        "com.yek.android.kfc.activitys"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "mcdonalds": {
+      "slug": "mcdonalds",
+      "title": "麦当劳",
+      "short_name": "麦当劳",
+      "badge_text": "麦",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#DA291C",
+      "aliases": [],
+      "keywords": [
+        "麦当劳",
+        "McDonald",
+        "McDonald's",
+        "金拱门",
+        "mcdonalds"
+      ],
+      "package_hints": [
+        "com.mcdonalds.gma.cn"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "burgerking": {
+      "slug": "burgerking",
+      "title": "汉堡王",
+      "short_name": "汉堡王",
+      "badge_text": "堡",
+      "category": "food",
+      "sub_category": "fast_food",
+      "color": "#D62300",
+      "aliases": [],
+      "keywords": [
+        "汉堡王",
+        "Burger King",
+        "burgerking"
+      ],
+      "package_hints": [
+        "com.burgerking.china"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "tasting": {
+      "slug": "tasting",
+      "title": "塔斯汀中国汉堡",
+      "short_name": "塔斯汀汉堡",
+      "badge_text": "塔",
+      "category": "food",
+      "sub_category": "fast_food",
+      "color": "#E11D48",
+      "aliases": [],
+      "keywords": [
+        "塔斯汀",
+        "塔塔",
+        "中国汉堡",
+        "tasting"
+      ],
+      "package_hints": [
+        "com.tastin.client"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "wallace": {
+      "slug": "wallace",
+      "title": "华莱士",
+      "short_name": "华莱士",
+      "badge_text": "华",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#EF4444",
+      "aliases": [],
+      "keywords": [
+        "华莱士",
+        "全鸡汉堡",
+        "wallace"
+      ],
+      "package_hints": [
+        "com.cnwallace.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "laoxiangji": {
+      "slug": "laoxiangji",
+      "title": "老乡鸡",
+      "short_name": "老乡鸡",
+      "badge_text": "老",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#15803D",
+      "aliases": [],
+      "keywords": [
+        "老乡鸡",
+        "老母鸡汤",
+        "laoxiangji"
+      ],
+      "package_hints": [
+        "com.laoxiangji.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "haidilao": {
+      "slug": "haidilao",
+      "title": "海底捞",
+      "short_name": "海底捞",
+      "badge_text": "海",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#DC2626",
+      "aliases": [],
+      "keywords": [
+        "海底捞",
+        "海底捞火锅",
+        "haidilao"
+      ],
+      "package_hints": [
+        "com.haidilao.hdl"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "pizzahut": {
+      "slug": "pizzahut",
+      "title": "必胜客",
+      "short_name": "必胜客",
+      "badge_text": "必",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#EE3124",
+      "aliases": [],
+      "keywords": [
+        "必胜客",
+        "Pizza Hut",
+        "pizzahut"
+      ],
+      "package_hints": [
+        "com.pizzahut.activity"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "dominos": {
+      "slug": "dominos",
+      "title": "达美乐比萨",
+      "short_name": "达美乐比萨",
+      "badge_text": "达",
+      "category": "food",
+      "sub_category": "fast_food",
+      "color": "#006491",
+      "aliases": [],
+      "keywords": [
+        "达美乐",
+        "Domino's",
+        "dominos"
+      ],
+      "package_hints": [
+        "com.dominos.china"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "juewei": {
+      "slug": "juewei",
+      "title": "绝味鸭脖",
+      "short_name": "绝味鸭脖",
+      "badge_text": "绝",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#B91C1C",
+      "aliases": [],
+      "keywords": [
+        "绝味",
+        "绝味鸭脖",
+        "juewei"
+      ],
+      "package_hints": [
+        "com.juewei.client"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "zhouheiya": {
+      "slug": "zhouheiya",
+      "title": "周黑鸭",
+      "short_name": "周黑鸭",
+      "badge_text": "周",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#EA580C",
+      "aliases": [],
+      "keywords": [
+        "周黑鸭",
+        "zhouheiya"
+      ],
+      "package_hints": [
+        "com.zhouheiya.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "holiland": {
+      "slug": "holiland",
+      "title": "好利来",
+      "short_name": "好利来",
+      "badge_text": "好",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#BE185D",
+      "aliases": [],
+      "keywords": [
+        "好利来",
+        "半熟芝士",
+        "holiland"
+      ],
+      "package_hints": [
+        "com.holiland.client"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "zhenkongfu": {
+      "slug": "zhenkongfu",
+      "title": "真功夫",
+      "short_name": "真功夫",
+      "badge_text": "真",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#D97706",
+      "aliases": [],
+      "keywords": [
+        "真功夫",
+        "zhenkongfu"
+      ],
+      "package_hints": [
+        "com.zkf.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "xibei": {
+      "slug": "xibei",
+      "title": "西贝莜面村",
+      "short_name": "西贝莜面村",
+      "badge_text": "西",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#C2410C",
+      "aliases": [],
+      "keywords": [
+        "西贝",
+        "西贝莜面村",
+        "xibei"
+      ],
+      "package_hints": [
+        "com.xibei.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "luckin": {
+      "slug": "luckin",
+      "title": "瑞幸咖啡",
+      "short_name": "瑞幸咖啡",
+      "badge_text": "幸",
+      "category": "drink",
+      "sub_category": "coffee",
+      "color": "#002B49",
+      "aliases": [],
+      "keywords": [
+        "瑞幸",
+        "瑞幸咖啡",
+        "LUCKIN",
+        "luckin",
+        "生椰拿铁"
+      ],
+      "package_hints": [
+        "com.lucky.luckyclient"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "luckincoffee://"
+      ]
+    },
+    "starbucks": {
+      "slug": "starbucks",
+      "title": "星巴克",
+      "short_name": "星巴克",
+      "badge_text": "星",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#006241",
+      "aliases": [],
+      "keywords": [
+        "星巴克",
+        "STARBUCKS",
+        "Starbucks",
+        "starbucks",
+        "啡快口令"
+      ],
+      "package_hints": [
+        "com.starbucks.cn"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "starbucks://"
+      ]
+    },
+    "cotti": {
+      "slug": "cotti",
+      "title": "库迪咖啡",
+      "short_name": "库迪咖啡",
+      "badge_text": "库",
+      "category": "drink",
+      "sub_category": "coffee",
+      "color": "#D90429",
+      "aliases": [],
+      "keywords": [
+        "库迪",
+        "库迪咖啡",
+        "COTTI",
+        "cotti"
+      ],
+      "package_hints": [
+        "com.cotticoffee.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "mixue": {
+      "slug": "mixue",
+      "title": "蜜雪冰城",
+      "short_name": "蜜雪冰城",
+      "badge_text": "雪",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#EF4444",
+      "aliases": [],
+      "keywords": [
+        "蜜雪冰城",
+        "雪王",
+        "冰鲜柠檬水",
+        "mixue"
+      ],
+      "package_hints": [
+        "com.mxbc.mxsa"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "heytea": {
+      "slug": "heytea",
+      "title": "喜茶",
+      "short_name": "喜茶",
+      "badge_text": "喜",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#111827",
+      "aliases": [],
+      "keywords": [
+        "喜茶",
+        "HEYTEA",
+        "heytea",
+        "喜茶GO",
+        "制茶中"
+      ],
+      "package_hints": [
+        "com.heyteago"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "naixue": {
+      "slug": "naixue",
+      "title": "奈雪的茶",
+      "short_name": "奈雪的茶",
+      "badge_text": "奈",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#65A30D",
+      "aliases": [],
+      "keywords": [
+        "奈雪",
+        "奈雪的茶",
+        "霸气鲜果茶",
+        "naixue"
+      ],
+      "package_hints": [
+        "com.naixue.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "chagee": {
+      "slug": "chagee",
+      "title": "霸王茶姬",
+      "short_name": "霸王茶姬",
+      "badge_text": "姬",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#DC2626",
+      "aliases": [],
+      "keywords": [
+        "霸王茶姬",
+        "CHAGEE",
+        "伯牙绝弦",
+        "chagee",
+        "chaji"
+      ],
+      "package_hints": [
+        "com.chagee.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "goodme": {
+      "slug": "goodme",
+      "title": "古茗",
+      "short_name": "古茗",
+      "badge_text": "茗",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#0D9488",
+      "aliases": [],
+      "keywords": [
+        "古茗",
+        "古茗茶饮",
+        "goodme",
+        "guming",
+        "葫芦",
+        "取茶号"
+      ],
+      "package_hints": [
+        "com.goodme.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "chapanda": {
+      "slug": "chapanda",
+      "title": "茶百道",
+      "short_name": "茶百道",
+      "badge_text": "茶",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#0284C7",
+      "aliases": [],
+      "keywords": [
+        "茶百道",
+        "ChaPanda",
+        "chapanda",
+        "熊猫币",
+        "熊猫值"
+      ],
+      "package_hints": [
+        "com.chapanda.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "hushangayi": {
+      "slug": "hushangayi",
+      "title": "沪上阿姨",
+      "short_name": "沪上阿姨",
+      "badge_text": "沪",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#E11D48",
+      "aliases": [],
+      "keywords": [
+        "沪上阿姨",
+        "血糯米奶茶",
+        "hushangayi",
+        "hsay"
+      ],
+      "package_hints": [
+        "com.hushangayi.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "coco": {
+      "slug": "coco",
+      "title": "CoCo都可",
+      "short_name": "CoCo都可",
+      "badge_text": "C",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#EA580C",
+      "aliases": [],
+      "keywords": [
+        "CoCo",
+        "COCO",
+        "coco",
+        "CoCo都可",
+        "都可茶饮"
+      ],
+      "package_hints": [
+        "com.coco.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "yidiandian": {
+      "slug": "yidiandian",
+      "title": "一点点奶茶",
+      "short_name": "一点点奶茶",
+      "badge_text": "一",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#059669",
+      "aliases": [],
+      "keywords": [
+        "一点点",
+        "1点点",
+        "一点点奶茶",
+        "yidiandian",
+        "yidd"
+      ],
+      "package_hints": [
+        "com.yidiandian.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "shuyi": {
+      "slug": "shuyi",
+      "title": "书亦烧仙草",
+      "short_name": "书亦烧仙草",
+      "badge_text": "书",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#D97706",
+      "aliases": [],
+      "keywords": [
+        "书亦烧仙草",
+        "书亦",
+        "shuyi"
+      ],
+      "package_hints": [
+        "com.shuyi.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "chayan": {
+      "slug": "chayan",
+      "title": "茶颜悦色",
+      "short_name": "茶颜悦色",
+      "badge_text": "茶",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#BE123C",
+      "aliases": [],
+      "keywords": [
+        "茶颜悦色",
+        "幽兰拿铁",
+        "声声乌龙",
+        "chayan"
+      ],
+      "package_hints": [
+        "com.chayan.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "manner": {
+      "slug": "manner",
+      "title": "Manner Coffee",
+      "short_name": "Manner Coffee",
+      "badge_text": "M",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#27272A",
+      "aliases": [],
+      "keywords": [
+        "Manner",
+        "MANNER",
+        "manner",
+        "Manner Coffee"
+      ],
+      "package_hints": [
+        "com.manner.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "tims": {
+      "slug": "tims",
+      "title": "Tims天好咖啡",
+      "short_name": "Tims天好咖啡",
+      "badge_text": "T",
+      "category": "drink",
+      "sub_category": "coffee",
+      "color": "#B91C1C",
+      "aliases": [],
+      "keywords": [
+        "Tims",
+        "TIMS",
+        "tims",
+        "天好咖啡",
+        "Tim Hortons"
+      ],
+      "package_hints": [
+        "com.timhortons.china"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "luckycup": {
+      "slug": "luckycup",
+      "title": "幸运咖",
+      "short_name": "幸运咖",
+      "badge_text": "幸",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#F59E0B",
+      "aliases": [],
+      "keywords": [
+        "幸运咖",
+        "luckycup"
+      ],
+      "package_hints": [
+        "com.luckycup.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "mollytea": {
+      "slug": "mollytea",
+      "title": "茉莉奶白",
+      "short_name": "茉莉奶白",
+      "badge_text": "茉",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#14B8A6",
+      "aliases": [],
+      "keywords": [
+        "茉莉奶白",
+        "Molly",
+        "MOLLY",
+        "mollytea"
+      ],
+      "package_hints": [
+        "com.mollytea.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "noyetea": {
+      "slug": "noyetea",
+      "title": "爷爷不泡茶",
+      "short_name": "爷爷不泡茶",
+      "badge_text": "爷",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#78716C",
+      "aliases": [],
+      "keywords": [
+        "爷爷不泡茶",
+        "noyetea"
+      ],
+      "package_hints": [
+        "com.noyetea.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "chaliys": {
+      "slug": "chaliys",
+      "title": "茶理宜世",
+      "short_name": "茶理宜世",
+      "badge_text": "茶",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#B45309",
+      "aliases": [],
+      "keywords": [
+        "茶理宜世",
+        "chaliys"
+      ],
+      "package_hints": [
+        "com.chaliys.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "linlee": {
+      "slug": "linlee",
+      "title": "LINLEE 林里手打柠檬茶",
+      "short_name": "LINLEE 林里手打柠檬茶",
+      "badge_text": "L",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#84CC16",
+      "aliases": [],
+      "keywords": [
+        "LINLEE",
+        "linlee",
+        "林里柠檬茶",
+        "手打柠檬茶"
+      ],
+      "package_hints": [
+        "com.linlee.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "tianlala": {
+      "slug": "tianlala",
+      "title": "甜啦啦",
+      "short_name": "甜啦啦",
+      "badge_text": "甜",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#F43F5E",
+      "aliases": [],
+      "keywords": [
+        "甜啦啦",
+        "tianlala"
+      ],
+      "package_hints": [
+        "com.tianlala.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "sevenfall": {
+      "slug": "sevenfall",
+      "title": "7分甜",
+      "short_name": "7分甜",
+      "badge_text": "7",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#FBBF24",
+      "aliases": [],
+      "keywords": [
+        "7分甜",
+        "七分甜",
+        "sevenfall"
+      ],
+      "package_hints": [
+        "com.sevenfall.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "yizhisuannai": {
+      "slug": "yizhisuannai",
+      "title": "一只酸奶牛",
+      "short_name": "一只酸奶牛",
+      "badge_text": "一",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#3B82F6",
+      "aliases": [],
+      "keywords": [
+        "一只酸奶牛",
+        "yizhisuannai"
+      ],
+      "package_hints": [
+        "com.yizhisuannai.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "xianguoshijian": {
+      "slug": "xianguoshijian",
+      "title": "鲜果时间",
+      "short_name": "鲜果时间",
+      "badge_text": "鲜",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#10B981",
+      "aliases": [],
+      "keywords": [
+        "鲜果时间",
+        "xianguoshijian"
+      ],
+      "package_hints": [
+        "com.xianguoshijian.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "happylemon": {
+      "slug": "happylemon",
+      "title": "快乐柠檬",
+      "short_name": "快乐柠檬",
+      "badge_text": "快",
+      "category": "drink",
+      "sub_category": "milk_tea",
+      "color": "#FACC15",
+      "aliases": [],
+      "keywords": [
+        "快乐柠檬",
+        "happylemon"
+      ],
+      "package_hints": [
+        "com.happylemon.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "12306": {
+      "slug": "12306",
+      "title": "中国铁路 12306",
+      "short_name": "铁路 12306",
+      "badge_text": "铁",
+      "category": "travel",
+      "sub_category": "train",
+      "color": "#1E88E5",
+      "aliases": [],
+      "keywords": [
+        "12306",
+        "中国铁路",
+        "高铁",
+        "动车",
+        "火车票",
+        "客票",
+        "检票口",
+        "候车"
+      ],
+      "package_hints": [
+        "com.MobileTicket",
+        "com.railway.ticket"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "com.MobileTicket://"
+      ]
+    },
+    "didi": {
+      "slug": "didi",
+      "title": "滴滴出行",
+      "short_name": "滴滴出行",
+      "badge_text": "滴",
+      "category": "travel",
+      "sub_category": "train",
+      "color": "#FF8000",
+      "aliases": [],
+      "keywords": [
+        "滴滴",
+        "滴滴出行",
+        "滴滴快车",
+        "滴滴专车",
+        "司机正在赶来",
+        "等待车主到达",
+        "didi"
+      ],
+      "package_hints": [
+        "com.sdu.didi.psnger",
+        "com.didi.passenger"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "diditaxi://",
+        "didi://"
+      ]
+    },
+    "amap": {
+      "slug": "amap",
+      "title": "高德打车",
+      "short_name": "高德打车",
+      "badge_text": "高",
+      "category": "travel",
+      "sub_category": "taxi",
+      "color": "#0091FF",
+      "aliases": [],
+      "keywords": [
+        "高德地图",
+        "高德打车",
+        "高德出行",
+        "autonavi"
+      ],
+      "package_hints": [
+        "com.autonavi.minimap"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "t3go": {
+      "slug": "t3go",
+      "title": "T3 出行",
+      "short_name": "T3 出行",
+      "badge_text": "T",
+      "category": "travel",
+      "sub_category": "train",
+      "color": "#0D9488",
+      "aliases": [],
+      "keywords": [
+        "T3",
+        "T3出行",
+        "T3打车",
+        "t3go"
+      ],
+      "package_hints": [
+        "com.t3.passenger"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "caocao": {
+      "slug": "caocao",
+      "title": "曹操出行",
+      "short_name": "曹操出行",
+      "badge_text": "曹",
+      "category": "travel",
+      "sub_category": "train",
+      "color": "#0284C7",
+      "aliases": [],
+      "keywords": [
+        "曹操出行",
+        "曹操专车",
+        "caocao"
+      ],
+      "package_hints": [
+        "com.caocaokeji.carpassenger"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "hellobike": {
+      "slug": "hellobike",
+      "title": "哈啰出行",
+      "short_name": "哈啰出行",
+      "badge_text": "哈",
+      "category": "travel",
+      "sub_category": "train",
+      "color": "#06B6D4",
+      "aliases": [],
+      "keywords": [
+        "哈啰",
+        "哈啰出行",
+        "哈啰单车",
+        "哈啰顺风车",
+        "haluo",
+        "hellobike"
+      ],
+      "package_hints": [
+        "com.hello.bike"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "huaxiaozhu": {
+      "slug": "huaxiaozhu",
+      "title": "花小猪打车",
+      "short_name": "花小猪打车",
+      "badge_text": "花",
+      "category": "travel",
+      "sub_category": "taxi",
+      "color": "#F43F5E",
+      "aliases": [],
+      "keywords": [
+        "花小猪",
+        "花小猪打车",
+        "huaxz",
+        "huaxiaozhu"
+      ],
+      "package_hints": [
+        "com.huaxiaozhu.passenger"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "ctrip": {
+      "slug": "ctrip",
+      "title": "携程旅行",
+      "short_name": "携程旅行",
+      "badge_text": "携",
+      "category": "travel",
+      "sub_category": "train",
+      "color": "#2563EB",
+      "aliases": [],
+      "keywords": [
+        "携程",
+        "携程旅行",
+        "Ctrip",
+        "ctrip"
+      ],
+      "package_hints": [
+        "ctrip.android.view"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "tongcheng": {
+      "slug": "tongcheng",
+      "title": "同程旅行",
+      "short_name": "同程旅行",
+      "badge_text": "同",
+      "category": "travel",
+      "sub_category": "train",
+      "color": "#E11D48",
+      "aliases": [],
+      "keywords": [
+        "同程",
+        "同程旅行",
+        "同程艺龙",
+        "tongcheng"
+      ],
+      "package_hints": [
+        "com.tongcheng.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "qunar": {
+      "slug": "qunar",
+      "title": "去哪儿旅行",
+      "short_name": "去哪儿旅行",
+      "badge_text": "去",
+      "category": "travel",
+      "sub_category": "train",
+      "color": "#0EA5E9",
+      "aliases": [],
+      "keywords": [
+        "去哪儿",
+        "去哪儿网",
+        "qunar"
+      ],
+      "package_hints": [
+        "com.Qunar"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "fliggy": {
+      "slug": "fliggy",
+      "title": "飞猪旅行",
+      "short_name": "飞猪旅行",
+      "badge_text": "飞",
+      "category": "travel",
+      "sub_category": "train",
+      "color": "#F59E0B",
+      "aliases": [],
+      "keywords": [
+        "飞猪",
+        "飞猪旅行",
+        "阿里飞猪",
+        "fliggy"
+      ],
+      "package_hints": [
+        "com.taobao.trip"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "airchina": {
+      "slug": "airchina",
+      "title": "中国国际航空",
+      "short_name": "国际航空",
+      "badge_text": "航",
+      "category": "flight",
+      "sub_category": "airline",
+      "color": "#E11D48",
+      "aliases": [],
+      "keywords": [
+        "中国国航",
+        "国航",
+        "中国国际航空",
+        "Air China",
+        "CA"
+      ],
+      "package_hints": [
+        "com.airchina.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "ceair": {
+      "slug": "ceair",
+      "title": "中国东方航空",
+      "short_name": "东方航空",
+      "badge_text": "航",
+      "category": "flight",
+      "sub_category": "airline",
+      "color": "#0284C7",
+      "aliases": [],
+      "keywords": [
+        "东方航空",
+        "东航",
+        "MU",
+        "China Eastern"
+      ],
+      "package_hints": [
+        "com.ceair.activity"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "csair": {
+      "slug": "csair",
+      "title": "中国南方航空",
+      "short_name": "南方航空",
+      "badge_text": "航",
+      "category": "flight",
+      "sub_category": "airline",
+      "color": "#0D9488",
+      "aliases": [],
+      "keywords": [
+        "南方航空",
+        "南航",
+        "CZ",
+        "China Southern"
+      ],
+      "package_hints": [
+        "com.csair.mbp"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "hainanair": {
+      "slug": "hainanair",
+      "title": "海南航空",
+      "short_name": "海南航空",
+      "badge_text": "航",
+      "category": "flight",
+      "sub_category": "airline",
+      "color": "#DC2626",
+      "aliases": [],
+      "keywords": [
+        "海南航空",
+        "海航",
+        "HU",
+        "Hainan Airlines"
+      ],
+      "package_hints": [
+        "com.hainanairlines.mclient"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "xiamenair": {
+      "slug": "xiamenair",
+      "title": "厦门航空",
+      "short_name": "厦门航空",
+      "badge_text": "航",
+      "category": "flight",
+      "sub_category": "airline",
+      "color": "#2563EB",
+      "aliases": [],
+      "keywords": [
+        "厦门航空",
+        "厦航",
+        "MF",
+        "Xiamen Air"
+      ],
+      "package_hints": [
+        "com.xiamenair.h5"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "springair": {
+      "slug": "springair",
+      "title": "春秋航空",
+      "short_name": "春秋航空",
+      "badge_text": "航",
+      "category": "flight",
+      "sub_category": "airline",
+      "color": "#16A34A",
+      "aliases": [],
+      "keywords": [
+        "春秋航空",
+        "春秋",
+        "9C",
+        "Spring Airlines"
+      ],
+      "package_hints": [
+        "com.ch.chflightapp"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "juneyaoair": {
+      "slug": "juneyaoair",
+      "title": "吉祥航空",
+      "short_name": "吉祥航空",
+      "badge_text": "航",
+      "category": "flight",
+      "sub_category": "airline",
+      "color": "#BE185D",
+      "aliases": [],
+      "keywords": [
+        "吉祥航空",
+        "吉祥",
+        "HO",
+        "Juneyao Air"
+      ],
+      "package_hints": [
+        "com.juneyao.air"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "sichuanair": {
+      "slug": "sichuanair",
+      "title": "四川航空",
+      "short_name": "四川航空",
+      "badge_text": "航",
+      "category": "flight",
+      "sub_category": "airline",
+      "color": "#DC2626",
+      "aliases": [],
+      "keywords": [
+        "四川航空",
+        "川航",
+        "3U",
+        "Sichuan Airlines"
+      ],
+      "package_hints": [
+        "com.sichuanair.client"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "shenzhenair": {
+      "slug": "shenzhenair",
+      "title": "深圳航空",
+      "short_name": "深圳航空",
+      "badge_text": "航",
+      "category": "flight",
+      "sub_category": "airline",
+      "color": "#EA580C",
+      "aliases": [],
+      "keywords": [
+        "深圳航空",
+        "深航",
+        "ZH",
+        "Shenzhen Air"
+      ],
+      "package_hints": [
+        "com.shenzhenair.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "hema": {
+      "slug": "hema",
+      "title": "盒马鲜生",
+      "short_name": "盒马鲜生",
+      "badge_text": "盒",
+      "category": "supermarket",
+      "sub_category": "hypermarket",
+      "color": "#0284C7",
+      "aliases": [],
+      "keywords": [
+        "盒马",
+        "盒马鲜生",
+        "盒马邻里",
+        "hema"
+      ],
+      "package_hints": [
+        "com.alibaba.wireless.resell"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "samsclub": {
+      "slug": "samsclub",
+      "title": "山姆会员商店",
+      "short_name": "山姆会员商店",
+      "badge_text": "山",
+      "category": "supermarket",
+      "sub_category": "hypermarket",
+      "color": "#00629B",
+      "aliases": [],
+      "keywords": [
+        "山姆",
+        "山姆会员商店",
+        "Sam's Club",
+        "samsclub"
+      ],
+      "package_hints": [
+        "com.walmart.sams"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "walmart": {
+      "slug": "walmart",
+      "title": "沃尔玛",
+      "short_name": "沃尔玛",
+      "badge_text": "沃",
+      "category": "supermarket",
+      "sub_category": "hypermarket",
+      "color": "#0071DC",
+      "aliases": [],
+      "keywords": [
+        "沃尔玛",
+        "Walmart",
+        "walmart"
+      ],
+      "package_hints": [
+        "com.walmart.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "dingdong": {
+      "slug": "dingdong",
+      "title": "叮咚买菜",
+      "short_name": "叮咚买菜",
+      "badge_text": "叮",
+      "category": "supermarket",
+      "sub_category": "fresh",
+      "color": "#16A34A",
+      "aliases": [],
+      "keywords": [
+        "叮咚买菜",
+        "叮咚",
+        "dingdong"
+      ],
+      "package_hints": [
+        "com.yousan.dingdong"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "xiaoxiang": {
+      "slug": "xiaoxiang",
+      "title": "小象超市 / 美团买菜",
+      "short_name": "小象超市 / 美团买菜",
+      "badge_text": "小",
+      "category": "supermarket",
+      "sub_category": "fresh",
+      "color": "#F59E0B",
+      "aliases": [],
+      "keywords": [
+        "小象超市",
+        "美团买菜",
+        "xiaoxiang"
+      ],
+      "package_hints": [
+        "com.sankuai.meituan"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "pupu": {
+      "slug": "pupu",
+      "title": "朴朴超市",
+      "short_name": "朴朴超市",
+      "badge_text": "朴",
+      "category": "supermarket",
+      "sub_category": "hypermarket",
+      "color": "#10B981",
+      "aliases": [],
+      "keywords": [
+        "朴朴",
+        "朴朴超市",
+        "pupu"
+      ],
+      "package_hints": [
+        "com.pupu.mall"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "yonghui": {
+      "slug": "yonghui",
+      "title": "永辉超市",
+      "short_name": "永辉超市",
+      "badge_text": "永",
+      "category": "supermarket",
+      "sub_category": "hypermarket",
+      "color": "#EF4444",
+      "aliases": [],
+      "keywords": [
+        "永辉",
+        "永辉超市",
+        "永辉生活",
+        "yonghui"
+      ],
+      "package_hints": [
+        "com.yonghui.active"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {},
+      "pickup_schemes": [
+        "sfexpress://",
+        "sf-express://"
+      ]
+    },
+    "rtmart": {
+      "slug": "rtmart",
+      "title": "大润发",
+      "short_name": "大润发",
+      "badge_text": "大",
+      "category": "supermarket",
+      "sub_category": "hypermarket",
+      "color": "#DC2626",
+      "aliases": [],
+      "keywords": [
+        "大润发",
+        "大润发优鲜",
+        "rtmart"
+      ],
+      "package_hints": [
+        "com.rtmart.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "seveneleven": {
+      "slug": "seveneleven",
+      "title": "7-Eleven",
+      "short_name": "7-Eleven",
+      "badge_text": "7",
+      "category": "supermarket",
+      "sub_category": "hypermarket",
+      "color": "#FF6000",
+      "aliases": [],
+      "keywords": [
+        "7-Eleven",
+        "7-11",
+        "711便利店"
+      ],
+      "package_hints": [
+        "com.seveneleven.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "familymart": {
+      "slug": "familymart",
+      "title": "全家 FamilyMart",
+      "short_name": "全家 FamilyMart",
+      "badge_text": "全",
+      "category": "supermarket",
+      "sub_category": "convenience",
+      "color": "#00854A",
+      "aliases": [],
+      "keywords": [
+        "全家",
+        "FamilyMart",
+        "全家便利店"
+      ],
+      "package_hints": [
+        "com.familymart.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "lawson": {
+      "slug": "lawson",
+      "title": "罗森 Lawson",
+      "short_name": "罗森 Lawson",
+      "badge_text": "罗",
+      "category": "supermarket",
+      "sub_category": "convenience",
+      "color": "#005BA6",
+      "aliases": [],
+      "keywords": [
+        "罗森",
+        "Lawson",
+        "罗森便利店"
+      ],
+      "package_hints": [
+        "com.lawson.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "ubereats": {
+      "slug": "ubereats",
+      "title": "Uber Eats",
+      "short_name": "Uber Eats",
+      "badge_text": "U",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#06C167",
+      "aliases": [],
+      "keywords": [
+        "Uber Eats",
+        "UberEats",
+        "ubereats"
+      ],
+      "package_hints": [
+        "com.ubercab.eats"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "doordash": {
+      "slug": "doordash",
+      "title": "DoorDash",
+      "short_name": "DoorDash",
+      "badge_text": "D",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#FF3008",
+      "aliases": [],
+      "keywords": [
+        "DoorDash",
+        "doordash"
+      ],
+      "package_hints": [
+        "com.dd.doordash"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "deliveroo": {
+      "slug": "deliveroo",
+      "title": "Deliveroo",
+      "short_name": "Deliveroo",
+      "badge_text": "D",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#00CDBC",
+      "aliases": [],
+      "keywords": [
+        "Deliveroo",
+        "deliveroo"
+      ],
+      "package_hints": [
+        "com.deliveroo.orderapp"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "grab": {
+      "slug": "grab",
+      "title": "Grab SuperApp",
+      "short_name": "Grab SuperApp",
+      "badge_text": "G",
+      "category": "travel",
+      "sub_category": "train",
+      "color": "#00B14F",
+      "aliases": [],
+      "keywords": [
+        "Grab",
+        "GrabFood",
+        "grab"
+      ],
+      "package_hints": [
+        "com.grabtaxi.passenger"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "foodpanda": {
+      "slug": "foodpanda",
+      "title": "Foodpanda",
+      "short_name": "Foodpanda",
+      "badge_text": "F",
+      "category": "food",
+      "sub_category": "restaurant",
+      "color": "#D70F64",
+      "aliases": [],
+      "keywords": [
+        "Foodpanda",
+        "foodpanda"
+      ],
+      "package_hints": [
+        "com.global.foodpanda.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "shopee": {
+      "slug": "shopee",
+      "title": "Shopee",
+      "short_name": "Shopee",
+      "badge_text": "S",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#EE4D2D",
+      "aliases": [],
+      "keywords": [
+        "Shopee",
+        "虾皮购物",
+        "shopee"
+      ],
+      "package_hints": [
+        "com.shopee.app"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "lazada": {
+      "slug": "lazada",
+      "title": "Lazada",
+      "short_name": "Lazada",
+      "badge_text": "L",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#0F146D",
+      "aliases": [],
+      "keywords": [
+        "Lazada",
+        "lazada"
+      ],
+      "package_hints": [
+        "com.lazada.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "amazon": {
+      "slug": "amazon",
+      "title": "Amazon",
+      "short_name": "Amazon",
+      "badge_text": "A",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#FF9900",
+      "aliases": [],
+      "keywords": [
+        "Amazon",
+        "亚马逊",
+        "amazon"
+      ],
+      "package_hints": [
+        "com.amazon.mShop.android.shopping"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "dhl": {
+      "slug": "dhl",
+      "title": "DHL Express",
+      "short_name": "DHL Express",
+      "badge_text": "D",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#FFCC00",
+      "aliases": [],
+      "keywords": [
+        "DHL",
+        "敦豪快递",
+        "dhl"
+      ],
+      "package_hints": [
+        "com.dhl.express.mobile"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "fedex": {
+      "slug": "fedex",
+      "title": "FedEx",
+      "short_name": "FedEx",
+      "badge_text": "F",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#4D148C",
+      "aliases": [],
+      "keywords": [
+        "FedEx",
+        "联邦快递",
+        "fedex"
+      ],
+      "package_hints": [
+        "com.fedex.ida.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    },
+    "ups": {
+      "slug": "ups",
+      "title": "UPS",
+      "short_name": "UPS",
+      "badge_text": "U",
+      "category": "express",
+      "sub_category": "courier",
+      "color": "#351C15",
+      "aliases": [],
+      "keywords": [
+        "UPS",
+        "联合包裹",
+        "ups"
+      ],
+      "package_hints": [
+        "com.ups.mobile.android"
+      ],
+      "icon_url": null,
+      "domain": null,
+      "forces_pickup_scene": true,
+      "special_rules": {
+        "qr_pattern": null,
+        "code_patterns": [],
+        "require_qr_code": false
+      },
+      "custom_metadata": {}
+    }
+  },
+  "total_brands": 101
+}

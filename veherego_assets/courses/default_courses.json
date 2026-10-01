@@ -1,0 +1,11 @@
+{
+  "schema": "veherego_course_v1",
+  "semester": {
+    "name": "大学课程 (动态自适应学期)",
+    "mode": "dynamic_adaptive",
+    "totalWeeks": 20,
+    "holidaySubscriptionUrl": "https://cdn.jsdelivr.net/gh/NateScarlet/holiday-cn@master/2026.json"
+  },
+  "courses": [],
+  "overrides": []
+}

@@ -1,0 +1,26 @@
+{
+  "protocol_version": "1.0",
+  "updated_at": "2026-09-07T00:00:00Z",
+  "source_name": "VehereGo Official Community Memory",
+  "locations": [
+    {
+      "name": "示例驿站 (学校西门)",
+      "brand": "cainiao",
+      "lat": 36.0664,
+      "lon": 120.3826,
+      "geohash": "wwm7p1",
+      "confidence": 0.95,
+      "privacy_level": "anonymized",
+      "aliases": [
+        "西门驿站",
+        "西大门"
+      ],
+      "wifi_fingerprints": [
+        {
+          "h": "sha256_hashed_bssid",
+          "s": "Campus_WiFi_Guest"
+        }
+      ]
+    }
+  ]
+}

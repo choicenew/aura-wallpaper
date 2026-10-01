@@ -1,0 +1,33 @@
+{
+  "source": "https://www.thunderbird.net/en-US/calendar/holidays/",
+  "entries": [
+    {
+      "name": "China",
+      "url": "https://www.thunderbird.net/media/caldata/autogen/ChinaHolidays.ics"
+    },
+    {
+      "name": "United States",
+      "url": "https://www.thunderbird.net/media/caldata/autogen/USHolidays.ics"
+    },
+    {
+      "name": "United Kingdom",
+      "url": "https://www.thunderbird.net/media/caldata/autogen/UKHolidays.ics"
+    },
+    {
+      "name": "Japan",
+      "url": "https://www.thunderbird.net/media/caldata/autogen/JapanHolidays.ics"
+    },
+    {
+      "name": "South Korea",
+      "url": "https://www.thunderbird.net/media/caldata/autogen/SouthKoreaHolidays.ics"
+    },
+    {
+      "name": "France",
+      "url": "https://www.thunderbird.net/media/caldata/autogen/FrenchHolidays.ics"
+    },
+    {
+      "name": "Germany",
+      "url": "https://www.thunderbird.net/media/caldata/autogen/GermanHolidays.ics"
+    }
+  ]
+}
