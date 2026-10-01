@@ -1,0 +1,36 @@
+name: "[PyroMagma] Update Store Listing (API)"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-play-store:
+    name: Update PyroMagma Google Play Store Listing
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Google API Library
+        working-directory: ./update-store-list
+        run: npm install googleapis
+
+      - name: Run Store Listing Update Script
+        env:
+          PLAY_STORE_CREDENTIALS: ${{ secrets.PYROMAGMA_PLAY_STORE_SERVICE_ACCOUNT || secrets.PLAY_STORE_SERVICE_ACCOUNT }}
+          PACKAGE_NAME: ${{ secrets.PYROMAGMA_PACKAGE_NAME || 'com.pyromagma.pyro_magma' }}
+          TRANSLATIONS_FILE: pyromagma_translations.json
+        run: |
+          if [ -z "$PLAY_STORE_CREDENTIALS" ]; then
+            echo "::error::PLAY_STORE_CREDENTIALS is not configured in GitHub Secrets."
+            exit 1
+          fi
+          echo "$PLAY_STORE_CREDENTIALS" > play_config.json
+          cd update-store-list
+          node update.js
