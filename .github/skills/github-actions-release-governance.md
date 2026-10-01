@@ -1,6 +1,6 @@
 ---
 name: github-actions-release-governance
-description: Standardized guidelines for GitHub Actions CI/CD workflows in Android and Flutter projects. Covers concise workflow naming conventions, separation of debug vs release artifacts, prevention of GitHub Release pollution, and downstream trigger synchronization.
+description: Standardized guidelines for GitHub Actions CI/CD workflows in Android and Flutter projects. Covers concise workflow naming conventions, prerelease vs production release publishing rules, and downstream trigger synchronization.
 ---
 
 # GitHub Actions Release & Workflow Governance Skill
@@ -27,16 +27,15 @@ This skill defines strict standards for writing, maintaining, and refactoring Gi
 
 ---
 
-## 2. Release & Artifact Boundary Rules
+## 2. Release & Prerelease Publishing Rules
 
-### GitHub Releases vs. Internal Artifacts
-1. **Official Production Releases**:
-   - Only release workflows triggered by version tags (e.g., `v*`) or official release dispatches may publish to **GitHub Releases** (`softprops/action-gh-release@v2`).
-   - Official release assets MUST contain both **AAB** (for Google Play) and **APK** (for direct testing/distribution).
+### GitHub Releases Strategy
+1. **Test / Debug / Prerelease Builds**:
+   - Test builds, debug builds, and Master pipeline builds MUST publish test APKs directly to **GitHub Releases** (marked with `prerelease: true` and dedicated test tags like `*-debug`, `*-master`) so that testers and developers can easily download test packages directly from GitHub Releases.
 
-2. **CI / Debug / Master Synced Pipelines**:
-   - Master branch CI pipelines, debug builds, and dependency governance workflows MUST NEVER publish to GitHub Releases.
-   - Debug or test APKs MUST NOT pollute the GitHub Releases page. If temporary binaries are required, store them as CI run artifacts (`actions/upload-artifact@v4`) or keep builds strictly in-memory.
+2. **Official Production Releases**:
+   - Official release builds triggered by version tags (e.g., `v*`) publish to **GitHub Releases** with `prerelease: false`.
+   - Official production releases MUST contain both **AAB** (for Google Play Store) and **APK** (for direct testing).
 
 ---
 

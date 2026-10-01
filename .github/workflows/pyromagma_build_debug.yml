@@ -123,3 +123,20 @@ jobs:
           mkdir -p release_assets
           cp build/app/outputs/flutter-apk/app-debug.apk release_assets/pyro_magma-v${{ env.APP_VERSION }}-debug.apk
           ls -lh release_assets/
+
+      - name: Publish Test Build to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: pyromagma-v${{ env.APP_VERSION }}-debug
+          name: "pyromagma Test Build v${{ env.APP_VERSION }}"
+          body: |
+            ## pyromagma - 测试构建 #${{ github.run_number }}
+            - **应用名**: `pyromagma`
+            - **版本**: `${{ env.APP_VERSION }}`
+            - **最新 Commit**: `${{ env.COMMIT_MSG }}`
+            - **说明**: 用于日常测试与验证的测试包。
+          draft: false
+          prerelease: true
+          files: ./pyro_magma/release_assets/*.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
