@@ -28,7 +28,7 @@ jobs:
           fi
           echo "Found tag: $SOURCE_TAG"
           mkdir -p release_assets
-          gh release download "$SOURCE_TAG" --repo ${{ github.repository }} --pattern "*.apk" --dir release_assets
+          gh release download "$SOURCE_TAG" --repo ${{ github.repository }} --pattern "*github*.apk" --dir release_assets
           echo "source_tag=${SOURCE_TAG}" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
