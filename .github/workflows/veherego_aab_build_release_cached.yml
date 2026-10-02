@@ -134,18 +134,21 @@ jobs:
         working-directory: ${{ env.VEHEREGO_DIR }}
         run: |
           echo "=========================================================================="
-          echo "🛡️ 开始构建 Release APK & AAB (Gradle Cached Multi-Flavor: Play极简合规版 + GitHub全功能版)..."
+          echo "🛡️ 开始全量构建 Play & GitHub 双渠道 Release APK 与 AAB (Gradle Cached)..."
           echo "=========================================================================="
           flutter build appbundle --release --flavor play --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
-          flutter build apk --release --flavor github --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
+          flutter build apk --release --flavor play --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
           flutter build appbundle --release --flavor github --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
+          flutter build apk --release --flavor github --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
+          
           mkdir -p release_assets
           cp build/app/outputs/bundle/playRelease/app-play-release.aab release_assets/veherego-v${{ env.APP_VERSION }}-play-release.aab
-          cp build/app/outputs/flutter-apk/app-github-release.apk release_assets/veherego-v${{ env.APP_VERSION }}-github-release.apk
+          cp build/app/outputs/flutter-apk/app-play-release.apk release_assets/veherego-v${{ env.APP_VERSION }}-play-release.apk
           cp build/app/outputs/bundle/githubRelease/app-github-release.aab release_assets/veherego-v${{ env.APP_VERSION }}-github-release.aab
+          cp build/app/outputs/flutter-apk/app-github-release.apk release_assets/veherego-v${{ env.APP_VERSION }}-github-release.apk
           cp build/app/outputs/flutter-apk/app-github-release.apk "../veherego-release-universal.apk"
           echo "=========================================================================="
-          echo "✅ 编译打包成功！版本号: ${{ env.APP_VERSION }} + ${{ env.APP_BUILD_NUMBER }}"
+          echo "✅ 4 项全量产物（Play AAB/APK + GitHub AAB/APK）编译导出成功！版本号: ${{ env.APP_VERSION }} + ${{ env.APP_BUILD_NUMBER }}"
           echo "=========================================================================="
 
       - name: Publish Release to GitHub Release

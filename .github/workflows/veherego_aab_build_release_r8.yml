@@ -107,11 +107,19 @@ jobs:
       - name: Build Android App Bundle (AAB) & Signed Release APK with R8
         working-directory: ${{ env.VEHEREGO_DIR }}
         run: |
+          echo "=========================================================================="
+          echo "🛡️ 开始全量构建 R8 混淆 Play & GitHub 双渠道 Release APK 与 AAB..."
+          echo "=========================================================================="
           flutter build appbundle --release --flavor play --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
+          flutter build apk --release --flavor play --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
+          flutter build appbundle --release --flavor github --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
           flutter build apk --release --flavor github --no-tree-shake-icons --build-name="${{ env.APP_VERSION }}" --build-number=${{ env.APP_BUILD_NUMBER }} --android-skip-build-dependency-validation
+          
           mkdir -p release_assets
-          cp build/app/outputs/flutter-apk/app-github-release.apk release_assets/veherego-v${{ env.APP_VERSION }}-github-release-r8.apk
           cp build/app/outputs/bundle/playRelease/app-play-release.aab release_assets/veherego-v${{ env.APP_VERSION }}-play-release-r8.aab
+          cp build/app/outputs/flutter-apk/app-play-release.apk release_assets/veherego-v${{ env.APP_VERSION }}-play-release-r8.apk
+          cp build/app/outputs/bundle/githubRelease/app-github-release.aab release_assets/veherego-v${{ env.APP_VERSION }}-github-release-r8.aab
+          cp build/app/outputs/flutter-apk/app-github-release.apk release_assets/veherego-v${{ env.APP_VERSION }}-github-release-r8.apk
 
       - name: Publish Release to GitHub Release
         uses: softprops/action-gh-release@v2
