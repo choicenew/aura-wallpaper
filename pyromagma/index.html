@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>PyroMagma - AI Academic Reader & Literature RAG | Edge AI Paper Summarizer, Zotero Sync & Dual Translation</title>
+
+    <!-- Global SEO Meta Tags -->
+    <meta name="description" content="PyroMagma is an AI-driven academic literature and reading app designed for researchers, graduate students, and engineers. Features an immersive card-swiping paper feed, edge & cloud AI paper summarization, interactive RAG Q&A over full PDFs, smooth multi-engine bilingual translation, and seamless Zotero / WebDAV cloud sync. 100% privacy-preserving on-device algorithms. Supports PDF, EPUB, and RSS academic feeds.">
+    <meta name="keywords" content="PyroMagma, AI Academic Reader, Literature RAG, ArXiv AI summarizer, edge AI paper digest, Zotero sync Android, dual language academic translation, PDF EPUB academic reader, paper summarizer app, AI research assistant, Read Paper AI, Sci-Hub reader, Nature Science IEEE papers AI summary, AI论文阅读器, 论文RAG问答, 论文拆解工具, Zotero同步, 学术文献管理, 論文AI要約, 学術論文リーダ, Lector de papers IA, com.mypyro.pyromagma">
+    <meta name="author" content="Pyro Studio / oakgeol">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://pyroapp.github.io/pyromagma/index.html">
+
+    <!-- Webmaster Verification Meta Tags -->
+    <meta name="google-site-verification" content="PYROMAGMA_GOOGLE_VERIFICATION_TOKEN">
+    <meta name="msvalidate.01" content="PYROMAGMA_BING_VERIFICATION_TOKEN">
+    <meta name="baidu-site-verification" content="PYROMAGMA_BAIDU_VERIFICATION_TOKEN">
+    <meta name="yandex-verification" content="PYROMAGMA_YANDEX_VERIFICATION_TOKEN">
+
+    <!-- Baidu & Mobile Adaptation Meta Tags -->
+    <meta name="mobile-agent" content="format=html5;url=https://pyroapp.github.io/pyromagma/index.html">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+
+    <!-- Alternate Language Hreflang Tags (11 Target Languages) -->
+    <link rel="alternate" hreflang="en" href="https://pyroapp.github.io/pyromagma/index.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://pyroapp.github.io/pyromagma/index.html#zh">
+    <link rel="alternate" hreflang="zh-TW" href="https://pyroapp.github.io/pyromagma/index.html#zh-tw">
+    <link rel="alternate" hreflang="ja" href="https://pyroapp.github.io/pyromagma/index.html#ja">
+    <link rel="alternate" hreflang="ko" href="https://pyroapp.github.io/pyromagma/index.html#ko">
+    <link rel="alternate" hreflang="es" href="https://pyroapp.github.io/pyromagma/index.html#es">
+    <link rel="alternate" hreflang="de" href="https://pyroapp.github.io/pyromagma/index.html#de">
+    <link rel="alternate" hreflang="fr" href="https://pyroapp.github.io/pyromagma/index.html#fr">
+    <link rel="alternate" hreflang="pt" href="https://pyroapp.github.io/pyromagma/index.html#pt">
+    <link rel="alternate" hreflang="ru" href="https://pyroapp.github.io/pyromagma/index.html#ru">
+    <link rel="alternate" hreflang="ar" href="https://pyroapp.github.io/pyromagma/index.html#ar">
+    <link rel="alternate" hreflang="x-default" href="https://pyroapp.github.io/pyromagma/index.html">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pyroapp.github.io/pyromagma/index.html">
+    <meta property="og:title" content="PyroMagma - AI Academic Paper Reader & Interactive Literature RAG">
+    <meta property="og:description" content="Immersive paper card feed, edge & cloud AI paper summaries, RAG interactive Q&A, bilingual translation, and Zotero cloud sync. Designed for researchers and engineers!">
+    <meta property="og:image" content="https://pyroapp.github.io/pyromagma/og-image.jpg">
+    <meta property="og:site_name" content="PyroMagma">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="ja_JP">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PyroMagma - AI Academic Reader & Literature RAG">
+    <meta name="twitter:description" content="Card-swiping paper feed, edge AI summaries, full-text RAG Q&A, and Zotero reference library sync for researchers.">
+
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "PyroMagma",
+          "operatingSystem": "Android",
+          "applicationCategory": "EducationalApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.95",
+            "ratingCount": "960"
+          },
+          "description": "PyroMagma is an AI-driven academic literature and reading app designed for researchers, graduate students, engineers, and avid readers. Features card-swiping paper feeds, edge AI summaries, RAG Q&A, and reference library sync."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does PyroMagma use AI and RAG to summarize research papers?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "When you open any PDF or ArXiv paper, PyroMagma builds a local vector index and utilizes edge or cloud LLM models to extract core innovations, methodology, experimental results, and research limitations in seconds. Its RAG (Retrieval-Augmented Generation) engine allows you to ask interactive questions directly over the full text to resolve complex formulas and derivations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which reference management tools does PyroMagma sync with?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PyroMagma seamlessly connects with Zotero, EndNote, Mendeley, and WebDAV cloud storage providers. You can push papers, annotations, and highlights to your library with one click."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does PyroMagma protect my research privacy and reading history?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PyroMagma uses 100% on-device recommendation algorithms. Your reading preferences, search history, and annotations remain strictly on your local device without being uploaded to remote servers."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0d0f17;
+            --card-bg: #181b28;
+            --card-border: #282d42;
+            --accent-color: #06b6d4;
+            --accent-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            --text-main: #f3f4f6;
+            --text-sub: #9ca3af;
+            --pill-bg: #1e2436;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(13, 15, 23, 0.88);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.4rem;
+            font-size: 0.82rem;
+            color: var(--text-sub);
+            flex-wrap: wrap;
+        }
+
+        .lang-switch a {
+            color: #38bdf8;
+            text-decoration: none;
+            padding: 0.18rem 0.45rem;
+            border-radius: 4px;
+            background: rgba(6, 182, 212, 0.1);
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.35);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(6, 182, 212, 0.55);
+        }
+
+        .btn-secondary {
+            background: var(--pill-bg);
+            color: var(--text-main);
+            border: 1px solid var(--card-border);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #273048;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 4rem auto 3rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .badge-tag {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            color: #38bdf8;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-sub);
+            max-width: 820px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 1.1rem;
+            margin-bottom: 3.5rem;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .grid-features {
+            max-width: 1200px;
+            margin: 0 auto 5rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #0284c7;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        .comparison-section {
+            max-width: 1000px;
+            margin: 0 auto 5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+        }
+
+        th, td {
+            padding: 1.2rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        th {
+            background: #111522;
+            color: #9ca3af;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.95rem;
+        }
+
+        .tag-check {
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .tag-cross {
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto 5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: #38bdf8;
+        }
+
+        .faq-item p {
+            color: var(--text-sub);
+            font-size: 0.98rem;
+        }
+
+        .seo-keywords-box {
+            max-width: 1200px;
+            margin: 0 auto 4rem auto;
+            padding: 1.5rem;
+            background: rgba(18, 22, 34, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            line-height: 1.8;
+        }
+
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            background: #090b10;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-title">
+                🔥 PyroMagma
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#ai">AI & RAG Engine</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <div class="lang-switch">
+                    <a href="#en">EN</a>
+                    <a href="#zh">中文</a>
+                    <a href="#ja">日本語</a>
+                    <a href="#ko">한국어</a>
+                    <a href="#es">ES</a>
+                </div>
+                <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary">
+                    🚀 Try PyroMagma
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="en">
+        <div class="badge-tag">🧠 AI-Driven Academic Paper Reader & RAG Hub</div>
+        <h1>Next-Gen <span>PyroMagma</span><br>AI Paper Summaries · Immersive Feed · Interactive RAG</h1>
+        <p>
+            Say goodbye to tedious PDF reading! PyroMagma combines an immersive card-swiping literature feed, edge & cloud LLM paper breakdowns, interactive full-text RAG Q&A, and smooth multi-engine bilingual translation to supercharge your academic research workflow.
+        </p>
+
+        <div class="hero-cta">
+            <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary">
+                👥 Join Pyro Community & Get Beta Access
+            </a>
+            <a href="privacy.html" class="btn-secondary">
+                📄 View Privacy Policy (100% On-Device)
+            </a>
+        </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section id="features">
+        <h2 class="section-title" id="ai">⚡ Six Core Research Breakthroughs</h2>
+        <p class="section-subtitle">From paper scanning and AI summarization to reference sync, empowering your entire research lifecycle</p>
+
+        <div class="grid-features">
+            <div class="feature-card">
+                <div class="feature-icon">🔥</div>
+                <h3>Immersive Academic Card Feed</h3>
+                <p>Browse cutting-edge research papers from ArXiv, Nature, Science, IEEE, and PubMed in a card-swiping format. Effortlessly scan figures, abstracts, and key findings during your spare time.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>Online & Edge AI Paper Summaries</h3>
+                <p>Built-in LLMs extract core innovations, methodology, and limitations in seconds. Conduct interactive RAG Q&A over full papers to easily resolve complex equations and proofs.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>On-Device Recommendation & Privacy</h3>
+                <p>Reading preferences and history remain strictly processed on your device's hardware. Smart recommendations suggest adjacent cross-disciplinary research to break filter bubbles safely.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Multi-Engine Smooth Translation</h3>
+                <p>Local and cloud translation engines provide side-by-side bilingual reading with precise technical terminology mapping, eliminating language barriers when reading international journals.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Reference Library & Cloud Sync</h3>
+                <p>Seamlessly integrates with Zotero, EndNote, Mendeley, and WebDAV / Cloud storage. Push paper cards, highlights, and notes to your personal library with a single tap.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Full-Format Immersive Reader</h3>
+                <p>Native rendering for PDF, EPUB, and RSS academic feeds. Multi-color highlighting, note-taking, and annotation export tools provide a focused, distraction-free reading space.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section" id="comparison">
+        <h2 class="section-title">📊 Why Choose PyroMagma?</h2>
+        <p class="section-subtitle">Comparing PyroMagma with traditional PDF readers and web-based AI tools</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Capability</th>
+                    <th>PyroMagma</th>
+                    <th>Traditional PDF Readers</th>
+                    <th>Web AI Tools</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Immersive Swiping Card Feed</strong></td>
+                    <td class="tag-check">✅ Rapid card scanning</td>
+                    <td class="tag-cross">❌ Page turning only</td>
+                    <td class="tag-cross">❌ Manual search required</td>
+                </tr>
+                <tr>
+                    <td><strong>Full-Text LLM & RAG Q&A</strong></td>
+                    <td class="tag-check">✅ Edge + Cloud Hybrid RAG</td>
+                    <td class="tag-cross">❌ Not supported</td>
+                    <td class="tag-check">⚠️ Manual PDF upload</td>
+                </tr>
+                <tr>
+                    <td><strong>Side-by-Side Bilingual Translation</strong></td>
+                    <td class="tag-check">✅ Academic term mapping</td>
+                    <td class="tag-cross">❌ Word lookup only</td>
+                    <td class="tag-check">⚠️ Formatting broken easily</td>
+                </tr>
+                <tr>
+                    <td><strong>Zotero / WebDAV Cloud Sync</strong></td>
+                    <td class="tag-check">✅ Native 1-click sync</td>
+                    <td class="tag-check">⚠️ Plugin dependent</td>
+                    <td class="tag-cross">❌ Not supported</td>
+                </tr>
+                <tr>
+                    <td><strong>On-Device Research Privacy</strong></td>
+                    <td class="tag-check">🔒 100% On-device processing</td>
+                    <td class="tag-check">🔒 Local files</td>
+                    <td class="tag-cross">⚠️ Data sent to cloud servers</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- FAQ Section (English & Chinese) -->
+    <section class="faq-section" id="faq">
+        <h2 class="section-title">❓ Frequently Asked Questions (FAQ)</h2>
+        <p class="section-subtitle">Key questions and answers regarding PyroMagma AI Academic Reader</p>
+
+        <div class="faq-item">
+            <h3>Q: How do PyroMagma's AI paper breakdowns and RAG Q&A work?</h3>
+            <p><strong>English:</strong> When opening a paper, PyroMagma builds a local vector index of the text. The LLM extracts key innovations and enables interactive RAG Q&A pinned directly to exact paper sections and mathematical equations.</p>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>应用在打开论文时会建立向量索引，大模型一键提炼创新点，并支持基于 RAG 技术进行论文全文问答。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Q: Will PyroMagma expose my research direction or history?</h3>
+            <p><strong>English:</strong> Absolutely not. PyroMagma uses 100% on-device algorithms for recommendations and processing. Your reading history, bookmarks, and search terms stay strictly on your device.</p>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>绝不会。阅读偏好与标注历史纯本地算法处理，零上传，彻底保障您的科研隐私。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Q: Which document formats are supported?</h3>
+            <p><strong>English:</strong> Native support for PDF papers, EPUB ebooks, and RSS academic subscription feeds, with direct searching and reading from ArXiv and bioRxiv.</p>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>原生支持 PDF 论文、EPUB 电子书与 RSS 学术资讯流。</p>
+        </div>
+    </section>
+
+    <!-- Chinese & Global Section Anchor Targets -->
+    <section id="zh" style="max-width: 1200px; margin: 0 auto 3rem auto; padding: 0 1.5rem;">
+        <div style="background: rgba(18, 22, 34, 0.6); border: 1px solid var(--card-border); border-radius: 1rem; padding: 2rem;">
+            <h3 style="font-size: 1.5rem; color: #38bdf8; margin-bottom: 1rem;">🇨🇳 中文专区 (Chinese Summary)</h3>
+            <p style="color: #cbd5e1; line-height: 1.8;">
+                <strong>PyroMagma</strong> 是一款专为科研人员、研究生与工程师打造的 AI 驱动学术文献阅读工具。<br>
+                融合沉浸式论文卡片流、在线/端侧大模型核心贡献拆解、论文 RAG 交互问答、多源双语翻译对照以及 Zotero / WebDAV / 云盘同步。纯本地推荐算法保护您的研究方向与隐私！
+            </p>
+            <div id="ja" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <h4 style="color: #a855f7; font-size: 1.1rem;">🇯🇵 日本語概要 (Japanese Overview)</h4>
+                <p style="color: #94a3b8; font-size: 0.92rem;">PyroMagmaは、研究者やエンジニア向けに設計されたAI駆動の学術文献閲覧アプリです。没入型カードフィード、RAG質疑応答、Zotero同期を統合しています。</p>
+            </div>
+            <div id="ko" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <h4 style="color: #ec4899; font-size: 1.1rem;">🇰🇷 한국어 개요 (Korean Overview)</h4>
+                <p style="color: #94a3b8; font-size: 0.92rem;">PyroMagma는 연구자와 엔지니어를 위해 설계된 AI 기반 학술 문헌 읽기 앱입니다. 몰입형 피드, RAG 질의응답 및 Zotero 동기화를 지원합니다.</p>
+            </div>
+            <div id="es" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <h4 style="color: #38bdf8; font-size: 1.1rem;">🇪🇸 Resumen en Español (Spanish Overview)</h4>
+                <p style="color: #94a3b8; font-size: 0.92rem;">PyroMagma es un lector académico impulsado por IA con resúmenes, preguntas y respuestas RAG y sincronización con Zotero.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Multilingual SEO Long-tail Keywords Cloud -->
+    <section class="seo-keywords-box">
+        <strong>Global SEO Search Keywords & Index Tags (11 Languages Covered):</strong><br>
+        PyroMagma, AI Academic Reader, Literature RAG, ArXiv AI summarizer, edge AI paper digest, Zotero sync Android, dual language academic translation, PDF EPUB academic reader, paper summarizer app, AI research assistant, Read Paper AI, Sci-Hub reader, Nature Science IEEE papers AI summary, AI论文阅读器, 论文RAG问答, 论文拆解工具, Zotero同步, 学术文献管理, 論文AI要約, 学術論文リーダ, Lector de papers IA, com.mypyro.pyromagma, AI-gestützte akademische Leser, lecteur académique IA, leitor acadêmico IA.
+    </section>
+
+    <!-- Instant IndexNow Protocol & Multi-Search Engine Ping Trigger -->
+    <script>
+    (function(){
+        // 1. IndexNow Instant Indexing Protocol (Bing, Yandex, DuckDuckGo, Naver, Seznam)
+        var indexNowUrl = 'https://api.indexnow.org/indexnow?url=' + encodeURIComponent(window.location.href) + '&key=pyroapp2026indexnowkey';
+        if (navigator.sendBeacon) {
+            navigator.sendBeacon(indexNowUrl);
+            navigator.sendBeacon('https://www.google.com/ping?sitemap=https://pyroapp.github.io/sitemap.xml');
+            navigator.sendBeacon('https://www.bing.com/ping?sitemap=https://pyroapp.github.io/sitemap.xml');
+        }
+
+        // 2. Baidu Auto Push Client
+        var canonicalURL, bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        if (s && s.parentNode) {
+            s.parentNode.insertBefore(bp, s);
+        }
+    })();
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Pyro Studio / oakgeol. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="../nav/index.html">Apps Hub Directory</a> |
+            <a href="reader.html">Legado Reader Alternative</a> |
+            <a href="../veherego/index.html">VehereGo Island</a> |
+            <a href="../yourcallyourrule/index.html">YourCallYourRule Blocker</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="https://groups.google.com/g/pyroapp/members">Google Group Community</a> |
+            Email: <a href="mailto:OAKGEOL@GMAIL.COM">OAKGEOL@GMAIL.COM</a>
+        </p>
+    </footer>
+
+</body>
+</html>

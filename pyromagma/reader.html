@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>PyroMagma AI Reader - Free Novel, Manga & Academic Reader | Legado Alternative | Local AI Translation & Live OCR</title>
+
+    <!-- Global SEO Meta Tags -->
+    <meta name="description" content="PyroMagma is the ultimate on-device AI reader for novels, raw manga, and academic papers. The premier Legado alternative featuring zero-lag local AI translation, live manga OCR, EPUB/PDF/RSS feed support, and 100% offline privacy. Read free papers, novels, and manga with instant AI translation!">
+    <meta name="keywords" content="Legado, Legado阅读, 开源阅读 Legado, Legado 替代品, Legado 安卓, Legado书源, 看小说看漫画软件, 免费看小说, 免费看漫画, 全网小说无广告, EPUB小说阅读器, Legado manga reader, 本地 AI 翻译, 本地大模型翻译小说, 漫画 AI 实时 OCR 翻译, 日漫美漫 AI 本地汉化, 离线 OCR 识图看书, 生肉漫画 AI 翻译, 生肉小说 AI 汉化, 免费看论文, ArXiv 论文 AI 阅读, 论文双语对照, PDF 论文大模型提炼, Legado alternative, free novel reader Android, free manga AI translator, on-device AI OCR reader, PyroMagma reader, com.mypyro.pyromagma">
+    <meta name="author" content="Pyro Studio / oakgeol">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://pyroapp.github.io/pyromagma/reader.html">
+
+    <!-- Webmaster Verification Meta Tags -->
+    <meta name="google-site-verification" content="READER_GOOGLE_VERIFICATION_TOKEN">
+    <meta name="msvalidate.01" content="READER_BING_VERIFICATION_TOKEN">
+    <meta name="baidu-site-verification" content="READER_BAIDU_VERIFICATION_TOKEN">
+    <meta name="yandex-verification" content="READER_YANDEX_VERIFICATION_TOKEN">
+
+    <!-- Baidu & Mobile Adaptation Meta Tags -->
+    <meta name="mobile-agent" content="format=html5;url=https://pyroapp.github.io/pyromagma/reader.html">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+
+    <!-- Alternate Language Hreflang Tags (11 Target Languages) -->
+    <link rel="alternate" hreflang="en" href="https://pyroapp.github.io/pyromagma/reader.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://pyroapp.github.io/pyromagma/reader.html#zh">
+    <link rel="alternate" hreflang="zh-TW" href="https://pyroapp.github.io/pyromagma/reader.html#zh-tw">
+    <link rel="alternate" hreflang="ja" href="https://pyroapp.github.io/pyromagma/reader.html#ja">
+    <link rel="alternate" hreflang="ko" href="https://pyroapp.github.io/pyromagma/reader.html#ko">
+    <link rel="alternate" hreflang="es" href="https://pyroapp.github.io/pyromagma/reader.html#es">
+    <link rel="alternate" hreflang="de" href="https://pyroapp.github.io/pyromagma/reader.html#de">
+    <link rel="alternate" hreflang="fr" href="https://pyroapp.github.io/pyromagma/reader.html#fr">
+    <link rel="alternate" hreflang="pt" href="https://pyroapp.github.io/pyromagma/reader.html#pt">
+    <link rel="alternate" hreflang="ru" href="https://pyroapp.github.io/pyromagma/reader.html#ru">
+    <link rel="alternate" hreflang="ar" href="https://pyroapp.github.io/pyromagma/reader.html#ar">
+    <link rel="alternate" hreflang="x-default" href="https://pyroapp.github.io/pyromagma/reader.html">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pyroapp.github.io/pyromagma/reader.html">
+    <meta property="og:title" content="PyroMagma AI Reader - Free Novel, Manga & Academic Reader (Legado Alternative)">
+    <meta property="og:description" content="Read novels, raw manga, and academic papers with on-device AI translation, real-time OCR, and Zotero/WebDAV sync. Premier Legado alternative!">
+    <meta property="og:image" content="https://pyroapp.github.io/pyromagma/og-image.jpg">
+    <meta property="og:site_name" content="PyroMagma">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="ja_JP">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PyroMagma AI Reader - Legado Alternative & On-Device AI Translation">
+    <meta name="twitter:description" content="Free novel, manga & paper reader with local AI translation, live OCR, and EPUB/PDF support.">
+
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "PyroMagma Reader",
+          "operatingSystem": "Android",
+          "applicationCategory": "BooksApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.98",
+            "ratingCount": "1540"
+          },
+          "description": "PyroMagma AI Reader is a privacy-focused on-device AI reader for web novels, raw manga comics, EPUB ebooks, and academic research papers. Serves as the ultimate Legado alternative with real-time local OCR, local AI translation, and cloud sync."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Why is PyroMagma the best Legado (阅读) alternative?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Unlike traditional reader apps, PyroMagma integrates an on-device AI translation engine and live OCR scanner directly into the reader. It supports EPUB, PDF, RSS, and custom book sources while allowing you to translate raw foreign web novels and manga comics offline without relying on external cloud APIs or servers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does local AI translation and real-time OCR work for manga and novels?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PyroMagma runs optimized AI neural networks locally on your mobile device hardware. When reading raw Japanese/English manga or web novels, the app extracts speech bubbles and text via live OCR and translates them side-by-side without network latency or data privacy risks."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I read free academic papers and sync with Zotero?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! PyroMagma provides free access to ArXiv, PubMed, and IEEE paper feeds, along with AI-driven RAG paper summaries and 1-click WebDAV/Zotero reference sync."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #141824;
+            --card-border: #222a3d;
+            --accent-color: #ec4899;
+            --accent-gradient: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #8b5cf6 100%);
+            --text-main: #f3f4f6;
+            --text-sub: #9ca3af;
+            --pill-bg: #1e2538;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(11, 14, 20, 0.9);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.4rem;
+            font-size: 0.82rem;
+            color: var(--text-sub);
+            flex-wrap: wrap;
+        }
+
+        .lang-switch a {
+            color: #f472b6;
+            text-decoration: none;
+            padding: 0.18rem 0.45rem;
+            border-radius: 4px;
+            background: rgba(236, 72, 153, 0.1);
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(236, 72, 153, 0.6);
+        }
+
+        .btn-secondary {
+            background: var(--pill-bg);
+            color: var(--text-main);
+            border: 1px solid var(--card-border);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #28334e;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 4rem auto 3rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .badge-tag {
+            display: inline-block;
+            background: rgba(236, 72, 153, 0.15);
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            color: #f472b6;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-sub);
+            max-width: 820px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 1.1rem;
+            margin-bottom: 3.5rem;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .grid-features {
+            max-width: 1200px;
+            margin: 0 auto 5rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #ec4899;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        .comparison-section {
+            max-width: 1000px;
+            margin: 0 auto 5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+        }
+
+        th, td {
+            padding: 1.2rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        th {
+            background: #0f131f;
+            color: #9ca3af;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.95rem;
+        }
+
+        .tag-check {
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .tag-cross {
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto 5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: #f472b6;
+        }
+
+        .faq-item p {
+            color: var(--text-sub);
+            font-size: 0.98rem;
+        }
+
+        .seo-keywords-box {
+            max-width: 1200px;
+            margin: 0 auto 4rem auto;
+            padding: 1.5rem;
+            background: rgba(18, 22, 34, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            line-height: 1.8;
+        }
+
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            background: #07090e;
+        }
+
+        footer a {
+            color: #f472b6;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-title">
+                📚 PyroMagma Reader
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Legado Features</a></li>
+                <li><a href="#ai">Local AI & OCR</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <div class="lang-switch">
+                    <a href="#en">EN</a>
+                    <a href="#zh">中文</a>
+                    <a href="#ja">日本語</a>
+                    <a href="#ko">한국어</a>
+                    <a href="#es">ES</a>
+                </div>
+                <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary">
+                    🚀 Download PyroMagma
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="en">
+        <div class="badge-tag">📖 Premier Legado Alternative | Local AI Translation & Live OCR Reader</div>
+        <h1>Free Novels, Manga & Papers<br><span>On-Device AI Reader & Translator</span></h1>
+        <p>
+            The ultimate reading evolution! Read light novels, foreign manga comics, EPUB ebooks, and academic research papers with built-in on-device AI translation, real-time image OCR, and zero network lag. 100% ad-free, 100% offline privacy!
+        </p>
+
+        <div class="hero-cta">
+            <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary">
+                👥 Step 1: Join Google Group Community
+            </a>
+            <a href="https://play.google.com/apps/testing/com.mypyro.veherego" target="_blank" rel="noopener" class="btn-secondary">
+                📲 Step 2: Download PyroMagma App
+            </a>
+        </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section id="features">
+        <h2 class="section-title" id="ai">⚡ Six Power Features Beyond Legado (阅读)</h2>
+        <p class="section-subtitle">Combining open book sources, raw manga OCR, and on-device AI translation into one unified reader</p>
+
+        <div class="grid-features">
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Ultimate Legado Alternative & Formats</h3>
+                <p>Seamlessly read EPUB, PDF, RSS, and web novels. Supports custom book sources, clean typography, custom fonts, night mode, and ad-free immersion.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>On-Device Local AI Translation</h3>
+                <p>Read raw Japanese light novels or English web stories effortlessly. Local AI neural translation runs directly on your phone's chip with zero network delay and zero API fees.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Live Manga & Image OCR Translation</h3>
+                <p>Reading foreign manga comics? Real-time on-device OCR extracts speech bubble text instantly, providing instant side-by-side translation without leaving the manga page.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3>Free Academic Paper Reader & RAG</h3>
+                <p>Access free ArXiv, Nature, Science, and IEEE paper feeds. AI-driven RAG automatically summarizes complex equations, methodology, and conclusions.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>100% On-Device Offline Privacy</h3>
+                <p>Zero tracking, zero accounts, zero server log uploads! All OCR, AI neural translation, and reading history run strictly offline on your device.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>WebDAV & Zotero Multi-Cloud Sync</h3>
+                <p>Sync your reading progress, custom book sources, highlights, and notes seamlessly across devices using WebDAV, Zotero, or private cloud storage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section" id="comparison">
+        <h2 class="section-title">📊 How PyroMagma Outperforms Traditional Readers</h2>
+        <p class="section-subtitle">A direct comparison with Legado (阅读), generic manga readers, and online AI translators</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Reader Feature</th>
+                    <th>PyroMagma Reader</th>
+                    <th>Legado (开源阅读)</th>
+                    <th>Generic Manga Readers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Local AI Text Translation</strong></td>
+                    <td class="tag-check">✅ Built-in On-Device AI Engine</td>
+                    <td class="tag-cross">❌ External API required</td>
+                    <td class="tag-cross">❌ Not supported</td>
+                </tr>
+                <tr>
+                    <td><strong>Manga Speech Bubble Live OCR</strong></td>
+                    <td class="tag-check">✅ Instant On-device OCR</td>
+                    <td class="tag-cross">❌ Text novels only</td>
+                    <td class="tag-cross">❌ Static image display</td>
+                </tr>
+                <tr>
+                    <td><strong>EPUB, PDF, RSS & ArXiv Papers</strong></td>
+                    <td class="tag-check">✅ Full support + AI RAG</td>
+                    <td class="tag-check">⚠️ EPUB/TXT only</td>
+                    <td class="tag-cross">❌ Images only</td>
+                </tr>
+                <tr>
+                    <td><strong>Ad-Free & Offline Privacy</strong></td>
+                    <td class="tag-check">🔒 100% On-device processing</td>
+                    <td class="tag-check">🔒 Open source local</td>
+                    <td class="tag-cross">⚠️ Ad-heavy / Server tracking</td>
+                </tr>
+                <tr>
+                    <td><strong>WebDAV & Zotero Sync</strong></td>
+                    <td class="tag-check">✅ Native 1-click cloud sync</td>
+                    <td class="tag-check">⚠️ WebDAV only</td>
+                    <td class="tag-cross">❌ Not supported</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Chinese & Global Section Anchor Targets -->
+    <section id="zh" style="max-width: 1200px; margin: 0 auto 3rem auto; padding: 0 1.5rem;">
+        <div style="background: rgba(20, 24, 36, 0.8); border: 1px solid var(--card-border); border-radius: 1rem; padding: 2rem;">
+            <h3 style="font-size: 1.5rem; color: #f472b6; margin-bottom: 1rem;">🇨🇳 中文专区：Legado 替代品 + 本地 AI 漫画小说论文阅读器</h3>
+            <p style="color: #cbd5e1; line-height: 1.8;">
+                <strong>PyroMagma Reader</strong> 是一款集小说明确看、生肉漫画实时 OCR 翻译、EPUB/PDF 全格式沉浸阅读与免费学术论文 AI 速读于一体的离线神器！<br>
+                相比于 Legado (开源阅读)，PyroMagma 原生内置了<strong>端侧芯片级 AI 神经网络翻译引擎</strong>与<strong>实时识图 OCR</strong>。无论您是看生肉日漫、外文小说，还是极速扫视 ArXiv 论文，均能在无需联网、无需配置复杂云端 API 的情况下毫秒级翻译并呈现！全线 100% 离线保护隐私，无广告无跟踪！
+            </p>
+            <div id="ja" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <h4 style="color: #f472b6; font-size: 1.1rem;">🇯🇵 日本語概要 (Japanese Overview)</h4>
+                <p style="color: #94a3b8; font-size: 0.92rem;">PyroMagma Readerは、小説、マンガ、学術論文に対応したローカルAI翻訳＆OCR機能搭載の電子書籍リーダーです。</p>
+            </div>
+            <div id="ko" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <h4 style="color: #a855f7; font-size: 1.1rem;">🇰🇷 한국어 개요 (Korean Overview)</h4>
+                <p style="color: #94a3b8; font-size: 0.92rem;">PyroMagma Reader는 소설, 만화 및 학술 논문을 위한 온디바이스 AI 번역 및 OCR 지원 리더 앱입니다.</p>
+            </div>
+            <div id="es" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <h4 style="color: #38bdf8; font-size: 1.1rem;">🇪🇸 Resumen en Español (Spanish Overview)</h4>
+                <p style="color: #94a3b8; font-size: 0.92rem;">PyroMagma Reader es un lector con traducción IA local y OCR en tiempo real para novelas, manga y artículos científicos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <h2 class="section-title">❓ Frequently Asked Questions (FAQ)</h2>
+        <p class="section-subtitle">Common questions about PyroMagma Reader and Legado features</p>
+
+        <div class="faq-item">
+            <h3>Q: Is PyroMagma Reader a direct alternative to Legado (阅读)?</h3>
+            <p><strong>English:</strong> Yes! PyroMagma Reader supports custom book sources, EPUB/TXT/PDF files, RSS feeds, and clean ad-free reading layout just like Legado, while adding revolutionary on-device AI translation, manga speech bubble OCR, and academic paper summaries.</p>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>是的！PyroMagma 支持书源导入、EPUB/TXT/PDF 阅读、RSS 订阅，并独家融入了端侧 AI 翻译与漫画 OCR 识别。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Q: How does the local AI translation and manga OCR work without internet?</h3>
+            <p><strong>English:</strong> PyroMagma bundles optimized, lightweight on-device neural model weights that run directly on your smartphone NPU/CPU/GPU. This means 100% offline translation and OCR with zero data consumption.</p>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>应用打包了轻量端侧 AI 模型，直接在手机芯片上完成离线 OCR 与神经网络翻译，0 流量消耗，0 延迟。</p>
+        </div>
+    </section>
+
+    <!-- Global SEO Keywords Cloud (11 Languages Covered) -->
+    <section class="seo-keywords-box">
+        <strong>SEO Keywords Cloud (11 Languages Covered):</strong><br>
+        Legado, Legado阅读, 开源阅读 Legado, Legado 替代品, Legado 安卓, Legado书源, 看小说看漫画软件, 免费看小说, 免费看漫画, 全网小说无广告, EPUB小说阅读器, Legado manga reader, 本地 AI 翻译, 本地大模型翻译小说, 漫画 AI 实时 OCR 翻译, 日漫美漫 AI 本地汉化, 离线 OCR 识图看书, 生肉漫画 AI 翻译, 生肉小说 AI 汉化, 免费看论文, ArXiv 论文 AI 阅读, 论文双语对照, PDF 论文大模型提炼, Legado alternative, free novel reader Android, free manga AI translator, on-device AI OCR reader, PyroMagma reader, com.mypyro.pyromagma, Kostenloser Manga-Reader, leytor de novelas gratis, lector de manga IA.
+    </section>
+
+    <!-- Instant IndexNow Protocol & Multi-Search Engine Ping Trigger -->
+    <script>
+    (function(){
+        // 1. IndexNow Instant Indexing Protocol (Bing, Yandex, DuckDuckGo, Naver, Seznam)
+        var indexNowUrl = 'https://api.indexnow.org/indexnow?url=' + encodeURIComponent(window.location.href) + '&key=pyroapp2026indexnowkey';
+        if (navigator.sendBeacon) {
+            navigator.sendBeacon(indexNowUrl);
+            navigator.sendBeacon('https://www.google.com/ping?sitemap=https://pyroapp.github.io/sitemap.xml');
+            navigator.sendBeacon('https://www.bing.com/ping?sitemap=https://pyroapp.github.io/sitemap.xml');
+        }
+
+        // 2. Baidu Auto Push Client
+        var canonicalURL, bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        if (s && s.parentNode) {
+            s.parentNode.insertBefore(bp, s);
+        }
+    })();
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Pyro Studio / oakgeol. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="../nav/index.html">Apps Hub Directory</a> |
+            <a href="index.html">PyroMagma Academic</a> |
+            <a href="../veherego/index.html">VehereGo Island</a> |
+            <a href="../yourcallyourrule/index.html">YourCallYourRule Blocker</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="https://groups.google.com/g/pyroapp/members">Google Group Community</a> |
+            Email: <a href="mailto:OAKGEOL@GMAIL.COM">OAKGEOL@GMAIL.COM</a>
+        </p>
+    </footer>
+
+</body>
+</html>

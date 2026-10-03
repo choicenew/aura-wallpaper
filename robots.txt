@@ -1,0 +1,66 @@
+# Search Engine & AI Model Spider Directives (Global Multi-Engine Allowed)
+User-agent: *
+Allow: /
+
+# OpenAI / ChatGPT Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude Crawlers
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI Crawler
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini / AI Overviews Crawler
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Apple Intelligence Crawler
+User-agent: Applebot-Extended
+Allow: /
+
+# ByteDance / Doubao AI Crawler
+User-agent: ByteSpider
+Allow: /
+
+# Common Crawl (LLM Foundation Dataset)
+User-agent: CCBot
+Allow: /
+
+# Baidu Search Spider
+User-agent: Baiduspider
+Allow: /
+
+# Bing Search Spider
+User-agent: Bingbot
+Allow: /
+
+# Yandex Search Spider
+User-agent: YandexBot
+Allow: /
+
+# DuckDuckGo Search Spider
+User-agent: DuckDuckBot
+Allow: /
+
+# Naver Search Spider
+User-agent: NaverBot
+Allow: /
+
+# XML Sitemap Directives
+Sitemap: https://pyroapp.github.io/sitemap.xml
+
+# AI Model LLMs Standard Directive
+LLMs: https://pyroapp.github.io/llms.txt

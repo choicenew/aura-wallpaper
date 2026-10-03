@@ -1,0 +1,102 @@
+# Pyro Studio Ecosystem - Comprehensive LLM Documentation
+
+This file contains exhaustive specifications, feature capabilities, and technical details for all applications in the Pyro Studio ecosystem.
+
+================================================================================
+APPLICATION 1: VehereGo (Package: com.mypyro.veherego)
+================================================================================
+
+Overview:
+VehereGo is a local-first, privacy-focused central hub for managing parcel pickup codes, flight/train tickets, PKPass digital vouchers, live status bar activities, universal calendars, and course schedules on Android.
+
+Key Features:
+1. Status Bar Island & Live Activities:
+   Pushes real-time parcel shipping progress, food delivery status, transit tickets, music playback, and custom system notifications to status bar floating capsules.
+2. Smart Parcel Pickup Code OCR & SMS Parsing:
+   Auto-detects parcel extraction codes from screenshots (Cainiao Station, SF Express, Hive Box, Meituan) using on-device OCR. Generates scannable barcodes and QR codes for instant station pickup.
+3. PKPass Wallet:
+   Native support for Apple Wallet (.pkpass) format passes, boarding passes, event tickets, and loyalty cards.
+4. Universal Calendar & Course Schedule:
+   Includes solar/lunar dates, 24 solar terms, auspicious daily guides, odd/even week course schedules, and 1-click ICS calendar import/export.
+5. 100% On-Device Privacy:
+   Zero user accounts, zero server tracking, zero cloud data uploads.
+
+Links:
+- Landing Page: https://pyroapp.github.io/veherego/index.html
+- Google Group Tester Access: https://groups.google.com/g/pyroapp/members
+- Google Play Beta Track: https://play.google.com/apps/testing/com.mypyro.veherego
+
+================================================================================
+APPLICATION 2: PyroMagma Academic AI Reader (Package: com.mypyro.pyromagma)
+================================================================================
+
+Overview:
+PyroMagma Academic is an AI-driven academic literature reader designed for researchers, graduate students, engineers, and avid readers.
+
+Key Features:
+1. Immersive Academic Card Feed:
+   Card-swiping interface to browse latest papers from ArXiv, Nature, Science, IEEE, and PubMed during fragmented time.
+2. Edge & Cloud AI Summaries & RAG Q&A:
+   One-click extraction of core innovations, methodology, and limitations. Interactive RAG (Retrieval-Augmented Generation) Q&A over full PDF text to resolve complex equations and derivations.
+3. Multi-Engine Smooth Translation:
+   Local and cloud translation engines provide side-by-side bilingual reading with precise technical terminology mapping.
+4. Reference Library & Cloud Sync:
+   Seamless 1-click synchronization with Zotero, EndNote, Mendeley, and WebDAV / Cloud storage.
+5. On-Device Recommendation & Privacy:
+   100% on-device preference algorithms that break filter bubbles safely without uploading reading history to servers.
+
+Links:
+- Landing Page: https://pyroapp.github.io/pyromagma/index.html
+- Community Access: https://groups.google.com/g/pyroapp/members
+
+================================================================================
+APPLICATION 3: PyroMagma Reader / Legado Alternative (Package: com.mypyro.pyromagma)
+================================================================================
+
+Overview:
+PyroMagma Reader is a privacy-focused on-device AI reader for web novels, raw manga comics, EPUB ebooks, and academic research papers, serving as the premier alternative to Legado (开源阅读).
+
+Key Features:
+1. Ultimate Legado Alternative:
+   Supports custom book sources, EPUB, PDF, RSS, and web novels in a clean, ad-free reading environment.
+2. On-Device Local AI Translation:
+   Local neural translation models run directly on your smartphone NPU/CPU/GPU to translate raw Japanese/English web novels offline with zero delay and zero API fees.
+3. Live Manga & Image Speech Bubble OCR:
+   Real-time on-device OCR extracts speech bubble text from foreign manga panels and provides instant side-by-side translation.
+4. WebDAV & Zotero Sync:
+   Sync reading progress, custom book sources, highlights, and notes across devices.
+
+Links:
+- Landing Page: https://pyroapp.github.io/pyromagma/reader.html
+
+================================================================================
+APPLICATION 4: YourCallYourRule (Package: com.yours.yourcallyourrule)
+================================================================================
+
+Overview:
+YourCallYourRule is a powerful, highly customizable Android application designed to give users complete control over incoming calls and SMS.
+
+Key Features:
+1. Blacklist & Whitelist Management:
+   Create lists of allowed and blocked phone numbers or contacts.
+2. Regular Expression (Regex) Rules:
+   Define complex blocking rules using regular expressions for area codes, number patterns, and SMS keywords.
+3. Online Rule Subscriptions:
+   Subscribe to curated online blocklists using subscription URLs.
+4. STIR/SHAKEN Caller ID Verification:
+   Cryptographic caller verification to block spoofed numbers.
+5. Dual SIM Recognition:
+   Apply different rules based on SIM 1 or SIM 2.
+6. Flexible Actions:
+   Choose to hang up, mute ringer, or answer-and-hang-up blocked calls.
+7. QuickJS Web Scraping Plugin Engine:
+   Engine for scraping online databases or web APIs to identify unknown caller IDs. Includes AI automation SOP (SKILL.md) for plugin development.
+8. 100% On-Device Privacy & Multi-Cloud Backup:
+   Zero contact uploads. Back up settings via WebDAV, Google Drive, or OneDrive.
+
+Links:
+- Landing Page: https://pyroapp.github.io/yourcallyourrule/index.html
+- Google Play Store: https://play.google.com/store/apps/details?id=com.yours.yourcallyourrule
+- Google Play Beta: https://play.google.com/apps/testing/com.yours.yourcallyourrule
+- Telegram Channel: https://t.me/yourcallyourrule
+- Telegram Group: https://t.me/+GHoPy6xwQEU1ZThh

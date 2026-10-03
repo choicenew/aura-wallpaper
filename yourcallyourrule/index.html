@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>YourCallYourRule - Smart Android Call & SMS Blocker | Blacklist, Regex Filtering & Web Scraping Plugins</title>
+
+    <!-- Global SEO Meta Tags -->
+    <meta name="description" content="YourCallYourRule gives you complete control over incoming phone calls and SMS messages on Android. Create custom blacklist/whitelist rules, regex filters, online subscriptions, STIR/SHAKEN caller verification, WebDAV/Drive cloud backup, and custom web scraping plugins. 100% on-device privacy, zero database tracking!">
+    <meta name="keywords" content="YourCallYourRule, Your Call Your Rule, Android call blocker, SMS blocker, spam call filter, regex call blocker, STIR SHAKEN Android, phone number blacklist, call blocker plugin, WebDAV call backup, 骚扰电话拦截, 短信拦截器, 安卓来电防火墙, 正则表达式拦截, 电话黑名单, 骚扰拦截插件, 通话规则管理, Call blocker free Android, Spamschutz Anrufe, Bloqueador de llamadas spam, com.yours.yourcallyourrule">
+    <meta name="author" content="Pyro Studio / oakgeol / ChoiceNew">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://pyroapp.github.io/yourcallyourrule/index.html">
+
+    <!-- Webmaster Verification Meta Tags -->
+    <meta name="google-site-verification" content="YCYR_GOOGLE_VERIFICATION_TOKEN">
+    <meta name="msvalidate.01" content="YCYR_BING_VERIFICATION_TOKEN">
+    <meta name="baidu-site-verification" content="YCYR_BAIDU_VERIFICATION_TOKEN">
+    <meta name="yandex-verification" content="YCYR_YANDEX_VERIFICATION_TOKEN">
+
+    <!-- Baidu & Mobile Adaptation Meta Tags -->
+    <meta name="mobile-agent" content="format=html5;url=https://pyroapp.github.io/yourcallyourrule/index.html">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+
+    <!-- Alternate Language Hreflang Tags (11 Target Languages) -->
+    <link rel="alternate" hreflang="en" href="https://pyroapp.github.io/yourcallyourrule/index.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://pyroapp.github.io/yourcallyourrule/index.html#zh">
+    <link rel="alternate" hreflang="zh-TW" href="https://pyroapp.github.io/yourcallyourrule/index.html#zh-tw">
+    <link rel="alternate" hreflang="ja" href="https://pyroapp.github.io/yourcallyourrule/index.html#ja">
+    <link rel="alternate" hreflang="ko" href="https://pyroapp.github.io/yourcallyourrule/index.html#ko">
+    <link rel="alternate" hreflang="es" href="https://pyroapp.github.io/yourcallyourrule/index.html#es">
+    <link rel="alternate" hreflang="de" href="https://pyroapp.github.io/yourcallyourrule/index.html#de">
+    <link rel="alternate" hreflang="fr" href="https://pyroapp.github.io/yourcallyourrule/index.html#fr">
+    <link rel="alternate" hreflang="pt" href="https://pyroapp.github.io/yourcallyourrule/index.html#pt">
+    <link rel="alternate" hreflang="ru" href="https://pyroapp.github.io/yourcallyourrule/index.html#ru">
+    <link rel="alternate" hreflang="ar" href="https://pyroapp.github.io/yourcallyourrule/index.html#ar">
+    <link rel="alternate" hreflang="x-default" href="https://pyroapp.github.io/yourcallyourrule/index.html">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pyroapp.github.io/yourcallyourrule/index.html">
+    <meta property="og:title" content="YourCallYourRule - Smart Android Call & SMS Blocker">
+    <meta property="og:description" content="Customizable call blocker and SMS spam filter. Regex rules, WebDAV cloud backup, web scraping plugin engine, and 100% on-device privacy.">
+    <meta property="og:image" content="https://pyroapp.github.io/yourcallyourrule/og-image.jpg">
+    <meta property="og:site_name" content="YourCallYourRule">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YourCallYourRule - Android Call & SMS Filter">
+    <meta name="twitter:description" content="Take full control of incoming calls and SMS. Regex rules, plugin web scrapers, and WebDAV cloud backup.">
+
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "YourCallYourRule",
+          "operatingSystem": "Android",
+          "applicationCategory": "UtilitiesApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.96",
+            "ratingCount": "1820"
+          },
+          "description": "YourCallYourRule is a powerful, highly customizable Android application designed to give you complete control over incoming calls and SMS. Features blacklist/whitelist management, regular expression rules, STIR/SHAKEN verification, web scraping plugins, and 100% local privacy."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does YourCallYourRule protect user privacy compared to other caller ID apps?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Unlike commercial caller ID apps that upload your contacts to cloud databases, YourCallYourRule manages 100% of your rules and data locally on your device. It does not include an online tracking database, guaranteeing zero contact leaks or privacy tracking."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the plugin system and how can I scrape caller info?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "YourCallYourRule features a QuickJS-powered plugin engine that lets you scrape web pages or query APIs to identify unknown callers. You can develop and unit-test plugins using our QuickJS AI automation template without needing an Android emulator."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does SMS filtering work and where can I download the full version?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Due to Google Play policy restrictions on SMS permissions, the Play Store version focuses on call blocking. The full version with SMS filtering is available directly from our GitHub Releases page or Telegram Channel."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0b0e17;
+            --card-bg: #141828;
+            --card-border: #232d42;
+            --accent-color: #10b981;
+            --accent-gradient: linear-gradient(135deg, #059669 0%, #10b981 50%, #06b6d4 100%);
+            --text-main: #f3f4f6;
+            --text-sub: #9ca3af;
+            --pill-bg: #1d253b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(11, 14, 23, 0.88);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 0.4rem;
+            font-size: 0.82rem;
+            color: var(--text-sub);
+            flex-wrap: wrap;
+        }
+
+        .lang-switch a {
+            color: #34d399;
+            text-decoration: none;
+            padding: 0.18rem 0.45rem;
+            border-radius: 4px;
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(16, 185, 129, 0.6);
+        }
+
+        .btn-secondary {
+            background: var(--pill-bg);
+            color: var(--text-main);
+            border: 1px solid var(--card-border);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #28344e;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 4rem auto 3rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .badge-tag {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #34d399;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-sub);
+            max-width: 820px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 1.1rem;
+            margin-bottom: 3.5rem;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .grid-features {
+            max-width: 1200px;
+            margin: 0 auto 5rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #10b981;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        .comparison-section {
+            max-width: 1000px;
+            margin: 0 auto 5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+        }
+
+        th, td {
+            padding: 1.2rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        th {
+            background: #0f131f;
+            color: #9ca3af;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        td {
+            font-size: 0.95rem;
+        }
+
+        .tag-check {
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .tag-cross {
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        .faq-section {
+            max-width: 900px;
+            margin: 0 auto 5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: #34d399;
+        }
+
+        .faq-item p {
+            color: var(--text-sub);
+            font-size: 0.98rem;
+        }
+
+        .seo-keywords-box {
+            max-width: 1200px;
+            margin: 0 auto 4rem auto;
+            padding: 1.5rem;
+            background: rgba(18, 22, 34, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            line-height: 1.8;
+        }
+
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            background: #07090e;
+        }
+
+        footer a {
+            color: #34d399;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="../nav/index.html" class="logo-title">
+                🛡️ YourCallYourRule
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#plugins">Plugins Engine</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <div class="lang-switch">
+                    <a href="#en">EN</a>
+                    <a href="#zh">中文</a>
+                    <a href="#ja">日本語</a>
+                    <a href="#ko">한국어</a>
+                    <a href="#es">ES</a>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.yours.yourcallyourrule" target="_blank" rel="noopener" class="btn-primary">
+                    🚀 Google Play
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="en">
+        <div class="badge-tag">🛡️ Complete Incoming Call & SMS Firewall for Android</div>
+        <h1>Your Calls, Your Rules<br><span>Smart Call & SMS Blocker</span></h1>
+        <p>
+            Take 100% control over your mobile communications. YourCallYourRule provides powerful regex filtering, blacklist/whitelist rules, online subscriptions, STIR/SHAKEN caller verification, WebDAV cloud backup, and a web scraping plugin engine. 100% local, zero tracking!
+        </p>
+
+        <div class="hero-cta">
+            <a href="https://play.google.com/store/apps/details?id=com.yours.yourcallyourrule" target="_blank" rel="noopener" class="btn-primary">
+                📱 Download on Google Play
+            </a>
+            <a href="https://play.google.com/apps/testing/com.yours.yourcallyourrule" target="_blank" rel="noopener" class="btn-secondary">
+                🧪 Google Play Beta Channel
+            </a>
+            <a href="https://t.me/yourcallyourrule" target="_blank" rel="noopener" class="btn-secondary">
+                📢 Telegram Channel
+            </a>
+            <a href="https://t.me/+GHoPy6xwQEU1ZThh" target="_blank" rel="noopener" class="btn-secondary">
+                💬 Telegram Group
+            </a>
+        </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section id="features">
+        <h2 class="section-title">⚡ Eight Power Features for Total Call Control</h2>
+        <p class="section-subtitle">Designed for users who demand extreme privacy, flexibility, and powerful blocking customization</p>
+
+        <div class="grid-features">
+            <div class="feature-card">
+                <div class="feature-icon">🚫</div>
+                <h3>Blacklist & Whitelist Management</h3>
+                <p>Easily create lists of allowed and blocked phone numbers or contacts. Intercept unwanted spam callers, telemarketers, and robocalls instantly.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Regular Expression (Regex) Rules</h3>
+                <p>Define sophisticated and complex blocking rules using powerful regular expressions for area codes, number prefixes, patterns, and SMS keywords.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Online Rule Subscription</h3>
+                <p>Subscribe to curated online blocklists using subscription URLs. Automatically download updated spam databases without manually managing entries.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>STIR/SHAKEN Integration</h3>
+                <p>Leverage STIR/SHAKEN cryptographic caller verification technology to verify spoofed numbers (supported in select regions, including North America).</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Dual SIM Card Recognition</h3>
+                <p>Apply different blocking rules and actions based on which physical or eSIM card receives the incoming call or text message.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Flexible Blocking Actions</h3>
+                <p>Choose your preferred blocking action: hang up immediately, mute the ringer, or answer-and-hang-up to prevent callers from leaving voicemails.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>100% On-Device Local Privacy</h3>
+                <p>All data is managed strictly on your device. The app includes zero online tracking databases and never uploads your contacts or call logs to external servers.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">☁️</div>
+                <h3>Multi-Cloud Backup & Restore</h3>
+                <p>Seamlessly back up and restore your settings, rules, and plugins via WebDAV, Google Drive, and Microsoft OneDrive.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plugin System Section -->
+    <section id="plugins" style="max-width: 1100px; margin: 0 auto 5rem auto; padding: 0 1.5rem;">
+        <div style="background: rgba(20, 24, 40, 0.8); border: 1px solid var(--card-border); border-radius: 1.5rem; padding: 2.5rem;">
+            <h2 style="font-size: 2rem; color: #34d399; margin-bottom: 1rem;">🧩 QuickJS Web Scraping Plugin Engine</h2>
+            <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                One of the core strengths of <strong>YourCallYourRule</strong> is its powerful JavaScript plugin engine. Plugins can scrape online databases or query web APIs in real time to identify unknown caller IDs without relying on centralized servers.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="background: rgba(11, 14, 23, 0.6); padding: 1.25rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.08);">
+                    <h4 style="color: #ffffff; margin-bottom: 0.5rem;">📂 Community Plugin Directory</h4>
+                    <p style="color: #94a3b8; font-size: 0.92rem;">Maintained community plugins and template files are hosted in our repository's <code>/plugins</code> folder.</p>
+                </div>
+
+                <div style="background: rgba(11, 14, 23, 0.6); padding: 1.25rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.08);">
+                    <h4 style="color: #ffffff; margin-bottom: 0.5rem;">🤖 AI Automation Workflow (SKILL.md)</h4>
+                    <p style="color: #94a3b8; font-size: 0.92rem;">Develop and unit-test custom plugins using our QuickJS AI automation SOP without needing an Android emulator.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section" id="comparison">
+        <h2 class="section-title">📊 How YourCallYourRule Outperforms Traditional Blocker Apps</h2>
+        <p class="section-subtitle">A direct comparison with commercial caller ID apps and standard Android system blockers</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Blocking Feature</th>
+                    <th>YourCallYourRule</th>
+                    <th>Commercial Caller ID Apps</th>
+                    <th>Standard System Blocker</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Contact Privacy & Local Storage</strong></td>
+                    <td class="tag-check">🔒 100% Local, zero upload</td>
+                    <td class="tag-cross">❌ Uploads contacts to cloud</td>
+                    <td class="tag-check">🔒 Local</td>
+                </tr>
+                <tr>
+                    <td><strong>Regular Expression (Regex) Rules</strong></td>
+                    <td class="tag-check">✅ Full regex support</td>
+                    <td class="tag-cross">❌ Basic prefix only</td>
+                    <td class="tag-cross">❌ Static numbers only</td>
+                </tr>
+                <tr>
+                    <td><strong>Online Blocklist Subscriptions</strong></td>
+                    <td class="tag-check">✅ Any custom URL</td>
+                    <td class="tag-cross">❌ Proprietary database</td>
+                    <td class="tag-cross">❌ Not supported</td>
+                </tr>
+                <tr>
+                    <td><strong>Web Scraping Plugin Engine</strong></td>
+                    <td class="tag-check">✅ QuickJS plugin engine</td>
+                    <td class="tag-cross">❌ Not supported</td>
+                    <td class="tag-cross">❌ Not supported</td>
+                </tr>
+                <tr>
+                    <td><strong>STIR/SHAKEN & Dual SIM Support</strong></td>
+                    <td class="tag-check">✅ Supported</td>
+                    <td class="tag-cross">⚠️ Varies</td>
+                    <td class="tag-cross">❌ Basic</td>
+                </tr>
+                <tr>
+                    <td><strong>WebDAV / Cloud Backup</strong></td>
+                    <td class="tag-check">✅ WebDAV, Drive, OneDrive</td>
+                    <td class="tag-cross">⚠️ Proprietary account</td>
+                    <td class="tag-cross">❌ Local backup only</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Chinese Summary Block -->
+    <section id="zh" style="max-width: 1200px; margin: 0 auto 3rem auto; padding: 0 1.5rem;">
+        <div style="background: rgba(20, 24, 40, 0.8); border: 1px solid var(--card-border); border-radius: 1rem; padding: 2rem;">
+            <h3 style="font-size: 1.5rem; color: #34d399; margin-bottom: 1rem;">🇨🇳 中文专区：YourCallYourRule 您的通话与短信规则</h3>
+            <p style="color: #cbd5e1; line-height: 1.8;">
+                <strong>YourCallYourRule</strong> 是一款功能强大且高度可定制的安卓通话与短信拦截防火墙。<br>
+                支持黑白名单管理、正则表达式灵活拦截、在线骚扰库订阅、STIR/SHAKEN 来电防伪、双 SIM 卡独立规则、挂断/静音/接听挂断操作，以及强大的 QuickJS 网页抓取插件系统。所有规则与数据 100% 在手机本地离线管理，绝不上报联系人与通话记录！
+            </p>
+            <div id="ja" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <h4 style="color: #a855f7; font-size: 1.1rem;">🇯🇵 日本語概要 (Japanese Overview)</h4>
+                <p style="color: #94a3b8; font-size: 0.92rem;">YourCallYourRuleは、着信・SMSを完全にコントロールできる100%ローカルなAndroid着信拒否アプリです。正規表現、WebDAVバックアップ、プラグインをサポートします。</p>
+            </div>
+            <div id="ko" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <h4 style="color: #ec4899; font-size: 1.1rem;">🇰🇷 한국어 개요 (Korean Overview)</h4>
+                <p style="color: #94a3b8; font-size: 0.92rem;">YourCallYourRule은 수신 전화 및 SMS 차단을 위한 강력한 온디바이스 Android 앱입니다. 정규식 규칙, 플러그인, WebDAV 백업을 지원합니다.</p>
+            </div>
+            <div id="es" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <h4 style="color: #38bdf8; font-size: 1.1rem;">🇪🇸 Resumen en Español (Spanish Overview)</h4>
+                <p style="color: #94a3b8; font-size: 0.92rem;">YourCallYourRule es un bloqueador de llamadas y SMS para Android con expresiones regulares, plugins y copia de seguridad WebDAV.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <h2 class="section-title">❓ Frequently Asked Questions (FAQ)</h2>
+        <p class="section-subtitle">Common questions about YourCallYourRule features and SMS permissions</p>
+
+        <div class="faq-item">
+            <h3>Q: Why does the Google Play Store version focus on call blocking?</h3>
+            <p><strong>English:</strong> Due to Google Play policies restricting SMS permission usage, the Play Store version handles call blocking. If you need full SMS filtering, download the full package directly from our GitHub Releases page or Telegram channel.</p>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>受 Google Play 政策限制，商店版聚焦来电拦截。如需短信过滤功能，请从 Releases 或 Telegram 频道下载完整版。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Q: Does YourCallYourRule upload my contacts to an online database?</h3>
+            <p><strong>English:</strong> No! All rule processing and contact matching run 100% locally on your phone. We do not maintain or query an online user database.</p>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>绝不。所有拦截与联系人匹配 100% 在本地运行，无任何云端数据库抓取与上传。</p>
+        </div>
+    </section>
+
+    <!-- Global SEO Keywords Cloud (11 Languages Covered) -->
+    <section class="seo-keywords-box">
+        <strong>SEO Keywords Cloud (11 Languages Covered):</strong><br>
+        YourCallYourRule, Your Call Your Rule, Android call blocker, SMS blocker, spam call filter, regex call blocker, STIR SHAKEN Android, phone number blacklist, call blocker plugin, WebDAV call backup, 骚扰电话拦截, 短信拦截器, 安卓来电防火墙, 正则表达式拦截, 电话黑名单, 骚扰拦截插件, 通话规则管理, Call blocker free Android, Spamschutz Anrufe, Bloqueador de llamadas spam, com.yours.yourcallyourrule, Android 착신 거부, アプリ着信拒否, filtro llamadas spam.
+    </section>
+
+    <!-- Instant IndexNow Protocol & Multi-Search Engine Ping Trigger -->
+    <script>
+    (function(){
+        // 1. IndexNow Instant Indexing Protocol (Bing, Yandex, DuckDuckGo, Naver, Seznam)
+        var indexNowUrl = 'https://api.indexnow.org/indexnow?url=' + encodeURIComponent(window.location.href) + '&key=pyroapp2026indexnowkey';
+        if (navigator.sendBeacon) {
+            navigator.sendBeacon(indexNowUrl);
+            navigator.sendBeacon('https://www.google.com/ping?sitemap=https://pyroapp.github.io/sitemap.xml');
+            navigator.sendBeacon('https://www.bing.com/ping?sitemap=https://pyroapp.github.io/sitemap.xml');
+        }
+
+        // 2. Baidu Auto Push Client
+        var canonicalURL, bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        if (s && s.parentNode) {
+            s.parentNode.insertBefore(bp, s);
+        }
+    })();
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Pyro Studio / ChoiceNew / oakgeol. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="../nav/index.html">Apps Hub</a> |
+            <a href="https://play.google.com/store/apps/details?id=com.yours.yourcallyourrule">Google Play</a> |
+            <a href="https://t.me/yourcallyourrule">Telegram Channel</a> |
+            <a href="https://t.me/+GHoPy6xwQEU1ZThh">Telegram Group</a> |
+            <a href="../llms.txt">AI Index (llms.txt)</a> |
+            Email: <a href="mailto:OAKGEOL@GMAIL.COM">OAKGEOL@GMAIL.COM</a>
+        </p>
+    </footer>
+
+</body>
+</html>
