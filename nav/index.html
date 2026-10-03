@@ -30,9 +30,9 @@
     <link rel="alternate" hreflang="zh-TW" href="https://pyroapp.github.io/nav/index.html#zh-tw">
     <link rel="alternate" hreflang="ja" href="https://pyroapp.github.io/nav/index.html#ja">
     <link rel="alternate" hreflang="ko" href="https://pyroapp.github.io/nav/index.html#ko">
-    <link rel="alternate" hreflang="es" href="https://pyroapp.github.io/nav/index.html#es">
     <link rel="alternate" hreflang="de" href="https://pyroapp.github.io/nav/index.html#de">
     <link rel="alternate" hreflang="fr" href="https://pyroapp.github.io/nav/index.html#fr">
+    <link rel="alternate" hreflang="es" href="https://pyroapp.github.io/nav/index.html#es">
     <link rel="alternate" hreflang="pt" href="https://pyroapp.github.io/nav/index.html#pt">
     <link rel="alternate" hreflang="ru" href="https://pyroapp.github.io/nav/index.html#ru">
     <link rel="alternate" hreflang="ar" href="https://pyroapp.github.io/nav/index.html#ar">
@@ -203,8 +203,8 @@
 
         .lang-switch {
             display: flex;
-            gap: 0.4rem;
-            font-size: 0.82rem;
+            gap: 0.35rem;
+            font-size: 0.8rem;
             color: var(--text-sub);
             flex-wrap: wrap;
         }
@@ -212,7 +212,7 @@
         .lang-switch a {
             color: #818cf8;
             text-decoration: none;
-            padding: 0.18rem 0.45rem;
+            padding: 0.18rem 0.42rem;
             border-radius: 4px;
             background: rgba(99, 102, 241, 0.12);
             border: 1px solid rgba(99, 102, 241, 0.25);
@@ -410,7 +410,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#apps" data-i18n="nav_apps">Ecosystem Apps</a></li>
-                <li><a href="#zh" data-i18n="nav_zh">中文导航</a></li>
+                <li><a href="#zh" data-i18n="nav_zh">Chinese Hub</a></li>
             </ul>
             <div style="display: flex; gap: 0.75rem; align-items: center;">
                 <div class="lang-switch">
@@ -419,7 +419,12 @@
                     <a href="#zh-tw">繁體</a>
                     <a href="#ja">日本語</a>
                     <a href="#ko">한국어</a>
+                    <a href="#de">DE</a>
+                    <a href="#fr">FR</a>
                     <a href="#es">ES</a>
+                    <a href="#pt">PT</a>
+                    <a href="#ru">RU</a>
+                    <a href="#ar">AR</a>
                 </div>
                 <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary" data-i18n="btn_community">
                     👥 Community
@@ -445,7 +450,7 @@
             <div>
                 <div class="app-icon">🏝️</div>
                 <h3>VehereGo</h3>
-                <p data-i18n="app1_desc">Status bar island & Live Activity hub for Android. Automatically extracts parcel pickup codes (Cainiao, SF Express, Meituan) via OCR, manages PKPass vouchers, and tracks transit tickets in live capsules.</p>
+                <p data-i18n="app1_desc">Status bar island & Live Activity hub for Android. Automatically extracts parcel pickup codes via OCR, manages PKPass vouchers, and tracks transit tickets in live capsules.</p>
                 <div class="app-tags">
                     <span class="app-tag">Live Activity</span>
                     <span class="app-tag">Parcel OCR</span>
@@ -462,7 +467,7 @@
             <div>
                 <div class="app-icon">🔥</div>
                 <h3>PyroMagma Academic</h3>
-                <p data-i18n="app2_desc">AI-driven academic literature reader. Browse paper card feeds (ArXiv, IEEE, Nature, PubMed), conduct interactive full-text RAG Q&A, and sync annotations seamlessly with Zotero and WebDAV.</p>
+                <p data-i18n="app2_desc">AI-driven academic literature reader. Browse paper card feeds (ArXiv, IEEE, Nature, PubMed), conduct interactive full-text RAG Q&A, and sync annotations seamlessly with Zotero.</p>
                 <div class="app-tags">
                     <span class="app-tag">AI Paper Summarizer</span>
                     <span class="app-tag">Literature RAG</span>
@@ -541,7 +546,7 @@
             hero_badge: '🌐 Pyro Studio 官方应用导航门户',
             hero_title: '全新一代 <span>Android 旗舰套件</span><br>纯本地隐私防护 · 状态栏灵动岛 · AI 驱动引擎',
             hero_pitch: '欢迎来到 Pyro Studio 官方应用门户！探索我们专为 Android 打造的效率工具与 AI 引擎生态系统：状态栏灵动岛、AI 学术论文阅读器、Legado 替代品与来电防火墙。',
-            app1_desc: '安卓状态栏灵动岛与实时动态中枢。自动 OCR 识图提取菜鸟/顺丰/美团取件码，管理 PKPass 数字卡包与行程凭证。',
+            app1_desc: '安卓状态栏灵动岛与实时动态中枢。自动 OCR 识图提取菜鸟/顺丰/外卖取件码，管理 PKPass 数字卡包与行程凭证。',
             btn_app1: '👉 查看 VehereGo',
             app2_desc: 'AI 驱动学术论文卡片流阅读器。支持 ArXiv/IEEE/Nature 顶刊订阅、全文 RAG 交互问答与 Zotero/WebDAV 云同步。',
             btn_app2: '👉 查看 PyroMagma 学术版',
@@ -592,6 +597,34 @@
             app4_desc: '강력한 수신 전화 및 SMS 방화벽. 정규식 차단, WebDAV 백업 및 스크래핑 플러그인 지원.',
             btn_app4: '👉 YourCallYourRule 탐색'
         },
+        'de': {
+            nav_apps: 'Ecosystem Apps', nav_zh: 'Übersicht', btn_community: '👥 Community',
+            hero_badge: '🌐 Offizielles Pyro Studio Anwendungsportal',
+            hero_title: 'Next-Gen <span>Android Suite</span><br>Datenschutz-Tools, KI-Reader & Blocker',
+            hero_pitch: 'Willkommen im offiziellen Pyro Studio Hub! Entdecken Sie unser Ökosystem aus leistungsstarken Android-Tools für Statusleiste, KI-Forschung und Anrufschutz.',
+            app1_desc: 'Statusleisten-Insel & Live Aktivitäten Hub für Android. Automatische Paket-OCR und PKPass Wallet-Verwaltung.',
+            btn_app1: '👉 VehereGo Entdecken',
+            app2_desc: 'KI-gestützter wissenschaftlicher Paper-Reader. ArXiv/IEEE Feeds, RAG-Chat und Zotero-Synchronisation.',
+            btn_app2: '👉 PyroMagma Academic Entdecken',
+            app3_desc: 'Die ultimative Legado-Alternative für Web-Romane und Manga mit lokaler KI-Übersetzung und Echtzeit-Manga-OCR.',
+            btn_app3: '👉 PyroMagma Reader Entdecken',
+            app4_desc: 'Leistungsstarker Anruf- & SMS-Blocker mit Regex-Regeln, WebDAV-Backup und Web-Scraping-Plugins.',
+            btn_app4: '👉 YourCallYourRule Entdecken'
+        },
+        'fr': {
+            nav_apps: 'Applications', nav_zh: 'Aperçu', btn_community: '👥 Communauté',
+            hero_badge: '🌐 Répertoire Officiel des Applications Pyro Studio',
+            hero_title: 'Next-Gen <span>Android Suite</span><br>Outils de Confidentialité, Lecteurs IA & Bloqueurs',
+            hero_pitch: 'Bienvenue sur le hub officiel de Pyro Studio ! Découvrez nos outils Android axés sur la confidentialité pour la barre d\'état, la recherche IA et le blocage d\'appels.',
+            app1_desc: 'Îlot de barre d\'état & hub d\'activités en direct. OCR automatique de codes de colis et gestionnaire PKPass.',
+            btn_app1: '👉 Explorer VehereGo',
+            app2_desc: 'Lecteur d\'articles scientifiques par IA. Flux ArXiv/IEEE, questions-réponses RAG et synchro Zotero.',
+            btn_app2: '👉 Explorer PyroMagma Academic',
+            app3_desc: 'L\'alternative ultime à Legado pour romans et mangas avec traduction IA locale et OCR de bulles.',
+            btn_app3: '👉 Explorer PyroMagma Reader',
+            app4_desc: 'Bloqueur d\'appels et SMS puissant avec règles Regex, sauvegarde WebDAV et plugins de scraping.',
+            btn_app4: '👉 Explorer YourCallYourRule'
+        },
         'es': {
             nav_apps: 'Aplicaciones', nav_zh: 'Resumen', btn_community: '👥 Comunidad',
             hero_badge: '🌐 Directorio Oficial de Aplicaciones Pyro Studio',
@@ -605,6 +638,48 @@
             btn_app3: '👉 Explorar PyroMagma Reader',
             app4_desc: 'Bloqueador de llamadas y SMS con expresiones regulares, plugins QuickJS y copia WebDAV.',
             btn_app4: '👉 Explorar YourCallYourRule'
+        },
+        'pt': {
+            nav_apps: 'Aplicativos', nav_zh: 'Visão Geral', btn_community: '👥 Comunidade',
+            hero_badge: '🌐 Diretório Oficial de Aplicativos Pyro Studio',
+            hero_title: 'Nova Geração <span>Android Suite</span><br>Ferramentas de Privacidade, Leitores IA e Bloqueadores',
+            hero_pitch: 'Bem-vindo ao hub oficial do Pyro Studio! Descubra nossos aplicativos Android focados em privacidade para barra de status, pesquisa com IA e controle de chamadas.',
+            app1_desc: 'Hub de Atividades ao Vivo para barra de status Android. OCR automático de encomendas e carteira PKPass.',
+            btn_app1: '👉 Explorar VehereGo',
+            app2_desc: 'Leitor de literatura acadêmica com IA. Feeds do ArXiv/IEEE, RAG sobre PDFs e sincronização Zotero.',
+            btn_app2: '👉 Explorar PyroMagma Academic',
+            app3_desc: 'A alternativa definitiva ao Legado para web novels e mangás com tradução IA local e OCR de balões.',
+            btn_app3: '👉 Explorar PyroMagma Reader',
+            app4_desc: 'Bloqueador de chamadas e SMS com regras Regex, backup WebDAV e plugins de scraping.',
+            btn_app4: '👉 Explorar YourCallYourRule'
+        },
+        'ru': {
+            nav_apps: 'Приложения', nav_zh: 'Обзор', btn_community: '👥 Сообщество',
+            hero_badge: '🌐 Официальный Каталог Приложений Pyro Studio',
+            hero_title: 'Новое Поколение <span>Android Suite</span><br>Приватные Утилиты, ИИ-Ридеры и Блокировщики',
+            hero_pitch: 'Добро пожаловать на официальный портал Pyro Studio! Откройте для себя экосистему приложений Android для строки состояния, ИИ-исследований и защиты от спама.',
+            app1_desc: 'Остров строки состояния и центр Live Activity. Автоматический OCR кодов посылок и кошелек PKPass.',
+            btn_app1: '👉 Обзор VehereGo',
+            app2_desc: 'ИИ-ридер научной литературы. Фиды ArXiv/IEEE, RAG-чат по статьям и синхронизация с Zotero.',
+            btn_app2: '👉 Обзор PyroMagma Academic',
+            app3_desc: 'Альтернатива Legado для новелл и манги с локальным ИИ-переводом и живым OCR бабблов.',
+            btn_app3: '👉 Обзор PyroMagma Reader',
+            app4_desc: 'Мощный блокировщик звонков и SMS с правилами Regex, бэкапом WebDAV и плагинами.',
+            btn_app4: '👉 Обзор YourCallYourRule'
+        },
+        'ar': {
+            nav_apps: 'التطبيقات', nav_zh: 'نظرة عامة', btn_community: '👥 المجتمع',
+            hero_badge: '🌐 الدليل الرسمي لتطبيقات Pyro Studio',
+            hero_title: 'الجيل القادم <span>Android Suite</span><br>أدوات الخصوصية، قارئات الذكاء الاصطناعي والمحاضر',
+            hero_pitch: 'مرحباً بك في البوابة الرسمية لـ Pyro Studio! اكتشف تطبيقنا لنظام Android المخصص للإنتاجية والخصوصية.',
+            app1_desc: 'جزيرة شريط الحالة وأنشطة الوقت الفعلي مع استخراج OCR واستيراد بطاقات PKPass.',
+            btn_app1: '👉 استكشاف VehereGo',
+            app2_desc: 'قارئ الأوراق العلمية بالذكاء الاصطناعي مع RAG ومزامنة Zotero.',
+            btn_app2: '👉 استكشاف PyroMagma Academic',
+            app3_desc: 'بديل Legado للروايات والمانغا مع ترجمة الذكاء الاصطناعي المحلية و OCR الفقاعات المباشر.',
+            btn_app3: '👉 استكشاف PyroMagma Reader',
+            app4_desc: 'حاظر مكالمات ورسائل مع قواعد Regex ونسخ احتياطي WebDAV وإضافات جرف الويب.',
+            btn_app4: '👉 استكشاف YourCallYourRule'
         }
     };
 
@@ -619,13 +694,21 @@
         if (sys.startsWith('ja')) return 'ja';
         if (sys.startsWith('ko')) return 'ko';
         if (sys.startsWith('es')) return 'es';
+        if (sys.startsWith('de')) return 'de';
+        if (sys.startsWith('fr')) return 'fr';
+        if (sys.startsWith('pt')) return 'pt';
+        if (sys.startsWith('ru')) return 'ru';
+        if (sys.startsWith('ar')) return 'ar';
         return 'en';
     }
 
     function setLanguage(lang) {
         if (!i18nDict[lang]) lang = 'en';
+        var isRtl = (lang === 'ar');
         document.documentElement.lang = lang;
+        document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
         localStorage.setItem('pyro_lang', lang);
+
         var dict = i18nDict[lang] || i18nDict['en'];
         document.querySelectorAll('[data-i18n]').forEach(function(el) {
             var key = el.getAttribute('data-i18n');
@@ -671,7 +754,7 @@
     </script>
 
     <!-- Footer -->
-    <footer>
+    <footer dir="ltr">
         <p>&copy; 2026 Pyro Studio / oakgeol. All Rights Reserved.</p>
         <p style="margin-top: 0.5rem;">
             <a href="../veherego/index.html">VehereGo</a> |

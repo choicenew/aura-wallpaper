@@ -30,9 +30,9 @@
     <link rel="alternate" hreflang="zh-TW" href="https://pyroapp.github.io/pyromagma/reader.html#zh-tw">
     <link rel="alternate" hreflang="ja" href="https://pyroapp.github.io/pyromagma/reader.html#ja">
     <link rel="alternate" hreflang="ko" href="https://pyroapp.github.io/pyromagma/reader.html#ko">
-    <link rel="alternate" hreflang="es" href="https://pyroapp.github.io/pyromagma/reader.html#es">
     <link rel="alternate" hreflang="de" href="https://pyroapp.github.io/pyromagma/reader.html#de">
     <link rel="alternate" hreflang="fr" href="https://pyroapp.github.io/pyromagma/reader.html#fr">
+    <link rel="alternate" hreflang="es" href="https://pyroapp.github.io/pyromagma/reader.html#es">
     <link rel="alternate" hreflang="pt" href="https://pyroapp.github.io/pyromagma/reader.html#pt">
     <link rel="alternate" hreflang="ru" href="https://pyroapp.github.io/pyromagma/reader.html#ru">
     <link rel="alternate" hreflang="ar" href="https://pyroapp.github.io/pyromagma/reader.html#ar">
@@ -213,8 +213,8 @@
 
         .lang-switch {
             display: flex;
-            gap: 0.4rem;
-            font-size: 0.82rem;
+            gap: 0.35rem;
+            font-size: 0.8rem;
             color: var(--text-sub);
             flex-wrap: wrap;
         }
@@ -222,7 +222,7 @@
         .lang-switch a {
             color: #f472b6;
             text-decoration: none;
-            padding: 0.18rem 0.45rem;
+            padding: 0.18rem 0.42rem;
             border-radius: 4px;
             background: rgba(236, 72, 153, 0.12);
             border: 1px solid rgba(236, 72, 153, 0.25);
@@ -514,7 +514,12 @@
                     <a href="#zh-tw">繁體</a>
                     <a href="#ja">日本語</a>
                     <a href="#ko">한국어</a>
+                    <a href="#de">DE</a>
+                    <a href="#fr">FR</a>
                     <a href="#es">ES</a>
+                    <a href="#pt">PT</a>
+                    <a href="#ru">RU</a>
+                    <a href="#ar">AR</a>
                 </div>
                 <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary" data-i18n="btn_download">
                     🚀 Download PyroMagma
@@ -532,7 +537,7 @@
         </p>
 
         <!-- CSS Manga Speech Bubble Live OCR Simulation Mockup -->
-        <div class="manga-mockup-wrapper">
+        <div class="manga-mockup-wrapper" dir="ltr">
             <div class="manga-mockup-card">
                 <div class="panel-raw" data-i18n="mockup_raw">
                     <strong style="color:#ffffff;">🇯🇵 Raw Manga Speech Bubble:</strong><br>
@@ -610,7 +615,7 @@
         </div>
 
         <div class="faq-item">
-            <h3>Q: How does the local AI translation and manga OCR work without internet?</h3>
+            <h3 data-i18n="q2_title">Q: How does the local AI translation and manga OCR work without internet?</h3>
             <p data-i18n="q2_desc">PyroMagma bundles optimized, lightweight on-device neural model weights that run directly on your smartphone NPU/CPU/GPU. This means 100% offline translation and OCR with zero data consumption.</p>
         </div>
     </section>
@@ -641,7 +646,7 @@
             f6_title: 'WebDAV & Zotero Multi-Cloud Sync', f6_desc: 'Sync your reading progress, custom book sources, highlights, and notes seamlessly across devices.',
             faq_title: '❓ Frequently Asked Questions (FAQ)', faq_subtitle: 'Common questions about PyroMagma Reader and Legado features',
             q1_title: 'Q: Is PyroMagma Reader a direct alternative to Legado (阅读)?', q1_desc: 'Yes! PyroMagma Reader supports custom book sources, EPUB/TXT/PDF files, RSS feeds, and clean ad-free reading layout just like Legado, while adding on-device AI translation.',
-            q2_desc: 'PyroMagma bundles optimized, lightweight on-device neural model weights that run directly on your smartphone NPU/CPU/GPU.'
+            q2_title: 'Q: How does the local AI translation and manga OCR work without internet?', q2_desc: 'PyroMagma bundles optimized, lightweight on-device neural model weights that run directly on your smartphone NPU/CPU/GPU.'
         },
         'zh': {
             nav_features: 'Legado 核心功能', nav_ai: '本地 AI 与 OCR', nav_faq: '常见问题', btn_download: '🚀 下载 PyroMagma',
@@ -660,7 +665,7 @@
             f6_title: 'WebDAV & Zotero 多端云同步', f6_desc: '跨设备无缝同步您的阅读进度、书源配置、高亮划线与笔记。',
             faq_title: '❓ 常见问题 (FAQ)', faq_subtitle: '关于 PyroMagma Reader 与 Legado 功能的解答',
             q1_title: 'Q: PyroMagma 是 Legado (开源阅读) 的替代品吗？', q1_desc: '是的！PyroMagma 完全支持书源导入、EPUB/TXT/PDF 阅读与无广告排版，并独家融入了本地 AI 翻译与漫画 OCR。',
-            q2_desc: '应用打包了轻量端侧 AI 模型，直接在手机 CPU/GPU/NPU 上完成离线 OCR 与神经网络翻译，0 流量消耗。'
+            q2_title: 'Q: 本地 AI 翻译与漫画 OCR 如何实现离线工作？', q2_desc: '应用打包了轻量端侧 AI 模型，直接在手机 CPU/GPU/NPU 上完成离线 OCR 与神经网络翻译，0 流量消耗。'
         },
         'zh-tw': {
             nav_features: 'Legado 核心功能', nav_ai: '本地 AI 與 OCR', nav_faq: '常見問題', btn_download: '🚀 下載 PyroMagma',
@@ -679,7 +684,7 @@
             f6_title: 'WebDAV & Zotero 多端雲同步', f6_desc: '跨裝置無縫同步您的閱讀進度、書源配置、高亮劃線與筆記。',
             faq_title: '❓ 常見問題 (FAQ)', faq_subtitle: '關於 PyroMagma Reader 與 Legado 功能的解答',
             q1_title: 'Q: PyroMagma 是 Legado (開源閱讀) 的替代品嗎？', q1_desc: '是的！PyroMagma 完全支援書源匯入、EPUB/TXT/PDF 閱讀與無廣告排版，並獨家融入了本地 AI 翻譯與漫畫 OCR。',
-            q2_desc: '應用打包了輕量端側 AI 模型，直接在手機 CPU/GPU/NPU 上完成離線 OCR 與神經網絡翻譯，0 流量消耗。'
+            q2_title: 'Q: 本地 AI 翻譯與漫畫 OCR 如何實現離線工作？', q2_desc: '應用打包了輕量端側 AI 模型，直接在手機 CPU/GPU/NPU 上完成離線 OCR 與神經網絡翻譯，0 流量消耗。'
         },
         'ja': {
             nav_features: '機能', nav_ai: 'ローカルAI & OCR', nav_faq: 'FAQ', btn_download: '🚀 PyroMagmaをダウンロード',
@@ -698,7 +703,7 @@
             f6_title: 'WebDAV & Zoteroマルチクラウド同期', f6_desc: '読書進捗、ハイライト、メモをデバイス間でシームレスに同期。',
             faq_title: '❓ よくある質問 (FAQ)', faq_subtitle: 'PyroMagma Readerの使い方',
             q1_title: 'Q: 電子書籍リーダーとしての特徴は？', q1_desc: 'カスタム書源、EPUB/TXT/PDF対応、広告なしレイアウトに加え、ローカルAI翻訳を統合。',
-            q2_desc: '軽量オンデバイスAIモデルを同梱し、スマートフォン上で完全オフラインで動作します。'
+            q2_title: 'Q: オフラインでのAI翻訳とOCRの仕組みは？', q2_desc: '軽量オンデバイスAIモデルを同梱し、スマートフォン上で完全オフラインで動作します。'
         },
         'ko': {
             nav_features: '기능', nav_ai: '로컬 AI & OCR', nav_faq: '자주 묻는 질문', btn_download: '🚀 PyroMagma 다운로드',
@@ -715,14 +720,48 @@
             f6_title: 'WebDAV & Zotero 멀티 클라우드 동기화', f6_desc: '독서 진도, 하이라이트, 메모를 기기 간 동기화.',
             faq_title: '❓ 자주 묻는 질문 (FAQ)', faq_subtitle: 'PyroMagma Reader 이용 안내',
             q1_title: 'Q: 전자책 리더로서의 특징은?', q1_desc: '커스텀 서원 및 EPUB/TXT/PDF 지원과 더불어 온디바이스 AI 번역을 지원합니다.',
-            q2_desc: '경량 온디바이스 AI 모델이 내장되어 인터넷 없이 오프라인으로 작동합니다.'
+            q2_title: 'Q: 오프라인 AI 번역 작동 방식은?', q2_desc: '경량 온디바이스 AI 모델이 내장되어 인터넷 없이 오프라인으로 작동합니다.'
+        },
+        'de': {
+            nav_features: 'Funktionen', nav_ai: 'Lokale KI & OCR', nav_faq: 'FAQ', btn_download: '🚀 PyroMagma Herunterladen',
+            hero_badge: '📖 Legado-Alternative | On-Device KI-Übersetzung & Live-OCR Reader',
+            hero_title: 'Kostenlose Romane, Manga & Paper<br><span>On-Device KI-Reader & Übersetzer</span>',
+            hero_pitch: 'Lesen Sie Light Novels, Manga und ArXiv-Paper mit integrierter On-Device KI-Übersetzung und Echtzeit-Manga-OCR ohne Netzwerkverzögerung. 100% werbefrei und offline!',
+            btn_community: '👥 Schritt 1: Google Group Beitreten', btn_app: '📲 Schritt 2: PyroMagma Herunterladen',
+            features_title: '⚡ Sechs Leistungsstarke Funktionen', features_subtitle: 'Offene Buchquellen, Manga-OCR und On-Device KI-Übersetzung in einem Reader',
+            f1_title: 'Schnittstelle für Offene Quellen & Formate', f1_desc: 'Unterstützt EPUB, PDF, RSS und Web-Romane mit individuellen Schriftarten und Nachtmodus.',
+            f2_title: 'On-Device Lokale KI-Übersetzung', f2_desc: 'Lesen Sie japanische Light Novels offline. Die KI-Übersetzung läuft direkt auf Ihrem Smartphone-Chip.',
+            f3_title: 'Live Manga OCR Übersetzung', f3_desc: 'Echtzeit-OCR extrahiert Text aus Sprechblasen direkt auf der Manga-Seite.',
+            f4_title: 'Kostenloser Paper Reader & RAG', f4_desc: 'Zugriff auf ArXiv und IEEE Feeds mit automatischer KI-Zusammenfassung komplexer Formeln.',
+            f5_title: '100% Offline-Datenschutz', f5_desc: 'Kein Konto erforderlich! Alle OCR- und KI-Übersetzungsdaten bleiben lokal auf Ihrem Gerät.',
+            f6_title: 'WebDAV & Zotero Cloud Sync', f6_desc: 'Synchronisieren Sie Lesefortschritt, Buchquellen und Notizen über WebDAV und Zotero.',
+            faq_title: '❓ Häufig gestellte Fragen (FAQ)', faq_subtitle: 'Fragen zu PyroMagma Reader und Funktionen',
+            q1_title: 'Q: Ist PyroMagma eine Alternative zu Legado?', q1_desc: 'Ja, PyroMagma unterstützt benutzerdefinierte Buchquellen und bietet zusätzlich KI-Übersetzung.',
+            q2_title: 'Q: Wie funktioniert die KI-Übersetzung offline?', q2_desc: 'Optimierte On-Device-Modelle laufen direkt auf NPU/GPU Ihres Smartphones.'
+        },
+        'fr': {
+            nav_features: 'Fonctions', nav_ai: 'IA Locale & OCR', nav_faq: 'FAQ', btn_download: '🚀 Télécharger PyroMagma',
+            hero_badge: '📖 Alternative à Legado | Traduction IA Locale & Lecteur OCR',
+            hero_title: 'Romans, Mangas & Articles Gratuits<br><span>Lecteur & Traducteur IA Intégré</span>',
+            hero_pitch: 'Lisez des romans, mangas et articles scientifiques avec traduction IA locale sur appareil et OCR en temps réel. 100% sans publicité et privé !',
+            btn_community: '👥 Étape 1 : Rejoindre la Communauté', btn_app: '📲 Étape 2 : Télécharger l\'Application',
+            features_title: '⚡ Six Fonctionnalités Avancées', features_subtitle: 'Sources de livres ouvertes, OCR de mangas et traduction IA sur appareil',
+            f1_title: 'Alternative Ultime à Legado', f1_desc: 'Lisez EPUB, PDF, RSS et romans web. Supporte les sources personnalisées et le mode nuit.',
+            f2_title: 'Traduction IA Locale sur Appareil', f2_desc: 'Lisez des light novels japonais hors ligne grâce au moteur IA sur puce.',
+            f3_title: 'OCR en Direct pour Mangas', f3_desc: 'L\'OCR en temps réel extrait le texte des bulles pour une traduction côte à côte.',
+            f4_title: 'Lecteur d\'Articles Scientifiques RAG', f4_desc: 'Accédez aux flux ArXiv et IEEE avec résumés IA d\'équations complexes.',
+            f5_title: 'Confidentialité 100% Hors Ligne', f5_desc: 'Zéro compte, zéro serveur. Tout le traitement reste local.',
+            f6_title: 'Monomise WebDAV & Zotero Sync', f6_desc: 'Synchronisez votre progression, vos sources et vos notes via WebDAV et Zotero.',
+            faq_title: '❓ Foire Aux Questions (FAQ)', faq_subtitle: 'Questions fréquentes sur PyroMagma Reader',
+            q1_title: 'Q: Est-ce une alternative directe à Legado ?', q1_desc: 'Oui ! Il supporte les sources personnalisées avec l\'IA locale en plus.',
+            q2_title: 'Q: Comment fonctionne la traduction hors ligne ?', q2_desc: 'Des modèles IA légers s\'exécutent directement sur le processeur de votre téléphone.'
         },
         'es': {
             nav_features: 'Funciones', nav_ai: 'IA Local y OCR', nav_faq: 'Preguntas', btn_download: '🚀 Descargar PyroMagma',
             hero_badge: '📖 Lector de Libros con Traducción IA Local y OCR en Tiempo Real',
             hero_title: 'Novelas, Manga y Artículos Gratis<br><span>Lector IA en el Dispositivo</span>',
             hero_pitch: '¡La evolución de la lectura! Lea novelas, manga y artículos científicos con traducción IA en el dispositivo y OCR en tiempo real. ¡100% sin anuncios y privado!',
-            btn_community: '👥 Únete a la Comunidad en Google Group', btn_app: '📲 Descargar PyroMagma',
+            btn_community: '👥 Paso 1: Únete a la Comunidad en Google Group', btn_app: '📲 Paso 2: Descargar PyroMagma App',
             features_title: '⚡ Seis Funciones Potentes', features_subtitle: 'Fuentes abiertas, OCR de manga y traducción IA integrada',
             f1_title: 'Lector de Formatos Múltiples', f1_desc: 'Soporte para EPUB, PDF, RSS y novelas web. Sin anuncios.',
             f2_title: 'Traducción IA Local en el Dispositivo', f2_desc: 'Traducción IA directamente en el chip de su teléfono sin consumo de datos.',
@@ -731,8 +770,59 @@
             f5_title: 'Privacidad 100% en el Dispositivo', f5_desc: 'Sin cuentas ni procesamiento en la nube.',
             f6_title: 'Sincronización WebDAV y Zotero', f6_desc: 'Sincronice su progreso de lectura y notas entre dispositivos.',
             faq_title: '❓ Preguntas Frecuentes (FAQ)', faq_subtitle: 'Preguntas comunes sobre PyroMagma Reader',
-            q1_title: '¿Soporta fuentes personalizadas y EPUB?', q1_desc: 'Sí, es compatible con EPUB, PDF, TXT y fuentes personalizadas.',
-            q2_desc: 'Modelos IA integrados funcionan 100% offline en su teléfono.'
+            q1_title: '¿Es una alternativa a Legado?', q1_desc: 'Sí, es compatible con EPUB, PDF, TXT y fuentes personalizadas.',
+            q2_title: '¿Cómo funciona offline?', q2_desc: 'Modelos IA integrados funcionan 100% offline en su teléfono.'
+        },
+        'pt': {
+            nav_features: 'Recursos', nav_ai: 'IA Local e OCR', nav_faq: 'FAQ', btn_download: '🚀 Baixar PyroMagma',
+            hero_badge: '📖 Leitor com Tradução IA Local e OCR para Mangás',
+            hero_title: 'Novelas, Mangás e Artigos Grátis<br><span>Leitor com IA no Dispositivo</span>',
+            hero_pitch: 'Leia web novels, mangás em idioma original e artigos científicos com tradução IA integrada no chip do celular e OCR ao vivo. 100% sem anúncios!',
+            btn_community: '👥 Passo 1: Entrar na Comunidade', btn_app: '📲 Passo 2: Baixar Aplicativo',
+            features_title: '⚡ Seis Grandes Recursos', features_subtitle: 'Fontes de livros abertas, OCR de mangá e tradução IA integrada',
+            f1_title: 'Alternativa Definitiva ao Legado', f1_desc: 'Suporte para EPUB, PDF, RSS e fontes de livros personalizadas.',
+            f2_title: 'Tradução IA Local no Dispositivo', f2_desc: 'Tradução neural executada offline diretamente no chip do celular.',
+            f3_title: 'OCR ao Vivo para Mangás', f3_desc: 'Extrai texto dos balões de fala em tempo real para leitura lado a lado.',
+            f4_title: 'Leitor de Artigos com RAG', f4_desc: 'Acesso ao ArXiv e IEEE com resumos de equações por IA.',
+            f5_title: 'Privacidade 100% Offline', f5_desc: 'Sem contas ou uploads para servidores.',
+            f6_title: 'Sincronização WebDAV e Zotero', f6_desc: 'Sincronize progresso de leitura e notas entre dispositivos.',
+            faq_title: '❓ Perguntas Frequentes (FAQ)', faq_subtitle: 'Dúvidas sobre o PyroMagma Reader',
+            q1_title: 'Q: É uma alternativa ao Legado?', q1_desc: 'Sim, suporta fontes personalizadas e adiciona IA local.',
+            q2_title: 'Q: Como funciona offline?', q2_desc: 'Modelos neurais leves rodam no processador do seu celular.'
+        },
+        'ru': {
+            nav_features: 'Функции', nav_ai: 'Локальный ИИ и OCR', nav_faq: 'FAQ', btn_download: '🚀 Скачать PyroMagma',
+            hero_badge: '📖 Альтернатива Legado | Локальный ИИ-Перевод и OCR Манги',
+            hero_title: 'Бесплатные Новеллы, Манга и Статьи<br><span>Офлайн ИИ-Ридер и Переводчик</span>',
+            hero_pitch: 'Читайте ранобэ, анлейт-мангу и научные статьи с встроенным локальным ИИ-переводом и OCR в реальном времени. 100% без рекламы!',
+            btn_community: '👥 Шаг 1: Вступить в Сообщество', btn_app: '📲 Шаг 2: Скачать Приложение',
+            features_title: '⚡ Шесть Мощных Функций', features_subtitle: 'Открытые источники книг, OCR манги и нейросетевой перевод',
+            f1_title: 'Идеальная Замена Legado', f1_desc: 'Поддержка EPUB, PDF, RSS и пользовательских источников.',
+            f2_title: 'Офлайн ИИ-Перевод на Чипе', f2_desc: 'Локальный перевод работает прямо на процессоре вашего смартфона.',
+            f3_title: 'Живой OCR Текста Манги', f3_desc: 'Распознавание бабблов манги в реальном времени для параллельного чтения.',
+            f4_title: 'Ридер Научных Статей с RAG', f4_desc: 'Доступ к ArXiv с ИИ-выжимками формул и выводов.',
+            f5_title: '100% Офлайн Приватность', f5_desc: 'Без аккаунтов и передачи данных.',
+            f6_title: 'Синхронизация WebDAV и Zotero', f6_desc: 'Синхронизация прогресса и заметок через облако.',
+            faq_title: '❓ Часто задаваемые вопросы (FAQ)', faq_subtitle: 'Ответы о PyroMagma Reader',
+            q1_title: 'Q: Это замена Legado?', q1_desc: 'Да, поддерживает источники Legado и добавляет офлайн ИИ-перевод.',
+            q2_title: 'Q: Как работает офлайн-перевод?', q2_desc: 'Оптимизированные нейросети работают на GPU/NPU телефона.'
+        },
+        'ar': {
+            nav_features: 'الميزات', nav_ai: 'الذكاء الاصطناعي و OCR', nav_faq: 'أسئلة شائعة', btn_download: '🚀 تنزيل PyroMagma',
+            hero_badge: '📖 بديـل Legado الممتاز | ترجمة ذكاء اصطناعي محلي و OCR مباشر',
+            hero_title: 'روايات ومانغا وأوراق مجانية<br><span>قارئ ومترجم ذكاء اصطناعي على الجهاز</span>',
+            hero_pitch: 'اقرأ الروايات الخفيفة والمانغا وأوراق البحث مع ترجمة الذكاء الاصطناعي المحلية و OCR المباشر. 100% بدون إعلانات وبخصوصية تامة!',
+            btn_community: '👥 الخطوة 1: الانضمام لمجموعة جوجل', btn_app: '📲 الخطوة 2: تنزيل تطبيق PyroMagma',
+            features_title: '⚡ ست ميزات قوية', features_subtitle: 'دمج مصادر الكتب المفتوحة، OCR المانغا والترجمة المحلية',
+            f1_title: 'البديل الأفضل لـ Legado', f1_desc: 'يدعم EPUB و PDF و RSS ومصادر الكتب المخصصة بدون إعلانات.',
+            f2_title: 'ترجمة ذكاء اصطناعي محلي', f2_desc: 'اقرأ الروايات الأجنبية أوفلاين مباشرة على شريحة هاتفك.',
+            f3_title: 'OCR مباشر لفقاعات المانغا', f3_desc: 'يستخرج النص من فقاعات المانغا فوراً لقراءة مزدوجة.',
+            f4_title: 'قارئ الأوراق الأكاديمية مع RAG', f4_desc: 'وصول مجاني لأوراق ArXiv مع ملخصات المعادلات بالذكاء الاصطناعي.',
+            f5_title: 'خصوصية 100% أوفلاين', f5_desc: 'بدون حسابات أو رفع بيانات. كل شيء محلي.',
+            f6_title: 'مزامنة WebDAV و Zotero', f6_desc: 'زامن تقدم القراءة والملاحظات بين أجهزتك.',
+            faq_title: '❓ أسئلة شائعة (FAQ)', faq_subtitle: 'إجابات حول قارئ PyroMagma',
+            q1_title: 'Q: هل هو بديل لـ Legado؟', q1_desc: 'نعم، يدعم مصادر الكتب مع ترجمة الذكاء الاصطناعي.',
+            q2_title: 'Q: كيف تعمل الترجمة أوفلاين؟', q2_desc: 'نماذج ذكاء اصطناعي خفيفة تعمل مباشرة على هاتفك.'
         }
     };
 
@@ -747,13 +837,21 @@
         if (sys.startsWith('ja')) return 'ja';
         if (sys.startsWith('ko')) return 'ko';
         if (sys.startsWith('es')) return 'es';
+        if (sys.startsWith('de')) return 'de';
+        if (sys.startsWith('fr')) return 'fr';
+        if (sys.startsWith('pt')) return 'pt';
+        if (sys.startsWith('ru')) return 'ru';
+        if (sys.startsWith('ar')) return 'ar';
         return 'en';
     }
 
     function setLanguage(lang) {
         if (!i18nDict[lang]) lang = 'en';
+        var isRtl = (lang === 'ar');
         document.documentElement.lang = lang;
+        document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
         localStorage.setItem('pyro_lang', lang);
+
         var dict = i18nDict[lang] || i18nDict['en'];
         document.querySelectorAll('[data-i18n]').forEach(function(el) {
             var key = el.getAttribute('data-i18n');
@@ -799,7 +897,7 @@
     </script>
 
     <!-- Footer -->
-    <footer>
+    <footer dir="ltr">
         <p>&copy; 2026 Pyro Studio / oakgeol. All Rights Reserved.</p>
         <p style="margin-top: 0.5rem;">
             <a href="../nav/index.html">Apps Hub Directory</a> |

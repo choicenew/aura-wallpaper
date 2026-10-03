@@ -30,9 +30,9 @@
     <link rel="alternate" hreflang="zh-TW" href="https://pyroapp.github.io/yourcallyourrule/index.html#zh-tw">
     <link rel="alternate" hreflang="ja" href="https://pyroapp.github.io/yourcallyourrule/index.html#ja">
     <link rel="alternate" hreflang="ko" href="https://pyroapp.github.io/yourcallyourrule/index.html#ko">
-    <link rel="alternate" hreflang="es" href="https://pyroapp.github.io/yourcallyourrule/index.html#es">
     <link rel="alternate" hreflang="de" href="https://pyroapp.github.io/yourcallyourrule/index.html#de">
     <link rel="alternate" hreflang="fr" href="https://pyroapp.github.io/yourcallyourrule/index.html#fr">
+    <link rel="alternate" hreflang="es" href="https://pyroapp.github.io/yourcallyourrule/index.html#es">
     <link rel="alternate" hreflang="pt" href="https://pyroapp.github.io/yourcallyourrule/index.html#pt">
     <link rel="alternate" hreflang="ru" href="https://pyroapp.github.io/yourcallyourrule/index.html#ru">
     <link rel="alternate" hreflang="ar" href="https://pyroapp.github.io/yourcallyourrule/index.html#ar">
@@ -212,8 +212,8 @@
 
         .lang-switch {
             display: flex;
-            gap: 0.4rem;
-            font-size: 0.82rem;
+            gap: 0.35rem;
+            font-size: 0.8rem;
             color: var(--text-sub);
             flex-wrap: wrap;
         }
@@ -221,7 +221,7 @@
         .lang-switch a {
             color: #34d399;
             text-decoration: none;
-            padding: 0.18rem 0.45rem;
+            padding: 0.18rem 0.42rem;
             border-radius: 4px;
             background: rgba(16, 185, 129, 0.12);
             border: 1px solid rgba(16, 185, 129, 0.25);
@@ -503,7 +503,12 @@
                     <a href="#zh-tw">繁體</a>
                     <a href="#ja">日本語</a>
                     <a href="#ko">한국어</a>
+                    <a href="#de">DE</a>
+                    <a href="#fr">FR</a>
                     <a href="#es">ES</a>
+                    <a href="#pt">PT</a>
+                    <a href="#ru">RU</a>
+                    <a href="#ar">AR</a>
                 </div>
                 <a href="https://play.google.com/store/apps/details?id=com.yours.yourcallyourrule" target="_blank" rel="noopener" class="btn-primary" data-i18n="btn_play">
                     🚀 Google Play
@@ -521,7 +526,7 @@
         </p>
 
         <!-- CSS Call Shield Interception Simulation Mockup -->
-        <div class="shield-mockup-wrapper">
+        <div class="shield-mockup-wrapper" dir="ltr">
             <div class="shield-mockup-card">
                 <div class="shield-call-item">
                     <div>
@@ -769,6 +774,52 @@
             q1_title: 'Q: Google Play 버전은 왜 전화 차단 위주인가요?', q1_desc: 'SMS 권한 정책 때문입니다. SMS 차단이 포함된 전체 버전은 Telegram 또는 Releases에서 받아보세요.',
             q2_title: 'Q: 연락처가 서버로 업로드되나요?', q2_desc: '절대 업로드되지 않습니다. 모든 매칭은 100% 기기 내에서 처리됩니다.'
         },
+        'de': {
+            nav_features: 'Funktionen', nav_plugins: 'Plugin-Engine', nav_faq: 'FAQ', btn_play: '🚀 Google Play',
+            hero_badge: '🛡️ Anruf- und SMS-Firewall für Android',
+            hero_title: 'Ihre Anrufe, Ihre Regeln<br><span>YourCallYourRule</span>',
+            hero_pitch: 'Übernehmen Sie die volle Kontrolle! Blacklist/Whitelist-Regeln, Regex-Filterung, STIR/SHAKEN, WebDAV-Sicherung und Web-Scraping-Plugins. 100% lokal!',
+            mockup_desc: 'Werbeanruf Spam', mockup_status: 'Blockiert (Regex: ^\\+1800.*)',
+            btn_download_play: '📱 Auf Google Play herunterladen', btn_beta: '🧪 Google Play Beta-Kanal', btn_tg_channel: '📢 Telegram-Kanal', btn_tg_group: '💬 Telegram-Gruppe',
+            features_title: '⚡ Acht Leistungsstarke Blockierfunktionen', features_subtitle: 'Entwickelt für extremen Datenschutz und Anpassung',
+            f1_title: 'Blacklist- & Whitelist-Verwaltung', f1_desc: 'Erstellen Sie Listen erlaubter und blockierter Telefonnummern.',
+            f2_title: 'Reguläre Ausdrücke (Regex)', f2_desc: 'Definieren Sie komplexe Regeln für Vorwahlen und SMS-Schlüsselwörter.',
+            f3_title: 'Online-Regel-Abonnement', f3_desc: 'Abonnieren Sie aktualisierte Spam-Datenbanken per URL.',
+            f4_title: 'STIR/SHAKEN Integration', f4_desc: 'Kryptografische Anruferüberprüfung gegen Nummernmanipulation.',
+            f5_title: 'Dual-SIM-Erkennung', f5_desc: 'Wenden Sie unterschiedliche Regeln für SIM 1 und SIM 2 an.',
+            f6_title: 'Flexible Blockieraktionen', f6_desc: 'Sofort auflegen, stummschalten oder annehmen und auflegen.',
+            f7_title: '100% Lokale Privatsphäre', f7_desc: 'Keine Online-Datenbanken, kein Kontakt-Upload.',
+            f8_title: 'Multi-Cloud Backup', f8_desc: 'Sichern Sie Einstellungen über WebDAV, Google Drive und OneDrive.',
+            plugin_title: '🧩 QuickJS Web-Scraping Plugin Engine', plugin_desc: 'Fragen Sie Web-APIs in Echtzeit ab, um unbekannte Anrufer zu identifizieren.',
+            plugin_dir_title: '📂 Community-Plugin-Verzeichnis', plugin_dir_desc: 'Open-Source-Plugins im Verzeichnis /plugins.',
+            plugin_ai_title: '🤖 KI-Automatisierungs-Workflow', plugin_ai_desc: 'Entwickeln Sie QuickJS-Plugins mit KI ohne Emulator.',
+            faq_title: '❓ Häufig gestellte Fragen (FAQ)', faq_subtitle: 'Fragen zu Berechtigungen und Datenschutz',
+            q1_title: 'Q: Warum konzentriert sich die Play Store Version auf Anrufe?', q1_desc: 'Aufgrund der SMS-Richtlinien von Google Play. Die Vollversion ist auf Telegram/GitHub verfügbar.',
+            q2_title: 'Q: Werden meine Kontakte hochgeladen?', q2_desc: 'Nein! Alle Regelprüfungen laufen zu 100% lokal auf Ihrem Telefon.'
+        },
+        'fr': {
+            nav_features: 'Fonctions', nav_plugins: 'Moteur de Plugins', nav_faq: 'FAQ', btn_play: '🚀 Google Play',
+            hero_badge: '🛡️ Pare-feu d\'Appels et SMS pour Android',
+            hero_title: 'Vos Appels, Vos Règles<br><span>YourCallYourRule</span>',
+            hero_pitch: 'Prenez le contrôle total de vos communications ! Listes noires/blanches, filtres Regex, STIR/SHAKEN, sauvegarde WebDAV et moteur de plugins. 100% local !',
+            mockup_desc: 'Appel Indésirable Spam', mockup_status: 'Bloqué (Regex: ^\\+1800.*)',
+            btn_download_play: '📱 Télécharger sur Google Play', btn_beta: '🧪 Canal Bêta Google Play', btn_tg_channel: '📢 Canal Telegram', btn_tg_group: '💬 Groupe Telegram',
+            features_title: '⚡ Huit Fonctionnalités Puissantes', features_subtitle: 'Conçu pour une confidentialité et une personnalisation extrêmes',
+            f1_title: 'Gestion des Listes Noires & Blanches', f1_desc: 'Créez facilement des listes de numéros autorisés et bloqués.',
+            f2_title: 'Règles par Expressions Régulières (Regex)', f2_desc: 'Définissez des règles complexes pour les indicatifs et mots-clés SMS.',
+            f3_title: 'Abonnement aux Règles en Ligne', f3_desc: 'Abonnez-vous à des listes de blocage mises à jour via URL.',
+            f4_title: 'Intégration STIR/SHAKEN', f4_desc: 'Vérification cryptographique pour contrer le spoofing d\'appel.',
+            f5_title: 'Reconnaissance Double SIM', f5_desc: 'Appliquez des règles distinctes selon la carte SIM receptrice.',
+            f6_title: 'Actions de Blocage Flexibles', f6_desc: 'Raccrocher immédiatement, couper le son ou décrocher/raccrocher.',
+            f7_title: 'Confidentialité 100% Locale', f7_desc: 'Gestion stricte sur l\'appareil sans envoi de vos contacts.',
+            f8_title: 'Sauvegarde Multi-Cloud', f8_desc: 'Sauvegardez vos règles via WebDAV, Google Drive et OneDrive.',
+            plugin_title: '🧩 Moteur de Plugins QuickJS', plugin_desc: 'Interrogez des APIs en temps réel pour identifier les numéros inconnus.',
+            plugin_dir_title: '📂 Répertoire de Plugins Communautaires', plugin_dir_desc: 'Plugins hébergés dans le dossier /plugins du dépôt.',
+            plugin_ai_title: '🤖 Flux d\'Automatisant IA (SKILL.md)', plugin_ai_desc: 'Développez des plugins QuickJS avec l\'IA sans émulateur.',
+            faq_title: '❓ Foire Aux Questions (FAQ)', faq_subtitle: 'Questions sur les permissions et la confidentialité',
+            q1_title: 'Q: Pourquoi la version Play Store se concentre sur les appels ?', q1_desc: 'En raison des politiques Google Play sur les SMS. La version complète est sur Telegram.',
+            q2_title: 'Q: Mes contacts sont-ils envoyés en ligne ?', q2_desc: 'Non ! Tout le traitement est exécuté à 100% localement sur votre téléphone.'
+        },
         'es': {
             nav_features: 'Funciones', nav_plugins: 'Motor Plugins', nav_faq: 'Preguntas', btn_play: '🚀 Google Play',
             hero_badge: '🛡️ Cortafuegos de Llamadas y SMS para Android',
@@ -791,6 +842,75 @@
             faq_title: '❓ Preguntas Frecuentes (FAQ)', faq_subtitle: 'Dudas sobre permisos y privacidad',
             q1_title: '¿Por qué la versión de Play Store se centra en llamadas?', q1_desc: 'Debido a políticas de SMS de Google Play. La versión completa está en Telegram o GitHub Releases.',
             q2_title: '¿Se suben mis contactos a la nube?', q2_desc: '¡Nunca! Todo el procesamiento es 100% local en su dispositivo.'
+        },
+        'pt': {
+            nav_features: 'Recursos', nav_plugins: 'Motor de Plugins', nav_faq: 'FAQ', btn_play: '🚀 Google Play',
+            hero_badge: '🛡️ Firewall de Chamadas e SMS para Android',
+            hero_title: 'Suas Chamadas, Suas Regras<br><span>YourCallYourRule</span>',
+            hero_pitch: 'Assuma o controle total! Listas negras/brancas, regras por expressões regulares, STIR/SHAKEN, backup WebDAV e motor de plugins de scraping. 100% local!',
+            mockup_desc: 'Chamada Spam de Telemarketing', mockup_status: 'Bloqueado (Regex: ^\\+1800.*)',
+            btn_download_play: '📱 Baixar no Google Play', btn_beta: '🧪 Canal Beta do Google Play', btn_tg_channel: '📢 Canal do Telegram', btn_tg_group: '💬 Grupo do Telegram',
+            features_title: '⚡ Oito Recursos Poderosos de Bloqueio', features_subtitle: 'Projetado para privacidade extrema e personalização',
+            f1_title: 'Gerenciamento de Listas Negras e Brancas', f1_desc: 'Crie facilmente listas de números permitidos e bloqueados.',
+            f2_title: 'Regras de Expressões Regulares (Regex)', f2_desc: 'Defina regras complexas para códigos de área e palavras-chave de SMS.',
+            f3_title: 'Assinatura de Regras Online', f3_desc: 'Assine listas de bloqueio de spam atualizadas via URL.',
+            f4_title: 'Integração STIR/SHAKEN', f4_desc: 'Verificação criptográfica contra falsificação de chamadas.',
+            f5_title: 'Reconhecimento de Dual SIM', f5_desc: 'Aplique regras diferentes para o chip SIM 1 e SIM 2.',
+            f6_title: 'Ações de Bloqueio Flexíveis', f6_desc: 'Desligue imediatamente, silencie ou atenda e desligue.',
+            f7_title: 'Privacidade 100% no Dispositivo', f7_desc: 'Sem bancos de dados online ou upload de contatos.',
+            f8_title: 'Backup Multi-Nuvem', f8_desc: 'Faça backup das suas regras via WebDAV, Google Drive e OneDrive.',
+            plugin_title: '🧩 Motor de Plugins QuickJS', plugin_desc: 'Consulte APIs para identificar chamadores desconhecidos em tempo real.',
+            plugin_dir_title: '📂 Diretório de Plugins da Comunidade', plugin_dir_desc: 'Plugins hospedados na pasta /plugins do repositório.',
+            plugin_ai_title: '🤖 Fluxo de Automação com IA', plugin_ai_desc: 'Desenvolva plugins QuickJS usando IA sem emulador.',
+            faq_title: '❓ Perguntas Frequentes (FAQ)', faq_subtitle: 'Dúvidas sobre permissões e privacidade',
+            q1_title: 'Q: Por que a versão da Play Store foca em chamadas?', q1_desc: 'Devido às políticas de SMS do Google Play. A versão completa está no Telegram.',
+            q2_title: 'Q: Meus contatos são enviados para a nuvem?', q2_desc: 'Não! Todo o processamento é executado 100% localmente no celular.'
+        },
+        'ru': {
+            nav_features: 'Функции', nav_plugins: 'Движок Плагинов', nav_faq: 'FAQ', btn_play: '🚀 Google Play',
+            hero_badge: '🛡️ Файрвол Звонков и SMS для Android',
+            hero_title: 'Ваши Звонки, Ваши Правила<br><span>YourCallYourRule</span>',
+            hero_pitch: 'Полный контроль над связью! Черные и белые списки, регулярные выражения (Regex), STIR/SHAKEN, резервное копирование WebDAV и плагины парсинга. 100% локально!',
+            mockup_desc: 'Спам-Звонок Телемаркетинга', mockup_status: 'Заблокировано (Regex: ^\\+1800.*)',
+            btn_download_play: '📱 Скачать в Google Play', btn_beta: '🧪 Бета-Канал Google Play', btn_tg_channel: '📢 Канал в Telegram', btn_tg_group: '💬 Группа в Telegram',
+            features_title: '⚡ Восемь Функций Блокировки', features_subtitle: 'Создано для максимальной приватности и гибкой настройки',
+            f1_title: 'Управление Черными и Белыми Списками', f1_desc: 'Легко создавайте списки разрешенных и заблокированных номеров.',
+            f2_title: 'Правила Регулярных Выражений (Regex)', f2_desc: 'Гибкая блокировка по кодам городов, маскам номеров и ключевым словам SMS.',
+            f3_title: 'Подписка на Онлайн-Правила', f3_desc: 'Автоматическая загрузка обновляемых баз спам-номеров по URL.',
+            f4_title: 'Интеграция STIR/SHAKEN', f4_desc: 'Криптографическая проверка подлинности вызывающего абонента.',
+            f5_title: 'Распознавание Dual SIM', f5_desc: 'Раздельные правила блокировки для SIM 1 и SIM 2.',
+            f6_title: 'Гибкие Действия Блокировки', f6_desc: 'Сброс вызова, глушение звонка или подъем с немедленным сбросом.',
+            f7_title: '100% Локальная Приватность', f7_desc: 'Без отправки контактов и сетевых баз отслеживания.',
+            f8_title: 'Мультиоблачный Бэкап', f8_desc: 'Сохранение правил через WebDAV, Google Drive и OneDrive.',
+            plugin_title: '🧩 Движок Плагинов QuickJS', plugin_desc: 'Запрос к веб-API в реальном времени для определения неизвестных номеров.',
+            plugin_dir_title: '📂 Каталог Плагинов Сообщества', plugin_dir_desc: 'Открытые плагины сообщества в папке /plugins.',
+            plugin_ai_title: '🤖 Автоматизация с ИИ (SKILL.md)', plugin_ai_desc: 'Разработка QuickJS-плагинов с ИИ без эмулятора Android.',
+            faq_title: '❓ Часто задаваемые вопросы (FAQ)', faq_subtitle: 'Ответы о разрешениях и безопасности',
+            q1_title: 'Q: Почему версия в Play Store сфокусирована на звонках?', q1_desc: 'Из-за политики Google Play по SMS. Полная версия доступна в Telegram.',
+            q2_title: 'Q: Загружаются ли мои контакты в облако?', q2_desc: 'Нет! Вся обработка выполняется на 100% локально на смартфоне.'
+        },
+        'ar': {
+            nav_features: 'الميزات', nav_plugins: 'محرك الإضافات', nav_faq: 'أسئلة شائعة', btn_play: '🚀 متجر جوجل',
+            hero_badge: '🛡️ جدار حماية المكالمات والرسائل لنظام Android',
+            hero_title: 'مكالماتك، قواعدك<br><span>YourCallYourRule</span>',
+            hero_pitch: 'تحكم كامل في اتصالاتك! حظر القوائم السوداء والبيضاء، تصفية Regex، تقنية STIR/SHAKEN، نسخ احتياطي WebDAV ومحرك إضافات جرف الويب. 100% محلي!',
+            mockup_desc: 'مكالمة تسويقية مزعجة', mockup_status: 'محظور (Regex: ^\\+1800.*)',
+            btn_download_play: '📱 التنزيل من متجر جوجل', btn_beta: '🧪 قناة بيتا على متجر جوجل', btn_tg_channel: '📢 قناة التليجرام', btn_tg_group: '💬 مجموعة التليجرام',
+            features_title: '⚡ ثماني ميزات حظر قوية', features_subtitle: 'مصمم للخصوصية الفائقة والتخصيص الكامل',
+            f1_title: 'إدارة القوائم السوداء والبيضاء', f1_desc: 'أنشئ قوائم بالأرقام المسموحة والمحظورة بسهولة.',
+            f2_title: 'قواعد التعبير النمطي (Regex)', f2_desc: 'حدد قواعد حظر معقدة للرموز والكلمات المفتاحية في الرسائل.',
+            f3_title: 'الاشتراك في قواعد أونلاين', f3_desc: 'اشترك في قواعد حظر محدثة عبر الإنترنت من خلال الرابط.',
+            f4_title: 'تكامل STIR/SHAKEN', f4_desc: 'التحقق التشفيري لمنع تزوير هوية المتصل.',
+            f5_title: 'التعرف على الشريحتين Dual SIM', f5_desc: 'تطبيق قواعد حظر منفصلة للشريحة 1 والشريحة 2.',
+            f6_title: 'إجراءات حظر مرنة', f6_desc: 'إنهاء المكالمة فوراً، كتم الصوت، أو الرد ثم إنهاء المكالمة.',
+            f7_title: 'خصوصية 100% على الجهاز', f7_desc: 'معالجة محلية بالكامل بدون رفع جهات الاتصال.',
+            f8_title: 'نسخ احتياطي سحابي متعدد', f8_desc: 'احفظ إعداداتك وقواعدك عبر WebDAV و Google Drive و OneDrive.',
+            plugin_title: '🧩 محرك إضافات QuickJS', plugin_desc: 'استعلم عن APIs للتعرف على المتصلين المجهولين في الوقت الفعلي.',
+            plugin_dir_title: '📂 دليل إضافات المجتمع', plugin_dir_desc: 'إضافات مفتوحة المصدر في مجلد /plugins.',
+            plugin_ai_title: '🤖 سير عمل الأتمتة بالذكاء الاصطناعي', plugin_ai_desc: 'طوّر إضافات QuickJS باستخدام الذكاء الاصطناعي بدون محاكي.',
+            faq_title: '❓ أسئلة شائعة (FAQ)', faq_subtitle: 'إجابات حول الأذونات والخصوصية',
+            q1_title: 'Q: لماذا تقتصر نسخة متجر جوجل على المكالمات؟', q1_desc: 'بسبب سياسات متجر جوجل للرسائل. النسخة الكاملة متوفرة على تليجرام.',
+            q2_title: 'Q: هل يتم رفع جهات الاتصال الخاصة بي؟', q2_desc: 'لا! تتم جميع عمليات المطابقة محلياً بنسبة 100% على هاتفك.'
         }
     };
 
@@ -805,13 +925,21 @@
         if (sys.startsWith('ja')) return 'ja';
         if (sys.startsWith('ko')) return 'ko';
         if (sys.startsWith('es')) return 'es';
+        if (sys.startsWith('de')) return 'de';
+        if (sys.startsWith('fr')) return 'fr';
+        if (sys.startsWith('pt')) return 'pt';
+        if (sys.startsWith('ru')) return 'ru';
+        if (sys.startsWith('ar')) return 'ar';
         return 'en';
     }
 
     function setLanguage(lang) {
         if (!i18nDict[lang]) lang = 'en';
+        var isRtl = (lang === 'ar');
         document.documentElement.lang = lang;
+        document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
         localStorage.setItem('pyro_lang', lang);
+
         var dict = i18nDict[lang] || i18nDict['en'];
         document.querySelectorAll('[data-i18n]').forEach(function(el) {
             var key = el.getAttribute('data-i18n');
@@ -857,7 +985,7 @@
     </script>
 
     <!-- Footer -->
-    <footer>
+    <footer dir="ltr">
         <p>&copy; 2026 Pyro Studio / ChoiceNew / oakgeol. All Rights Reserved.</p>
         <p style="margin-top: 0.5rem;">
             <a href="../nav/index.html">Apps Hub</a> |
