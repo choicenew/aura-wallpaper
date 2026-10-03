@@ -27,17 +27,24 @@ Help us test our new Android utility! Similar to **LiveBridge**, it brings picku
 
 ---
 
-## 📱 Global Multi-Language SEO Landing Page Suite & AI Search Standards
+## 🌐 Live Web Landing Pages (GitHub Pages)
 
-This repository manages four flagship Android applications, complete with automated CI/CD pipelines, IndexNow protocol pings, AI agent standard `llms.txt`, and 11-language global SEO landing pages:
+Click any link below to visit the live, rendered 11-language web landing page on GitHub Pages:
 
-| Application / Landing Page | Primary Target Audience & Niche | Landing & SEO Page | Privacy Policy | Google Play Package |
+| Application | Primary Niche & Features | Live Web Page (GitHub Pages) | Privacy Policy Page | Google Play Package |
 | :--- | :--- | :--- | :--- | :--- |
-| **All-in-One App Hub** | Central Ecosystem Navigation Directory for All Apps | [App Navigation Portal](./nav/index.html) | - | Ecosystem Hub |
-| **VehereGo** | Live Activity Hub, Status Bar Island, Parcel Pickup OCR, PKPass | [VehereGo SEO Landing](./veherego/index.html) | [Privacy Policy](./veherego/privacy.html) | `com.mypyro.veherego` |
-| **PyroMagma Academic** | AI Academic Reader, Paper RAG Q&A, Edge LLM Digest, Zotero Sync | [PyroMagma Academic SEO](./pyromagma/index.html) | [Privacy Policy](./pyromagma/privacy.html) | `com.mypyro.pyromagma` |
-| **PyroMagma Reader** | Legado Alternative, Free Novel/Manga Reader, Local AI OCR & Translation | [Legado Reader SEO Landing](./pyromagma/reader.html) | [Privacy Policy](./pyromagma/privacy.html) | `com.mypyro.pyromagma` |
-| **YourCallYourRule** | Smart Call & SMS Blocker, Blacklist/Whitelist, Regex Rules, Plugins | [YourCallYourRule SEO](./yourcallyourrule/index.html) | - | `com.yours.yourcallyourrule` |
+| **All-in-One Apps Hub** | Central Ecosystem Directory for All Apps | 🌐 [Visit Apps Hub Live Page](https://choicenew.github.io/pyropub/nav/index.html) | - | Ecosystem Portal |
+| **VehereGo** | Status Bar Island, Parcel Pickup OCR, PKPass | 🌐 [Visit VehereGo Live Page](https://choicenew.github.io/pyropub/veherego/index.html) | 📄 [VehereGo Privacy Policy](https://choicenew.github.io/pyropub/veherego/privacy.html) | `com.mypyro.veherego` |
+| **PyroMagma Academic** | AI Academic Reader, Paper RAG, Zotero Sync | 🌐 [Visit PyroMagma Academic Live Page](https://choicenew.github.io/pyropub/pyromagma/index.html) | 📄 [PyroMagma Privacy Policy](https://choicenew.github.io/pyropub/pyromagma/privacy.html) | `com.mypyro.pyromagma` |
+| **PyroMagma Reader** | Legado Alternative, Free Novel/Manga AI Reader | 🌐 [Visit PyroMagma Reader Live Page](https://choicenew.github.io/pyropub/pyromagma/reader.html) | 📄 [PyroMagma Privacy Policy](https://choicenew.github.io/pyropub/pyromagma/privacy.html) | `com.mypyro.pyromagma` |
+| **YourCallYourRule** | Smart Call & SMS Blocker, Regex Rules, Plugins | 🌐 [Visit YourCallYourRule Live Page](https://choicenew.github.io/pyropub/yourcallyourrule/index.html) | - | `com.yours.yourcallyourrule` |
+
+*Alternate Custom Domain Pages:*  
+- [Apps Hub (pyroapp.github.io)](https://pyroapp.github.io/nav/index.html)
+- [VehereGo (pyroapp.github.io)](https://pyroapp.github.io/veherego/index.html)
+- [PyroMagma Academic (pyroapp.github.io)](https://pyroapp.github.io/pyromagma/index.html)
+- [PyroMagma Reader (pyroapp.github.io)](https://pyroapp.github.io/pyromagma/reader.html)
+- [YourCallYourRule (pyroapp.github.io)](https://pyroapp.github.io/yourcallyourrule/index.html)
 
 ---
 
@@ -45,9 +52,9 @@ This repository manages four flagship Android applications, complete with automa
 
 All landing pages are equipped with active indexing hooks and instant submission protocols for **ChatGPT Search, Perplexity AI, Claude, Gemini, Google, Baidu, Bing, Yandex, DuckDuckGo, Naver, and Doubao**:
 
-- **AI Search Engine Index Standard (`llmstxt.org`):** [`llms.txt`](./llms.txt) | Full Doc: [`llms-full.txt`](./llms-full.txt)
-- **XML Sitemap (11 Languages with `hreflang`):** [`sitemap.xml`](./sitemap.xml)
-- **Robots Directives (AI Crawlers & Search Spiders Allowed):** [`robots.txt`](./robots.txt)
+- **AI Search Engine Index Standard (`llmstxt.org`):** 🌐 [llms.txt Live Page](https://choicenew.github.io/pyropub/llms.txt) | Full Doc: 🌐 [llms-full.txt Live Page](https://choicenew.github.io/pyropub/llms-full.txt)
+- **XML Sitemap (11 Languages with `hreflang`):** 🌐 [sitemap.xml Live Link](https://choicenew.github.io/pyropub/sitemap.xml)
+- **Robots Directives (AI Crawlers & Search Spiders Allowed):** 🌐 [robots.txt Live Link](https://choicenew.github.io/pyropub/robots.txt)
 - **IndexNow Instant Indexing Protocol:** Integrated into all HTML landing pages targeting `api.indexnow.org` for instant sub-second indexing on Bing, Yandex, DuckDuckGo, Naver, and Seznam.
 - **Baidu LinkSubmit Auto-Push:** Client-side `push.js` automatically submits visited URLs directly to Baidu's indexing queue.
 - **Google & Bing Sitemap Ping Triggers:** Client-side `navigator.sendBeacon` triggers sitemap pings on page load.
