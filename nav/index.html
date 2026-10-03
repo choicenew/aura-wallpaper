@@ -101,14 +101,14 @@
 
     <style>
         :root {
-            --bg-color: #0b0e17;
-            --card-bg: #141828;
-            --card-border: #232d42;
+            --bg-color: #06080e;
+            --card-bg: rgba(18, 24, 38, 0.75);
+            --card-border: rgba(255, 255, 255, 0.08);
             --accent-color: #6366f1;
             --accent-gradient: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #ec4899 100%);
-            --text-main: #f3f4f6;
-            --text-sub: #9ca3af;
-            --pill-bg: #1d253b;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --pill-bg: rgba(30, 41, 59, 0.6);
         }
 
         * {
@@ -123,11 +123,40 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 2026 Ambient Mesh Gradient Glow Orbs */
+        .ambient-orb-1 {
+            position: fixed;
+            top: -120px;
+            left: -120px;
+            width: 650px;
+            height: 650px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(150px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ambient-orb-2 {
+            position: fixed;
+            bottom: -150px;
+            right: -100px;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(160px);
+            pointer-events: none;
+            z-index: 0;
         }
 
         header {
-            background: rgba(11, 14, 23, 0.88);
-            backdrop-filter: blur(12px);
+            background: rgba(6, 8, 14, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -185,7 +214,8 @@
             text-decoration: none;
             padding: 0.18rem 0.45rem;
             border-radius: 4px;
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.25);
         }
 
         .btn-primary {
@@ -199,30 +229,12 @@
             align-items: center;
             gap: 0.5rem;
             box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.25s, box-shadow 0.25s;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(99, 102, 241, 0.6);
-        }
-
-        .btn-secondary {
-            background: var(--pill-bg);
-            color: var(--text-main);
-            border: 1px solid var(--card-border);
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: background 0.2s;
-        }
-
-        .btn-secondary:hover {
-            background: #293452;
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.65);
         }
 
         .hero {
@@ -230,26 +242,29 @@
             margin: 4rem auto 3rem auto;
             padding: 0 1.5rem;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .badge-tag {
             display: inline-block;
-            background: rgba(99, 102, 241, 0.15);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            color: #818cf8;
-            padding: 0.4rem 1rem;
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.35);
+            color: #a5b4fc;
+            padding: 0.45rem 1.2rem;
             border-radius: 9999px;
             font-size: 0.88rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
         }
 
         .hero h1 {
-            font-size: 3.4rem;
+            font-size: 3.5rem;
             font-weight: 900;
-            line-height: 1.2;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.03em;
         }
 
         .hero h1 span {
@@ -259,7 +274,7 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.22rem;
             color: var(--text-sub);
             max-width: 820px;
             margin: 0 auto 2.5rem auto;
@@ -272,11 +287,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
             gap: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .app-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
+            backdrop-filter: blur(20px);
             border-radius: 1.5rem;
             padding: 2rem;
             display: flex;
@@ -284,7 +302,7 @@
             justify-content: space-between;
             position: relative;
             overflow: hidden;
-            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
         }
 
         .app-card::before {
@@ -295,9 +313,9 @@
         }
 
         .app-card:hover {
-            transform: translateY(-6px);
-            border-color: #6366f1;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(99, 102, 241, 0.6);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 30px rgba(99, 102, 241, 0.25);
         }
 
         .app-icon {
@@ -338,12 +356,14 @@
             max-width: 1200px;
             margin: 0 auto 4rem auto;
             padding: 1.5rem;
-            background: rgba(18, 22, 34, 0.4);
+            background: rgba(10, 15, 26, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 1rem;
             font-size: 0.85rem;
             color: #6b7280;
             line-height: 1.8;
+            position: relative;
+            z-index: 1;
         }
 
         footer {
@@ -352,7 +372,9 @@
             text-align: center;
             color: var(--text-sub);
             font-size: 0.9rem;
-            background: #07090e;
+            background: #04060a;
+            position: relative;
+            z-index: 1;
         }
 
         footer a {
@@ -367,6 +389,10 @@
     </style>
 </head>
 <body>
+
+    <!-- Ambient Mesh Glow Orbs -->
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
 
     <!-- Header & Navigation -->
     <header>
@@ -416,7 +442,6 @@
                     <span class="app-tag">Live Activity</span>
                     <span class="app-tag">Parcel OCR</span>
                     <span class="app-tag">PKPass Wallet</span>
-                    <span class="app-tag">LiveBridge Alternative</span>
                 </div>
             </div>
             <a href="../veherego/index.html" class="btn-primary" style="justify-content: center;">
@@ -481,9 +506,9 @@
     </section>
 
     <!-- Chinese Summary Section -->
-    <section id="zh" style="max-width: 1200px; margin: 0 auto 4rem auto; padding: 0 1.5rem;">
+    <section id="zh" style="max-width: 1200px; margin: 0 auto 4rem auto; padding: 0 1.5rem; position: relative; z-index: 1;">
         <div id="beta"></div>
-        <div style="background: rgba(20, 24, 40, 0.8); border: 1px solid var(--card-border); border-radius: 1.5rem; padding: 2rem;">
+        <div style="background: rgba(18, 24, 38, 0.75); border: 1px solid var(--card-border); backdrop-filter: blur(16px); border-radius: 1.5rem; padding: 2rem;">
             <h3 style="font-size: 1.6rem; color: #818cf8; margin-bottom: 1rem;">🇨🇳 综合应用矩阵与导航门户 (Chinese Hub Summary)</h3>
             <p style="color: #cbd5e1; line-height: 1.8; margin-bottom: 1.5rem;">
                 欢迎来到 <strong>Pyro Studio</strong> 官方应用导航门户！我们专注于打造高颜值、全功能且 100% 保护隐私的 Android 效率工具与 AI 引擎：

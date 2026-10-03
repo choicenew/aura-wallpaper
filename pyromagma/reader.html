@@ -111,14 +111,14 @@
 
     <style>
         :root {
-            --bg-color: #0b0e14;
-            --card-bg: #141824;
-            --card-border: #222a3d;
+            --bg-color: #0c0812;
+            --card-bg: rgba(26, 20, 38, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
             --accent-color: #ec4899;
             --accent-gradient: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #8b5cf6 100%);
-            --text-main: #f3f4f6;
-            --text-sub: #9ca3af;
-            --pill-bg: #1e2538;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --pill-bg: rgba(30, 24, 45, 0.6);
         }
 
         * {
@@ -133,11 +133,40 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 2026 Ambient Mesh Gradient Glow Orbs */
+        .ambient-orb-1 {
+            position: fixed;
+            top: -120px;
+            left: -120px;
+            width: 650px;
+            height: 650px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(150px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ambient-orb-2 {
+            position: fixed;
+            bottom: -150px;
+            right: -100px;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.22) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(160px);
+            pointer-events: none;
+            z-index: 0;
         }
 
         header {
-            background: rgba(11, 14, 20, 0.9);
-            backdrop-filter: blur(12px);
+            background: rgba(12, 8, 18, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -195,7 +224,8 @@
             text-decoration: none;
             padding: 0.18rem 0.45rem;
             border-radius: 4px;
-            background: rgba(236, 72, 153, 0.1);
+            background: rgba(236, 72, 153, 0.12);
+            border: 1px solid rgba(236, 72, 153, 0.25);
         }
 
         .btn-primary {
@@ -209,18 +239,19 @@
             align-items: center;
             gap: 0.5rem;
             box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.25s, box-shadow 0.25s;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(236, 72, 153, 0.6);
+            box-shadow: 0 8px 30px rgba(236, 72, 153, 0.65);
         }
 
         .btn-secondary {
             background: var(--pill-bg);
             color: var(--text-main);
             border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
             padding: 0.75rem 1.5rem;
             border-radius: 9999px;
             text-decoration: none;
@@ -232,34 +263,37 @@
         }
 
         .btn-secondary:hover {
-            background: #28334e;
+            background: rgba(51, 38, 70, 0.8);
         }
 
         .hero {
             max-width: 1200px;
-            margin: 4rem auto 3rem auto;
+            margin: 3.5rem auto 3rem auto;
             padding: 0 1.5rem;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .badge-tag {
             display: inline-block;
-            background: rgba(236, 72, 153, 0.15);
-            border: 1px solid rgba(236, 72, 153, 0.3);
+            background: rgba(236, 72, 153, 0.12);
+            border: 1px solid rgba(236, 72, 153, 0.35);
             color: #f472b6;
-            padding: 0.4rem 1rem;
+            padding: 0.45rem 1.2rem;
             border-radius: 9999px;
             font-size: 0.88rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
         }
 
         .hero h1 {
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-weight: 900;
-            line-height: 1.2;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.03em;
         }
 
         .hero h1 span {
@@ -269,10 +303,50 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.22rem;
             color: var(--text-sub);
             max-width: 820px;
             margin: 0 auto 2.5rem auto;
+        }
+
+        /* 2026 CSS Manga Speech Bubble OCR Simulation Mockup */
+        .manga-mockup-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 3rem auto 4rem auto;
+        }
+
+        .manga-mockup-card {
+            width: 100%;
+            max-width: 580px;
+            background: rgba(22, 16, 32, 0.85);
+            border: 1px solid rgba(236, 72, 153, 0.35);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 40px rgba(236, 72, 153, 0.2);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .panel-raw {
+            background: rgba(10, 8, 16, 0.8);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 0.82rem;
+            color: #cbd5e1;
+        }
+
+        .panel-ai {
+            background: rgba(236, 72, 153, 0.12);
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 0.82rem;
+            color: #fce7f3;
         }
 
         .hero-cta {
@@ -285,7 +359,7 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             font-weight: 800;
             margin-bottom: 1rem;
         }
@@ -307,19 +381,23 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 1.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .feature-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
+            backdrop-filter: blur(16px);
             border-radius: 1.25rem;
             padding: 2rem;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: #ec4899;
+            transform: translateY(-6px);
+            border-color: rgba(236, 72, 153, 0.6);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
         }
 
         .feature-icon {
@@ -339,57 +417,18 @@
             line-height: 1.6;
         }
 
-        .comparison-section {
-            max-width: 1000px;
-            margin: 0 auto 5rem auto;
-            padding: 0 1.5rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--card-bg);
-            border-radius: 1rem;
-            overflow: hidden;
-            border: 1px solid var(--card-border);
-        }
-
-        th, td {
-            padding: 1.2rem 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--card-border);
-        }
-
-        th {
-            background: #0f131f;
-            color: #9ca3af;
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        td {
-            font-size: 0.95rem;
-        }
-
-        .tag-check {
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        .tag-cross {
-            color: #ef4444;
-            font-weight: bold;
-        }
-
         .faq-section {
             max-width: 900px;
             margin: 0 auto 5rem auto;
             padding: 0 1.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .faq-item {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
+            backdrop-filter: blur(16px);
             border-radius: 1rem;
             padding: 1.5rem;
             margin-bottom: 1rem;
@@ -410,12 +449,14 @@
             max-width: 1200px;
             margin: 0 auto 4rem auto;
             padding: 1.5rem;
-            background: rgba(18, 22, 34, 0.4);
+            background: rgba(15, 10, 24, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 1rem;
             font-size: 0.85rem;
             color: #6b7280;
             line-height: 1.8;
+            position: relative;
+            z-index: 1;
         }
 
         footer {
@@ -424,7 +465,9 @@
             text-align: center;
             color: var(--text-sub);
             font-size: 0.9rem;
-            background: #07090e;
+            background: #050308;
+            position: relative;
+            z-index: 1;
         }
 
         footer a {
@@ -434,11 +477,16 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
+            .manga-mockup-card { grid-template-columns: 1fr; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Ambient Mesh Glow Orbs -->
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
 
     <!-- Header & Navigation -->
     <header>
@@ -449,7 +497,6 @@
             <ul class="nav-links">
                 <li><a href="#features">Legado Features</a></li>
                 <li><a href="#ai">Local AI & OCR</a></li>
-                <li><a href="#comparison">Comparison</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
             <div style="display: flex; gap: 0.75rem; align-items: center;">
@@ -474,6 +521,20 @@
         <p>
             The ultimate reading evolution! Read light novels, foreign manga comics, EPUB ebooks, and academic research papers with built-in on-device AI translation, real-time image OCR, and zero network lag. 100% ad-free, 100% offline privacy!
         </p>
+
+        <!-- CSS Manga Speech Bubble Live OCR Simulation Mockup -->
+        <div class="manga-mockup-wrapper">
+            <div class="manga-mockup-card">
+                <div class="panel-raw">
+                    <strong style="color:#ffffff;">🇯🇵 Raw Manga Speech Bubble:</strong><br>
+                    「このダンジョンの奥には一体何が封印されているんだ…！？」
+                </div>
+                <div class="panel-ai">
+                    🤖 <strong>On-Device Local AI OCR Translation:</strong><br>
+                    "Just what on earth is sealed deep inside this dungeon...?!"
+                </div>
+            </div>
+        </div>
 
         <div class="hero-cta">
             <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary">
@@ -529,58 +590,27 @@
         </div>
     </section>
 
-    <!-- Comparison Section -->
-    <section class="comparison-section" id="comparison">
-        <h2 class="section-title">📊 How PyroMagma Outperforms Traditional Readers</h2>
-        <p class="section-subtitle">A direct comparison with Legado (阅读), generic manga readers, and online AI translators</p>
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <h2 class="section-title">❓ Frequently Asked Questions (FAQ)</h2>
+        <p class="section-subtitle">Common questions about PyroMagma Reader and Legado features</p>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Reader Feature</th>
-                    <th>PyroMagma Reader</th>
-                    <th>Legado (开源阅读)</th>
-                    <th>Generic Manga Readers</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Local AI Text Translation</strong></td>
-                    <td class="tag-check">✅ Built-in On-Device AI Engine</td>
-                    <td class="tag-cross">❌ External API required</td>
-                    <td class="tag-cross">❌ Not supported</td>
-                </tr>
-                <tr>
-                    <td><strong>Manga Speech Bubble Live OCR</strong></td>
-                    <td class="tag-check">✅ Instant On-device OCR</td>
-                    <td class="tag-cross">❌ Text novels only</td>
-                    <td class="tag-cross">❌ Static image display</td>
-                </tr>
-                <tr>
-                    <td><strong>EPUB, PDF, RSS & ArXiv Papers</strong></td>
-                    <td class="tag-check">✅ Full support + AI RAG</td>
-                    <td class="tag-check">⚠️ EPUB/TXT only</td>
-                    <td class="tag-cross">❌ Images only</td>
-                </tr>
-                <tr>
-                    <td><strong>Ad-Free & Offline Privacy</strong></td>
-                    <td class="tag-check">🔒 100% On-device processing</td>
-                    <td class="tag-check">🔒 Open source local</td>
-                    <td class="tag-cross">⚠️ Ad-heavy / Server tracking</td>
-                </tr>
-                <tr>
-                    <td><strong>WebDAV & Zotero Sync</strong></td>
-                    <td class="tag-check">✅ Native 1-click cloud sync</td>
-                    <td class="tag-check">⚠️ WebDAV only</td>
-                    <td class="tag-cross">❌ Not supported</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="faq-item">
+            <h3>Q: Is PyroMagma Reader a direct alternative to Legado (阅读)?</h3>
+            <p><strong>English:</strong> Yes! PyroMagma Reader supports custom book sources, EPUB/TXT/PDF files, RSS feeds, and clean ad-free reading layout just like Legado, while adding revolutionary on-device AI translation, manga speech bubble OCR, and academic paper summaries.</p>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>是的！PyroMagma 支持书源导入、EPUB/TXT/PDF 阅读、RSS 订阅，并独家融入了端侧 AI 翻译与漫画 OCR 识别。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Q: How does the local AI translation and manga OCR work without internet?</h3>
+            <p><strong>English:</strong> PyroMagma bundles optimized, lightweight on-device neural model weights that run directly on your smartphone NPU/CPU/GPU. This means 100% offline translation and OCR with zero data consumption.</p>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>应用打包了轻量端侧 AI 模型，直接在手机芯片上完成离线 OCR 与神经网络翻译，0 流量消耗，0 延迟。</p>
+        </div>
     </section>
 
     <!-- Chinese & Global Section Anchor Targets -->
-    <section id="zh" style="max-width: 1200px; margin: 0 auto 3rem auto; padding: 0 1.5rem;">
-        <div style="background: rgba(20, 24, 36, 0.8); border: 1px solid var(--card-border); border-radius: 1rem; padding: 2rem;">
+    <section id="zh" style="max-width: 1200px; margin: 0 auto 3rem auto; padding: 0 1.5rem; position: relative; z-index: 1;">
+        <div style="background: rgba(26, 20, 38, 0.7); border: 1px solid var(--card-border); backdrop-filter: blur(16px); border-radius: 1rem; padding: 2rem;">
             <h3 style="font-size: 1.5rem; color: #f472b6; margin-bottom: 1rem;">🇨🇳 中文专区：Legado 替代品 + 本地 AI 漫画小说论文阅读器</h3>
             <p style="color: #cbd5e1; line-height: 1.8;">
                 <strong>PyroMagma Reader</strong> 是一款集小说明确看、生肉漫画实时 OCR 翻译、EPUB/PDF 全格式沉浸阅读与免费学术论文 AI 速读于一体的离线神器！<br>
@@ -598,24 +628,6 @@
                 <h4 style="color: #38bdf8; font-size: 1.1rem;">🇪🇸 Resumen en Español (Spanish Overview)</h4>
                 <p style="color: #94a3b8; font-size: 0.92rem;">PyroMagma Reader es un lector con traducción IA local y OCR en tiempo real para novelas, manga y artículos científicos.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section" id="faq">
-        <h2 class="section-title">❓ Frequently Asked Questions (FAQ)</h2>
-        <p class="section-subtitle">Common questions about PyroMagma Reader and Legado features</p>
-
-        <div class="faq-item">
-            <h3>Q: Is PyroMagma Reader a direct alternative to Legado (阅读)?</h3>
-            <p><strong>English:</strong> Yes! PyroMagma Reader supports custom book sources, EPUB/TXT/PDF files, RSS feeds, and clean ad-free reading layout just like Legado, while adding revolutionary on-device AI translation, manga speech bubble OCR, and academic paper summaries.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>是的！PyroMagma 支持书源导入、EPUB/TXT/PDF 阅读、RSS 订阅，并独家融入了端侧 AI 翻译与漫画 OCR 识别。</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Q: How does the local AI translation and manga OCR work without internet?</h3>
-            <p><strong>English:</strong> PyroMagma bundles optimized, lightweight on-device neural model weights that run directly on your smartphone NPU/CPU/GPU. This means 100% offline translation and OCR with zero data consumption.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>应用打包了轻量端侧 AI 模型，直接在手机芯片上完成离线 OCR 与神经网络翻译，0 流量消耗，0 延迟。</p>
         </div>
     </section>
 
@@ -659,6 +671,7 @@
             <a href="index.html">PyroMagma Academic</a> |
             <a href="../veherego/index.html">VehereGo Island</a> |
             <a href="../yourcallyourrule/index.html">YourCallYourRule Blocker</a> |
+            <a href="../llms.txt">AI Index (llms.txt)</a> |
             <a href="privacy.html">Privacy Policy</a> |
             <a href="https://groups.google.com/g/pyroapp/members">Google Group Community</a> |
             Email: <a href="mailto:OAKGEOL@GMAIL.COM">OAKGEOL@GMAIL.COM</a>

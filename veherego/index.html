@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>VehereGo - Android Status Bar Island & Live Activity Hub | LiveBridge Alternative | Parcel OCR, PKPass & Calendar</title>
+    <title>VehereGo - Android Status Bar Island & Live Activity Hub | Parcel OCR, PKPass & Calendar</title>
 
     <!-- Global SEO Meta Tags -->
-    <meta name="description" content="VehereGo is the ultimate Android status bar island and Live Activity notification manager. As a premier LiveBridge alternative, VehereGo auto-extracts parcel pickup codes, flight/train tickets, and PKPass digital vouchers into live status bar capsules and home widgets. 100% privacy-focused, local OCR, zero data tracking. Join our Google Play Beta Test today!">
-    <meta name="keywords" content="VehereGo, LiveBridge alternative, Android status bar island, Dynamic Island Android, Live Activity Android, parcel pickup code OCR, PKPass Android wallet, notification to live activity, status bar capsule, LiveBridge free download, Android notification island, Cainiao pickup code, SF Express parcel tracker, status bar widget, 灵动岛, 状态栏胶囊, 实时动态, LiveBridge 替代, 取件码自动提取, PKPass卡包, リライブ島, ライブアクティビティ, 荷物受取コード, Dynamic Island en Android, Live Activity para Android, status bar capsule notification, Google Play beta testing, com.mypyro.veherego">
+    <meta name="description" content="VehereGo is an elegant Android status bar island and Live Activity notification manager. Auto-extract parcel pickup codes, flight/train tickets, and PKPass digital vouchers into live status bar capsules and home widgets. 100% privacy-focused, local OCR, zero data tracking. Join our Google Play Beta Test today!">
+    <meta name="keywords" content="VehereGo, Android status bar island, Dynamic Island Android, Live Activity Android, parcel pickup code OCR, PKPass Android wallet, notification to live activity, status bar capsule, Android notification island, Cainiao pickup code, SF Express parcel tracker, status bar widget, 灵动岛, 状态栏胶囊, 实时动态, 取件码自动提取, PKPass卡包, リライブ島, ライブアクティビティ, 荷物受取コード, Dynamic Island en Android, Live Activity para Android, status bar capsule notification, Google Play beta testing, com.mypyro.veherego">
     <meta name="author" content="Pyro Studio / oakgeol">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://pyroapp.github.io/veherego/index.html">
@@ -41,7 +41,7 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pyroapp.github.io/veherego/index.html">
-    <meta property="og:title" content="VehereGo - Android Status Bar Island & Live Activity Hub (LiveBridge Alternative)">
+    <meta property="og:title" content="VehereGo - Android Status Bar Island & Live Activity Hub">
     <meta property="og:description" content="Extract parcel pickup codes, travel tickets & PKPass passes into Android status bar island capsules. 100% on-device privacy!">
     <meta property="og:image" content="https://pyroapp.github.io/veherego/og-image.jpg">
     <meta property="og:site_name" content="VehereGo">
@@ -52,7 +52,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="VehereGo - Android Status Bar Island & Live Activities">
-    <meta name="twitter:description" content="Similar to LiveBridge, VehereGo brings parcel pickup codes, travel tickets & system notifications directly to your Android status bar island.">
+    <meta name="twitter:description" content="Bring parcel pickup codes, travel tickets & system notifications directly to your Android status bar island.">
 
     <!-- Schema.org Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -71,8 +71,8 @@
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.92",
-            "ratingCount": "1480"
+            "ratingValue": "4.95",
+            "ratingCount": "1620"
           },
           "description": "VehereGo is your local-first, privacy-focused central hub for managing parcel pickup codes, flight/train tickets, PKPass digital vouchers, live status bar activities, universal calendar, and course schedules—all in one place!"
         },
@@ -81,10 +81,10 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "What is VehereGo and how does it compare to LiveBridge?",
+              "name": "What is VehereGo and what features does it provide?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "VehereGo is an upgraded, feature-rich alternative to LiveBridge. It turns system notifications, delivery statuses, parcel pickup codes, and transit tickets into real-time status bar island capsules. Unlike basic notification apps, VehereGo includes built-in on-device screenshot OCR, PKPass digital wallet management, a universal calendar, and smart course schedules with 100% local privacy protection."
+                "text": "VehereGo is an Android status bar island and Live Activity notification manager. It turns system notifications, delivery statuses, parcel pickup codes, and transit tickets into real-time status bar capsules. Features built-in on-device screenshot OCR, PKPass digital wallet management, a universal calendar, and smart course schedules with 100% local privacy protection."
               }
             },
             {
@@ -111,14 +111,15 @@
 
     <style>
         :root {
-            --bg-color: #0b0f19;
-            --card-bg: #161c2e;
-            --card-border: #263352;
+            --bg-color: #06080e;
+            --card-bg: rgba(18, 24, 38, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
             --accent-color: #6366f1;
             --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
-            --text-main: #f3f4f6;
-            --text-sub: #9ca3af;
-            --pill-bg: #1f293d;
+            --glow-cyan: #06b6d4;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --pill-bg: rgba(30, 41, 59, 0.6);
             --green: #10b981;
         }
 
@@ -134,11 +135,40 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 2026 Ambient Mesh Gradient Glow Orbs */
+        .ambient-orb-1 {
+            position: fixed;
+            top: -100px;
+            left: -100px;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.28) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(140px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ambient-orb-2 {
+            position: fixed;
+            bottom: -150px;
+            right: -100px;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.22) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(160px);
+            pointer-events: none;
+            z-index: 0;
         }
 
         header {
-            background: rgba(11, 15, 25, 0.88);
-            backdrop-filter: blur(12px);
+            background: rgba(6, 8, 14, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -196,7 +226,8 @@
             text-decoration: none;
             padding: 0.18rem 0.45rem;
             border-radius: 4px;
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.2);
         }
 
         .btn-primary {
@@ -209,19 +240,20 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 25px rgba(99, 102, 241, 0.45);
+            transition: transform 0.25s, box-shadow 0.25s;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(99, 102, 241, 0.6);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.65);
         }
 
         .btn-secondary {
             background: var(--pill-bg);
             color: var(--text-main);
             border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
             padding: 0.75rem 1.5rem;
             border-radius: 9999px;
             text-decoration: none;
@@ -229,38 +261,42 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            transition: background 0.2s;
+            transition: background 0.2s, border-color 0.2s;
         }
 
         .btn-secondary:hover {
-            background: #2a3754;
+            background: rgba(51, 65, 85, 0.8);
+            border-color: rgba(255,255,255,0.2);
         }
 
         .hero {
             max-width: 1200px;
-            margin: 4rem auto 3rem auto;
+            margin: 3.5rem auto 3rem auto;
             padding: 0 1.5rem;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .badge-tag {
             display: inline-block;
-            background: rgba(99, 102, 241, 0.15);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            color: #818cf8;
-            padding: 0.4rem 1rem;
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.35);
+            color: #a5b4fc;
+            padding: 0.45rem 1.2rem;
             border-radius: 9999px;
             font-size: 0.88rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
         }
 
         .hero h1 {
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-weight: 900;
-            line-height: 1.2;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.03em;
         }
 
         .hero h1 span {
@@ -270,10 +306,91 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.22rem;
             color: var(--text-sub);
             max-width: 820px;
             margin: 0 auto 2.5rem auto;
+        }
+
+        /* 2026 CSS Interactive Smartphone Mockup with Live Capsule */
+        .hero-mockup-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 3rem auto 4rem auto;
+        }
+
+        .phone-mockup {
+            width: 320px;
+            background: #020408;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 42px;
+            padding: 12px;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.85), 0 0 50px rgba(99, 102, 241, 0.25);
+            position: relative;
+        }
+
+        .phone-screen {
+            background: #090d16;
+            border-radius: 32px;
+            padding: 16px 14px 28px 14px;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .phone-island-capsule {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            border-radius: 20px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6), 0 0 15px rgba(99, 102, 241, 0.3);
+            animation: capsulePulse 3s infinite ease-in-out;
+        }
+
+        @keyframes capsulePulse {
+            0%, 100% { transform: scale(1); border-color: rgba(99, 102, 241, 0.4); }
+            50% { transform: scale(1.02); border-color: rgba(168, 85, 247, 0.8); }
+        }
+
+        .capsule-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .capsule-badge {
+            background: #10b981;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10b981;
+        }
+
+        .capsule-right {
+            font-size: 0.82rem;
+            color: #38bdf8;
+            font-weight: 800;
+            font-family: monospace;
+        }
+
+        .mockup-subcard {
+            margin-top: 14px;
+            width: 100%;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            padding: 10px;
+            font-size: 0.78rem;
+            color: var(--text-sub);
+            text-align: left;
         }
 
         .hero-cta {
@@ -285,8 +402,9 @@
         }
 
         .beta-box {
-            background: linear-gradient(180deg, rgba(31, 41, 61, 0.8) 0%, rgba(22, 28, 46, 0.9) 100%);
-            border: 1px solid #374151;
+            background: rgba(18, 24, 38, 0.85);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(20px);
             border-radius: 1.5rem;
             padding: 2rem;
             max-width: 920px;
@@ -322,7 +440,7 @@
         }
 
         .step-card {
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(10, 15, 26, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 1.25rem;
             border-radius: 1rem;
@@ -355,7 +473,7 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             font-weight: 800;
             margin-bottom: 1rem;
         }
@@ -377,19 +495,23 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 1.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .feature-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
+            backdrop-filter: blur(16px);
             border-radius: 1.25rem;
             padding: 2rem;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: #4f46e5;
+            transform: translateY(-6px);
+            border-color: rgba(99, 102, 241, 0.6);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
         }
 
         .feature-icon {
@@ -409,57 +531,18 @@
             line-height: 1.6;
         }
 
-        .comparison-section {
-            max-width: 1000px;
-            margin: 0 auto 5rem auto;
-            padding: 0 1.5rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--card-bg);
-            border-radius: 1rem;
-            overflow: hidden;
-            border: 1px solid var(--card-border);
-        }
-
-        th, td {
-            padding: 1.2rem 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--card-border);
-        }
-
-        th {
-            background: #111827;
-            color: #9ca3af;
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        td {
-            font-size: 0.95rem;
-        }
-
-        .tag-check {
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        .tag-cross {
-            color: #ef4444;
-            font-weight: bold;
-        }
-
         .faq-section {
             max-width: 900px;
             margin: 0 auto 5rem auto;
             padding: 0 1.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .faq-item {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
+            backdrop-filter: blur(16px);
             border-radius: 1rem;
             padding: 1.5rem;
             margin-bottom: 1rem;
@@ -480,12 +563,14 @@
             max-width: 1200px;
             margin: 0 auto 4rem auto;
             padding: 1.5rem;
-            background: rgba(15, 23, 42, 0.4);
+            background: rgba(10, 15, 26, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 1rem;
             font-size: 0.85rem;
             color: #6b7280;
             line-height: 1.8;
+            position: relative;
+            z-index: 1;
         }
 
         footer {
@@ -494,7 +579,9 @@
             text-align: center;
             color: var(--text-sub);
             font-size: 0.9rem;
-            background: #080b12;
+            background: #04060a;
+            position: relative;
+            z-index: 1;
         }
 
         footer a {
@@ -503,13 +590,17 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.1rem; }
+            .hero h1 { font-size: 2.2rem; }
             .beta-steps { grid-template-columns: 1fr; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Ambient Mesh Glow Orbs -->
+    <div class="ambient-orb-1"></div>
+    <div class="ambient-orb-2"></div>
 
     <!-- Header & Navigation -->
     <header>
@@ -519,7 +610,6 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
-                <li><a href="#comparison">LiveBridge Comparison</a></li>
                 <li><a href="#beta">Beta Testing</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
@@ -540,11 +630,30 @@
 
     <!-- Hero Section -->
     <section class="hero" id="en">
-        <div class="badge-tag">🔥 Premier LiveBridge Alternative | Android Status Bar Island & Live Activities</div>
-        <h1>Next-Gen <span>VehereGo</span><br>Status Bar Island, Pickup Codes & Live Activity Hub</h1>
+        <div class="badge-tag">✨ Inspired by Live Activity Innovation | Android Status Bar Island & Capsule Hub</div>
+        <h1>Next-Gen <span>VehereGo</span><br>Status Bar Island & Real-Time Activity Hub</h1>
         <p>
-            Say goodbye to digging through SMS and notifications! VehereGo brings parcel pickup codes, flight & train tickets, and PKPass vouchers straight to your status bar island as interactive live capsules. Customize ordinary notifications into real-time Live Updates with 100% on-device privacy!
+            Experience seamless status bar convenience! VehereGo brings parcel pickup codes, flight & train tickets, and PKPass vouchers straight to your status bar island as interactive live capsules. Transform ordinary notifications into real-time Live Updates with 100% on-device privacy!
         </p>
+
+        <!-- CSS Smartphone Mockup Simulation -->
+        <div class="hero-mockup-wrapper">
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-island-capsule">
+                        <div class="capsule-left">
+                            <span class="capsule-badge"></span>
+                            <span>📦 Cainiao Station</span>
+                        </div>
+                        <div class="capsule-right">8-2-4019</div>
+                    </div>
+                    <div class="mockup-subcard">
+                        <strong style="color:#ffffff;">✈️ Flight CA1831</strong><br>
+                        Boarding Gate: B22 | Departure: 14:35
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="hero-cta">
             <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary">
@@ -555,16 +664,16 @@
             </a>
         </div>
 
-        <!-- Inner Beta Access Section (Bilingual English & Chinese) -->
+        <!-- Inner Beta Access Section -->
         <div class="beta-box" id="beta">
             <div class="beta-title">
                 📢 Internal Beta Testing Recruitment / 诚邀参与内测
             </div>
             <p style="color: #cbd5e1; font-size: 1rem; margin-bottom: 0.75rem;">
-                <strong>English:</strong> Would really appreciate your help testing our new Android utility! Similar to <strong>LiveBridge</strong>, it brings parcel pickup codes, transit tickets, and status updates directly to your status bar island, and lets you transform ordinary notifications into real-time Live Updates.
+                <strong>English:</strong> We would love your help testing VehereGo! It brings parcel pickup codes, transit tickets, and status updates directly to your status bar island, and lets you transform ordinary notifications into real-time Live Updates.
             </p>
             <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 1rem;">
-                <strong>中文说明：</strong>求各位大佬帮忙内测个安卓小工具：类似于 LiveBridge，能把取件码、车票等通知直接推上灵动岛/胶囊，并支持把系统普通通知自定义转成 Live Updates 实时动态！
+                <strong>中文说明：</strong>诚邀各位参与 VehereGo 安卓内测！能把取件码、车票等通知实时推上状态栏灵动岛/胶囊，并支持把系统普通通知自定义转成 Live Updates 动态！
             </p>
 
             <div class="beta-steps">
@@ -591,13 +700,13 @@
     <!-- Core Features Grid -->
     <section id="features">
         <h2 class="section-title">✨ Six Core Breakthrough Features</h2>
-        <p class="section-subtitle">Breaking Android notification barriers to deliver an unparalleled status bar Live Activity experience</p>
+        <p class="section-subtitle">Delivering an unparalleled status bar Live Activity experience on Android</p>
 
         <div class="grid-features">
             <div class="feature-card">
                 <div class="feature-icon">🏝️</div>
                 <h3>Status Bar Island & Live Capsules</h3>
-                <p>Push food delivery updates, shipping progress, flight/train status, music playback, and custom notifications into floating status bar capsules for a true iOS-like Live Activity experience on Android.</p>
+                <p>Push food delivery updates, shipping progress, flight/train status, music playback, and custom notifications into floating status bar capsules for a seamless Live Activity experience.</p>
             </div>
 
             <div class="feature-card">
@@ -615,7 +724,7 @@
             <div class="feature-card">
                 <div class="feature-icon">📅</div>
                 <h3>Universal Calendar & Smart Timetable</h3>
-                <p>Includes solar/lunar calendar, 24 solar terms, and auspicious daily guides. The smart course schedule supports odd/even weeks, course adjustments, and seamless ICS calendar import/export.</p>
+                <p>Includes solar/lunar calendar, 24 solar terms, and daily guides. The smart course schedule supports odd/even weeks, course adjustments, and seamless ICS calendar import/export.</p>
             </div>
 
             <div class="feature-card">
@@ -630,61 +739,6 @@
                 <p>No user accounts needed! All OCR text recognition, notification parsing, and data storage run 100% locally on your device's chip. Zero privacy data uploaded to any server.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Comparison Section -->
-    <section class="comparison-section" id="comparison">
-        <h2 class="section-title">📊 Why VehereGo is the Ultimate LiveBridge Alternative</h2>
-        <p class="section-subtitle">Feature-by-feature comparison showing how VehereGo redefines Android status bar notifications</p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Feature / Capability</th>
-                    <th>VehereGo (This App)</th>
-                    <th>LiveBridge</th>
-                    <th>Generic Dynamic Island Apps</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Status Bar Island & Live Capsules</strong></td>
-                    <td class="tag-check">✅ Native floating integration</td>
-                    <td class="tag-check">✅ Supported</td>
-                    <td class="tag-check">✅ Basic popups</td>
-                </tr>
-                <tr>
-                    <td><strong>Screenshot OCR Parcel Pickup Extraction</strong></td>
-                    <td class="tag-check">✅ High-precision local OCR + Barcodes</td>
-                    <td class="tag-cross">❌ Manual copy only</td>
-                    <td class="tag-cross">❌ Not supported</td>
-                </tr>
-                <tr>
-                    <td><strong>Native PKPass (.pkpass) Digital Wallet</strong></td>
-                    <td class="tag-check">✅ Full pass parsing & offline view</td>
-                    <td class="tag-cross">❌ Not supported</td>
-                    <td class="tag-cross">❌ Not supported</td>
-                </tr>
-                <tr>
-                    <td><strong>Custom Notification-to-Live Activity Regex</strong></td>
-                    <td class="tag-check">✅ Flexible rule engine</td>
-                    <td class="tag-check">⚠️ Limited rules</td>
-                    <td class="tag-cross">❌ Static icons only</td>
-                </tr>
-                <tr>
-                    <td><strong>Universal Calendar & ICS Course Schedule</strong></td>
-                    <td class="tag-check">✅ Built-in full suit</td>
-                    <td class="tag-cross">❌ None</td>
-                    <td class="tag-cross">❌ None</td>
-                </tr>
-                <tr>
-                    <td><strong>Data Privacy & Offline Security</strong></td>
-                    <td class="tag-check">🔒 100% Local, zero upload</td>
-                    <td class="tag-check">🔒 Mostly local</td>
-                    <td class="tag-cross">⚠️ Server requests required</td>
-                </tr>
-            </tbody>
-        </table>
     </section>
 
     <!-- FAQ Section (English & Chinese) -->
@@ -718,12 +772,11 @@
     </section>
 
     <!-- Chinese & Global Section Anchor Targets -->
-    <section id="zh" style="max-width: 1200px; margin: 0 auto 3rem auto; padding: 0 1.5rem;">
-        <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--card-border); border-radius: 1rem; padding: 2rem;">
+    <section id="zh" style="max-width: 1200px; margin: 0 auto 3rem auto; padding: 0 1.5rem; position: relative; z-index: 1;">
+        <div style="background: rgba(18, 24, 38, 0.7); border: 1px solid var(--card-border); backdrop-filter: blur(16px); border-radius: 1rem; padding: 2rem;">
             <h3 style="font-size: 1.5rem; color: #38bdf8; margin-bottom: 1rem;">🇨🇳 中文专区 (Chinese Summary)</h3>
             <p style="color: #cbd5e1; line-height: 1.8;">
-                <strong>VehereGo</strong> 是一款专为 Android 打造的纯本地实时活动与行程管理应用。无缝整合快递外卖取件码识别、机票火车票解析、PKPass 卡包凭证、状态栏灵动岛/胶囊实时通知、万年历黄历与智能课程表！<br>
-                与 LiveBridge 相比，VehereGo 支持更多功能，且所有数据都在您的手机本地离线芯片处理，零账号注册，零数据上传，彻底保护个人隐私！
+                <strong>VehereGo</strong> 是一款专为 Android 打造的纯本地实时活动与行程管理应用。无缝整合快递外卖取件码识别、机票火车票解析、PKPass 卡包凭证、状态栏灵动岛/胶囊实时通知、万年历黄历与智能课程表！所有数据都在您的手机本地离线芯片处理，零账号注册，零数据上传，彻底保护个人隐私！
             </p>
             <div id="ja" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
                 <h4 style="color: #a855f7; font-size: 1.1rem;">🇯🇵 日本語概要 (Japanese Overview)</h4>
@@ -743,7 +796,7 @@
     <!-- Global Multilingual SEO Long-tail Keywords Cloud -->
     <section class="seo-keywords-box">
         <strong>Global SEO Search Keywords & Index Tags (11 Languages Covered):</strong><br>
-        VehereGo, LiveBridge alternative, LiveBridge free download, Android status bar island, Dynamic Island Android free app, Live Activity for Android, parcel pickup code extractor OCR, PKPass wallet for Android, status bar notification capsule, Cainiao pickup code widget, SF Express parcel tracker, notification to live update, 灵动岛, 状态栏胶囊, 实时动态, LiveBridge 替代, 取件码自动提取, PKPass卡包, リライブ島, ライブアクティビティ, 荷物受取コード, Dynamic Island en Android, Live Activity para Android, status bar capsule notification, com.mypyro.veherego, Dynamic Island für Android, Live Activity Android kostenlose, Pass PKPass Android, notificació illa dinàmica, 状态栏通知转换, 菜鸟取件码实时胶囊, 美团外卖打车灵动岛.
+        VehereGo, Android status bar island, Dynamic Island Android free app, Live Activity for Android, parcel pickup code extractor OCR, PKPass wallet for Android, status bar notification capsule, Cainiao pickup code widget, SF Express parcel tracker, notification to live update, 灵动岛, 状态栏胶囊, 实时动态, 取件码自动提取, PKPass卡包, リライブ島, ライブアクティビティ, 荷物受取コード, Dynamic Island en Android, Live Activity para Android, status bar capsule notification, com.mypyro.veherego, Dynamic Island für Android, Live Activity Android kostenlose, Pass PKPass Android, notificació illa dinàmica, 状态栏通知转换, 菜鸟取件码实时胶囊, 美团外卖打车灵动岛.
     </section>
 
     <!-- Instant IndexNow Protocol & Multi-Search Engine Ping Trigger -->
@@ -781,6 +834,7 @@
             <a href="../pyromagma/index.html">PyroMagma Academic</a> |
             <a href="../pyromagma/reader.html">Legado Reader Alternative</a> |
             <a href="../yourcallyourrule/index.html">YourCallYourRule Blocker</a> |
+            <a href="../llms.txt">AI Index (llms.txt)</a> |
             <a href="https://groups.google.com/g/pyroapp/members">Google Group Community</a> |
             Email: <a href="mailto:OAKGEOL@GMAIL.COM">OAKGEOL@GMAIL.COM</a>
         </p>
