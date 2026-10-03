@@ -228,6 +228,14 @@
             border-radius: 4px;
             background: rgba(99, 102, 241, 0.12);
             border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.2s;
+        }
+
+        .lang-switch a.active {
+            background: var(--accent-color);
+            color: #ffffff;
+            border-color: var(--accent-color);
+            font-weight: 700;
         }
 
         .btn-primary {
@@ -609,19 +617,20 @@
                 🏝️ VehereGo
             </a>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#beta">Beta Testing</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="#beta" data-i18n="nav_beta">Beta Testing</a></li>
+                <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
             </ul>
             <div style="display: flex; gap: 0.75rem; align-items: center;">
                 <div class="lang-switch">
                     <a href="#en">EN</a>
                     <a href="#zh">中文</a>
+                    <a href="#zh-tw">繁體</a>
                     <a href="#ja">日本語</a>
                     <a href="#ko">한국어</a>
                     <a href="#es">ES</a>
                 </div>
-                <a href="https://play.google.com/apps/testing/com.mypyro.veherego" target="_blank" rel="noopener" class="btn-primary">
+                <a href="https://play.google.com/apps/testing/com.mypyro.veherego" target="_blank" rel="noopener" class="btn-primary" data-i18n="btn_join_beta">
                     🚀 Join Beta
                 </a>
             </div>
@@ -630,9 +639,9 @@
 
     <!-- Hero Section -->
     <section class="hero" id="en">
-        <div class="badge-tag">✨ Inspired by Live Activity Innovation | Android Status Bar Island & Capsule Hub</div>
-        <h1>Next-Gen <span>VehereGo</span><br>Status Bar Island & Real-Time Activity Hub</h1>
-        <p>
+        <div class="badge-tag" data-i18n="hero_badge">✨ Inspired by Live Activity Innovation | Android Status Bar Island & Capsule Hub</div>
+        <h1 data-i18n="hero_title">Next-Gen <span>VehereGo</span><br>Status Bar Island & Real-Time Activity Hub</h1>
+        <p data-i18n="hero_pitch">
             Experience seamless status bar convenience! VehereGo brings parcel pickup codes, flight & train tickets, and PKPass vouchers straight to your status bar island as interactive live capsules. Transform ordinary notifications into real-time Live Updates with 100% on-device privacy!
         </p>
 
@@ -656,40 +665,37 @@
         </div>
 
         <div class="hero-cta">
-            <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary">
+            <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary" data-i18n="btn_step1">
                 👥 Step 1: Join Google Group for Access
             </a>
-            <a href="https://play.google.com/apps/testing/com.mypyro.veherego" target="_blank" rel="noopener" class="btn-secondary">
+            <a href="https://play.google.com/apps/testing/com.mypyro.veherego" target="_blank" rel="noopener" class="btn-secondary" data-i18n="btn_step2">
                 📲 Step 2: Download on Google Play
             </a>
         </div>
 
         <!-- Inner Beta Access Section -->
         <div class="beta-box" id="beta">
-            <div class="beta-title">
-                📢 Internal Beta Testing Recruitment / 诚邀参与内测
+            <div class="beta-title" data-i18n="beta_title">
+                📢 Internal Beta Testing Recruitment
             </div>
-            <p style="color: #cbd5e1; font-size: 1rem; margin-bottom: 0.75rem;">
-                <strong>English:</strong> We would love your help testing VehereGo! It brings parcel pickup codes, transit tickets, and status updates directly to your status bar island, and lets you transform ordinary notifications into real-time Live Updates.
-            </p>
-            <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 1rem;">
-                <strong>中文说明：</strong>诚邀各位参与 VehereGo 安卓内测！能把取件码、车票等通知实时推上状态栏灵动岛/胶囊，并支持把系统普通通知自定义转成 Live Updates 动态！
+            <p style="color: #cbd5e1; font-size: 1rem; margin-bottom: 0.75rem;" data-i18n="beta_desc">
+                We would love your help testing VehereGo! It brings parcel pickup codes, transit tickets, and status updates directly to your status bar island, and lets you transform ordinary notifications into real-time Live Updates.
             </p>
 
             <div class="beta-steps">
                 <div class="step-card">
                     <span class="step-num">1</span>
-                    <h4>Get Testing Access Permissions</h4>
-                    <p>Join the Pyro Google Group to receive automatic testing whitelist permissions for Google Play Store:</p>
-                    <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-secondary" style="width: 100%; justify-content: center;">
+                    <h4 data-i18n="step1_title">Get Testing Access Permissions</h4>
+                    <p data-i18n="step1_desc">Join the Pyro Google Group to receive automatic testing whitelist permissions for Google Play Store:</p>
+                    <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-secondary" style="width: 100%; justify-content: center;" data-i18n="step1_btn">
                         🔗 Join Google Group Tester Community
                     </a>
                 </div>
                 <div class="step-card">
                     <span class="step-num">2</span>
-                    <h4>Download via Google Play</h4>
-                    <p>Once joined, click the official Play Store testing link to install and receive instant updates:</p>
-                    <a href="https://play.google.com/apps/testing/com.mypyro.veherego" target="_blank" rel="noopener" class="btn-primary" style="width: 100%; justify-content: center;">
+                    <h4 data-i18n="step2_title">Download via Google Play</h4>
+                    <p data-i18n="step2_desc">Once joined, click the official Play Store testing link to install and receive instant updates:</p>
+                    <a href="https://play.google.com/apps/testing/com.mypyro.veherego" target="_blank" rel="noopener" class="btn-primary" style="width: 100%; justify-content: center;" data-i18n="step2_btn">
                         ⬇️ Download on Google Play Test Track
                     </a>
                 </div>
@@ -699,97 +705,66 @@
 
     <!-- Core Features Grid -->
     <section id="features">
-        <h2 class="section-title">✨ Six Core Breakthrough Features</h2>
-        <p class="section-subtitle">Delivering an unparalleled status bar Live Activity experience on Android</p>
+        <h2 class="section-title" data-i18n="features_title">✨ Six Core Breakthrough Features</h2>
+        <p class="section-subtitle" data-i18n="features_subtitle">Delivering an unparalleled status bar Live Activity experience on Android</p>
 
         <div class="grid-features">
             <div class="feature-card">
                 <div class="feature-icon">🏝️</div>
-                <h3>Status Bar Island & Live Capsules</h3>
-                <p>Push food delivery updates, shipping progress, flight/train status, music playback, and custom notifications into floating status bar capsules for a seamless Live Activity experience.</p>
+                <h3 data-i18n="f1_title">Status Bar Island & Live Capsules</h3>
+                <p data-i18n="f1_desc">Push food delivery updates, shipping progress, flight/train status, music playback, and custom notifications into floating status bar capsules for a seamless Live Activity experience.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">📦</div>
-                <h3>Smart Parcel Pickup Code OCR</h3>
-                <p>Instantly extract parcel pickup codes (Cainiao Station, SF Express, Hive Box, Meituan Delivery, etc.) via screenshot OCR and background SMS parsing. Auto-generates scannable barcodes and QR codes.</p>
+                <h3 data-i18n="f2_title">Smart Parcel Pickup Code OCR</h3>
+                <p data-i18n="f2_desc">Instantly extract parcel pickup codes (Cainiao Station, SF Express, Hive Box, Meituan Delivery, etc.) via screenshot OCR and background SMS parsing. Auto-generates scannable barcodes and QR codes.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🎫</div>
-                <h3>PKPass Wallet & Travel Vouchers</h3>
-                <p>Native support for Apple Wallet format (.pkpass) files. Manage flight tickets, train passes, movie tickets, and membership cards with quick offline presentation and scanning.</p>
+                <h3 data-i18n="f3_title">PKPass Wallet & Travel Vouchers</h3>
+                <p data-i18n="f3_desc">Native support for Apple Wallet format (.pkpass) files. Manage flight tickets, train passes, movie tickets, and membership cards with quick offline presentation and scanning.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">📅</div>
-                <h3>Universal Calendar & Smart Timetable</h3>
-                <p>Includes solar/lunar calendar, 24 solar terms, and daily guides. The smart course schedule supports odd/even weeks, course adjustments, and seamless ICS calendar import/export.</p>
+                <h3 data-i18n="f4_title">Universal Calendar & Smart Timetable</h3>
+                <p data-i18n="f4_desc">Includes solar/lunar calendar, 24 solar terms, and daily guides. The smart course schedule supports odd/even weeks, course adjustments, and seamless ICS calendar import/export.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">📲</div>
-                <h3>Glance Home Screen Widgets</h3>
-                <p>Multiple customizable Glance home screen widgets display today's parcel pickup codes, travel passes, course schedule, and pending tasks at a glance without opening the app.</p>
+                <h3 data-i18n="f5_title">Glance Home Screen Widgets</h3>
+                <p data-i18n="f5_desc">Multiple customizable Glance home screen widgets display today's parcel pickup codes, travel passes, course schedule, and pending tasks at a glance without opening the app.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🔒</div>
-                <h3>100% On-Device Privacy Security</h3>
-                <p>No user accounts needed! All OCR text recognition, notification parsing, and data storage run 100% locally on your device's chip. Zero privacy data uploaded to any server.</p>
+                <h3 data-i18n="f6_title">100% On-Device Privacy Security</h3>
+                <p data-i18n="f6_desc">No user accounts needed! All OCR text recognition, notification parsing, and data storage run 100% locally on your device's chip. Zero privacy data uploaded to any server.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section (English & Chinese) -->
+    <!-- FAQ Section -->
     <section class="faq-section" id="faq">
-        <h2 class="section-title">❓ Frequently Asked Questions (FAQ)</h2>
-        <p class="section-subtitle">Everything you need to know about setting up and using VehereGo</p>
+        <h2 class="section-title" data-i18n="faq_title">❓ Frequently Asked Questions (FAQ)</h2>
+        <p class="section-subtitle" data-i18n="faq_subtitle">Everything you need to know about setting up and using VehereGo</p>
 
         <div class="faq-item">
-            <h3>Q: How does VehereGo turn ordinary notifications into Live Activity capsules?</h3>
-            <p><strong>English:</strong> VehereGo uses an intelligent notification listener with custom regex parsing rules. When enabled, it automatically extracts key data (such as tracking numbers, rider locations, pickup codes, or flight statuses) and displays them as dynamic floating capsules in your status bar.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>VehereGo 内置智能通知监听与正则匹配引擎，能把普通系统的通知关键要素（提取码、骑手位置、快递单号）提取出来展现为状态栏灵动岛悬浮胶囊。</p>
+            <h3 data-i18n="q1_title">Q: How does VehereGo turn ordinary notifications into Live Activity capsules?</h3>
+            <p data-i18n="q1_desc">VehereGo uses an intelligent notification listener with custom regex parsing rules. When enabled, it automatically extracts key data (such as tracking numbers, rider locations, pickup codes, or flight statuses) and displays them as dynamic floating capsules in your status bar.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Q: How does screenshot pickup code extraction work?</h3>
-            <p><strong>English:</strong> When you take or save a screenshot containing parcel pickup codes (e.g. Cainiao, SF Express, Hive Box, Meituan), VehereGo's on-device OCR instantly detects the code, pops up a quick card, and generates a scannable barcode for station pickup.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>应用检测到包含取件码的截图时，会通过端侧离线 OCR 秒级抓取，弹窗并生成条形码供快件驿站或柜机扫码取件。</p>
+            <h3 data-i18n="q2_title">Q: How does screenshot pickup code extraction work?</h3>
+            <p data-i18n="q2_desc">When you take or save a screenshot containing parcel pickup codes (e.g. Cainiao, SF Express, Hive Box, Meituan), VehereGo's on-device OCR instantly detects the code, pops up a quick card, and generates a scannable barcode for station pickup.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Q: How do I import PKPass vouchers into VehereGo?</h3>
-            <p><strong>English:</strong> Simply tap any .pkpass file in your file manager, browser, or messaging app and select "Open with VehereGo". The app will parse and save it directly to your digital card wallet.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>在文件管理器或聊天软件中点击任何 .pkpass 文件并选择使用 VehereGo 打开，即可自动将卡券加入您的数字卡包。</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Q: How do I join the Google Play Beta test and update the app?</h3>
-            <p><strong>English:</strong> First, log in with your Google account and join the <a href="https://groups.google.com/g/pyroapp/members" style="color:#818cf8;">Pyro App Google Group</a>. Then click the <a href="https://play.google.com/apps/testing/com.mypyro.veherego" style="color:#818cf8;">Google Play Beta Link</a> to accept the invitation and download updates directly from the Play Store.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>先登录 Google 账号加入 <a href="https://groups.google.com/g/pyroapp/members" style="color:#818cf8;">Pyro Google Group</a>，随后点击 <a href="https://play.google.com/apps/testing/com.mypyro.veherego" style="color:#818cf8;">Play 测试链接</a> 接受邀请，即可在商店下载更新。</p>
-        </div>
-    </section>
-
-    <!-- Chinese & Global Section Anchor Targets -->
-    <section id="zh" style="max-width: 1200px; margin: 0 auto 3rem auto; padding: 0 1.5rem; position: relative; z-index: 1;">
-        <div style="background: rgba(18, 24, 38, 0.7); border: 1px solid var(--card-border); backdrop-filter: blur(16px); border-radius: 1rem; padding: 2rem;">
-            <h3 style="font-size: 1.5rem; color: #38bdf8; margin-bottom: 1rem;">🇨🇳 中文专区 (Chinese Summary)</h3>
-            <p style="color: #cbd5e1; line-height: 1.8;">
-                <strong>VehereGo</strong> 是一款专为 Android 打造的纯本地实时活动与行程管理应用。无缝整合快递外卖取件码识别、机票火车票解析、PKPass 卡包凭证、状态栏灵动岛/胶囊实时通知、万年历黄历与智能课程表！所有数据都在您的手机本地离线芯片处理，零账号注册，零数据上传，彻底保护个人隐私！
-            </p>
-            <div id="ja" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #a855f7; font-size: 1.1rem;">🇯🇵 日本語概要 (Japanese Overview)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">VehereGoは、荷物受取コード、航空券・乗車券・PKPassパス管理、ステータスバーライブアクティビティ通知を統合した100%ローカル・プライバシー重視アプリです。</p>
-            </div>
-            <div id="ko" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #ec4899; font-size: 1.1rem;">🇰🇷 한국어 개요 (Korean Overview)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">VehereGo는 택배 수령 코드, 여행 티켓, PKPass 패스 관리 및 상태 표시줄 라이브 위젯을 통합한 개인정보 중심 중앙 허브 앱입니다.</p>
-            </div>
-            <div id="es" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #38bdf8; font-size: 1.1rem;">🇪🇸 Resumen en Español (Spanish Overview)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">VehereGo es su centro local y privado para gestionar códigos de recogida de paquetes, billetes de avión/tren y pases PKPass en la barra de estado de Android.</p>
-            </div>
+            <h3 data-i18n="q3_title">Q: How do I import PKPass vouchers into VehereGo?</h3>
+            <p data-i18n="q3_desc">Simply tap any .pkpass file in your file manager, browser, or messaging app and select "Open with VehereGo". The app will parse and save it directly to your digital card wallet.</p>
         </div>
     </section>
 
@@ -799,10 +774,177 @@
         VehereGo, Android status bar island, Dynamic Island Android free app, Live Activity for Android, parcel pickup code extractor OCR, PKPass wallet for Android, status bar notification capsule, Cainiao pickup code widget, SF Express parcel tracker, notification to live update, 灵动岛, 状态栏胶囊, 实时动态, 取件码自动提取, PKPass卡包, リライブ島, ライブアクティビティ, 荷物受取コード, Dynamic Island en Android, Live Activity para Android, status bar capsule notification, com.mypyro.veherego, Dynamic Island für Android, Live Activity Android kostenlose, Pass PKPass Android, notificació illa dinàmica, 状态栏通知转换, 菜鸟取件码实时胶囊, 美团外卖打车灵动岛.
     </section>
 
-    <!-- Instant IndexNow Protocol & Multi-Search Engine Ping Trigger -->
+    <!-- Client-Side Auto Language Engine & Multilingual Dictionaries -->
     <script>
+    var i18nDict = {
+        'en': {
+            nav_features: 'Features', nav_beta: 'Beta Testing', nav_faq: 'FAQ', btn_join_beta: '🚀 Join Beta',
+            hero_badge: '✨ Inspired by Live Activity Innovation | Android Status Bar Island & Capsule Hub',
+            hero_title: 'Next-Gen <span>VehereGo</span><br>Status Bar Island & Real-Time Activity Hub',
+            hero_pitch: 'Experience seamless status bar convenience! VehereGo brings parcel pickup codes, flight & train tickets, and PKPass vouchers straight to your status bar island as interactive live capsules. Transform ordinary notifications into real-time Live Updates with 100% on-device privacy!',
+            btn_step1: '👥 Step 1: Join Google Group for Access', btn_step2: '📲 Step 2: Download on Google Play',
+            beta_title: '📢 Internal Beta Testing Recruitment', beta_desc: 'We would love your help testing VehereGo! It brings parcel pickup codes, transit tickets, and status updates directly to your status bar island, and lets you transform ordinary notifications into real-time Live Updates.',
+            step1_title: 'Get Testing Access Permissions', step1_desc: 'Join the Pyro Google Group to receive automatic testing whitelist permissions for Google Play Store:', step1_btn: '🔗 Join Google Group Tester Community',
+            step2_title: 'Download via Google Play', step2_desc: 'Once joined, click the official Play Store testing link to install and receive instant updates:', step2_btn: '⬇️ Download on Google Play Test Track',
+            features_title: '✨ Six Core Breakthrough Features', features_subtitle: 'Delivering an unparalleled status bar Live Activity experience on Android',
+            f1_title: 'Status Bar Island & Live Capsules', f1_desc: 'Push food delivery updates, shipping progress, flight/train status, music playback, and custom notifications into floating status bar capsules.',
+            f2_title: 'Smart Parcel Pickup Code OCR', f2_desc: 'Instantly extract parcel pickup codes (Cainiao, SF Express, Hive Box, Meituan) via screenshot OCR and background SMS parsing.',
+            f3_title: 'PKPass Wallet & Travel Vouchers', f3_desc: 'Native support for Apple Wallet format (.pkpass) files with quick offline presentation and scanning.',
+            f4_title: 'Universal Calendar & Smart Timetable', f4_desc: 'Includes solar/lunar calendar, 24 solar terms, and odd/even week course schedule with ICS import/export.',
+            f5_title: 'Glance Home Screen Widgets', f5_desc: 'Customizable Glance widgets display today\'s pickup codes, travel passes, and tasks without opening the app.',
+            f6_title: '100% On-Device Privacy Security', f6_desc: 'Zero user accounts, zero cloud data uploads. All OCR and notification parsing run locally on-device.',
+            faq_title: '❓ Frequently Asked Questions (FAQ)', faq_subtitle: 'Everything you need to know about setting up and using VehereGo',
+            q1_title: 'Q: How does VehereGo turn ordinary notifications into Live Activity capsules?', q1_desc: 'VehereGo uses an intelligent notification listener with custom regex parsing rules to extract key data and display dynamic floating capsules in your status bar.',
+            q2_title: 'Q: How does screenshot pickup code extraction work?', q2_desc: 'When you take a screenshot containing parcel pickup codes, VehereGo\'s on-device OCR instantly detects the code and generates a scannable barcode.',
+            q3_title: 'Q: How do I import PKPass vouchers into VehereGo?', q3_desc: 'Tap any .pkpass file in your file manager or messaging app and select "Open with VehereGo" to save it to your digital card wallet.'
+        },
+        'zh': {
+            nav_features: '核心功能', nav_beta: '内测参与', nav_faq: '常见问题', btn_join_beta: '🚀 加入内测',
+            hero_badge: '✨ 状态栏灵动岛与实时动态中枢 | 开启安卓胶囊通知新体验',
+            hero_title: '全新 <span>VehereGo</span><br>状态栏灵动岛 & 实时动态通知中枢',
+            hero_pitch: '告别繁琐翻找！VehereGo 能将菜鸟/顺丰/外卖取件码、机票火车票与 PKPass 卡券直接推上状态栏灵动岛/胶囊，并支持系统普通通知自定义转 Live Updates！100% 纯本地离线保护隐私！',
+            btn_step1: '👥 第一步：先进 Google Group 拿权限', btn_step2: '📲 第二步：点 Play 链接下载安装',
+            beta_title: '📢 诚邀参与 VehereGo 安卓内测招募', beta_desc: '诚邀各位大佬参与 VehereGo 内测！能把取件码、车票等通知实时推上状态栏灵动岛/胶囊，并支持把系统普通通知自定义转成 Live Updates 动态！',
+            step1_title: '获取测试白名单权限', step1_desc: '加入 Pyro Google Group 社区，即可自动获得 Google Play 内测组下载资格：', step1_btn: '🔗 访问 Google Group 测试组',
+            step2_title: 'Google Play 极速下载', step2_desc: '加入 Group 后，进入 Play Store 官方测试渠道即可下载安装体验：', step2_btn: '⬇️ Play Store 内测下载通道',
+            features_title: '✨ 六大黑科技 功能极致绽放', features_subtitle: '打破系统通知壁垒，带来媲美 iOS 灵动岛的 Android 实时动态体验',
+            f1_title: '灵动岛 & 状态栏胶囊 Live Updates', f1_desc: '将外卖配送、快递进度、航班车次、音乐播放与自定义通知转为状态栏悬浮胶囊。',
+            f2_title: '智能取件码 OCR & 截屏提取', f2_desc: '自动识别菜鸟驿站、顺丰、丰巢、美团等提取码！支持截图 OCR 与短信解析，生成可扫条形码。',
+            f3_title: 'PKPass 卡包与行程凭证收纳', f3_desc: '原生支持 Apple Wallet .pkpass 卡券。集中管理机票、高铁票、电影票与会员卡。',
+            f4_title: '万年历黄历 & 智能课程表', f4_desc: '内置农历黄历、二十四节气。课程表支持单双周与调课计算，无缝导入 ICS 日历。',
+            f5_title: 'Glance 多尺寸桌面小组件', f5_desc: '桌面 Widget 一目了然显示今日取件码、行程与待办事项，无需频繁打开应用。',
+            f6_title: '100% 纯本地离线与隐私保护', f6_desc: '零账号体系！所有 OCR 识别与通知规则均在设备本地芯片完成，0 隐私上传。',
+            faq_title: '❓ 常见问题与解答 (FAQ)', faq_subtitle: '快速了解 VehereGo 的配置与使用技巧',
+            q1_title: 'Q: 如何将普通通知转为灵动岛胶囊？', q1_desc: 'VehereGo 内置智能通知监听与正则匹配引擎，能把普通通知关键要素提取出来展现为状态栏悬浮胶囊。',
+            q2_title: 'Q: 截图提取取件码是如何工作的？', q2_desc: '检测到包含取件码的截图时，通过端侧离线 OCR 秒级抓取，弹窗并生成条形码供快件驿站或柜机扫码取件。',
+            q3_title: 'Q: 如何导入 PKPass 凭证？', q3_desc: '在文件管理器中点击任何 .pkpass 文件并选择使用 VehereGo 打开，即可自动将卡券加入数字卡包。'
+        },
+        'zh-tw': {
+            nav_features: '核心功能', nav_beta: '內測參與', nav_faq: '常見問題', btn_join_beta: '🚀 加入內測',
+            hero_badge: '✨ 狀態欄靈動島與實時動態中樞 | 開啟安卓膠囊通知新體驗',
+            hero_title: '全新 <span>VehereGo</span><br>狀態欄靈動島 & 實時動態通知中樞',
+            hero_pitch: '告別繁瑣翻找！VehereGo 能將取件碼、機票火車票與 PKPass 卡券直接推上狀態欄靈動島/膠囊，並支援系統普通通知自訂轉 Live Updates！100% 純本地離線保護隱私！',
+            btn_step1: '👥 第一步：先進 Google Group 拿權限', btn_step2: '📲 第二步：點 Play 連結下載安裝',
+            beta_title: '📢 誠邀參與 VehereGo 安卓內測招募', beta_desc: '誠邀各位參與 VehereGo 安卓內測！能把取件碼、車票等通知實時推上狀態欄靈動島/膠囊，並支援把系統普通通知自訂轉成 Live Updates 動態！',
+            step1_title: '獲取測試白名單權限', step1_desc: '加入 Pyro Google Group 社群，即可自動獲得 Google Play 內測組下載資格：', step1_btn: '🔗 訪問 Google Group 測試組',
+            step2_title: 'Google Play 極速下載', step2_desc: '加入 Group 後，進入 Play Store 官方測試渠道即可下載安裝體驗：', step2_btn: '⬇️ Play Store 內測下載通道',
+            features_title: '✨ 六大黑科技 功能極致綻放', features_subtitle: '打破系統通知壁壘，帶來媲美 iOS 靈動島的 Android 實時動態體驗',
+            f1_title: '靈動島 & 狀態欄膠囊 Live Updates', f1_desc: '將外賣配送、快遞進度、航班車次、音樂播放與自訂通知轉為狀態欄懸浮膠囊。',
+            f2_title: '智能取件碼 OCR & 截屏提取', f2_desc: '自動識別快遞與外賣提取碼！支援截圖 OCR 與簡訊解析，生成可掃條形碼。',
+            f3_title: 'PKPass 卡包與行程憑證收納', f3_desc: '原生支援 Apple Wallet .pkpass 卡券。集中管理機票、高鐵票、電影票與會員卡。',
+            f4_title: '萬年曆黃曆 & 智能課程表', f4_desc: '內建農曆黃曆、二十四節氣。課程表支援單雙周與調課計算，無縫匯入 ICS 日曆。',
+            f5_title: 'Glance 多尺寸桌面小元件', f5_desc: '桌面 Widget 一目了然顯示今日取件碼、行程與待辦事項，無需頻繁打開應用。',
+            f6_title: '100% 純本地離線與隱私保護', f6_desc: '零帳號體系！所有 OCR 識別與通知規則均在裝置本地晶片完成，0 隱私上傳。',
+            faq_title: '❓ 常見問題與解答 (FAQ)', faq_subtitle: '快速了解 VehereGo 的配置與使用技巧',
+            q1_title: 'Q: 如何將普通通知轉為靈動島膠囊？', q1_desc: 'VehereGo 內建智能通知監聽與正則匹配引擎，能把普通通知關鍵要素提取出來展現為狀態欄懸浮膠囊。',
+            q2_title: 'Q: 截圖提取取件碼是如何工作的？', q2_desc: '檢測到包含取件碼的截圖時，通過端側離線 OCR 秒級抓取，彈窗並生成條形碼供驛站或櫃機掃碼取件。',
+            q3_title: 'Q: 如何匯入 PKPass 憑證？', q3_desc: '在檔案管理器中點擊任何 .pkpass 檔案並選擇使用 VehereGo 打開，即可自動將卡券加入數字卡包。'
+        },
+        'ja': {
+            nav_features: '機能', nav_beta: 'ベータテスト', nav_faq: 'よくある質問', btn_join_beta: '🚀 ベータ参加',
+            hero_badge: '✨ ステータスバーライブアクティビティ通知ハブ',
+            hero_title: '新世代 <span>VehereGo</span><br>ステータスバーダイナミックアイランド＆通知ハブ',
+            hero_pitch: '荷物受取コード、航空券・乗車券、PKPassパスをステータスバーのライブカプセルに自動同期！100%ローカル・プライバシー重視！',
+            btn_step1: '👥 ステップ1: Google Groupに参加', btn_step2: '📲 ステップ2: Google Playでダウンロード',
+            beta_title: '📢 VehereGo ベータテスター募集', beta_desc: 'VehereGoのテスターを募集しています！受取コードや乗車券をステータスバーカプセルに表示できます。',
+            step1_title: 'テスト権限の取得', step1_desc: 'Pyro Google Groupに参加してテストアクセス権を取得：', step1_btn: '🔗 Google Groupに参加',
+            step2_title: 'Google Playダウンロード', step2_desc: '参加後、Google Playテストトラックからダウンロード：', step2_btn: '⬇️ Google Playテストリンク',
+            features_title: '✨ 6つのコア機能', features_subtitle: 'Androidで最高のステータスバーライブ通知体験を実現',
+            f1_title: 'ステータスバーカプセル＆ライブ通知', f1_desc: '配送状況、乗車券、音楽再生をステータスバーのカプセルに即座に表示。',
+            f2_title: 'スクリーンショットOCR受取コード抽出', f2_desc: 'スクリーンショットから受取コードをミリ秒単位でOCR抽出。バーコードを自動生成。',
+            f3_title: 'PKPassデジタルウォレット', f3_desc: 'Apple Walletフォーマット（.pkpass）ファイルをネイティブサポート。',
+            f4_title: '万年カレンダー＆時間割', f4_desc: '旧暦、二十四節気、時間割ICSインポート・エクスポート対応。',
+            f5_title: 'Glanceホーム画面ウィジェット', f5_desc: '今日の受取コードやスケジュールをホーム画面で一目で確認。',
+            f6_title: '100%ローカルオフラインプライバシー', f6_desc: 'アカウント不要！すべてのOCRと通知解析はデバイス上でローカル処理。',
+            faq_title: '❓ よくある質問 (FAQ)', faq_subtitle: 'VehereGoの設定と使用方法',
+            q1_title: 'Q: 通常の通知をカプセル化するには？', q1_desc: '通知リスナーと正規表現ルールにより、重要な情報を抽出してステータスバーカプセルに表示します。',
+            q2_title: 'Q: スクリーンショットの受取コード抽出は？', q2_desc: '受取コードを含むスクリーンショットをローカルOCRで自動検出し、バーコードを生成します。',
+            q3_title: 'Q: PKPassの取り込み方法は？', q3_desc: 'ファイルマネージャーで.pkpassファイルをタップし、VehereGoで開くを選択します。'
+        },
+        'ko': {
+            nav_features: '기능', nav_beta: '베타 테스트', nav_faq: '자주 묻는 질문', btn_join_beta: '🚀 베타 참여',
+            hero_badge: '✨ 상태 표시줄 라이브 액티비티 허브',
+            hero_title: '차세대 <span>VehereGo</span><br>상태 표시줄 아일랜드 & 라이브 위젯',
+            hero_pitch: '택배 수령 코드, 항공권/열차표, PKPass 패스를 상태 표시줄 라이브 캡슐로 실시간 표시합니다. 100% 개인정보 보호!',
+            btn_step1: '👥 1단계: Google 그룹스 참여', btn_step2: '📲 2단계: Google Play 다운로드',
+            beta_title: '📢 VehereGo 테스터 모집', beta_desc: 'VehereGo 베타 테스트에 참여해보세요! 상태 표시줄에 실시간 정보 캡슐을 제공합니다.',
+            step1_title: '테스트 권한 획득', step1_desc: 'Pyro Google 그룹스에 참여하여 테스터 화이트리스트 권한을 받으세요:', step1_btn: '🔗 Google 그룹스 참여',
+            step2_title: 'Google Play 다운로드', step2_desc: '참여 후 Google Play 테스터 링크에서 다운로드하세요:', step2_btn: '⬇️ Google Play 테스터 링크',
+            features_title: '✨ 6가지 핵심 기능', features_subtitle: '안드로이드 최고 수준의 상태 표시줄 라이브 캡슐 경험',
+            f1_title: '상태 표시줄 아일랜드 & 캡슐', f1_desc: '배달, 택배, 항공권, 음악 재생을 상태 표시줄 플로팅 캡슐로 실시간 확인.',
+            f2_title: '스크린샷 OCR 수령 코드 추출', f2_desc: '스크린샷 OCR 및 문자로 택배 수령 코드를 실시간 추출하고 바코드 생성.',
+            f3_title: 'PKPass 디지털 지갑', f3_desc: 'Apple Wallet (.pkpass) 승차권 및 카드 패스 기본 지원.',
+            f4_title: '만년력 & 스마트 시간표', f4_desc: '음력, 절기 및 학기 시간표 ICS 동기화 지원.',
+            f5_title: 'Glance 홈 화면 위젯', f5_desc: '오늘의 수령 코드 및 일정을 홈 화면 위젯에서 바로 확인.',
+            f6_title: '100% 개인정보 보호 온디바이스', f6_desc: '계정 필요 없음! 모든 OCR과 분석은 기기 내에서만 처리.',
+            faq_title: '❓ 자주 묻는 질문 (FAQ)', faq_subtitle: 'VehereGo 사용법 안내',
+            q1_title: 'Q: 일반 알림을 캡슐로 만드는 방법은?', q1_desc: '알림 리스너와 정규식 규칙을 통해 핵심 정보를 상태 표시줄 캡슐로 전환합니다.',
+            q2_title: 'Q: 스크린샷 수령 코드 추출 작동 방식은?', q2_desc: '수령 코드가 포함된 스크린샷을 기기 내 OCR로 실시간 감지하여 바코드를 생성합니다.',
+            q3_title: 'Q: PKPass 패스는 어떻게 가져오나요?', q3_desc: '.pkpass 파일을 선택하고 VehereGo로 열기를 누르면 카드 지갑에 추가됩니다.'
+        },
+        'es': {
+            nav_features: 'Funciones', nav_beta: 'Prueba Beta', nav_faq: 'Preguntas', btn_join_beta: '🚀 Únete a la Beta',
+            hero_badge: '✨ Centro de Actividad en Vivo para Barra de Estado Android',
+            hero_title: 'Nueva Generación <span>VehereGo</span><br>Isla de Estado & Centro de Actividad',
+            hero_pitch: 'Extraiga códigos de paquetes, billetes de avión/tren y pases PKPass directamente a la barra de estado en cápsulas flotantes. ¡100% privado y en el dispositivo!',
+            btn_step1: '👥 Paso 1: Únete al Grupo de Google', btn_step2: '📲 Paso 2: Descarga en Google Play',
+            beta_title: '📢 Reclutamiento de Probadores Beta', beta_desc: '¡Ayúdanos a probar VehereGo! Transforma notificaciones en cápsulas flotantes en tiempo real.',
+            step1_title: 'Obtener Permisos de Prueba', step1_desc: 'Únete al Grupo Pyro de Google para recibir permisos automáticos:', step1_btn: '🔗 Únete al Grupo de Google',
+            step2_title: 'Descarga en Google Play', step2_desc: 'Una vez unido, haz clic en el enlace de prueba de Play Store:', step2_btn: '⬇️ Enlace de Google Play Beta',
+            features_title: '✨ Seis Funciones Clave', features_subtitle: 'La mejor experiencia de actividad en vivo en la barra de estado de Android',
+            f1_title: 'Cápsulas Flotantes en Barra de Estado', f1_desc: 'Muestra estados de entrega, billetes de viaje y música en cápsulas flotantes.',
+            f2_title: 'OCR Inteligente de Códigos de Paquetes', f2_desc: 'Extrae códigos de paquetes mediante OCR local e impresiones de pantalla.',
+            f3_title: 'Cartera Digital PKPass', f3_desc: 'Soporte nativo para pases Apple Wallet (.pkpass).',
+            f4_title: 'Calendario Universal y Horarios', f4_desc: 'Incluye calendario lunar y sincronización de horarios mediante ICS.',
+            f5_title: 'Widgets Glance para Pantalla de Inicio', f5_desc: 'Visualice pases y tareas diarias directamente en la pantalla de inicio.',
+            f6_title: 'Privacidad 100% Local en el Dispositivo', f6_desc: 'Sin cuentas ni procesamiento en la nube. ¡100% privado!',
+            faq_title: '❓ Preguntas Frecuentes (FAQ)', faq_subtitle: 'Todo lo que necesita saber sobre VehereGo',
+            q1_title: '¿Cómo convierte notificaciones en cápsulas?', q1_desc: 'VehereGo utiliza reglas de análisis inteligente para extraer datos clave en tiempo real.',
+            q2_title: '¿Cómo funciona la extracción por OCR?', q2_desc: 'SDetecta impresiones de pantalla con códigos e imprime un código de barras escaneable.',
+            q3_title: '¿Cómo importar pases PKPass?', q3_desc: 'Toque cualquier archivo .pkpass y seleccione "Abrir con VehereGo".'
+        }
+    };
+
+    function detectLanguage() {
+        var hash = window.location.hash.replace('#', '').toLowerCase();
+        if (hash && i18nDict[hash]) return hash;
+        var saved = localStorage.getItem('pyro_lang');
+        if (saved && i18nDict[saved]) return saved;
+        var sys = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (sys.startsWith('zh-tw') || sys.startsWith('zh-hk') || sys.startsWith('zh-mo')) return 'zh-tw';
+        if (sys.startsWith('zh')) return 'zh';
+        if (sys.startsWith('ja')) return 'ja';
+        if (sys.startsWith('ko')) return 'ko';
+        if (sys.startsWith('es')) return 'es';
+        return 'en';
+    }
+
+    function setLanguage(lang) {
+        if (!i18nDict[lang]) lang = 'en';
+        document.documentElement.lang = lang;
+        localStorage.setItem('pyro_lang', lang);
+        var dict = i18nDict[lang] || i18nDict['en'];
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            var key = el.getAttribute('data-i18n');
+            if (dict[key]) el.innerHTML = dict[key];
+        });
+        document.querySelectorAll('.lang-switch a').forEach(function(btn) {
+            var href = btn.getAttribute('href').replace('#', '').toLowerCase();
+            if (href === lang) btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+    }
+
+    window.addEventListener('hashchange', function() {
+        setLanguage(detectLanguage());
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setLanguage(detectLanguage());
+    });
+
+    // 1. IndexNow Instant Indexing Protocol
     (function(){
-        // 1. IndexNow Instant Indexing Protocol (Bing, Yandex, DuckDuckGo, Naver, Seznam)
         var indexNowUrl = 'https://api.indexnow.org/indexnow?url=' + encodeURIComponent(window.location.href) + '&key=pyroapp2026indexnowkey';
         if (navigator.sendBeacon) {
             navigator.sendBeacon(indexNowUrl);

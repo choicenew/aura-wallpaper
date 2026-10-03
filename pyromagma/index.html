@@ -117,7 +117,7 @@
             --accent-color: #06b6d4;
             --accent-gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
             --text-main: #f8fafc;
-            --text-sub: #94a3b8;
+            --text-sub: #9ca3af;
             --pill-bg: rgba(30, 41, 59, 0.6);
         }
 
@@ -226,6 +226,14 @@
             border-radius: 4px;
             background: rgba(6, 182, 212, 0.12);
             border: 1px solid rgba(6, 182, 212, 0.25);
+            transition: all 0.2s;
+        }
+
+        .lang-switch a.active {
+            background: var(--accent-color);
+            color: #ffffff;
+            border-color: var(--accent-color);
+            font-weight: 700;
         }
 
         .btn-primary {
@@ -495,19 +503,20 @@
                 🔥 PyroMagma
             </a>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#ai">AI & RAG Engine</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="#ai" data-i18n="nav_ai">AI & RAG Engine</a></li>
+                <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
             </ul>
             <div style="display: flex; gap: 0.75rem; align-items: center;">
                 <div class="lang-switch">
                     <a href="#en">EN</a>
                     <a href="#zh">中文</a>
+                    <a href="#zh-tw">繁體</a>
                     <a href="#ja">日本語</a>
                     <a href="#ko">한국어</a>
                     <a href="#es">ES</a>
                 </div>
-                <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary">
+                <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary" data-i18n="btn_try">
                     🚀 Try PyroMagma
                 </a>
             </div>
@@ -516,29 +525,29 @@
 
     <!-- Hero Section -->
     <section class="hero" id="en">
-        <div class="badge-tag">🧠 AI-Driven Academic Paper Reader & Interactive RAG Hub</div>
-        <h1>Next-Gen <span>PyroMagma</span><br>AI Paper Summaries · Immersive Feed · Interactive RAG</h1>
-        <p>
+        <div class="badge-tag" data-i18n="hero_badge">🧠 AI-Driven Academic Paper Reader & Interactive RAG Hub</div>
+        <h1 data-i18n="hero_title">Next-Gen <span>PyroMagma</span><br>AI Paper Summaries · Immersive Feed · Interactive RAG</h1>
+        <p data-i18n="hero_pitch">
             PyroMagma combines an immersive card-swiping literature feed, edge & cloud LLM paper breakdowns, interactive full-text RAG Q&A, and smooth multi-engine bilingual translation to supercharge your academic research workflow.
         </p>
 
         <!-- CSS AI RAG Chat Dialog Simulation -->
         <div class="rag-mockup-wrapper">
             <div class="rag-chat-mockup">
-                <div class="chat-bubble-user">
+                <div class="chat-bubble-user" data-i18n="mockup_user">
                     💬 "Explain Equation (4) in this ArXiv paper."
                 </div>
-                <div class="chat-bubble-ai">
+                <div class="chat-bubble-ai" data-i18n="mockup_ai">
                     🤖 <strong>PyroMagma RAG:</strong> Equation (4) computes multi-head self-attention weights $W_q, W_k$. The key innovation is scaling dot-products by $\frac{1}{\sqrt{d_k}}$ to prevent gradient vanishing during backpropagation.
                 </div>
             </div>
         </div>
 
         <div class="hero-cta">
-            <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary">
+            <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary" data-i18n="btn_community">
                 👥 Join Pyro Community & Get Access
             </a>
-            <a href="privacy.html" class="btn-secondary">
+            <a href="privacy.html" class="btn-secondary" data-i18n="btn_privacy">
                 📄 View Privacy Policy (100% On-Device)
             </a>
         </div>
@@ -546,92 +555,66 @@
 
     <!-- Core Features Grid -->
     <section id="features">
-        <h2 class="section-title" id="ai">⚡ Six Core Research Breakthroughs</h2>
-        <p class="section-subtitle">From paper scanning and AI summarization to reference sync, empowering your entire research lifecycle</p>
+        <h2 class="section-title" id="ai" data-i18n="features_title">⚡ Six Core Research Breakthroughs</h2>
+        <p class="section-subtitle" data-i18n="features_subtitle">From paper scanning and AI summarization to reference sync, empowering your entire research lifecycle</p>
 
         <div class="grid-features">
             <div class="feature-card">
                 <div class="feature-icon">🔥</div>
-                <h3>Immersive Academic Card Feed</h3>
-                <p>Browse cutting-edge research papers from ArXiv, Nature, Science, IEEE, and PubMed in a card-swiping format. Effortlessly scan figures, abstracts, and key findings during your spare time.</p>
+                <h3 data-i18n="f1_title">Immersive Academic Card Feed</h3>
+                <p data-i18n="f1_desc">Browse cutting-edge research papers from ArXiv, Nature, Science, IEEE, and PubMed in a card-swiping format. Effortlessly scan figures, abstracts, and key findings during your spare time.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🤖</div>
-                <h3>Online & Edge AI Paper Summaries</h3>
-                <p>Built-in LLMs extract core innovations, methodology, and limitations in seconds. Conduct interactive RAG Q&A over full papers to easily resolve complex equations and proofs.</p>
+                <h3 data-i18n="f2_title">Online & Edge AI Paper Summaries</h3>
+                <p data-i18n="f2_desc">Built-in LLMs extract core innovations, methodology, and limitations in seconds. Conduct interactive RAG Q&A over full papers to easily resolve complex equations and proofs.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🧠</div>
-                <h3>On-Device Recommendation & Privacy</h3>
-                <p>Reading preferences and history remain strictly processed on your device's hardware. Smart recommendations suggest adjacent cross-disciplinary research to break filter bubbles safely.</p>
+                <h3 data-i18n="f3_title">On-Device Recommendation & Privacy</h3>
+                <p data-i18n="f3_desc">Reading preferences and history remain strictly processed on your device's hardware. Smart recommendations suggest adjacent cross-disciplinary research to break filter bubbles safely.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🌐</div>
-                <h3>Multi-Engine Smooth Translation</h3>
-                <p>Local and cloud translation engines provide side-by-side bilingual reading with precise technical terminology mapping, eliminating language barriers when reading international journals.</p>
+                <h3 data-i18n="f4_title">Multi-Engine Smooth Translation</h3>
+                <p data-i18n="f4_desc">Local and cloud translation engines provide side-by-side bilingual reading with precise technical terminology mapping, eliminating language barriers when reading international journals.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">📚</div>
-                <h3>Reference Library & Cloud Sync</h3>
-                <p>Seamlessly integrates with Zotero, EndNote, Mendeley, and WebDAV / Cloud storage. Push paper cards, highlights, and notes to your personal library with a single tap.</p>
+                <h3 data-i18n="f5_title">Reference Library & Cloud Sync</h3>
+                <p data-i18n="f5_desc">Seamlessly integrates with Zotero, EndNote, Mendeley, and WebDAV / Cloud storage. Push paper cards, highlights, and notes to your personal library with a single tap.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">📖</div>
-                <h3>Full-Format Immersive Reader</h3>
-                <p>Native rendering for PDF, EPUB, and RSS academic feeds. Multi-color highlighting, note-taking, and annotation export tools provide a focused, distraction-free reading space.</p>
+                <h3 data-i18n="f6_title">Full-Format Immersive Reader</h3>
+                <p data-i18n="f6_desc">Native rendering for PDF, EPUB, and RSS academic feeds. Multi-color highlighting, note-taking, and annotation export tools provide a focused, distraction-free reading space.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section (English & Chinese) -->
+    <!-- FAQ Section -->
     <section class="faq-section" id="faq">
-        <h2 class="section-title">❓ Frequently Asked Questions (FAQ)</h2>
-        <p class="section-subtitle">Key questions and answers regarding PyroMagma AI Academic Reader</p>
+        <h2 class="section-title" data-i18n="faq_title">❓ Frequently Asked Questions (FAQ)</h2>
+        <p class="section-subtitle" data-i18n="faq_subtitle">Key questions and answers regarding PyroMagma AI Academic Reader</p>
 
         <div class="faq-item">
-            <h3>Q: How do PyroMagma's AI paper breakdowns and RAG Q&A work?</h3>
-            <p><strong>English:</strong> When opening a paper, PyroMagma builds a local vector index of the text. The LLM extracts key innovations and enables interactive RAG Q&A pinned directly to exact paper sections and mathematical equations.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>应用在打开论文时会建立向量索引，大模型一键提炼创新点，并支持基于 RAG 技术进行论文全文问答。</p>
+            <h3 data-i18n="q1_title">Q: How do PyroMagma's AI paper breakdowns and RAG Q&A work?</h3>
+            <p data-i18n="q1_desc">When opening a paper, PyroMagma builds a local vector index of the text. The LLM extracts key innovations and enables interactive RAG Q&A pinned directly to exact paper sections and mathematical equations.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Q: Will PyroMagma expose my research direction or history?</h3>
-            <p><strong>English:</strong> Absolutely not. PyroMagma uses 100% on-device algorithms for recommendations and processing. Your reading history, bookmarks, and search terms stay strictly on your device.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>绝不会。阅读偏好与标注历史纯本地算法处理，零上传，彻底保障您的科研隐私。</p>
+            <h3 data-i18n="q2_title">Q: Will PyroMagma expose my research direction or history?</h3>
+            <p data-i18n="q2_desc">Absolutely not. PyroMagma uses 100% on-device algorithms for recommendations and processing. Your reading history, bookmarks, and search terms stay strictly on your device.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Q: Which document formats are supported?</h3>
-            <p><strong>English:</strong> Native support for PDF papers, EPUB ebooks, and RSS academic subscription feeds, with direct searching and reading from ArXiv and bioRxiv.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>原生支持 PDF 论文、EPUB 电子书与 RSS 学术资讯流。</p>
-        </div>
-    </section>
-
-    <!-- Chinese & Global Section Anchor Targets -->
-    <section id="zh" style="max-width: 1200px; margin: 0 auto 3rem auto; padding: 0 1.5rem; position: relative; z-index: 1;">
-        <div style="background: rgba(22, 26, 42, 0.7); border: 1px solid var(--card-border); backdrop-filter: blur(16px); border-radius: 1rem; padding: 2rem;">
-            <h3 style="font-size: 1.5rem; color: #38bdf8; margin-bottom: 1rem;">🇨🇳 中文专区 (Chinese Summary)</h3>
-            <p style="color: #cbd5e1; line-height: 1.8;">
-                <strong>PyroMagma</strong> 是一款专为科研人员、研究生与工程师打造的 AI 驱动学术文献阅读工具。<br>
-                融合沉浸式论文卡片流、在线/端侧大模型核心贡献拆解、论文 RAG 交互问答、多源双语翻译对照以及 Zotero / WebDAV / 云盘同步。纯本地推荐算法保护您的研究方向与隐私！
-            </p>
-            <div id="ja" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #a855f7; font-size: 1.1rem;">🇯🇵 日本語概要 (Japanese Overview)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">PyroMagmaは、研究者やエンジニア向けに設計されたAI駆動の学術文献閲覧アプリです。没入型カードフィード、RAG質疑応答、Zotero同期を統合しています。</p>
-            </div>
-            <div id="ko" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #ec4899; font-size: 1.1rem;">🇰🇷 한국어 개요 (Korean Overview)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">PyroMagma는 연구자와 엔지니어를 위해 설계된 AI 기반 학술 문헌 읽기 앱입니다. 몰입형 피드, RAG 질의응답 및 Zotero 동기화를 지원합니다.</p>
-            </div>
-            <div id="es" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #38bdf8; font-size: 1.1rem;">🇪🇸 Resumen en Español (Spanish Overview)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">PyroMagma es un lector académico impulsado por IA con resúmenes, preguntas y respuestas RAG y sincronización con Zotero.</p>
-            </div>
+            <h3 data-i18n="q3_title">Q: Which document formats are supported?</h3>
+            <p data-i18n="q3_desc">Native support for PDF papers, EPUB ebooks, and RSS academic subscription feeds, with direct searching and reading from ArXiv and bioRxiv.</p>
         </div>
     </section>
 
@@ -641,10 +624,171 @@
         PyroMagma, AI Academic Reader, Literature RAG, ArXiv AI summarizer, edge AI paper digest, Zotero sync Android, dual language academic translation, PDF EPUB academic reader, paper summarizer app, AI research assistant, Read Paper AI, Sci-Hub reader, Nature Science IEEE papers AI summary, AI论文阅读器, 论文RAG问答, 论文拆解工具, Zotero同步, 学术文献管理, 論文AI要約, 学術論文リーダ, Lector de papers IA, com.mypyro.pyromagma, AI-gestützte akademische Leser, lecteur académique IA, leitor acadêmico IA.
     </section>
 
-    <!-- Instant IndexNow Protocol & Multi-Search Engine Ping Trigger -->
+    <!-- Client-Side Auto Language Engine & Multilingual Dictionaries -->
     <script>
+    var i18nDict = {
+        'en': {
+            nav_features: 'Features', nav_ai: 'AI & RAG Engine', nav_faq: 'FAQ', btn_try: '🚀 Try PyroMagma',
+            hero_badge: '🧠 AI-Driven Academic Paper Reader & Interactive RAG Hub',
+            hero_title: 'Next-Gen <span>PyroMagma</span><br>AI Paper Summaries · Immersive Feed · Interactive RAG',
+            hero_pitch: 'PyroMagma combines an immersive card-swiping literature feed, edge & cloud LLM paper breakdowns, interactive full-text RAG Q&A, and smooth multi-engine bilingual translation to supercharge your academic research workflow.',
+            mockup_user: '💬 "Explain Equation (4) in this ArXiv paper."',
+            mockup_ai: '🤖 <strong>PyroMagma RAG:</strong> Equation (4) computes multi-head self-attention weights $W_q, W_k$. The key innovation is scaling dot-products by $\\frac{1}{\\sqrt{d_k}}$ to prevent gradient vanishing during backpropagation.',
+            btn_community: '👥 Join Pyro Community & Get Access', btn_privacy: '📄 View Privacy Policy (100% On-Device)',
+            features_title: '⚡ Six Core Research Breakthroughs', features_subtitle: 'From paper scanning and AI summarization to reference sync, empowering your entire research lifecycle',
+            f1_title: 'Immersive Academic Card Feed', f1_desc: 'Browse cutting-edge research papers from ArXiv, Nature, Science, IEEE, and PubMed in a card-swiping format.',
+            f2_title: 'Online & Edge AI Paper Summaries', f2_desc: 'Built-in LLMs extract core innovations, methodology, and limitations in seconds. Conduct interactive RAG Q&A over full papers.',
+            f3_title: 'On-Device Recommendation & Privacy', f3_desc: 'Reading preferences remain strictly processed on-device. Smart recommendations suggest adjacent cross-disciplinary research.',
+            f4_title: 'Multi-Engine Smooth Translation', f4_desc: 'Local and cloud translation engines provide side-by-side bilingual reading with precise technical terminology mapping.',
+            f5_title: 'Reference Library & Cloud Sync', f5_desc: 'Seamlessly integrates with Zotero, EndNote, Mendeley, and WebDAV / Cloud storage.',
+            f6_title: 'Full-Format Immersive Reader', f6_desc: 'Native rendering for PDF, EPUB, and RSS academic feeds with multi-color highlighting and note-taking.',
+            faq_title: '❓ Frequently Asked Questions (FAQ)', faq_subtitle: 'Key questions and answers regarding PyroMagma AI Academic Reader',
+            q1_title: 'Q: How do PyroMagma\'s AI paper breakdowns and RAG Q&A work?', q1_desc: 'When opening a paper, PyroMagma builds a local vector index. The LLM extracts key innovations and enables interactive RAG Q&A.',
+            q2_title: 'Q: Will PyroMagma expose my research direction or history?', q2_desc: 'Absolutely not. PyroMagma uses 100% on-device algorithms. Your reading history stays strictly on your device.',
+            q3_title: 'Q: Which document formats are supported?', q3_desc: 'Native support for PDF papers, EPUB ebooks, and RSS academic subscription feeds.'
+        },
+        'zh': {
+            nav_features: '核心亮点', nav_ai: 'AI 拆解与 RAG', nav_faq: '常见问题', btn_try: '🚀 体验 PyroMagma',
+            hero_badge: '🧠 专为科研人员与工程师打造的 AI 驱动学术阅读器',
+            hero_title: '新一代 <span>PyroMagma</span><br>AI 拆解论文 · 沉浸卡片流 · RAG 极速交互',
+            hero_pitch: '告别传统 PDF 的枯燥繁重！PyroMagma 融合碎片化沉浸卡片流、云端与端侧大模型核心贡献拆解、论文 RAG 对话问答与多源平滑对比翻译，让科研文献阅读效率提升 10 倍！',
+            mockup_user: '💬 "请解释这篇 ArXiv 论文中的公式 (4)"',
+            mockup_ai: '🤖 <strong>PyroMagma RAG：</strong>公式 (4) 用于计算多头自注意力权重 $W_q, W_k$，核心创新是通过 $\\frac{1}{\\sqrt{d_k}}$ 缩放点积，防止反向传播时梯度消失。',
+            btn_community: '👥 加入 Pyro 社区获取体验', btn_privacy: '📄 查阅隐私政策 (100% 本地算法)',
+            features_title: '⚡ 六大核心维度 重塑科研阅读体验', features_subtitle: '从文献扫视、核心拆解到云端协同，全链路赋能您的学术研究',
+            f1_title: '沉浸式学术卡片流', f1_desc: '利用碎片化时间扫视 ArXiv、Nature、Science、IEEE、PubMed 等全球顶刊最新论文图表与摘要。',
+            f2_title: '在线与端侧大模型拆解', f2_desc: '内置 LLM 大模型，一键提炼论文核心创新点。支持基于全文的 RAG 深度问答，推导公式毫无压力。',
+            f3_title: '纯本地隐私算法 & 破除茧房', f3_desc: '阅读偏好与历史记录纯本地处理。精准推荐喜好文献的同时，智能推荐周边交叉学科前沿。',
+            f4_title: '多源平滑对比翻译', f4_desc: '内置多源本地与云端平滑翻译引擎，支持逐句双语对照阅读。专业学术术语精准匹配。',
+            f5_title: '知识库协同与多端云同步', f5_desc: '无缝整合 Zotero、EndNote、Mendeley 及 WebDAV/云盘。一键推送论文与笔记。',
+            f6_title: '全格式沉浸阅读引擎', f6_desc: '原生支持 PDF、EPUB 图书以及 RSS 学术订阅流。内置多色高亮与划线摘录。',
+            faq_title: '❓ 常见问题 (FAQ)', faq_subtitle: '关于 PyroMagma AI 论文阅读器的核心疑问解析',
+            q1_title: 'Q: AI 拆解和 RAG 问答是如何工作的？', q1_desc: '应用在打开论文时会建立向量索引，大模型一键提炼创新点，并支持基于 RAG 技术进行论文全文问答。',
+            q2_title: 'Q: 会暴露我的课题与阅读方向隐私吗？', q2_desc: '绝不会。阅读偏好与标注历史纯本地算法处理，零上传，彻底保障您的科研隐私。',
+            q3_title: 'Q: 支持哪些文献格式？', q3_desc: '原生支持 PDF 论文、EPUB 电子书与 RSS 学术资讯流。'
+        },
+        'zh-tw': {
+            nav_features: '核心亮點', nav_ai: 'AI 拆解與 RAG', nav_faq: '常見問題', btn_try: '🚀 體驗 PyroMagma',
+            hero_badge: '🧠 專為科研人員與工程師打造的 AI 驅動學術閱讀器',
+            hero_title: '新一代 <span>PyroMagma</span><br>AI 拆解論文 · 沉浸卡片流 · RAG 極速交互',
+            hero_pitch: '告別傳統 PDF 的枯燥繁重！PyroMagma 融合碎片化沉浸卡片流、雲端與端側大模型核心貢獻拆解、論文 RAG 對話問答與多源平滑對比翻譯，讓科研文獻閱讀效率提升 10 倍！',
+            mockup_user: '💬 "請解釋這篇 ArXiv 論文中的公式 (4)"',
+            mockup_ai: '🤖 <strong>PyroMagma RAG：</strong>公式 (4) 用於計算多頭自注意力權重 $W_q, W_k$，核心創新是透過 $\\frac{1}{\\sqrt{d_k}}$ 縮放點積，防止反向傳播時梯度消失。',
+            btn_community: '👥 加入 Pyro 社群獲取體驗', btn_privacy: '📄 查閱隱私政策 (100% 本地演算法)',
+            features_title: '⚡ 六大核心維度 重塑科研閱讀體驗', features_subtitle: '從文獻掃視、核心拆解到雲端協同，全鏈路賦能您的學術研究',
+            f1_title: '沉浸式學術卡片流', f1_desc: '利用碎片化時間掃視 ArXiv、Nature、Science、IEEE、PubMed 等全球頂刊最新論文圖表與摘要。',
+            f2_title: '在線與端側大模型拆解', f2_desc: '內建 LLM 大模型，一鍵提煉論文核心創新點。支援基於全文的 RAG 深度問答。',
+            f3_title: '純本地隱私演算法 & 破除繭房', f3_desc: '閱讀偏好與歷史記錄純本地處理。精準推薦喜好文獻的同時，智能推薦周邊交叉學科前沿。',
+            f4_title: '多源平滑對比翻譯', f4_desc: '內建多源本地與雲端平滑翻譯引擎，支援逐句雙語對照閱讀。專業學術術語精準匹配。',
+            f5_title: '知識庫協同與多端雲同步', f5_desc: '無縫整合 Zotero、EndNote、Mendeley 及 WebDAV/雲盤。一鍵推送論文與筆記。',
+            f6_title: '全格式沉浸閱讀引擎', f6_desc: '原生支援 PDF、EPUB 圖書以及 RSS 學術訂閱流。內建多色高亮與劃線摘錄。',
+            faq_title: '❓ 常見問題 (FAQ)', faq_subtitle: '關於 PyroMagma AI 論文閱讀器的核心疑問解析',
+            q1_title: 'Q: AI 拆解和 RAG 問答是如何工作的？', q1_desc: '應用在打開論文時會建立向量索引，大模型一鍵提煉創新點，並支援基於 RAG 技術進行論文全文問答。',
+            q2_title: 'Q: 會暴露我的課題與閱讀方向隱私嗎？', q2_desc: '絕不會。閱讀偏好與標註歷史純本地演算法處理，零上傳，徹底保障您的科研隱私。',
+            q3_title: 'Q: 支援哪些文獻格式？', q3_desc: '原生支援 PDF 論文、EPUB 電子書與 RSS 學術資訊流。'
+        },
+        'ja': {
+            nav_features: '機能', nav_ai: 'AI & RAGエンジン', nav_faq: 'FAQ', btn_try: '🚀 PyroMagmaを試す',
+            hero_badge: '🧠 研究者とエンジニアのためのAI駆動型学術論文リーダー',
+            hero_title: '新世代 <span>PyroMagma</span><br>AI要約 · カードフィード · RAG対話',
+            hero_pitch: 'ArXiv、Nature、IEEE論文をカードスワイプで速読。オンデバイスAI論文要約とRAG質疑応答で研究効率を飛躍的に向上。',
+            mockup_user: '💬 「このArXiv論文の式(4)を説明してください」',
+            mockup_ai: '🤖 <strong>PyroMagma RAG:</strong> 式(4)はマルチヘッド自己アテンション重みを計算します。',
+            btn_community: '👥 Pyroコミュニティに参加', btn_privacy: '📄 プライバシーポリシーを表示',
+            features_title: '⚡ 6つの研究イノベーション', features_subtitle: '論文スキャンからAI要約、Zotero同期まで研究ライフサイクルをサポート',
+            f1_title: '没入型学術カードフィード', f1_desc: 'ArXiv、Nature、Science、IEEE論文の図表とアブストラクトをスワイプで速読。',
+            f2_title: 'オンデバイスAI論文要約', f2_desc: 'LLMがイノベーションと結論をミリ秒で抽出。RAGで数式や推導を対話形式で解説。',
+            f3_title: 'プライバシー重視ローカルアルゴリズム', f3_desc: '閲覧履歴や好みのアルゴリズム計算は100%デバイス上で処理。',
+            f4_title: 'マルチエンジン対訳翻訳', f4_desc: 'ローカルおよびクラウド翻訳エンジンで専門用語を正確にマッピング。',
+            f5_title: '文献管理＆クラウド同期', f5_desc: 'Zotero、EndNote、Mendeley、WebDAVと1タップで同期。',
+            f6_title: '全フォーマット対応リーダー', f6_desc: 'PDF、EPUB、RSSに対応。ハイライトやメモ書き出し機能を搭載。',
+            faq_title: '❓ よくある質問 (FAQ)', faq_subtitle: 'PyroMagma AIリーダーの利用ガイド',
+            q1_title: 'Q: AI要約とRAG質疑応答の仕組みは？', q1_desc: '論文テキストのローカルベクトルインデックスを作成し、RAGで高精度な回答を生成します。',
+            q2_title: 'Q: 研究テーマのプライバシーは守られますか？', q2_desc: '100%オンデバイス処理のため、履歴や検索ワードが外部に送信されることはありません。',
+            q3_title: 'Q: 対応しているドキュメントフォーマットは？', q3_desc: 'PDF論文、EPUB電子書籍、RSSフィードに対応しています。'
+        },
+        'ko': {
+            nav_features: '기능', nav_ai: 'AI & RAG 엔진', nav_faq: '자주 묻는 질문', btn_try: '🚀 PyroMagma 체험',
+            hero_badge: '🧠 연구자와 엔지니어를 위한 AI 기반 학술 논문 리더',
+            hero_title: '차세대 <span>PyroMagma</span><br>AI 논문 요약 · 카카오 피드 · RAG 질의응답',
+            hero_pitch: 'ArXiv, Nature, IEEE 논문을 카드 피드로 빠르게 탐색하세요. 온디바이스 AI 논문 요약 및 RAG 질의응답을 지원합니다.',
+            mockup_user: '💬 "이 ArXiv 논문의 수식 (4)를 설명해주세요."',
+            mockup_ai: '🤖 <strong>PyroMagma RAG:</strong> 수식 (4)는 멀티헤드 어텐션 가중치를 계산합니다.',
+            btn_community: '👥 Pyro 커뮤니티 참여', btn_privacy: '📄 개인정보 처리방침 보기',
+            features_title: '⚡ 6가지 혁신 기능', features_subtitle: '논문 피드부터 AI 요약, Zotero 동기화까지',
+            f1_title: '몰입형 학술 카드 피드', f1_desc: 'ArXiv, Nature, Science, IEEE 논문의 초록과 그림을 카드로 빠르게 탐색.',
+            f2_title: '온디바이스 AI 논문 요약', f2_desc: 'LLM이 핵심 혁신과 결과를 몇 초 만에 추출하고 RAG로 수식을 해설.',
+            f3_title: '온디바이스 추천 & 개인정보 보호', f3_desc: '읽기 선호도와 기록은 기기 내에서만 처리되어 연구 보안 유지.',
+            f4_title: '다중 엔진 번역', f4_desc: '학술 용어를 정확하게 매핑하여 나란히 번역글 제공.',
+            f5_title: 'Zotero & WebDAV 클라우드 동기화', f5_desc: 'Zotero, EndNote, Mendeley 및 WebDAV와 1클릭 동기화.',
+            f6_title: '전체 포맷 지원 리더', f6_desc: 'PDF, EPUB, RSS 논문 피드 원본 렌더링 및 하이라이트 기능 지원.',
+            faq_title: '❓ 자주 묻는 질문 (FAQ)', faq_subtitle: 'PyroMagma AI 리더 사용 안내',
+            q1_title: 'Q: AI 논문 요약과 RAG 작동 방식은?', q1_desc: '논문 로컬 벡터 인덱스를 생성하여 질문에 정확히 답변합니다.',
+            q2_title: 'Q: 연구 기록이 외부로 유출되나요?', q2_desc: '아닙니다. 100% 기기 내에서만 알고리즘이 동작합니다.',
+            q3_title: 'Q: 지원하는 문서 형식은?', q3_desc: 'PDF 논문, EPUB 전자책, RSS 피드를 지원합니다.'
+        },
+        'es': {
+            nav_features: 'Funciones', nav_ai: 'Motor IA y RAG', nav_faq: 'Preguntas', btn_try: '🚀 Probar PyroMagma',
+            hero_badge: '🧠 Lector Académico de Artículos Científicos con IA',
+            hero_title: 'Nueva Era <span>PyroMagma</span><br>Resúmenes IA · Feed Inmersivo · RAG Interactivo',
+            hero_pitch: 'Combine un feed de artículos científicos en formato de tarjetas, resúmenes IA en el dispositivo y preguntas RAG interactivas sobre archivos PDF completos con sincronización Zotero.',
+            mockup_user: '💬 "Explica la Ecuación (4) en este artículo de ArXiv."',
+            mockup_ai: '🤖 <strong>PyroMagma RAG:</strong> La Ecuación (4) calcula los pesos de atención.',
+            btn_community: '👥 Únete a la Comunidad Pyro', btn_privacy: '📄 Ver Política de Privacidad',
+            features_title: '⚡ Seis Innovaciones Clave', features_subtitle: 'Potenciando todo su ciclo de investigación académica',
+            f1_title: 'Feed Inmersivo de Tarjetas Académicas', f1_desc: 'Explore artículos de ArXiv, Nature, Science e IEEE deslizando tarjetas.',
+            f2_title: 'Resúmenes IA en el Dispositivo', f2_desc: 'Extraiga innovaciones clave en segundos e interactúe con RAG sobre el texto completo.',
+            f3_title: 'Recomendación y Privacidad Local', f3_desc: 'Sus preferencias permanecen 100% procesadas en su dispositivo.',
+            f4_title: 'Traducción Multimotor Fluida', f4_desc: 'Lectura bilingüe en paralelo con mapeo preciso de términos técnicos.',
+            f5_title: 'Sincronización Zotero y WebDAV', f5_desc: 'Conéctelo con un clic a Zotero, EndNote y almacenamiento WebDAV.',
+            f6_title: 'Lector Inmersivo Multiformato', f6_desc: 'Soporte nativo para archivos PDF, EPUB y fuentes RSS académicas.',
+            faq_title: '❓ Preguntas Frecuentes (FAQ)', faq_subtitle: 'Todo sobre PyroMagma AI Academic Reader',
+            q1_title: '¿Cómo funciona el resumen IA y RAG?', q1_desc: 'Crea un índice vectorial local y responde preguntas sobre el texto completo.',
+            q2_title: '¿Se expone mi historial de investigación?', q2_desc: 'No, todo el procesamiento es 100% en el dispositivo.',
+            q3_title: '¿Qué formatos son compatibles?', q3_desc: 'Soporta PDFs académicos, EPUBs y fuentes RSS.'
+        }
+    };
+
+    function detectLanguage() {
+        var hash = window.location.hash.replace('#', '').toLowerCase();
+        if (hash && i18nDict[hash]) return hash;
+        var saved = localStorage.getItem('pyro_lang');
+        if (saved && i18nDict[saved]) return saved;
+        var sys = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (sys.startsWith('zh-tw') || sys.startsWith('zh-hk') || sys.startsWith('zh-mo')) return 'zh-tw';
+        if (sys.startsWith('zh')) return 'zh';
+        if (sys.startsWith('ja')) return 'ja';
+        if (sys.startsWith('ko')) return 'ko';
+        if (sys.startsWith('es')) return 'es';
+        return 'en';
+    }
+
+    function setLanguage(lang) {
+        if (!i18nDict[lang]) lang = 'en';
+        document.documentElement.lang = lang;
+        localStorage.setItem('pyro_lang', lang);
+        var dict = i18nDict[lang] || i18nDict['en'];
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            var key = el.getAttribute('data-i18n');
+            if (dict[key]) el.innerHTML = dict[key];
+        });
+        document.querySelectorAll('.lang-switch a').forEach(function(btn) {
+            var href = btn.getAttribute('href').replace('#', '').toLowerCase();
+            if (href === lang) btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+    }
+
+    window.addEventListener('hashchange', function() {
+        setLanguage(detectLanguage());
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setLanguage(detectLanguage());
+    });
+
+    // Instant IndexNow Protocol
     (function(){
-        // 1. IndexNow Instant Indexing Protocol (Bing, Yandex, DuckDuckGo, Naver, Seznam)
         var indexNowUrl = 'https://api.indexnow.org/indexnow?url=' + encodeURIComponent(window.location.href) + '&key=pyroapp2026indexnowkey';
         if (navigator.sendBeacon) {
             navigator.sendBeacon(indexNowUrl);
@@ -652,7 +796,7 @@
             navigator.sendBeacon('https://www.bing.com/ping?sitemap=https://pyroapp.github.io/sitemap.xml');
         }
 
-        // 2. Baidu Auto Push Client
+        // Baidu Auto Push
         var canonicalURL, bp = document.createElement('script');
         var curProtocol = window.location.protocol.split(':')[0];
         if (curProtocol === 'https') {

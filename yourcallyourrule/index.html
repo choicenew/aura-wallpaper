@@ -116,7 +116,7 @@
             --accent-color: #10b981;
             --accent-gradient: linear-gradient(135deg, #059669 0%, #10b981 50%, #06b6d4 100%);
             --text-main: #f8fafc;
-            --text-sub: #94a3b8;
+            --text-sub: #9ca3af;
             --pill-bg: rgba(20, 35, 38, 0.6);
         }
 
@@ -225,6 +225,14 @@
             border-radius: 4px;
             background: rgba(16, 185, 129, 0.12);
             border: 1px solid rgba(16, 185, 129, 0.25);
+            transition: all 0.2s;
+        }
+
+        .lang-switch a.active {
+            background: var(--accent-color);
+            color: #ffffff;
+            border-color: var(--accent-color);
+            font-weight: 700;
         }
 
         .btn-primary {
@@ -484,19 +492,20 @@
                 🛡️ YourCallYourRule
             </a>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#plugins">Plugins Engine</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="#plugins" data-i18n="nav_plugins">Plugins Engine</a></li>
+                <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
             </ul>
             <div style="display: flex; gap: 0.75rem; align-items: center;">
                 <div class="lang-switch">
                     <a href="#en">EN</a>
                     <a href="#zh">中文</a>
+                    <a href="#zh-tw">繁體</a>
                     <a href="#ja">日本語</a>
                     <a href="#ko">한국어</a>
                     <a href="#es">ES</a>
                 </div>
-                <a href="https://play.google.com/store/apps/details?id=com.yours.yourcallyourrule" target="_blank" rel="noopener" class="btn-primary">
+                <a href="https://play.google.com/store/apps/details?id=com.yours.yourcallyourrule" target="_blank" rel="noopener" class="btn-primary" data-i18n="btn_play">
                     🚀 Google Play
                 </a>
             </div>
@@ -505,9 +514,9 @@
 
     <!-- Hero Section -->
     <section class="hero" id="en">
-        <div class="badge-tag">🛡️ Complete Incoming Call & SMS Firewall for Android</div>
-        <h1>Your Calls, Your Rules<br><span>Smart Call & SMS Blocker</span></h1>
-        <p>
+        <div class="badge-tag" data-i18n="hero_badge">🛡️ Complete Incoming Call & SMS Firewall for Android</div>
+        <h1 data-i18n="hero_title">Your Calls, Your Rules<br><span>Smart Call & SMS Blocker</span></h1>
+        <p data-i18n="hero_pitch">
             Take 100% control over your mobile communications. YourCallYourRule provides powerful regex filtering, blacklist/whitelist rules, online subscriptions, STIR/SHAKEN caller verification, WebDAV cloud backup, and a web scraping plugin engine. 100% local, zero tracking!
         </p>
 
@@ -517,9 +526,9 @@
                 <div class="shield-call-item">
                     <div>
                         <strong style="color:#ef4444;">🚫 +1 (800) 555-0199</strong><br>
-                        <span style="font-size: 0.78rem; color: #94a3b8;">Telemarketing Spam Call</span>
+                        <span style="font-size: 0.78rem; color: #94a3b8;" data-i18n="mockup_desc">Telemarketing Spam Call</span>
                     </div>
-                    <span style="background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); padding: 4px 10px; border-radius: 9999px; font-weight: 700; font-size: 0.78rem;">
+                    <span style="background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); padding: 4px 10px; border-radius: 9999px; font-weight: 700; font-size: 0.78rem;" data-i18n="mockup_status">
                         Blocked (Regex: ^\+1800.*)
                     </span>
                 </div>
@@ -527,16 +536,16 @@
         </div>
 
         <div class="hero-cta">
-            <a href="https://play.google.com/store/apps/details?id=com.yours.yourcallyourrule" target="_blank" rel="noopener" class="btn-primary">
+            <a href="https://play.google.com/store/apps/details?id=com.yours.yourcallyourrule" target="_blank" rel="noopener" class="btn-primary" data-i18n="btn_download_play">
                 📱 Download on Google Play
             </a>
-            <a href="https://play.google.com/apps/testing/com.yours.yourcallyourrule" target="_blank" rel="noopener" class="btn-secondary">
+            <a href="https://play.google.com/apps/testing/com.yours.yourcallyourrule" target="_blank" rel="noopener" class="btn-secondary" data-i18n="btn_beta">
                 🧪 Google Play Beta Channel
             </a>
-            <a href="https://t.me/yourcallyourrule" target="_blank" rel="noopener" class="btn-secondary">
+            <a href="https://t.me/yourcallyourrule" target="_blank" rel="noopener" class="btn-secondary" data-i18n="btn_tg_channel">
                 📢 Telegram Channel
             </a>
-            <a href="https://t.me/+GHoPy6xwQEU1ZThh" target="_blank" rel="noopener" class="btn-secondary">
+            <a href="https://t.me/+GHoPy6xwQEU1ZThh" target="_blank" rel="noopener" class="btn-secondary" data-i18n="btn_tg_group">
                 💬 Telegram Group
             </a>
         </div>
@@ -544,56 +553,56 @@
 
     <!-- Core Features Grid -->
     <section id="features">
-        <h2 class="section-title">⚡ Eight Power Features for Total Call Control</h2>
-        <p class="section-subtitle">Designed for users who demand extreme privacy, flexibility, and powerful blocking customization</p>
+        <h2 class="section-title" data-i18n="features_title">⚡ Eight Power Features for Total Call Control</h2>
+        <p class="section-subtitle" data-i18n="features_subtitle">Designed for users who demand extreme privacy, flexibility, and powerful blocking customization</p>
 
         <div class="grid-features">
             <div class="feature-card">
                 <div class="feature-icon">🚫</div>
-                <h3>Blacklist & Whitelist Management</h3>
-                <p>Easily create lists of allowed and blocked phone numbers or contacts. Intercept unwanted spam callers, telemarketers, and robocalls instantly.</p>
+                <h3 data-i18n="f1_title">Blacklist & Whitelist Management</h3>
+                <p data-i18n="f1_desc">Easily create lists of allowed and blocked phone numbers or contacts. Intercept unwanted spam callers, telemarketers, and robocalls instantly.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🔍</div>
-                <h3>Regular Expression (Regex) Rules</h3>
-                <p>Define sophisticated and complex blocking rules using powerful regular expressions for area codes, number prefixes, patterns, and SMS keywords.</p>
+                <h3 data-i18n="f2_title">Regular Expression (Regex) Rules</h3>
+                <p data-i18n="f2_desc">Define sophisticated and complex blocking rules using powerful regular expressions for area codes, number prefixes, patterns, and SMS keywords.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🌐</div>
-                <h3>Online Rule Subscription</h3>
-                <p>Subscribe to curated online blocklists using subscription URLs. Automatically download updated spam databases without manually managing entries.</p>
+                <h3 data-i18n="f3_title">Online Rule Subscription</h3>
+                <p data-i18n="f3_desc">Subscribe to curated online blocklists using subscription URLs. Automatically download updated spam databases without manually managing entries.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🛡️</div>
-                <h3>STIR/SHAKEN Integration</h3>
-                <p>Leverage STIR/SHAKEN cryptographic caller verification technology to verify spoofed numbers (supported in select regions, including North America).</p>
+                <h3 data-i18n="f4_title">STIR/SHAKEN Integration</h3>
+                <p data-i18n="f4_desc">Leverage STIR/SHAKEN cryptographic caller verification technology to verify spoofed numbers (supported in select regions, including North America).</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">📱</div>
-                <h3>Dual SIM Card Recognition</h3>
-                <p>Apply different blocking rules and actions based on which physical or eSIM card receives the incoming call or text message.</p>
+                <h3 data-i18n="f5_title">Dual SIM Card Recognition</h3>
+                <p data-i18n="f5_desc">Apply different blocking rules and actions based on which physical or eSIM card receives the incoming call or text message.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">⚡</div>
-                <h3>Flexible Blocking Actions</h3>
-                <p>Choose your preferred blocking action: hang up immediately, mute the ringer, or answer-and-hang-up to prevent callers from leaving voicemails.</p>
+                <h3 data-i18n="f6_title">Flexible Blocking Actions</h3>
+                <p data-i18n="f6_desc">Choose your preferred blocking action: hang up immediately, mute the ringer, or answer-and-hang-up to prevent callers from leaving voicemails.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">🔒</div>
-                <h3>100% On-Device Local Privacy</h3>
-                <p>All data is managed strictly on your device. The app includes zero online tracking databases and never uploads your contacts or call logs to external servers.</p>
+                <h3 data-i18n="f7_title">100% On-Device Local Privacy</h3>
+                <p data-i18n="f7_desc">All data is managed strictly on your device. The app includes zero online tracking databases and never uploads your contacts or call logs to external servers.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">☁️</div>
-                <h3>Multi-Cloud Backup & Restore</h3>
-                <p>Seamlessly back up and restore your settings, rules, and plugins via WebDAV, Google Drive, and Microsoft OneDrive.</p>
+                <h3 data-i18n="f8_title">Multi-Cloud Backup & Restore</h3>
+                <p data-i18n="f8_desc">Seamlessly back up and restore your settings, rules, and plugins via WebDAV, Google Drive, and Microsoft OneDrive.</p>
             </div>
         </div>
     </section>
@@ -601,20 +610,20 @@
     <!-- Plugin System Section -->
     <section id="plugins" style="max-width: 1100px; margin: 0 auto 5rem auto; padding: 0 1.5rem; position: relative; z-index: 1;">
         <div style="background: rgba(18, 28, 32, 0.85); border: 1px solid var(--card-border); backdrop-filter: blur(20px); border-radius: 1.5rem; padding: 2.5rem;">
-            <h2 style="font-size: 2rem; color: #34d399; margin-bottom: 1rem;">🧩 QuickJS Web Scraping Plugin Engine</h2>
-            <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            <h2 style="font-size: 2rem; color: #34d399; margin-bottom: 1rem;" data-i18n="plugin_title">🧩 QuickJS Web Scraping Plugin Engine</h2>
+            <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;" data-i18n="plugin_desc">
                 One of the core strengths of <strong>YourCallYourRule</strong> is its powerful JavaScript plugin engine. Plugins can scrape online databases or query web APIs in real time to identify unknown caller IDs without relying on centralized servers.
             </p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
                 <div style="background: rgba(6, 11, 14, 0.6); padding: 1.25rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.08);">
-                    <h4 style="color: #ffffff; margin-bottom: 0.5rem;">📂 Community Plugin Directory</h4>
-                    <p style="color: #94a3b8; font-size: 0.92rem;">Maintained community plugins and template files are hosted in our repository's <code>/plugins</code> folder.</p>
+                    <h4 style="color: #ffffff; margin-bottom: 0.5rem;" data-i18n="plugin_dir_title">📂 Community Plugin Directory</h4>
+                    <p style="color: #94a3b8; font-size: 0.92rem;" data-i18n="plugin_dir_desc">Maintained community plugins and template files are hosted in our repository's <code>/plugins</code> folder.</p>
                 </div>
 
                 <div style="background: rgba(6, 11, 14, 0.6); padding: 1.25rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.08);">
-                    <h4 style="color: #ffffff; margin-bottom: 0.5rem;">🤖 AI Automation Workflow (SKILL.md)</h4>
-                    <p style="color: #94a3b8; font-size: 0.92rem;">Develop and unit-test custom plugins using our QuickJS AI automation SOP without needing an Android emulator.</p>
+                    <h4 style="color: #ffffff; margin-bottom: 0.5rem;" data-i18n="plugin_ai_title">🤖 AI Automation Workflow (SKILL.md)</h4>
+                    <p style="color: #94a3b8; font-size: 0.92rem;" data-i18n="plugin_ai_desc">Develop and unit-test custom plugins using our QuickJS AI automation SOP without needing an Android emulator.</p>
                 </div>
             </div>
         </div>
@@ -622,55 +631,209 @@
 
     <!-- FAQ Section -->
     <section class="faq-section" id="faq">
-        <h2 class="section-title">❓ Frequently Asked Questions (FAQ)</h2>
-        <p class="section-subtitle">Common questions about YourCallYourRule features and SMS permissions</p>
+        <h2 class="section-title" data-i18n="faq_title">❓ Frequently Asked Questions (FAQ)</h2>
+        <p class="section-subtitle" data-i18n="faq_subtitle">Common questions about YourCallYourRule features and SMS permissions</p>
 
         <div class="faq-item">
-            <h3>Q: Why does the Google Play Store version focus on call blocking?</h3>
-            <p><strong>English:</strong> Due to Google Play policies restricting SMS permission usage, the Play Store version handles call blocking. If you need full SMS filtering, download the full package directly from our GitHub Releases page or Telegram channel.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>受 Google Play 政策限制，商店版聚焦来电拦截。如需短信过滤功能，请从 Releases 或 Telegram 频道下载完整版。</p>
+            <h3 data-i18n="q1_title">Q: Why does the Google Play Store version focus on call blocking?</h3>
+            <p data-i18n="q1_desc">Due to Google Play policies restricting SMS permission usage, the Play Store version handles call blocking. If you need full SMS filtering, download the full package directly from our GitHub Releases page or Telegram channel.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Q: Does YourCallYourRule upload my contacts to an online database?</h3>
-            <p><strong>English:</strong> No! All rule processing and contact matching run 100% locally on your phone. We do not maintain or query an online user database.</p>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem;"><strong>中文：</strong>绝不。所有拦截与联系人匹配 100% 在本地运行，无任何云端数据库抓取与上传。</p>
+            <h3 data-i18n="q2_title">Q: Does YourCallYourRule upload my contacts to an online database?</h3>
+            <p data-i18n="q2_desc">No! All rule processing and contact matching run 100% locally on your phone. We do not maintain or query an online user database.</p>
         </div>
     </section>
 
-    <!-- Chinese & Global Section Anchor Targets -->
-    <section id="zh" style="max-width: 1200px; margin: 0 auto 3rem auto; padding: 0 1.5rem; position: relative; z-index: 1;">
-        <div style="background: rgba(18, 28, 32, 0.7); border: 1px solid var(--card-border); backdrop-filter: blur(16px); border-radius: 1rem; padding: 2rem;">
-            <h3 style="font-size: 1.5rem; color: #34d399; margin-bottom: 1rem;">🇨🇳 中文专区：YourCallYourRule 您的通话与短信规则</h3>
-            <p style="color: #cbd5e1; line-height: 1.8;">
-                <strong>YourCallYourRule</strong> 是一款功能强大且高度可定制的安卓通话与短信拦截防火墙。<br>
-                支持黑白名单管理、正则表达式灵活拦截、在线骚扰库订阅、STIR/SHAKEN 来电防伪、双 SIM 卡独立规则、挂断/静音/接听挂断操作，以及强大的 QuickJS 网页抓取插件系统。所有规则与数据 100% 在手机本地离线管理，绝不上报联系人与通话记录！
-            </p>
-            <div id="ja" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #a855f7; font-size: 1.1rem;">🇯🇵 日本語概要 (Japanese Overview)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">YourCallYourRuleは、着信・SMSを完全にコントロールできる100%ローカルなAndroid着信拒否アプリです。正規表現、WebDAVバックアップ、プラグインをサポートします。</p>
-            </div>
-            <div id="ko" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #ec4899; font-size: 1.1rem;">🇰🇷 한국어 개요 (Korean Overview)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">YourCallYourRule은 수신 전화 및 SMS 차단을 위한 강력한 온디바이스 Android 앱입니다. 정규식 규칙, 플러그인, WebDAV 백업을 지원합니다.</p>
-            </div>
-            <div id="es" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #38bdf8; font-size: 1.1rem;">🇪🇸 Resumen en Español (Spanish Overview)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">YourCallYourRule es un bloqueador de llamadas y SMS para Android con expresiones regulares, plugins y copia de seguridad WebDAV.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global SEO Keywords Cloud (11 Languages Covered) -->
+    <!-- Global SEO Keywords Cloud -->
     <section class="seo-keywords-box">
         <strong>SEO Keywords Cloud (11 Languages Covered):</strong><br>
         YourCallYourRule, Your Call Your Rule, Android call blocker, SMS blocker, spam call filter, regex call blocker, STIR SHAKEN Android, phone number blacklist, call blocker plugin, WebDAV call backup, 骚扰电话拦截, 短信拦截器, 安卓来电防火墙, 正则表达式拦截, 电话黑名单, 骚扰拦截插件, 通话规则管理, Call blocker free Android, Spamschutz Anrufe, Bloqueador de llamadas spam, com.yours.yourcallyourrule, Android 착신 거부, アプリ着信拒否, filtro llamadas spam.
     </section>
 
-    <!-- Instant IndexNow Protocol & Multi-Search Engine Ping Trigger -->
+    <!-- Client-Side Auto Language Engine & Multilingual Dictionaries -->
     <script>
+    var i18nDict = {
+        'en': {
+            nav_features: 'Features', nav_plugins: 'Plugins Engine', nav_faq: 'FAQ', btn_play: '🚀 Google Play',
+            hero_badge: '🛡️ Complete Incoming Call & SMS Firewall for Android',
+            hero_title: 'Your Calls, Your Rules<br><span>Smart Call & SMS Blocker</span>',
+            hero_pitch: 'Take 100% control over your mobile communications. YourCallYourRule provides powerful regex filtering, blacklist/whitelist rules, online subscriptions, STIR/SHAKEN caller verification, WebDAV cloud backup, and a web scraping plugin engine. 100% local, zero tracking!',
+            mockup_desc: 'Telemarketing Spam Call', mockup_status: 'Blocked (Regex: ^\\+1800.*)',
+            btn_download_play: '📱 Download on Google Play', btn_beta: '🧪 Google Play Beta Channel', btn_tg_channel: '📢 Telegram Channel', btn_tg_group: '💬 Telegram Group',
+            features_title: '⚡ Eight Power Features for Total Call Control', features_subtitle: 'Designed for users who demand extreme privacy, flexibility, and powerful blocking customization',
+            f1_title: 'Blacklist & Whitelist Management', f1_desc: 'Easily create lists of allowed and blocked phone numbers or contacts. Intercept unwanted spam callers instantly.',
+            f2_title: 'Regular Expression (Regex) Rules', f2_desc: 'Define sophisticated and complex blocking rules using powerful regular expressions for area codes and SMS keywords.',
+            f3_title: 'Online Rule Subscription', f3_desc: 'Subscribe to curated online blocklists using subscription URLs. Automatically download updated spam databases.',
+            f4_title: 'STIR/SHAKEN Integration', f4_desc: 'Leverage STIR/SHAKEN cryptographic caller verification technology to verify spoofed numbers.',
+            f5_title: 'Dual SIM Card Recognition', f5_desc: 'Apply different blocking rules and actions based on which physical or eSIM card receives the call.',
+            f6_title: 'Flexible Blocking Actions', f6_desc: 'Choose your preferred action: hang up immediately, mute ringer, or answer-and-hang-up.',
+            f7_title: '100% On-Device Local Privacy', f7_desc: 'All data is managed strictly on your device with zero online database tracking or contact uploads.',
+            f8_title: 'Multi-Cloud Backup & Restore', f8_desc: 'Seamlessly back up and restore your settings, rules, and plugins via WebDAV, Google Drive, and OneDrive.',
+            plugin_title: '🧩 QuickJS Web Scraping Plugin Engine', plugin_desc: 'YourCallYourRule features a JavaScript plugin engine to query web APIs or scrape databases in real time to identify unknown caller IDs.',
+            plugin_dir_title: '📂 Community Plugin Directory', plugin_dir_desc: 'Maintained community plugins and template files are hosted in our repository\'s /plugins folder.',
+            plugin_ai_title: '🤖 AI Automation Workflow (SKILL.md)', plugin_ai_desc: 'Develop and unit-test custom plugins using our QuickJS AI automation SOP without an Android emulator.',
+            faq_title: '❓ Frequently Asked Questions (FAQ)', faq_subtitle: 'Common questions about YourCallYourRule features and SMS permissions',
+            q1_title: 'Q: Why does the Google Play Store version focus on call blocking?', q1_desc: 'Due to Google Play policies restricting SMS permissions, the Play Store version focuses on call blocking. Full SMS filtering package is available on GitHub Releases / Telegram.',
+            q2_title: 'Q: Does YourCallYourRule upload my contacts to an online database?', q2_desc: 'No! All rule processing runs 100% locally on your phone with zero contact uploads.'
+        },
+        'zh': {
+            nav_features: '拦截功能', nav_plugins: '插件引擎', nav_faq: '常见问题', btn_play: '🚀 Google Play',
+            hero_badge: '🛡️ 强大可定制的安卓来电与短信防火墙',
+            hero_title: '您的通话与短信<br><span>由您完全掌控 (YourCallYourRule)</span>',
+            hero_pitch: '完全掌控您的手机通讯！YourCallYourRule 提供强大的黑白名单管理、正则表达式拦截、在线骚扰库订阅、STIR/SHAKEN 来电防伪、WebDAV/云盘备份以及 QuickJS 网页抓取插件系统。100% 本地离线，零隐私上报！',
+            mockup_desc: '推销骚扰电话', mockup_status: '已拦截 (正则: ^\\+1800.*)',
+            btn_download_play: '📱 从 Google Play 下载', btn_beta: '🧪 Google Play 测试通道', btn_tg_channel: '📢 Telegram 官方频道', btn_tg_group: '💬 Telegram 交流群组',
+            features_title: '⚡ 八大硬核拦截黑科技', features_subtitle: '专为极客与注重隐私的用户打造的全方位通话防护',
+            f1_title: '黑白名单精准管理', f1_desc: '轻松创建允许和阻止的号码列表，秒级拦截骚扰电话、推销与机器人来电。',
+            f2_title: '正则表达式 (Regex) 拦截', f2_desc: '使用强大的正则表达式灵活定义区号、号段模式及短信关键字拦截逻辑。',
+            f3_title: '在线规则订阅', f3_desc: '通过提供订阅链接，实时获取在线更新的骚扰号码数据库，免去手动维护。',
+            f4_title: 'STIR/SHAKEN 来电校验', f4_desc: '利用 STIR/SHAKEN 加密验证技术防止伪造号码（支持北美等地区）。',
+            f5_title: '双 SIM 卡独立规则识别', f5_desc: '根据接收来电或短信的 SIM 卡（SIM 1/SIM 2/eSIM）应用不同的拦截规则。',
+            f6_title: '灵活的拦截操作', f6_desc: '自由选择拦截动作：直接挂断、静音、或接听后立即挂断（防止留言）。',
+            f7_title: '100% 本地离线与隐私保护', f7_desc: '所有规则在手机本地运行，应用不内置跟踪数据库，绝不上报通讯录。',
+            f8_title: 'WebDAV & 云端备份恢复', f8_desc: '支持通过 WebDAV、Google Drive 和 OneDrive 备份与一键恢复配置。',
+            plugin_title: '🧩 QuickJS 网页抓取插件引擎', plugin_desc: '内置 QuickJS 插件引擎，可通过实时抓取网页或 API 查询陌生号码，无需依赖集中式云服务器。',
+            plugin_dir_title: '📂 社区插件开源目录', plugin_dir_desc: '所有官方与社区贡献的插件托管在仓库的 /plugins 目录下。',
+            plugin_ai_title: '🤖 AI 自动化测试工作流 (SKILL.md)', plugin_ai_desc: '配合 SKILL.md 模板，无需 Android 模拟器即可利用 AI 编写并单测 QuickJS 插件。',
+            faq_title: '❓ 常见问题 (FAQ)', faq_subtitle: '关于 YourCallYourRule 的使用疑问解答',
+            q1_title: 'Q: 为什么 Google Play 商店版聚焦来电拦截？', q1_desc: '受 Google Play 政策限制，商店版不包含短信过滤。如需短信拦截，请从 Telegram 频道或 Releases 下载完整版。',
+            q2_title: 'Q: 会上报通讯录到云端数据库吗？', q2_desc: '绝不上报！所有号码匹配 100% 在本地运行，彻底保障个人隐私。'
+        },
+        'zh-tw': {
+            nav_features: '攔截功能', nav_plugins: '外掛引擎', nav_faq: '常見問題', btn_play: '🚀 Google Play',
+            hero_badge: '🛡️ 強大可自訂的安卓來電與簡訊防火牆',
+            hero_title: '您的通話與簡訊<br><span>由您完全掌控 (YourCallYourRule)</span>',
+            hero_pitch: '完全掌控您的手機通訊！YourCallYourRule 提供強大的黑白名單管理、正則表達式攔截、線上騷擾庫訂閱、STIR/SHAKEN 來電防偽、WebDAV/雲端備份以及 QuickJS 網頁抓取外掛系統。100% 本地離線，零隱私上報！',
+            mockup_desc: '推銷騷擾電話', mockup_status: '已攔截 (正則: ^\\+1800.*)',
+            btn_download_play: '📱 從 Google Play 下載', btn_beta: '🧪 Google Play 測試渠道', btn_tg_channel: '📢 Telegram 官方頻道', btn_tg_group: '💬 Telegram 交流群組',
+            features_title: '⚡ 八大硬核攔截黑科技', features_subtitle: '專為極客與注重隱私的用戶打造的全方位通話防護',
+            f1_title: '黑白名單精準管理', f1_desc: '輕鬆創建允許和阻止的號碼列表，秒級攔截騷擾電話、推銷與機器人來電。',
+            f2_title: '正則表達式 (Regex) 攔截', f2_desc: '使用強大的正則表達式靈活定義區號、號段模式及簡訊關鍵字攔截邏輯。',
+            f3_title: '線上規則訂閱', f3_desc: '通過提供訂閱連結，實時獲取線上更新的騷擾號碼資料庫，免去手動維護。',
+            f4_title: 'STIR/SHAKEN 來電校驗', f4_desc: '利用 STIR/SHAKEN 加密驗證技術防止偽造號碼（支援北美等地區）。',
+            f5_title: '雙 SIM 卡獨立規則識別', f5_desc: '根據接收來電或簡訊的 SIM 卡（SIM 1/SIM 2/eSIM）應用不同的攔截規則。',
+            f6_title: '靈活的攔截操作', f6_desc: '自由選擇攔截動作：直接掛斷、靜音、或接聽後立即掛斷（防止留言）。',
+            f7_title: '100% 本地離線與隱私保護', f7_desc: '所有規則在手機本地運行，應用不內建跟蹤資料庫，絕不上報通訊錄。',
+            f8_title: 'WebDAV & 雲端備份恢復', f8_desc: '支援通過 WebDAV、Google Drive 和 OneDrive 備份與一鍵恢復配置。',
+            plugin_title: '🧩 QuickJS 網頁抓取外掛引擎', plugin_desc: '內建 QuickJS 外掛引擎，可透過實時抓取網頁或 API 查詢陌生號碼，無需依賴集中式雲端伺服器。',
+            plugin_dir_title: '📂 社群外掛開源目錄', plugin_dir_desc: '所有官方與社群貢獻的外掛託管在倉庫的 /plugins 號目錄下。',
+            plugin_ai_title: '🤖 AI 自動化測試工作流 (SKILL.md)', plugin_ai_desc: '配合 SKILL.md 模版，無需 Android 模擬器即可利用 AI 撰寫並單測 QuickJS 外掛。',
+            faq_title: '❓ 常見問題 (FAQ)', faq_subtitle: '關於 YourCallYourRule 的使用疑問解答',
+            q1_title: 'Q: 為什麼 Google Play 商店版聚焦來電攔截？', q1_desc: '受 Google Play 政策限制，商店版不包含簡訊過濾。如需簡訊攔截，請從 Telegram 頻道或 Releases 下載完整版。',
+            q2_title: 'Q: 會上報通訊錄到雲端資料庫嗎？', q2_desc: '絕不上報！所有號碼匹配 100% 在本地運行，徹底保障個人隱私。'
+        },
+        'ja': {
+            nav_features: '機能', nav_plugins: 'プラグイン', nav_faq: 'FAQ', btn_play: '🚀 Google Play',
+            hero_badge: '🛡️ 完全カスタマイズ可能なAndroid着信・SMSファイアウォール',
+            hero_title: 'あなたの通話、あなたのルール<br><span>YourCallYourRule</span>',
+            hero_pitch: '着信とSMSを完全コントロール！ブラックリスト/ホワイトリスト、正規表現フィルター、STIR/SHAKEN検証、WebDAVバックアップ、スクレイピングプラグインエンジン。100%ローカル！',
+            mockup_desc: 'スパム電話', mockup_status: '拒否済み (正規表現: ^\\+1800.*)',
+            btn_download_play: '📱 Google Playからダウンロード', btn_beta: '🧪 Google Playベータトラック', btn_tg_channel: '📢 Telegram チャンネル', btn_tg_group: '💬 Telegram グループ',
+            features_title: '⚡ 8つの強力な着信拒否機能', features_subtitle: 'プライバシーと高度なカスタマイズを求めるユーザー向け',
+            f1_title: 'ブラックリスト＆ホワイトリスト', f1_desc: '許可・拒否する番号リストを簡単作成。迷惑電話を即座にブロック。',
+            f2_title: '正規表現 (Regex) ルール', f2_desc: '市外局番やSMSキーワードの複雑な拒否ルールを正規表現で定義。',
+            f3_title: 'オンラインルール購読', f3_desc: 'URLからオンラインの迷惑電話データベースを自動購読・更新。',
+            f4_title: 'STIR/SHAKEN統合', f4_desc: '偽装電話番号を暗号検証技術でブロック（北米など一部地域）。',
+            f5_title: 'デュアルSIM識別', f5_desc: 'SIM 1/SIM 2の着信に応じた個別の拒否ルールを適用。',
+            f6_title: '柔軟な拒否アクション', f6_desc: '即時切断、消音、応答後切断などの拒否動作を選択可能。',
+            f7_title: '100%オンデバイスプライバシー', f7_desc: '連絡先アップロードなし。すべての処理はデバイス上で完了。',
+            f8_title: 'マルチクラウドバックアップ', f8_desc: 'WebDAV、Google Drive、OneDrive経由で設定をバックアップ・復元。',
+            plugin_title: '🧩 QuickJS Webスクレイピングプラグイン', plugin_desc: 'QuickJSエンジンにより、WebページやAPIから未知の着信元をリアルタイム照会。',
+            plugin_dir_title: '📂 コミュニティプラグインディレクトリ', plugin_dir_desc: '/pluginsフォルダでオープンソースプラグインをホスト。',
+            plugin_ai_title: '🤖 AI自動化ワークフロー (SKILL.md)', plugin_ai_desc: 'エミュレータなしでQuickJSプラグインをAIで作成・単体テスト可能。',
+            faq_title: '❓ よくある質問 (FAQ)', faq_subtitle: 'YourCallYourRuleの設定と権限について',
+            q1_title: 'Q: なぜGoogle Play版は着信拒否に特化しているのか？', q1_desc: 'SMS権限に関するGoogle Playポリシーのためです。フルバージョンはTelegramまたはReleasesから取得できます。',
+            q2_title: 'Q: 連絡先はクラウドにアップロードされますか？', q2_desc: 'いいえ！すべての処理は100%ローカルで実行されます。'
+        },
+        'ko': {
+            nav_features: '기능', nav_plugins: '플러그인', nav_faq: '자주 묻는 질문', btn_play: '🚀 Google Play',
+            hero_badge: '🛡️ 강력한 안드로이드 수신 전화 & SMS 방화벽',
+            hero_title: '당신의 전화, 당신의 규칙<br><span>YourCallYourRule</span>',
+            hero_pitch: '수신 전화와 SMS를 완벽하게 차단하세요! 블랙리스트/화이트리스트, 정규식 차단, STIR/SHAKEN, WebDAV 백업, 웹 스크래핑 플러그인 엔진. 100% 로컬 오프라인!',
+            mockup_desc: '스팸 전화', mockup_status: '차단됨 (정규식: ^\\+1800.*)',
+            btn_download_play: '📱 Google Play 다운로드', btn_beta: '🧪 Google Play 베타 채널', btn_tg_channel: '📢 Telegram 채널', btn_tg_group: '💬 Telegram 그룹',
+            features_title: '⚡ 8가지 완벽한 차단 기능', features_subtitle: '개인정보와 커스텀 차단을 원하는 유저를 위한 앱',
+            f1_title: '블랙리스트 & 화이트리스트 관리', f1_desc: '허용 및 차단할 전화번호 목록을 쉽게 생성하여 스팸 차단.',
+            f2_title: '정규식 (Regex) 차단 규칙', f2_desc: '지역 번호 및 SMS 키워드에 대한 복잡한 정규식 차단 규칙 설정.',
+            f3_title: '온라인 차단 목록 구독', f3_desc: 'URL 구독을 통해 최신 스팸 번호 DB를 자동으로 업데이트.',
+            f4_title: 'STIR/SHAKEN 통합', f4_desc: '발신 번호 조작 차단을 위한 STIR/SHAKEN 암호화 검증 기술 지원.',
+            f5_title: '듀얼 SIM 카드 인식', f5_desc: 'SIM 1 / SIM 2 수신별 개별 차단 규칙 및 동작 적용.',
+            f6_title: '유연한 차단 동작', f6_desc: '즉시 거절, 무음, 받자마자 끊기 등 유연한 차단 선택.',
+            f7_title: '100% 온디바이스 개인정보 보호', f7_desc: '연락처 업로드 없음. 모든 데이터는 기기 내부에서만 관리.',
+            f8_title: '클라우드 백업 및 복원', f8_desc: 'WebDAV, Google Drive, OneDrive를 통한 설정 백업 및 복원.',
+            plugin_title: '🧩 QuickJS 웹 스크래핑 플러그인', plugin_desc: 'QuickJS 엔진으로 웹 API 및 페이지를 실시간 조회하여 모르는 발신자 식별.',
+            plugin_dir_title: '📂 커뮤니티 오픈소스 플러그인', plugin_dir_desc: '/plugins 폴더에서 커뮤니티 플러그인 호스팅.',
+            plugin_ai_title: '🤖 AI 자동화 테스트 (SKILL.md)', plugin_ai_desc: '에뮬레이터 없이 AI를 활용하여 플러그인 단체 테스트 가능.',
+            faq_title: '❓ 자주 묻는 질문 (FAQ)', faq_subtitle: 'YourCallYourRule 권한 안내',
+            q1_title: 'Q: Google Play 버전은 왜 전화 차단 위주인가요?', q1_desc: 'SMS 권한 정책 때문입니다. SMS 차단이 포함된 전체 버전은 Telegram 또는 Releases에서 받아보세요.',
+            q2_title: 'Q: 연락처가 서버로 업로드되나요?', q2_desc: '절대 업로드되지 않습니다. 모든 매칭은 100% 기기 내에서 처리됩니다.'
+        },
+        'es': {
+            nav_features: 'Funciones', nav_plugins: 'Motor Plugins', nav_faq: 'Preguntas', btn_play: '🚀 Google Play',
+            hero_badge: '🛡️ Cortafuegos de Llamadas y SMS para Android',
+            hero_title: 'Tus Llamadas, Tus Reglas<br><span>YourCallYourRule</span>',
+            hero_pitch: '¡Tome el control total de sus comunicaciones! Reglas de listas negras/blancas, expresiones regulares, STIR/SHAKEN, copia de seguridad WebDAV y motor de plugins. ¡100% local y privado!',
+            mockup_desc: 'Llamada Spam', mockup_status: 'Bloqueado (Regex: ^\\+1800.*)',
+            btn_download_play: '📱 Descargar en Google Play', btn_beta: '🧪 Canal Beta de Google Play', btn_tg_channel: '📢 Canal de Telegram', btn_tg_group: '💬 Grupo de Telegram',
+            features_title: '⚡ Ocho Funciones Potentes de Bloqueo', features_subtitle: 'Diseñado para privacidad extrema y personalización',
+            f1_title: 'Gestión de Listas Negras y Blancas', f1_desc: 'Cree listas de números permitidos y bloqueados fácilmente.',
+            f2_title: 'Reglas de Expresiones Regulares (Regex)', f2_desc: 'Defina reglas avanzadas para prefijos de área y palabras clave de SMS.',
+            f3_title: 'Suscripción a Listas en Línea', f3_desc: 'Suscríbase a bases de datos de spam en línea mediante URLs.',
+            f4_title: 'Integración STIR/SHAKEN', f4_desc: 'Verificación criptográfica para evitar falsificación de identificador.',
+            f5_title: 'Reconocimiento de Doble SIM', f5_desc: 'Aplique reglas independientes para SIM 1 o SIM 2.',
+            f6_title: 'Acciones de Bloqueo Flexibles', f6_desc: 'Cuelgue inmediatamente, silencie o responda y cuelgue.',
+            f7_title: 'Privacidad 100% Local en el Dispositivo', f7_desc: 'Todos los datos se gestionan en su teléfono sin subir contactos.',
+            f8_title: 'Copia de Seguridad Multinube', f8_desc: 'Respalde mediante WebDAV, Google Drive y OneDrive.',
+            plugin_title: '🧩 Motor de Plugins QuickJS', plugin_desc: 'Consulte APIs o páginas web en tiempo real para identificar llamadas desconocidas.',
+            plugin_dir_title: '📂 Directorio de Plugins de la Comunidad', plugin_dir_desc: 'Plugins hospedados en la carpeta /plugins de nuestro repositorio.',
+            plugin_ai_title: '🤖 Flujo de Trabajo IA (SKILL.md)', plugin_ai_desc: 'Desarrolle plugins usando nuestra plantilla IA sin emulador.',
+            faq_title: '❓ Preguntas Frecuentes (FAQ)', faq_subtitle: 'Dudas sobre permisos y privacidad',
+            q1_title: '¿Por qué la versión de Play Store se centra en llamadas?', q1_desc: 'Debido a políticas de SMS de Google Play. La versión completa está en Telegram o GitHub Releases.',
+            q2_title: '¿Se suben mis contactos a la nube?', q2_desc: '¡Nunca! Todo el procesamiento es 100% local en su dispositivo.'
+        }
+    };
+
+    function detectLanguage() {
+        var hash = window.location.hash.replace('#', '').toLowerCase();
+        if (hash && i18nDict[hash]) return hash;
+        var saved = localStorage.getItem('pyro_lang');
+        if (saved && i18nDict[saved]) return saved;
+        var sys = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (sys.startsWith('zh-tw') || sys.startsWith('zh-hk') || sys.startsWith('zh-mo')) return 'zh-tw';
+        if (sys.startsWith('zh')) return 'zh';
+        if (sys.startsWith('ja')) return 'ja';
+        if (sys.startsWith('ko')) return 'ko';
+        if (sys.startsWith('es')) return 'es';
+        return 'en';
+    }
+
+    function setLanguage(lang) {
+        if (!i18nDict[lang]) lang = 'en';
+        document.documentElement.lang = lang;
+        localStorage.setItem('pyro_lang', lang);
+        var dict = i18nDict[lang] || i18nDict['en'];
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            var key = el.getAttribute('data-i18n');
+            if (dict[key]) el.innerHTML = dict[key];
+        });
+        document.querySelectorAll('.lang-switch a').forEach(function(btn) {
+            var href = btn.getAttribute('href').replace('#', '').toLowerCase();
+            if (href === lang) btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+    }
+
+    window.addEventListener('hashchange', function() {
+        setLanguage(detectLanguage());
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setLanguage(detectLanguage());
+    });
+
+    // Instant IndexNow Protocol
     (function(){
-        // 1. IndexNow Instant Indexing Protocol (Bing, Yandex, DuckDuckGo, Naver, Seznam)
         var indexNowUrl = 'https://api.indexnow.org/indexnow?url=' + encodeURIComponent(window.location.href) + '&key=pyroapp2026indexnowkey';
         if (navigator.sendBeacon) {
             navigator.sendBeacon(indexNowUrl);
@@ -678,7 +841,7 @@
             navigator.sendBeacon('https://www.bing.com/ping?sitemap=https://pyroapp.github.io/sitemap.xml');
         }
 
-        // 2. Baidu Auto Push Client
+        // Baidu Auto Push
         var canonicalURL, bp = document.createElement('script');
         var curProtocol = window.location.protocol.split(':')[0];
         if (curProtocol === 'https') {

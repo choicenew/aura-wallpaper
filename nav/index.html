@@ -107,7 +107,7 @@
             --accent-color: #6366f1;
             --accent-gradient: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #ec4899 100%);
             --text-main: #f8fafc;
-            --text-sub: #94a3b8;
+            --text-sub: #9ca3af;
             --pill-bg: rgba(30, 41, 59, 0.6);
         }
 
@@ -216,6 +216,14 @@
             border-radius: 4px;
             background: rgba(99, 102, 241, 0.12);
             border: 1px solid rgba(99, 102, 241, 0.25);
+            transition: all 0.2s;
+        }
+
+        .lang-switch a.active {
+            background: var(--accent-color);
+            color: #ffffff;
+            border-color: var(--accent-color);
+            font-weight: 700;
         }
 
         .btn-primary {
@@ -401,19 +409,19 @@
                 🚀 Pyro Apps Hub
             </a>
             <ul class="nav-links">
-                <li><a href="#apps">Ecosystem Apps</a></li>
-                <li><a href="#zh">中文导航</a></li>
-                <li><a href="#beta">Beta Testing</a></li>
+                <li><a href="#apps" data-i18n="nav_apps">Ecosystem Apps</a></li>
+                <li><a href="#zh" data-i18n="nav_zh">中文导航</a></li>
             </ul>
             <div style="display: flex; gap: 0.75rem; align-items: center;">
                 <div class="lang-switch">
                     <a href="#en">EN</a>
                     <a href="#zh">中文</a>
+                    <a href="#zh-tw">繁體</a>
                     <a href="#ja">日本語</a>
                     <a href="#ko">한국어</a>
                     <a href="#es">ES</a>
                 </div>
-                <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary">
+                <a href="https://groups.google.com/g/pyroapp/members" target="_blank" rel="noopener" class="btn-primary" data-i18n="btn_community">
                     👥 Community
                 </a>
             </div>
@@ -422,9 +430,9 @@
 
     <!-- Hero Section -->
     <section class="hero" id="en">
-        <div class="badge-tag">🌐 Pyro Studio Official Application Directory</div>
-        <h1>Next-Gen <span>Android Suite</span><br>Privacy-First Utilities, AI Readers & Blockers</h1>
-        <p>
+        <div class="badge-tag" data-i18n="hero_badge">🌐 Pyro Studio Official Application Directory</div>
+        <h1 data-i18n="hero_title">Next-Gen <span>Android Suite</span><br>Privacy-First Utilities, AI Readers & Blockers</h1>
+        <p data-i18n="hero_pitch">
             Welcome to the official Pyro Studio hub! Discover our ecosystem of powerful, privacy-respecting Android tools engineered for maximum productivity, status bar convenience, AI research, and call control.
         </p>
     </section>
@@ -437,14 +445,14 @@
             <div>
                 <div class="app-icon">🏝️</div>
                 <h3>VehereGo</h3>
-                <p>Status bar island & Live Activity hub for Android. Automatically extracts parcel pickup codes (Cainiao, SF Express, Meituan) via OCR, manages PKPass vouchers, and tracks transit tickets in live capsules.</p>
+                <p data-i18n="app1_desc">Status bar island & Live Activity hub for Android. Automatically extracts parcel pickup codes (Cainiao, SF Express, Meituan) via OCR, manages PKPass vouchers, and tracks transit tickets in live capsules.</p>
                 <div class="app-tags">
                     <span class="app-tag">Live Activity</span>
                     <span class="app-tag">Parcel OCR</span>
                     <span class="app-tag">PKPass Wallet</span>
                 </div>
             </div>
-            <a href="../veherego/index.html" class="btn-primary" style="justify-content: center;">
+            <a href="../veherego/index.html" class="btn-primary" style="justify-content: center;" data-i18n="btn_app1">
                 👉 Explore VehereGo
             </a>
         </div>
@@ -454,7 +462,7 @@
             <div>
                 <div class="app-icon">🔥</div>
                 <h3>PyroMagma Academic</h3>
-                <p>AI-driven academic literature reader. Browse paper card feeds (ArXiv, IEEE, Nature, PubMed), conduct interactive full-text RAG Q&A, and sync annotations seamlessly with Zotero and WebDAV.</p>
+                <p data-i18n="app2_desc">AI-driven academic literature reader. Browse paper card feeds (ArXiv, IEEE, Nature, PubMed), conduct interactive full-text RAG Q&A, and sync annotations seamlessly with Zotero and WebDAV.</p>
                 <div class="app-tags">
                     <span class="app-tag">AI Paper Summarizer</span>
                     <span class="app-tag">Literature RAG</span>
@@ -462,7 +470,7 @@
                     <span class="app-tag">Bilingual Translation</span>
                 </div>
             </div>
-            <a href="../pyromagma/index.html" class="btn-primary" style="justify-content: center;">
+            <a href="../pyromagma/index.html" class="btn-primary" style="justify-content: center;" data-i18n="btn_app2">
                 👉 Explore PyroMagma Academic
             </a>
         </div>
@@ -472,7 +480,7 @@
             <div>
                 <div class="app-icon">📚</div>
                 <h3>PyroMagma Reader</h3>
-                <p>The ultimate Legado (开源阅读) alternative for web novels, raw manga, and ebooks. Integrates local AI neural translation and live manga speech bubble OCR directly into the reader.</p>
+                <p data-i18n="app3_desc">The ultimate Legado (开源阅读) alternative for web novels, raw manga, and ebooks. Integrates local AI neural translation and live manga speech bubble OCR directly into the reader.</p>
                 <div class="app-tags">
                     <span class="app-tag">Legado Alternative</span>
                     <span class="app-tag">Raw Manga OCR</span>
@@ -480,7 +488,7 @@
                     <span class="app-tag">EPUB/PDF Reader</span>
                 </div>
             </div>
-            <a href="../pyromagma/reader.html" class="btn-primary" style="justify-content: center;">
+            <a href="../pyromagma/reader.html" class="btn-primary" style="justify-content: center;" data-i18n="btn_app3">
                 👉 Explore PyroMagma Reader
             </a>
         </div>
@@ -490,7 +498,7 @@
             <div>
                 <div class="app-icon">🛡️</div>
                 <h3>YourCallYourRule</h3>
-                <p>Powerful, highly customizable call & SMS blocker for Android. Features blacklists, whitelists, regex filtering, STIR/SHAKEN caller verification, WebDAV cloud backup, and a web scraping plugin engine.</p>
+                <p data-i18n="app4_desc">Powerful, highly customizable call & SMS blocker for Android. Features blacklists, whitelists, regex filtering, STIR/SHAKEN caller verification, WebDAV cloud backup, and a web scraping plugin engine.</p>
                 <div class="app-tags">
                     <span class="app-tag">Smart Call Blocker</span>
                     <span class="app-tag">SMS Spam Filter</span>
@@ -498,52 +506,148 @@
                     <span class="app-tag">Web Scraping Plugins</span>
                 </div>
             </div>
-            <a href="../yourcallyourrule/index.html" class="btn-primary" style="justify-content: center;">
+            <a href="../yourcallyourrule/index.html" class="btn-primary" style="justify-content: center;" data-i18n="btn_app4">
                 👉 Explore YourCallYourRule
             </a>
         </div>
 
     </section>
 
-    <!-- Chinese Summary Section -->
-    <section id="zh" style="max-width: 1200px; margin: 0 auto 4rem auto; padding: 0 1.5rem; position: relative; z-index: 1;">
-        <div id="beta"></div>
-        <div style="background: rgba(18, 24, 38, 0.75); border: 1px solid var(--card-border); backdrop-filter: blur(16px); border-radius: 1.5rem; padding: 2rem;">
-            <h3 style="font-size: 1.6rem; color: #818cf8; margin-bottom: 1rem;">🇨🇳 综合应用矩阵与导航门户 (Chinese Hub Summary)</h3>
-            <p style="color: #cbd5e1; line-height: 1.8; margin-bottom: 1.5rem;">
-                欢迎来到 <strong>Pyro Studio</strong> 官方应用导航门户！我们专注于打造高颜值、全功能且 100% 保护隐私的 Android 效率工具与 AI 引擎：
-            </p>
-            <ul style="color: #94a3b8; line-height: 1.8; margin-left: 1.5rem;">
-                <li><strong>VehereGo：</strong>状态栏灵动岛/胶囊通知中枢、菜鸟/顺丰取件码 OCR 识别与 PKPass 数字卡包。</li>
-                <li><strong>PyroMagma Academic：</strong>AI 学术论文卡片流阅读器、论文全文 RAG 问答与 Zotero/WebDAV 云同步。</li>
-                <li><strong>PyroMagma Reader：</strong>Legado (开源阅读) 替代品、生肉漫画/小说端侧 AI 实时翻译与识图 OCR。</li>
-                <li><strong>YourCallYourRule：</strong>强大可定制的骚扰电话与短信拦截防火墙、正则表达式过滤、STIR/SHAKEN 验证与网页抓取插件系统。</li>
-            </ul>
-            <div id="ja" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #a855f7; font-size: 1.1rem;">🇯🇵 日本語ポータル概要 (Japanese Hub)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">Pyro Studio公式アプリハブへようこそ。VehereGo、PyroMagma、YourCallYourRuleなど、プライバシー重視のAndroidアプリを提供します。</p>
-            </div>
-            <div id="ko" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #ec4899; font-size: 1.1rem;">🇰🇷 한국어 포털 개요 (Korean Hub)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">Pyro Studio 공식 앱 허브에 오신 것을 환영합니다. VehereGo, PyroMagma, YourCallYourRule 등 개인정보 중심의 Android 유틸리티를 제공합니다.</p>
-            </div>
-            <div id="es" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                <h4 style="color: #38bdf8; font-size: 1.1rem;">🇪🇸 Portal en Español (Spanish Hub)</h4>
-                <p style="color: #94a3b8; font-size: 0.92rem;">Bienvenido al portal oficial de Pyro Studio. Descubra nuestra suite de aplicaciones para Android enfocadas en privacidad.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global Multilingual SEO Long-tail Keywords Cloud -->
+    <!-- Global SEO Keywords Cloud -->
     <section class="seo-keywords-box">
         <strong>Global SEO Search Keywords & Index Tags (11 Languages Covered):</strong><br>
         Pyro Apps, Pyro Studio, VehereGo, PyroMagma, YourCallYourRule, Android app ecosystem, status bar island app, AI academic reader, Legado alternative, call blocker Android, SMS spam blocker, privacy Android apps, com.mypyro.veherego, com.mypyro.pyromagma, com.yours.yourcallyourrule, 灵动岛, 状态栏胶囊, AI论文阅读器, Legado替代, 骚扰拦截, 安卓隐私软件, Bloqueador de llamadas spam, App de Ilha Dinâmica Android, Android Anrufblocker, 荷物受取コード, ライブアクティビティ.
     </section>
 
-    <!-- Instant IndexNow Protocol & Multi-Search Engine Ping Trigger -->
+    <!-- Client-Side Auto Language Engine & Multilingual Dictionaries -->
     <script>
+    var i18nDict = {
+        'en': {
+            nav_apps: 'Ecosystem Apps', nav_zh: 'Chinese Hub', btn_community: '👥 Community',
+            hero_badge: '🌐 Pyro Studio Official Application Directory',
+            hero_title: 'Next-Gen <span>Android Suite</span><br>Privacy-First Utilities, AI Readers & Blockers',
+            hero_pitch: 'Welcome to the official Pyro Studio hub! Discover our ecosystem of powerful, privacy-respecting Android tools engineered for maximum productivity, status bar convenience, AI research, and call control.',
+            app1_desc: 'Status bar island & Live Activity hub for Android. Automatically extracts parcel pickup codes via OCR, manages PKPass vouchers, and tracks transit tickets in live capsules.',
+            btn_app1: '👉 Explore VehereGo',
+            app2_desc: 'AI-driven academic literature reader. Browse paper card feeds (ArXiv, IEEE, Nature, PubMed), conduct interactive full-text RAG Q&A, and sync annotations with Zotero.',
+            btn_app2: '👉 Explore PyroMagma Academic',
+            app3_desc: 'The ultimate Legado (开源阅读) alternative for web novels, raw manga, and ebooks. Integrates local AI neural translation and live manga speech bubble OCR directly into the reader.',
+            btn_app3: '👉 Explore PyroMagma Reader',
+            app4_desc: 'Powerful, highly customizable call & SMS blocker for Android. Features blacklists, whitelists, regex filtering, STIR/SHAKEN caller verification, and web scraping plugins.',
+            btn_app4: '👉 Explore YourCallYourRule'
+        },
+        'zh': {
+            nav_apps: '生态应用矩阵', nav_zh: '中文导航', btn_community: '👥 社区群组',
+            hero_badge: '🌐 Pyro Studio 官方应用导航门户',
+            hero_title: '全新一代 <span>Android 旗舰套件</span><br>纯本地隐私防护 · 状态栏灵动岛 · AI 驱动引擎',
+            hero_pitch: '欢迎来到 Pyro Studio 官方应用门户！探索我们专为 Android 打造的效率工具与 AI 引擎生态系统：状态栏灵动岛、AI 学术论文阅读器、Legado 替代品与来电防火墙。',
+            app1_desc: '安卓状态栏灵动岛与实时动态中枢。自动 OCR 识图提取菜鸟/顺丰/美团取件码，管理 PKPass 数字卡包与行程凭证。',
+            btn_app1: '👉 查看 VehereGo',
+            app2_desc: 'AI 驱动学术论文卡片流阅读器。支持 ArXiv/IEEE/Nature 顶刊订阅、全文 RAG 交互问答与 Zotero/WebDAV 云同步。',
+            btn_app2: '👉 查看 PyroMagma 学术版',
+            app3_desc: 'Legado (开源阅读) 完美替代品。集成端侧芯片级 AI 神经网络翻译与生肉漫画气泡实时识图 OCR，无广告极速看书。',
+            btn_app3: '👉 查看 PyroMagma 阅读器',
+            app4_desc: '强大可定制的骚扰电话与短信拦截防火墙。支持黑白名单、正则表达式匹配、STIR/SHAKEN 防伪、WebDAV 备份与 QuickJS 插件。',
+            btn_app4: '👉 查看 YourCallYourRule'
+        },
+        'zh-tw': {
+            nav_apps: '生態應用矩陣', nav_zh: '中文導航', btn_community: '👥 社群群組',
+            hero_badge: '🌐 Pyro Studio 官方應用導航門戶',
+            hero_title: '全新一代 <span>Android 旗艦套件</span><br>純本地隱私防護 · 狀態欄靈動島 · AI 驅動引擎',
+            hero_pitch: '歡迎來到 Pyro Studio 官方應用門戶！探索我們專為 Android 打造的效率工具與 AI 引擎生態系統：狀態欄靈動島、AI 學術論文閱讀器、Legado 替代品與來電防火牆。',
+            app1_desc: '安卓狀態欄靈動島與實時動態中樞。自動 OCR 識圖提取快遞與外賣取件碼，管理 PKPass 數字卡包與行程憑證。',
+            btn_app1: '👉 查看 VehereGo',
+            app2_desc: 'AI 驅動學術論文卡片流閱讀器。支援 ArXiv/IEEE/Nature 頂刊訂閱、全文 RAG 交互問答與 Zotero/WebDAV 雲同步。',
+            btn_app2: '👉 查看 PyroMagma 學術版',
+            app3_desc: 'Legado (開源閱讀) 完美替代品。整合端側晶片級 AI 神經網絡翻譯與生肉漫畫氣泡實時識圖 OCR，無廣告極速看書。',
+            btn_app3: '👉 查看 PyroMagma 閱讀器',
+            app4_desc: '強大可自訂的騷擾電話與簡訊攔截防火牆。支援黑白名單、正則表達式匹配、STIR/SHAKEN 防偽、WebDAV 備份與 QuickJS 外掛。',
+            btn_app4: '👉 查看 YourCallYourRule'
+        },
+        'ja': {
+            nav_apps: 'アプリ一覧', nav_zh: '日本語ハブ', btn_community: '👥 コミュニティ',
+            hero_badge: '🌐 Pyro Studio 公式アプリケーションポータル',
+            hero_title: '次世代 <span>Android スイート</span><br>プライバシー重視 · AIリーダー · 着信拒否',
+            hero_pitch: 'Pyro Studio公式ハブへようこそ！VehereGo、PyroMagma、YourCallYourRuleなどのAndroidアプリを提供します。',
+            app1_desc: 'ステータスバーカプセル＆ライブアクティビティ通知ハブ。OCRでの受取コード抽出とPKPassパス管理に対応。',
+            btn_app1: '👉 VehereGoを見る',
+            app2_desc: 'AI駆動型学術論文リーダー。ArXiv論文カードフィード、RAG質疑応答、Zoteroクラウド同期をサポート。',
+            btn_app2: '👉 PyroMagma Academicを見る',
+            app3_desc: '電子書籍・マンガ・Web小説リーダー。オンデバイスAI翻訳とマンガ吹き出しOCRを直接搭載。',
+            btn_app3: '👉 PyroMagma Readerを見る',
+            app4_desc: '高度にカスタマイズ可能な着信・SMSファイアウォール。正規表現ルール、WebDAVバックアップ、スクレイピングプラグイン対応。',
+            btn_app4: '👉 YourCallYourRuleを見る'
+        },
+        'ko': {
+            nav_apps: '앱 목록', nav_zh: '포털 개요', btn_community: '👥 커뮤니티',
+            hero_badge: '🌐 Pyro Studio 공식 애플리케이션 포털',
+            hero_title: '차세대 <span>Android 스위트</span><br>개인정보 보호 · AI 리더 · 전화 차단',
+            hero_pitch: 'Pyro Studio 공식 허브에 오신 것을 환영합니다! VehereGo, PyroMagma, YourCallYourRule 등 Android 유틸리티를 제공합니다.',
+            app1_desc: '안드로이드 상태 표시줄 라이브 캡슐 허브. OCR 수령 코드 추출 및 PKPass 카드 지갑 관리.',
+            btn_app1: '👉 VehereGo 살펴보기',
+            app2_desc: 'AI 기반 논문 리더. ArXiv 논문 카드 피드, RAG 질의응답 및 Zotero 동기화.',
+            btn_app2: '👉 PyroMagma Academic 탐색',
+            app3_desc: '소설 및 만화용 리더. 온디바이스 AI 번역 및 만화 말풍선 실시간 OCR 내장.',
+            btn_app3: '👉 PyroMagma Reader 탐색',
+            app4_desc: '강력한 수신 전화 및 SMS 방화벽. 정규식 차단, WebDAV 백업 및 스크래핑 플러그인 지원.',
+            btn_app4: '👉 YourCallYourRule 탐색'
+        },
+        'es': {
+            nav_apps: 'Aplicaciones', nav_zh: 'Resumen', btn_community: '👥 Comunidad',
+            hero_badge: '🌐 Directorio Oficial de Aplicaciones Pyro Studio',
+            hero_title: 'Nueva Era <span>Android Suite</span><br>Privacidad Local · Lectores IA · Bloqueadores',
+            hero_pitch: '¡Bienvenido al portal oficial de Pyro Studio! Descubra nuestras aplicaciones enfocadas en privacidad para Android.',
+            app1_desc: 'Centro de actividades en la barra de estado y cápsulas flotantes con OCR e integración PKPass.',
+            btn_app1: '👉 Explorar VehereGo',
+            app2_desc: 'Lector académico con IA, preguntas y respuestas RAG sobre PDFs y sincronización con Zotero.',
+            btn_app2: '👉 Explorar PyroMagma Academic',
+            app3_desc: 'Lector de novelas y manga con traducción IA en el dispositivo y OCR de bocadillos en tiempo real.',
+            btn_app3: '👉 Explorar PyroMagma Reader',
+            app4_desc: 'Bloqueador de llamadas y SMS con expresiones regulares, plugins QuickJS y copia WebDAV.',
+            btn_app4: '👉 Explorar YourCallYourRule'
+        }
+    };
+
+    function detectLanguage() {
+        var hash = window.location.hash.replace('#', '').toLowerCase();
+        if (hash && i18nDict[hash]) return hash;
+        var saved = localStorage.getItem('pyro_lang');
+        if (saved && i18nDict[saved]) return saved;
+        var sys = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (sys.startsWith('zh-tw') || sys.startsWith('zh-hk') || sys.startsWith('zh-mo')) return 'zh-tw';
+        if (sys.startsWith('zh')) return 'zh';
+        if (sys.startsWith('ja')) return 'ja';
+        if (sys.startsWith('ko')) return 'ko';
+        if (sys.startsWith('es')) return 'es';
+        return 'en';
+    }
+
+    function setLanguage(lang) {
+        if (!i18nDict[lang]) lang = 'en';
+        document.documentElement.lang = lang;
+        localStorage.setItem('pyro_lang', lang);
+        var dict = i18nDict[lang] || i18nDict['en'];
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            var key = el.getAttribute('data-i18n');
+            if (dict[key]) el.innerHTML = dict[key];
+        });
+        document.querySelectorAll('.lang-switch a').forEach(function(btn) {
+            var href = btn.getAttribute('href').replace('#', '').toLowerCase();
+            if (href === lang) btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+    }
+
+    window.addEventListener('hashchange', function() {
+        setLanguage(detectLanguage());
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setLanguage(detectLanguage());
+    });
+
+    // Instant IndexNow Protocol
     (function(){
-        // 1. IndexNow Instant Indexing Protocol (Bing, Yandex, DuckDuckGo, Naver, Seznam)
         var indexNowUrl = 'https://api.indexnow.org/indexnow?url=' + encodeURIComponent(window.location.href) + '&key=pyroapp2026indexnowkey';
         if (navigator.sendBeacon) {
             navigator.sendBeacon(indexNowUrl);
@@ -551,7 +655,7 @@
             navigator.sendBeacon('https://www.bing.com/ping?sitemap=https://pyroapp.github.io/sitemap.xml');
         }
 
-        // 2. Baidu Auto Push Client
+        // Baidu Auto Push
         var canonicalURL, bp = document.createElement('script');
         var curProtocol = window.location.protocol.split(':')[0];
         if (curProtocol === 'https') {
