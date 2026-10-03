@@ -96,14 +96,26 @@ async function main() {
         continue;
       }
 
-      await publisher.edits.listings.update({
-        packageName,
-        editId,
-        language: lang,
-        requestBody
-      });
-      console.log(`   ✅ [${lang}] 已更新 -> ${requestBody.title ? `标题: "${requestBody.title}"` : '更新描述字段'}`);
-      updatedCount++;
+      try {
+        await publisher.edits.listings.update({
+          packageName,
+          editId,
+          language: lang,
+          requestBody
+        });
+        console.log(`   ✅ [${lang}] 已更新 -> ${requestBody.title ? `标题: "${requestBody.title}"` : '更新描述字段'}`);
+        updatedCount++;
+      } catch (langError) {
+        const errMsg = langError.message || '';
+        if (errMsg.includes('not currently supported') || (langError.response && langError.response.status === 400)) {
+          console.warn(`   ⚠️ [${lang}] 语言不受 Google Play 支持，已自动跳过。`);
+        } else {
+          console.error(`   ❌ [${lang}] 更新失败: ${errMsg}`);
+          if (langError.response && langError.response.data) {
+            console.error('   API 错误详情:', JSON.stringify(langError.response.data, null, 2));
+          }
+        }
+      }
     }
 
     if (updatedCount === 0) {
