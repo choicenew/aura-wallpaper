@@ -17,6 +17,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Checkout legado_parser
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/legado_parser
+          path: legado_parser
+          token: ${{ secrets.GH_PAT }}
+          submodules: false
+
       - name: Fetch Release and Download APK
         id: fetch_data
         run: |

@@ -44,6 +44,14 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           submodules: false
 
+      - name: Checkout legado_parser
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/legado_parser
+          path: legado_parser
+          token: ${{ secrets.GH_PAT }}
+          submodules: false
+
       - name: Set up Java 17
         uses: actions/setup-java@v5
         with:

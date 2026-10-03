@@ -45,6 +45,14 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           submodules: false
 
+      - name: Checkout legado_parser
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/legado_parser
+          path: legado_parser
+          token: ${{ secrets.GH_PAT }}
+          submodules: false
+
       - name: Inject Prebuilt Supported Languages JSON
         run: |
           mkdir -p packages/pyro_api_translate/assets
